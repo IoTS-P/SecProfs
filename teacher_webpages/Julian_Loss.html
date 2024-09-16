@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="pointer skrollr skrollr-desktop"><head>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style id="customRules"></style><script async="" src="Julian_Loss_files/sp-2.0.0-dm-0.1.min.js"></script><script type="text/javascript">
+    window._currentDevice = 'desktop';
+    window.Parameters = window.Parameters || {
+        HomeUrl: 'http://www.julianloss.com/',
+        AccountUUID: 'ec67f6f7a96244188e27982dd3aee63d',
+        SystemID: '1AND1_EU_PROD',
+        SiteAlias: 'be5f1646e5624dbb9ad470eed3fd6f37',
+        SiteType: atob('RFVEQU9ORQ=='),
+        PublicationDate: 'Fri Sep 13 10:19:29 UTC 2024',
+        ExternalUid: '6c61f8c7-09f2-4cf0-8c17-7daacf8eb55d',
+        IsSiteMultilingual: false,
+        InitialPostAlias: '',
+        InitialDynamicItem: '',
+        DynamicPageInfo: {
+            isDynamicPage: false,
+            base64JsonRowData: 'null',
+        },
+        InitialPageAlias: 'home',
+        InitialPageUuid: 'bd6c13f69f4f48c39d01d390e086d571',
+        InitialPageId: '697939833',
+        InitialEncodedPageAlias: 'aG9tZQ==',
+        CurrentPageUrl: '',
+        IsCurrentHomePage: true,
+        AllowAjax: false,
+        AfterAjaxCommand: null,
+        HomeLinkText: 'Back To Home',
+        UseGalleryModule: false,
+        CurrentThemeName: 'Layout Theme',
+        ThemeVersion: '47540',
+        DefaultPageAlias: '',
+        RemoveDID: true,
+        WidgetStyleID: null,
+        IsHeaderFixed: false,
+        IsHeaderSkinny: false,
+        IsBfs: true,
+        StorePageAlias: 'null',
+        StorePagesUrls: 'e30=',
+        IsNewStore: 'false',
+        StorePath: '',
+        StoreId: 'null',
+        StoreVersion: 0,
+        StoreBaseUrl: '',
+        StoreCleanUrl: true,
+        StoreDisableScrolling: true,
+        IsStoreSuspended: false,
+        NotificationSubDomain: 'julianloss',
+        HasCustomDomain: true,
+        SimpleSite: false,
+        showCookieNotification: false,
+        cookiesNotificationMarkup: 'null',
+        translatedPageUrl: '',
+        isFastMigrationSite: false,
+        sidebarPosition: 'NA',
+        currentLanguage: 'de',
+        currentLocale: 'de',
+        NavItems: '{}',
+        errors: {
+            general: 'There was an error connecting to the page.<br/> Make sure you are not offline.',
+            password: 'Incorrect name/password combination',
+            tryAgain: 'Try again'
+        },
+        NavigationAreaParams: {
+            ShowBackToHomeOnInnerPages: true,
+            NavbarSize: 4,
+            NavbarLiveHomePage: 'http://www.julianloss.com/',
+            BlockContainerSelector: '.dmBody',
+            NavbarSelector: '#dmNav:has(a)',
+            SubNavbarSelector: '#subnav_main'
+        },
+        hasCustomCode: false,
+        planID: '2002',
+        customTemplateId: 'null',
+        siteTemplateId: 'null',
+        productId: 'DM_DIRECT',
+        disableTracking: false,
+        pageType: 'FROM_SCRATCH',
+        isRuntimeServer: true,
+        isInEditor: false,
+        hasNativeStore: false
+    };
+
+    window.Parameters.LayoutID = {};
+    window.Parameters.LayoutID[window._currentDevice] = 6;
+    window.Parameters.LayoutVariationID = {};
+    window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Injecting site-wide to the head -->
+
+
+
+
+<!-- End Injecting site-wide to the head -->
+
+<!-- Inject secured cdn script -->
+
+
+<!-- ========= Meta Tags ========= -->
+<!-- PWA settings -->
+<script>
+    function toHash(str) {
+        var hash = 5381, i = str.length;
+        while (i) {
+            hash = hash * 33 ^ str.charCodeAt(--i)
+        }
+        return hash >>> 0
+    }
+</script>
+<script>
+    (function (global) {
+    //const cacheKey = global.cacheKey;
+    const isOffline = 'onLine' in navigator && navigator.onLine === false;
+    const hasServiceWorkerSupport = 'serviceWorker' in navigator;
+    if (isOffline) {
+        console.log('offline mode');
+    }
+    if (!hasServiceWorkerSupport) {
+        console.log('service worker is not supported');
+    }
+    if (hasServiceWorkerSupport && !isOffline) {
+        window.addEventListener('load', function () {
+            const serviceWorkerPath = '/runtime-service-worker.js?v=3';
+            navigator.serviceWorker
+                .register(serviceWorkerPath, { scope: './' })
+                .then(
+                    function (registration) {
+                        // Registration was successful
+                        console.log(
+                            'ServiceWorker registration successful with scope: ',
+                            registration.scope
+                        );
+                    },
+                    function (err) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                    }
+                )
+                .catch(function (err) {
+                    console.log(err);
+                });
+        });
+
+        // helper function to refresh the page
+        var refreshPage = (function () {
+            var refreshing;
+            return function () {
+                if (refreshing) return;
+                // prevent multiple refreshes
+                var refreshkey = 'refreshed' + location.href;
+                var prevRefresh = localStorage.getItem(refreshkey);
+                if (prevRefresh) {
+                    localStorage.removeItem(refreshkey);
+                    if (Date.now() - prevRefresh < 30000) {
+                        return; // dont go into a refresh loop
+                    }
+                }
+                refreshing = true;
+                localStorage.setItem(refreshkey, Date.now());
+                console.log('refereshing page');
+                window.location.reload();
+            };
+        })();
+
+        function messageServiceWorker(data) {
+            return new Promise(function (resolve, reject) {
+                if (navigator.serviceWorker.controller) {
+                    var worker = navigator.serviceWorker.controller;
+                    var messageChannel = new MessageChannel();
+                    messageChannel.port1.onmessage = replyHandler;
+                    worker.postMessage(data, [messageChannel.port2]);
+                    function replyHandler(event) {
+                        resolve(event.data);
+                    }
+                } else {
+                    resolve();
+                }
+            });
+        }
+    }
+})(window);
+</script>
+<!-- Add manifest -->
+<!-- End PWA settings -->
+
+
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+
+<link rel="canonical" href="https://www.julianloss.com/">
+
+<meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>HOME</title>
+
+<!--Add favorites icons-->
+
+<link rel="icon" type="image/x-icon" href="https://static-cdn.website-editor.net/runtime/favicon_d1_res.ico">
+
+<!-- End favorite icons -->
+<link rel="preconnect" href="https://le-cdn.website-editor.net/">
+
+
+
+<!-- render the required CSS and JS in the head section -->
+<script>
+    window.SystemID = '1AND1_EU_PROD';
+
+    if (!window.dmAPI) {
+        window.dmAPI = {
+            registerExternalRuntimeComponent: function () {
+            },
+            getCurrentDeviceType: function () {
+                return window._currentDevice;
+            }
+        };
+    }
+
+    if (!window.requestIdleCallback) {
+        window.requestIdleCallback = function (fn) {
+            setTimeout(fn, 0);
+        }
+    }
+</script>
+
+<!-- loadCSS function header.jsp-->
+
+
+
+
+
+
+<script id="d-js-load-css">
+/**
+ * There are a few <link> tags with CSS resource in them that are preloaded in the page
+ * in each of those there is a "onload" handler which invokes the loadCSS callback
+ * defined here.
+ * We are monitoring 3 main CSS files - the runtime, the global and the page.
+ * When each load we check to see if we can append them all in a batch. If threre
+ * is no page css (which may happen on inner pages) then we do not wait for it
+ */
+(function () {
+  let cssLinks = {};
+  function loadCssLink(link) {
+    link.onload = null;
+    link.rel = "stylesheet";
+    link.type = "text/css";
+  }
+  
+    function checkCss() {
+      const pageCssLink = document.querySelector("[id*='CssLink']");
+      const widgetCssLink = document.querySelector("[id*='widgetCSS']");
+
+        if (cssLinks && cssLinks.runtime && cssLinks.global && (!pageCssLink || cssLinks.page) && (!widgetCssLink || cssLinks.widget)) {
+            const storedRuntimeCssLink = cssLinks.runtime;
+            const storedPageCssLink = cssLinks.page;
+            const storedGlobalCssLink = cssLinks.global;
+            const storedWidgetCssLink = cssLinks.widget;
+
+            storedGlobalCssLink.disabled = true;
+            loadCssLink(storedGlobalCssLink);
+
+            if (storedPageCssLink) {
+                storedPageCssLink.disabled = true;
+                loadCssLink(storedPageCssLink);
+            }
+
+            if(storedWidgetCssLink) {
+                storedWidgetCssLink.disabled = true;
+                loadCssLink(storedWidgetCssLink);
+            }
+
+            storedRuntimeCssLink.disabled = true;
+            loadCssLink(storedRuntimeCssLink);
+
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    storedRuntimeCssLink.disabled = false;
+                    storedGlobalCssLink.disabled = false;
+                    if (storedPageCssLink) {
+                      storedPageCssLink.disabled = false;
+                    }
+                    if (storedWidgetCssLink) {
+                      storedWidgetCssLink.disabled = false;
+                    }
+                    // (SUP-4179) Clear the accumulated cssLinks only when we're
+                    // sure that the document has finished loading and the document 
+                    // has been parsed.
+                    if(document.readyState === 'interactive') {
+                      cssLinks = null;
+                    }
+                }, 0);
+            });
+        }
+    }
+  
+
+  function loadCSS(link) {
+    try {
+      var urlParams = new URLSearchParams(window.location.search);
+      var noCSS = !!urlParams.get("nocss");
+      var cssTimeout = urlParams.get("cssTimeout") || 0;
+
+      if (noCSS) {
+        return;
+      }
+      if (link.href && link.href.includes("d-css-runtime")) {
+        cssLinks.runtime = link;
+        checkCss();
+      } else if (link.id === "siteGlobalCss") {
+        cssLinks.global = link;
+        checkCss();
+      } 
+      
+      else if (link.id && link.id.includes("CssLink")) {
+        cssLinks.page = link;
+        checkCss();
+      } else if (link.id && link.id.includes("widgetCSS")) {
+        cssLinks.widget = link;
+        checkCss();
+      }
+      
+      else {
+        requestIdleCallback(function () {
+          window.setTimeout(function () {
+            loadCssLink(link);
+          }, parseInt(cssTimeout, 10));
+        });
+      }
+    } catch (e) {
+      throw e
+    }
+  }
+  window.loadCSS = window.loadCSS || loadCSS;
+})();
+</script>
+
+
+
+<script data-role="deferred-init" type="text/javascript">
+    /* usage: window.getDeferred(<deferred name>).resolve() or window.getDeferred(<deferred name>).promise.then(...)*/
+    function Def() {
+        this.promise = new Promise((function (a, b) {
+            this.resolve = a, this.reject = b
+        }).bind(this))
+    }
+
+    const defs = {};
+    window.getDeferred = function (a) {
+        return null == defs[a] && (defs[a] = new Def), defs[a]
+    }
+    window.waitForDeferred = function (b, a, c) {
+        let d = window?.getDeferred?.(b);
+        d
+            ? d.promise.then(a)
+            : c && ["complete", "interactive"].includes(document.readyState)
+                ? setTimeout(a, 1)
+                : c
+                    ? document.addEventListener("DOMContentLoaded", a)
+                    : console.error(`Deferred  does not exist`);
+    };
+</script>
+<style id="forceCssIncludes">
+    /* This file is auto-generated from a `scss` file with the same name */
+
+.videobgwrapper{overflow:hidden;position:absolute;z-index:0;width:100%;height:100%;top:0;left:0;pointer-events:none;border-radius:inherit}.videobgframe{position:absolute;width:101%;height:100%;top:50%;left:50%;transform:translateY(-50%) translateX(-50%);object-fit:fill}#dm video.videobgframe{margin:0}@media (max-width:767px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:80vh}}@media (min-width:1025px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}@media (min-width:768px) and (max-width:1024px){.responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}#dm [data-show-on-page-only]{display:none!important}#dmRoot div.stickyHeaderFix div.site_content{margin-top:0!important}#dmRoot div.stickyHeaderFix div.hamburger-header-container{position:relative}
+    
+
+</style>
+<style id="cssVariables" type="text/css">
+    
+</style>
+
+
+<style id="hideAnimFix">
+    .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) [data-anim-extended] {
+        visibility: hidden;
+    }
+
+    .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+        visibility: hidden !important;
+    }
+</style>
+
+
+
+<style id="criticalCss">
+    @charset "UTF-8";.clearfix:after,.dmHoursOfOperation,.dmRespRow:after,.dmSocialHub,DIV.dmBody{clear:both}@font-face{font-family:Montserrat;font-style:normal;font-weight:100 900;font-display:swap;src:url(https://cdn.website-editor.net/fonts/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Alike;font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.website-editor.net/fonts/s/alike/v21/HI_EiYEYI6BIoHjGQ5Q.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}.dmInner{min-height:100vh!important;position:relative}.dmPopup,.dmPopupMask{position:fixed;left:0}.display_None{display:none}.dmDisplay_None,.dmFooterContainer{display:none!important}.clearfix:after{visibility:hidden;line-height:0;height:0}.clearfix:after,.clearfix:before{content:' ';display:table}.clearfix{display:inline-block}.dmPopupMask{margin:0;display:none;width:10px;z-index:1000000999;top:0}#dmRoot .dmPopup{display:block}.dmPopup{text-align:left;top:10px;width:93%;z-index:1000009999!important;box-sizing:border-box;background:#f5f5f5;overflow-y:auto;height:100%;display:block}.dmPopup .dmPopupTitle{text-align:left;font:700 19px Helvetica,Arial;margin:20px 20px 35px;color:#999}.lh-1,button{line-height:normal}#dmPopup{opacity:0}.dmPopupClose,.dmPopupClose:before{position:absolute;visibility:visible}.dmPopupClose{border-radius:25px;width:27px;height:27px;z-index:1;background-color:rgba(255,255,255,.4);top:12px;right:12px}.dmPopupClose:before{display:block;font-size:20px;color:#000;top:3px;right:3px}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar{width:5px;height:5px}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar-track{background:rgba(0,0,0,.1)}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar-thumb{background:#c8c8c8;box-shadow:inset 0 1px 2px #454545;border-radius:45px}#dm .dmRespRow .dmRespColsWrapper{display:flex}#dm .dmRespColsWrapper,nav{display:block}.align-center{margin-left:auto;margin-right:auto}.text-align-center{text-align:center}body.fix-mobile-scrolling{overflow:initial}#dmRoot{text-decoration-skip-ink:none}@media (min-width:1025px){:root{--btn-text-font-size:16px}}@media (min-width:768px) and (max-width:1024px){:root{--btn-text-font-size:16px}}html{font-family:Source Sans Pro;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}b{font-weight:700}hr{box-sizing:content-box;height:0}button{font-family:inherit;font-size:100%;margin:0;text-transform:none;-webkit-appearance:button}button::-moz-focus-inner{border:0;padding:0}*,:after,:before{box-sizing:border-box}.dmRespRow.dmRespRowNoPadding{padding:0}.dmRespRow{padding-top:15px;padding-bottom:15px}#dm .dmRespRow.dmRespRowNoPadding,.dmContent,.dmInner ul:not(.defaultList),DIV.dmBody{padding:0}.dmRespRow:after,.dmRespRow:before{content:' ';display:table}.dmRespRow,.dmRespRow .dmRespColsWrapper{max-width:960px;position:relative;margin:0 auto;width:100%}#dm .dmSocialHub .socialHubWrapper,.dmDesktopBody .dmRespCol.large-4 .dmHoursOfOperation,.dmHeader,.dmRespRow .dmRespCol>*{max-width:100%}.dmRespRow .dmRespCol{position:relative;width:100%;display:inline-block;vertical-align:top;float:left}.dmDesktopBody .dmRespRow .large-4{position:relative;width:33.33333%}.dmDesktopBody .dmRespRow .large-6{position:relative;width:50%}.dmDesktopBody .dmRespRow .large-12{position:relative;width:100%}.socialHubIcon,[class*=' dm-common-icons-'],[class*=' dm-social-icons-']{font-family:dm-social-icons!important;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.dm-social-icons-facebook:before{content:'\ea90'}.dm-social-icons-instagram:before{content:'\ea92'}.dm-social-icons-twitter:before{content:'\ea96'}.dm-social-icons-youtube:before{content:'\ea9d'}[class*=' dm-common-icons-']{font-family:dm-common-icons!important}.dm-common-icons-close:before{content:'\e901'}[class*=' icon-']{font-family:FontAwesome!important;font-weight:400;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;display:inline;width:auto;height:auto;line-height:normal;vertical-align:baseline;background-image:none;background-position:0 0;background-repeat:repeat;margin-top:0}[class*=' icon-']:before{text-decoration:none;display:inline-block;speak:none}a [class*=' icon-']{display:inline}.icon-angle-down:before{content:'\f107'}.dmInner{min-width:768px!important;font-size:16px;background:#fff;color:#111}#dm .socialHubInnerDiv a:not(:last-child){margin-right:5px}.socialHubIcon{display:flex!important;align-items:center;justify-content:center}*{border:0 solid #333;scrollbar-arrow-color:#fff;scrollbar-track-color:#F2F2F2;scrollbar-face-color:silver;scrollbar-highlight-color:silver;scrollbar-3dlight-color:silver;scrollbar-shadow-color:silver;scrollbar-darkshadow-color:silver;scrollbar-width:12px}body{-webkit-overflow-scrolling:touch;width:100%;overflow:hidden;-webkit-text-size-adjust:100%!important;-ms-text-size-adjust:100%!important}h3,ul{margin-left:0;margin-right:0}DD,DT{margin:0}.dmInner *{-webkit-font-smoothing:antialiased}span.oneIcon:before{display:inline-block}.clearfix,a,li,ul{vertical-align:top}#iscrollBody,#site_content{position:relative}.dmOuter{word-wrap:break-word}.dmDesktopBody .dmInner{min-width:960px}.dmInner a{color:#463939}.dmHeader{background:#fff;color:#111;text-align:center;position:relative;width:100%}.dmContent{margin:0}#site_content ul:not(.defaultList){-webkit-padding-start:0;-moz-padding-start:0;list-style-position:inside}#innerBar{position:relative;height:36px;width:100%;font-size:20px;margin:0;z-index:80}.dmRespRowsWrapper{max-width:960px;margin:0 auto}.dmRespCol>[dmle_extension]:not(:first-child){margin-top:10px}h3{font-weight:400;font-size:23px}.dmNewParagraph{text-align:left;margin:8px 0;padding:2px 0}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol,.dmLargeBody .fHeader .dmRespRow .dmRespCol{padding-left:.75%;padding-right:.75%}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol:first-child,.dmLargeBody .fHeader .dmRespRow .dmRespCol:first-child{padding-left:0;padding-right:1.5%}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol:last-child,.dmLargeBody .fHeader .dmRespRow .dmRespCol:last-child{padding-right:0;padding-left:1.5%}.dmLargeBody .fHeader .dmRespRow .dmRespCol:only-child{padding-left:0;padding-right:0}#innerBar.lineInnerBar{display:table;width:100%;box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;font-size:20px;margin-top:30px;margin-bottom:30px;background-color:transparent;color:#111}#innerBar .titleLine{display:table-cell;vertical-align:middle;width:50%}.dmPageTitleRow:not(#innerBar){display:none}.titleLine hr{min-height:1px;background-color:rgba(17,17,17,.2)}.dmFooterContainer{position:relative}.dmFooter{font-size:1em;font-weight:400;text-align:left;background:#fff;padding:0}.dmLargeBody .dmFooterResp>.dmRespRow .dmRespCol{padding-left:.75%;padding-right:.75%}.dmLargeBody .dmFooterResp>.dmRespRow .dmRespCol:first-child{padding-left:0;padding-right:1.5%}.dmLargeBody .dmFooterResp>.dmRespRow .dmRespCol:last-child{padding-right:0;padding-left:1.5%}.dmLargeBody .dmFooterResp>.dmRespRow .dmRespCol:only-child{padding-left:0;padding-right:0}.dmLinksMenu{float:none!important;display:block}.standardHeaderLayout .dmHeader{float:none}.dmInner a{outline:0;vertical-align:inherit}.dmLinksMenu>ul{display:block;margin:0;font-size:inherit}.dmReadySection .inlineMap{height:163px}.dmReadySection .dmSocialHub{margin:0}.dmReadySection .dmSocialHub>div{text-align:center}#dm .dmReadySection .dmSocialHub a{margin:2px 8px}#dm .dmReadySection h3{margin:0 0 20px;padding:0}.sectionContactBox{margin-bottom:20px}.dmStandardDesktop{display:block;margin:0 auto}#dm .dmwidget-title{margin:10px 0;font-size:23px;text-shadow:none;text-align:left;text-transform:capitalize;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal}#dm .dmDivider{display:block;margin:10px 0}.inlineMap{height:200px;width:100%}.dmHoursOfOperation .open-hours-data{background:0 0;box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;border:0;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;padding:0;margin:0}.dmHoursOfOperation .open-hours-data .open-hours-item{overflow:hidden;padding-bottom:10px}.dmHoursOfOperation .open-hours-data dt{width:40%;float:left;text-align:left}.dmHoursOfOperation .open-hours-data dd{float:right;text-align:right;width:59%}.dmHoursOfOperation .open-hours-data .open-hours-item:last-child{padding-bottom:0}.dmDesktopBody #dm .dmHoursOfOperation .dmwidget-title{padding:3px 0}#dm .dmHoursOfOperation .open-hours-data .open-hours-item:last-child{border:none}#dm .dmSocialHub a{display:inline-block;text-decoration:none;margin:0;vertical-align:bottom}.dmSocialHub>div{text-align:inherit}a span.socialHubIcon{width:36px;height:36px;font-size:31px;display:inline-block;text-align:center;margin-right:0;margin-bottom:5px;line-height:36px;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;background-image:none!important}.socialHubIcon.style5{color:#fff}#dm .dmSocialHub .socialHubWrapper{display:inline-block}body{background-color:#eee}#dm .dmDividerWrapper{display:block}#dm .dmBody .dmRespRowsWrapper{max-width:none;background-color:transparent}.dmLargeBody .dmRespRow{width:100%;max-width:none;margin-left:0;margin-right:0;padding-left:40px;padding-right:40px}#dm .fHeader .dmHeaderContent.freeHeaderRow1{padding:30px 0}.dm-bfs.dm-layout-home div.dmInner{background-color:#fff}.dmStandardDesktop .dmHeader{background-color:#fff;max-width:100%}.dmFooter{background-color:#333;color:#f7f7f7}.dmDivider{min-height:2px;border:currentColor;color:grey;background:0 0}.main-navigation.unifiednav{-js-display:flex;display:flex;justify-content:flex-start;align-items:stretch;overflow:visible}.main-navigation.unifiednav ul{list-style:none;padding:0;margin:0;font-size:1rem}.main-navigation.unifiednav .unifiednav__container{-js-display:flex;display:flex;justify-content:flex-start;list-style:none}.main-navigation.unifiednav:not(.unifiednav_vertical)>.unifiednav__container{flex-wrap:wrap}.main-navigation.unifiednav .unifiednav__container>.unifiednav__item-wrap{-js-display:flex;display:flex;justify-content:flex-start;position:relative;font-weight:400}.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::after,.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::before{content:'';align-self:center;font-weight:700}.main-navigation.unifiednav .unifiednav__container>.unifiednav__item-wrap>.unifiednav__item{-js-display:flex;display:flex;justify-content:flex-start;align-items:center;flex-direction:row;color:inherit;text-decoration:none;position:relative;padding:12px 15px;margin:0;font-weight:inherit;letter-spacing:.03em}.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item{padding:0 15px}.main-navigation.unifiednav .unifiednav__container>.unifiednav__item-wrap>.unifiednav__item .nav-item-text{white-space:nowrap}.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::after,.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::before{content:'';width:100%;height:0;border:0 solid transparent;border-top-color:currentColor;display:block;opacity:0}.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item.dmNavItemSelected .nav-item-text::after,.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item.dmNavItemSelected .nav-item-text::before{opacity:1}.main-navigation.unifiednav.effect-text-color{padding:12px 15px}.main-navigation.unifiednav.effect-text-color .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item.dmNavItemSelected{color:#9a9a9a}.main-navigation.unifiednav .unifiednav__container .unifiednav__item:not(.unifiednav__item_has-sub-nav) .icon{display:none}.main-navigation.unifiednav:not(.unifiednav_vertical)>.unifiednav__container{justify-content:inherit}#dm .p_hfcontainer nav.main-navigation.unifiednav{min-width:9em!important;text-align:initial!important}#dm .main-navigation.unifiednav:not([data-nav-structure=VERTICAL])>.unifiednav__container{flex-wrap:wrap;justify-content:inherit}#dm .main-navigation.unifiednav:not([data-nav-structure=VERTICAL])>.unifiednav__container .nav-item-text::before{text-align:left}#dm .main-navigation.unifiednav:not([data-nav-structure=VERTICAL]) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::after,#dm .main-navigation.unifiednav:not([data-nav-structure=VERTICAL]) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::before,#dm .main-navigation.unifiednav:not([data-nav-structure=VERTICAL])[data-divider]:not([data-direction=RIGHT]) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::before{content:''}.dmRespRow:not(.dmPlaceHolderRespRow) .dmRespColsWrapper .dmRespCol:not(.content-removed):only-child:empty{min-height:100px!important}.standardHeaderLayout .dmHeader{display:block;height:auto}.dmRespRow:not(.dmPlaceHolderRespRow) .dmRespColsWrapper .dmRespCol:not(.content-removed).empty-column,.dmRespRow:not(.dmPlaceHolderRespRow) .dmRespColsWrapper .dmRespCol:not(.content-removed):only-child:empty{min-height:100px}.dmRespRow:not(.dmPlaceHolderRespRow) .dmRespCol:not(.content-removed).empty-column,.dmRespRow:not(.dmPlaceHolderRespRow) .dmRespCol:not(.content-removed):empty{min-height:1px}.dmRespRow:not(.dmPlaceHolderRespRow) .dmRespColsWrapper .dmRespCol:not(.content-removed):only-child.empty-column{min-height:100px}#dm div.dmRespCol>*{line-height:150%}#dm div.dmInner,#dm div.dmInner .dmRespCol{font-weight:400;font-family:Alike,"Alike Fallback";color:rgba(51,62,76,1)}#dm div.dmFooter h3{color:rgba(37,45,55,.75);font-style:normal;font-family:Belgrano,"Belgrano Fallback";font-weight:700}.dmLargeBody .dmBody .dmRespRowsWrapper{background-color:transparent}#dm DIV.dmOuter DIV.dmInner{background-color:rgba(255,255,255,1);background-image:url(https://le-cdn.website-editor.net/s/be5f1646e5624dbb9ad470eed3fd6f37/dms3rep/multi/opt/halftone-2-4x4-1920w.png?Expires=1728815454&Signature=HLZVrIcif1R0XqsnoMNnVzo3kWpkcGmPJhDpcCXQ1NJvlvSCU7TUy0bNLVFY~kSZhE9uRJv1i5kb9sY-lHseS3NMJzlyYKVUqqUBEpzyBbCY5QHzShm2jcCXhRoD3e-gX0lmDy0jBiZtbK5ZprDoJoYYuopD070pe~CholI0rXU9U3frVzBXfkbIc9i3sO9imHsAo5A1T8I-usL6PkZhOdafi7A-lOGo0Ca6ZqeBuP5c7qGKI3CTRorrQtVAkjvxzlf6VPdTYFgEn-6ywmZpxF0-DDkAS147xr0tDtai6l23CbMiXj75ZkX6ttJecehQ85RRIzUE27YL1Pju616mJg__&Key-Pair-Id=K2NXBXLF010TJW);background-size:cover;background-repeat:no-repeat;background-attachment:initial}@media all{:root{--btn-text-direction:ltr;--btn-border-r-color:var(--btn-border-color);--btn-border-l-color:var(--btn-border-color);--btn-border-b-width:var(--btn-border-width);--btn-border-width:0px;--btn-border-radius:1px;--btn-border-t-width:var(--btn-border-width);--btn-border-tl-radius:var(--btn-border-radius);--btn-border-br-radius:var(--btn-border-radius);--btn-border-bl-radius:var(--btn-border-radius);--btn-bg-color:rgb(159, 175, 207);--btn-border-color:rgb(247, 247, 247);--btn-border-tr-radius:var(--btn-border-radius);--btn-border-r-width:var(--btn-border-width);--btn-border-b-color:var(--btn-border-color);--btn-border-l-width:var(--btn-border-width);--btn-border-t-color:var(--btn-border-color);--btn-text-align:center;--btn-text-color:rgb(247, 247, 247);--btn-text-decoration:none;--btn-text-font-weight:700;--btn-text-font-family:"Open Sans","Open Sans Fallback";--btn-icon-color:rgb(247, 247, 247);--btn-icon-fill:rgb(247, 247, 247);--btn-icon-wrpr-display:none;--btn-hover-border-b-color:var(--btn-hover-border-color);--btn-hover-bg:rgb(124, 141, 177);--btn-hover-border-t-color:var(--btn-hover-border-color);--btn-hover-border-r-color:var(--btn-hover-border-color);--btn-hover-border-l-color:var(--btn-hover-border-color);--btn-hover-border-color:rgba(0, 0, 0, 0);--btn-hover-text-color:rgb(255, 255, 255);--btn-hover-text-font-weight:var(--btn-text-font-weight);--btn-hover-text-decoration:var(--btn-text-decoration);--btn-hover-text-font-style:var(--btn-text-font-style)}}@media (min-width:0px) and (max-width:767px){:root{--btn-text-font-size:16px}}#dm .p_hfcontainer div.u_1571063569{background-color:rgba(0,0,0,0)!important}#dm .p_hfcontainer div.u_1840571846 hr{height:1px!important;min-height:1px!important;color:rgba(51,62,76,.6)!important;background-color:rgba(51,62,76,.6)!important}#dm .p_hfcontainer div.u_1179217980 hr,#dm .p_hfcontainer div.u_1251158887 hr{height:0!important;min-height:0!important;border-color:currentColor!important;border-width:1px!important;border-top-style:solid!important}#dm .p_hfcontainer div.u_1505905092{background-color:rgba(0,0,0,0)!important}#dm .p_hfcontainer div.u_1179217980 hr{color:rgba(51,62,76,.6)!important;background:0 0!important;background-size:initial!important}#dm .p_hfcontainer div.u_1820608773{background-color:rgba(0,0,0,0)!important}#dm .dmInner div.dmHeader,#dm .dmInner div.dmHeader.u_hcontainer,#dm .dmInner div.u_hcontainer{background-color:rgba(63,63,63,1)!important;background-image:url(https://le-cdn.website-editor.net/s/be5f1646e5624dbb9ad470eed3fd6f37/dms3rep/multi/opt/halftone-2-4x4-1920w.png?Expires=1728815454&Signature=HLZVrIcif1R0XqsnoMNnVzo3kWpkcGmPJhDpcCXQ1NJvlvSCU7TUy0bNLVFY~kSZhE9uRJv1i5kb9sY-lHseS3NMJzlyYKVUqqUBEpzyBbCY5QHzShm2jcCXhRoD3e-gX0lmDy0jBiZtbK5ZprDoJoYYuopD070pe~CholI0rXU9U3frVzBXfkbIc9i3sO9imHsAo5A1T8I-usL6PkZhOdafi7A-lOGo0Ca6ZqeBuP5c7qGKI3CTRorrQtVAkjvxzlf6VPdTYFgEn-6ywmZpxF0-DDkAS147xr0tDtai6l23CbMiXj75ZkX6ttJecehQ85RRIzUE27YL1Pju616mJg__&Key-Pair-Id=K2NXBXLF010TJW),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9TpUUqHSwo4pChOlkQFemoVShChVArtOpgcukXNGlIUlwcBdeCgx+LVQcXZ10dXAVB8APEzc1J0UVK/F9aaBHjwXE/3t173L0DhEaFaVbPBKDptplOJsRsblUMvEJAGEEMIi4zy5iTpBQ8x9c9fHy9i/Es73N/jn41bzHAJxLPMsO0iTeIZzZtg/M+cYSVZJX4nHjcpAsSP3JdafEb56LLAs+MmJn0PHGEWCx2sdLFrGRqxNPEUVXTKV/ItljlvMVZq9RY+578haG8vrLMdZojSGIRS5AgQkENZVRgI0arToqFNO0nPPzDrl8il0KuMhg5FlCFBtn1g//B726twtRkKymUAHpfHOdjFAjsAs2643wfO07zBPA/A1d6x19tAPFP0usdLXoEhLeBi+uOpuwBlzvA0JMhm7Ir+WkKhQLwfkbflAMGboG+tVZv7X2cPgAZ6ip1AxwcAmNFyl73eHewu7d/z7T7+wFwJnKmZ9+MiwAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB+UCDwksLkLIPkkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAAC0lEQVQI12NgAAIAAAUAAeImBZsAAAAASUVORK5CYII=)!important}#dm .p_hfcontainer nav.u_1284501632.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item{font-family:Montserrat!important;font-weight:700!important;color:rgba(255,255,255,.7)!important}#dm .p_hfcontainer nav.u_1284501632.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item.dmNavItemSelected{color:rgba(127,157,219,1)!important}#dm .dmInner div.dmFooter{background-color:rgba(124,141,177,1)!important;color:#000!important}#dm .p_hfcontainer div.u_1424311868 .open-hours-item dd,#dm .p_hfcontainer div.u_1424311868 .open-hours-item dt,#dm .p_hfcontainer div.u_1424311868 .open-hours-item time{font-weight:400!important;font-family:Alike!important;color:rgba(255,255,255,1)!important}#dm .p_hfcontainer div.u_1424311868 .dmwidget-title{font-family:'Open Sans'!important;font-weight:700!important;color:rgba(255,255,255,1)!important}#dm .p_hfcontainer nav.u_1284501632{color:#fff!important}#dm .p_hfcontainer div.u_1251158887 hr{color:rgba(255,255,255,.15)!important;background:0 0!important;background-size:initial!important}#dm .p_hfcontainer div.u_1472522769{padding-bottom:0!important;padding-top:0!important}#dm .dmInner div.dmHeader,#dm .dmInner div.dmHeader.u_hcontainer,#dm .dmInner div.u_hcontainer{background-repeat:repeat!important;background-size:auto!important}#dm .dmInner div.fHeader .dmHeader[freeheader=true]{margin-bottom:40px!important}#dm .p_hfcontainer div.u_1179217980{padding-bottom:5px!important;margin-top:15px!important}#dm .p_hfcontainer div.u_1505905092{padding-top:10px!important;padding-bottom:10px!important}#dm .p_hfcontainer .u_1755501396 .socialHubIcon{width:24px!important;height:24px!important;font-size:16px!important;line-height:24px!important}#dm .p_hfcontainer .u_1755501396 .socialHubIcon:after{width:32px!important;height:24px!important}#dm .p_hfcontainer div.u_1755501396{display:block!important;float:none!important;top:0!important;left:0!important;width:226px!important;position:relative!important;height:auto!important;max-width:100%!important;min-width:0!important;text-align:left!important;padding:0!important;margin:10px auto 0 0!important}#dm .p_hfcontainer .u_1755501396 .socialHubInnerDiv a{margin-right:0!important}#dm .dmInner div.dmFooter{margin-top:15px!important;padding-top:10px!important}#dm .p_hfcontainer div.u_1424311868{float:none!important;top:0!important;left:0!important;width:225px!important;position:relative!important;height:auto!important;max-width:calc(100% - 0px)!important;min-width:25px!important;text-align:left!important;padding:0!important;margin:0!important}#dm .p_hfcontainer div.u_1039136282,#dm .p_hfcontainer div.u_1956747598{float:none!important;top:0!important;left:0!important;width:100%!important;position:relative!important}#dm .p_hfcontainer div.u_1424311868 .dmwidget-title{font-size:20px!important}#dm .p_hfcontainer div.u_1424311868 .open-hours-item dd,#dm .p_hfcontainer div.u_1424311868 .open-hours-item dt,#dm .p_hfcontainer div.u_1424311868 .open-hours-item time{font-size:14px!important}#dm .p_hfcontainer div.u_1820608773{padding-top:10px!important;padding-bottom:45px!important}#dm .p_hfcontainer div.u_1956747598{height:96px!important;max-width:100%!important;min-width:0!important;text-align:left!important;padding:0!important;margin:18px auto 0!important}#dm .p_hfcontainer div.u_1039136282{height:145px!important;max-width:100%!important;min-width:0!important;text-align:left!important;padding:0!important;margin:20px auto 0!important}#dm .p_hfcontainer h3.u_1055873437,#dm .p_hfcontainer h3.u_1189610661{float:none!important;top:0!important;left:0!important;width:100%!important;position:relative!important;height:auto!important;min-width:0!important;text-align:left!important;padding:0!important;max-width:100%!important}#dm .p_hfcontainer h3.u_1055873437{margin:0 auto!important}#dm .p_hfcontainer h3.u_1189610661{margin:0!important}#dm .p_hfcontainer div.u_1542715283,#dm .p_hfcontainer div.u_1945822334{left:0!important;width:auto!important;position:relative!important;height:auto!important;min-width:0!important;text-align:center!important;margin:0!important;float:none!important;top:0!important}#dm .p_hfcontainer div.u_1437076231{padding-top:10px!important}#dm .p_hfcontainer div.u_1542715283{max-width:100%!important;padding:0 40px!important}#dm .p_hfcontainer div.u_1945822334{max-width:100%!important;padding:.5px 40px!important}#dm .dmBody div.u_1663260243,#dm .p_hfcontainer nav.u_1284501632{min-width:25px!important;left:0!important;position:relative!important;height:auto!important}#dm .p_hfcontainer nav.u_1284501632{float:none!important;top:0!important;width:calc(100% - 0px)!important;max-width:100%!important;justify-content:center!important;align-items:stretch!important;text-align:start!important;padding:12px 15px!important;margin:10px 0 0!important}#dm .p_hfcontainer div.u_1571063569{width:auto!important;margin:0 0 20px!important;padding:0 30px 10px!important}#dm .p_hfcontainer div.u_1840571846{margin-top:15px!important;margin-bottom:15px!important}#dm .dmBody div.u_1663260243{float:none!important;top:0!important;width:calc(100% - 0px)!important;max-width:436px!important;text-align:left!important;padding:2px 0!important;margin:8px 0!important}#dm .dmBody div.u_1475506472{margin:0!important;padding:0 14.39px 0 0!important}#dm .dmBody div.u_1506589965{float:none!important;top:0!important;left:0!important;width:auto!important;position:relative!important;height:auto!important;max-width:100%!important;min-width:0!important;text-align:center!important;padding:85px 40px 136px!important;margin:0!important}#dm .dmBody div.u_1918652435{background-repeat:no-repeat!important;background-image:url(https://le-cdn.website-editor.net/s/be5f1646e5624dbb9ad470eed3fd6f37/dms3rep/multi/opt/IMG_9512-47d5b308-720h.JPG?Expires=1728815454&Signature=XdN7Te7Nw0U7i21G6wsQnC5TpDEUT2UST~Co6bkuo90GLX~0BTAqW3qlaNyI-VEOHV18EC-g-RT9NyB8SiICPkdCKWKyG3k5N1xP1a3aLzbHQcZ5MpHgJgTG6KtpF1IipbOCPJeiWtyI4Fb2gCKob1RqoXLSVL9jRAlChNIQsK-zqhdDYFkIbaPKjah8~Avvi7Mwn81zCL3XQw9Tdhu2Bv5kvUM0R4SuN68iV2-oJEkT2jNNCghLOX5hSGDJrXObsfpbBMddqag~ApQANLJW9XEF6DwBAm4CAS5~n-LbecVcMAtXJ~vg4MnpC4CWFCrsfbeA2xTcVI9yiNGdyhl9hQ__&Key-Pair-Id=K2NXBXLF010TJW),url(data:image/png?Expires=1728815454&Signature=VimIFiCnypbkMWJs8HlSVYWX1FC3C11Jf29rVDFA2NwrQ8ho8TDRuPEJ7LbAGeLCWftWi0~ylyCmTLUMMS~77kQBH0W9Jn02PMi2bywlLrBmx18lP2lRxxoiqKM919YMqduYoYpWj6w6Wub~60kf3rbo5ihEuLtNq71Ja1IKQxkP6dyiRmoc8MittugBX7lG8IMm0x0fRzyPCBSUSI1rNhQ4GMTaYLNYbOk4pV9S8J5TlF1QK7zzkwINgqQ53P3LDqnHBxy0xP2-3J5RT~cGax0-a5Za7lEGtZuzWItRQMm16gCLxFR52~68hDbN8x1RfYcZV5J5l6vfJmitzjWv1g__&Key-Pair-Id=K2NXBXLF010TJW;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9TpUUqHSwo4pChOlkQFemoVShChVArtOpgcukXNGlIUlwcBdeCgx+LVQcXZ10dXAVB8APEzc1J0UVK/F9aaBHjwXE/3t173L0DhEaFaVbPBKDptplOJsRsblUMvEJAGEEMIi4zy5iTpBQ8x9c9fHy9i/Es73N/jn41bzHAJxLPMsO0iTeIZzZtg/M+cYSVZJX4nHjcpAsSP3JdafEb56LLAs+MmJn0PHGEWCx2sdLFrGRqxNPEUVXTKV/ItljlvMVZq9RY+578haG8vrLMdZojSGIRS5AgQkENZVRgI0arToqFNO0nPPzDrl8il0KuMhg5FlCFBtn1g//B726twtRkKymUAHpfHOdjFAjsAs2643wfO07zBPA/A1d6x19tAPFP0usdLXoEhLeBi+uOpuwBlzvA0JMhm7Ir+WkKhQLwfkbflAMGboG+tVZv7X2cPgAZ6ip1AxwcAmNFyl73eHewu7d/z7T7+wFwJnKmZ9+MiwAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB+UCDwksLkLIPkkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAAC0lEQVQI12NgAAIAAAUAAeImBZsAAAAASUVORK5CYII=)!important;background-size:cover!important;border-style:solid!important;border-width:0!important;margin:0 0 80px!important;padding:300px 0!important}.size-20,.size-20>font{font-size:20px!important}.size-14,.size-14>font{font-size:14px!important} #dm .dmPhotoGallery.newPhotoGallery .dmPhotoGalleryHolder {display: none;} @media (max-width:767px){ [data-hidden-on-mobile] {display:none!important}}
+    .dmDesktopBody [data-anim-desktop]:not([data-anim-desktop='none']) {
+        visibility: hidden;
+    }
+
+    
+</style>
+
+
+
+<style id="fontFallbacks">
+    @font-face {
+  font-family: "Lobster Two Fallback";
+  src: local('Arial');
+  ascent-override: 123.9905%;
+  descent-override: 30.9976%;
+  size-adjust: 80.6513%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Belgrano Fallback";
+  src: local('Arial');
+  ascent-override: 87.5736%;
+  descent-override: 24.5914%;
+  size-adjust: 113.0478%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Creepster Fallback";
+  src: local('Arial');
+  ascent-override: 104.0992%;
+  descent-override: 23.8338%;
+  size-adjust: 91.3717%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Helvetica Fallback";
+  src: local('Arial');
+  ascent-override: 77.002%;
+  descent-override: 22.998%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Alfa Slab One Fallback";
+  src: local('Arial');
+  ascent-override: 85.4761%;
+  descent-override: 27.4744%;
+  size-adjust: 121.2035%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Creepster Fallback";
+  src: local('Arial');
+  ascent-override: 104.0992%;
+  descent-override: 23.8338%;
+  size-adjust: 91.3717%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Lobster Fallback";
+  src: local('Arial');
+  ascent-override: 114.651%;
+  descent-override: 28.6627%;
+  size-adjust: 87.2212%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Montserrat Fallback";
+  src: local('Arial');
+  ascent-override: 84.9466%;
+  descent-override: 22.0264%;
+  size-adjust: 113.954%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Cabin Fallback";
+  src: local('Arial');
+  ascent-override: 101.7818%;
+  descent-override: 26.3684%;
+  size-adjust: 94.8106%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Arvo Fallback";
+  src: local('Arial');
+  ascent-override: 87.6577%;
+  descent-override: 22.538%;
+  line-gap-override: 2.4498%;
+  size-adjust: 109.6239%;
+}@font-face {
+  font-family: "Oswald Fallback";
+  src: local('Arial');
+  ascent-override: 145.0682%;
+  descent-override: 35.1423%;
+  size-adjust: 82.2372%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Alike Fallback";
+  src: local('Arial');
+  ascent-override: 96.9517%;
+  descent-override: 26.6026%;
+  size-adjust: 101.4938%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Open Sans Fallback";
+  src: local('Arial');
+  ascent-override: 101.1768%;
+  descent-override: 27.7323%;
+  size-adjust: 105.6416%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Eater Fallback";
+  src: local('Arial');
+  ascent-override: 100.9625%;
+  descent-override: 32.0168%;
+  size-adjust: 140.1549%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Abril Fatface Fallback";
+  src: local('Arial');
+  ascent-override: 102.6391%;
+  descent-override: 28.2306%;
+  size-adjust: 103.0796%;
+  line-gap-override: 0%;
+ }
+</style>
+
+
+<!-- End render the required css and JS in the head section -->
+
+
+
+
+
+
+
+
+
+  <link type="application/rss+xml" rel="alternate" href="https://www.julianloss.com//feed/rss2">
+  <link type="application/atom+xml" rel="alternate" href="https://www.julianloss.com//feed/atom">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+
+
+
+
+<!-- SYS- MUFORDFfRVVfUFJPRA== -->
+<script src="Julian_Loss_files/snippet.js"></script><link href="data:text/css,%3Ais(%5Bid*%3D'google_ads_iframe'%5D%2C%5Bid*%3D'taboola-'%5D%2C.taboolaHeight%2C.taboola-placeholder%2C%23credential_picker_container%2C%23credentials-picker-container%2C%23credential_picker_iframe%2C%5Bid*%3D'google-one-tap-iframe'%5D%2C%23google-one-tap-popup-container%2C.google-one-tap-modal-div%2C%23amp_floatingAdDiv%2C%23ez-content-blocker-container)%20%7Bdisplay%3Anone!important%3Bmin-height%3A0!important%3Bheight%3A0!important%3B%7D" rel="stylesheet" type="text/css"><script src="Julian_Loss_files/skrollr.min.js"></script><script src="Julian_Loss_files/22728.js" type="text/javascript"></script></head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body id="dmRoot" data-page-alias="home" class="dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmResellerSite dmLargeBody  pcCustomScrollbar d1SiteBody dmBodyNoIscroll" style="padding:0;margin:0;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========= Site Content ========= -->
+<div id="dm" class="dmwr">
+    
+    <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+         <div dmwrapped="true" id="1901957768" class="dm-home-page" themewaschanged="true"> <div dmtemplateid="StandardLayoutMultiD" class="standardHeaderLayout dm-bfs dm-layout-home hasAnimations dmPageBody d-page-1716942098 dmFreeHeader runtime-module-container" id="dm-outer-wrapper" data-page-class="1716942098" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div> <div id="iscrollBody"> <div id="site_content"> <div class="dmHeaderContainer fHeader d-header-wrapper"> <div id="hcontainer" class="u_hcontainer dmHeader p_hfcontainer" freeheader="true"> <div dm:templateorder="85" class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236"> <div class="u_1945822334 dmRespRow" style="text-align: center;" id="1945822334"> <div class="dmRespColsWrapper" id="1531770931"> <div class="u_1437076231 dmRespCol small-12 medium-12 large-12" id="1437076231"> <span id="1187770996"></span> 
+ <div class="dmNewParagraph" data-element-type="paragraph" id="1045529370" data-styletopreserve="{" background-image="" :=""><div style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 36px;"><br></span></div><div style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 36px;"><br></span></div><div style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 36px;">JULIAN LOSS</span></div></div></div> 
+</div> 
+</div> 
+ <div class="u_1542715283 dmRespRow" style="text-align: center;" id="1542715283"> <div class="dmRespColsWrapper" id="1968593878"> <div class="u_1014175553 dmRespCol small-12 large-4 medium-4" id="1014175553"> <div class="dmDividerWrapper clearfix u_1840571846" id="1840571846" data-element-type="dDividerId"><hr class="dmDivider" style="min-height: 2px; border:none; background:grey" id="1446988755"></div> 
+</div> 
+ <div class="u_1619522755 dmRespCol small-12 large-4 medium-4" id="1619522755"> <span id="1621261575"></span> 
+ <div class="dmDividerWrapper clearfix u_1251158887" id="1251158887" layout="divider-style-1" data-element-type="dDividerId" data-widget-version="2"><hr class="dmDivider" style="min-height: 2px; border:none; background:grey" id="1290637177"></div> 
+</div> 
+ <div class="u_1070665750 dmRespCol small-12 large-4 medium-4" id="1070665750"> <div class="dmDividerWrapper clearfix u_1179217980" id="1179217980" layout="divider-style-1" data-element-type="dDividerId" data-widget-version="2"><hr class="dmDivider" style="min-height: 2px; border:none; background:grey" id="1165199556"></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1571063569 dmRespRow dmHeaderContent freeHeaderRow1" id="1571063569"> <div class="dmRespColsWrapper clearfix" id="1618005341"> <div class="u_1780181932 dmRespCol small-12 medium-12 large-12" id="1780181932"> <span id="1520082955"></span> 
+ <nav class="u_1284501632 effect-text-color main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="horizontal_nav_layout_2" layout-sub="submenu_horizontal_1" data-show-vertical-sub-items="HOVER" id="1284501632" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" navigation_id="" data-nav-structure="HORIZONTAL" wr="false" icon="true" surround="false" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="https://www.julianloss.com/" class="unifiednav__item   dmUDNavigationItem_00 currentPage dmNavItemSelected" target="" data-target-page-alias="" data-auto="selected-page" tabindex="0"> <span class="nav-item-text " data-link-text="
+         HOME
+        " data-auto="page-text-style">HOME<span class="icon icon-angle-down"></span></span> 
+</a> 
+</li> 
+ <li role="menuitem" class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="https://www.julianloss.com/publications" class="unifiednav__item  dmUDNavigationItem_010101857252" target="" data-target-page-alias="" tabindex="0"> <span class="nav-item-text " data-link-text="
+         PUBLICATIONS
+        " data-auto="page-text-style">PUBLICATIONS<span class="icon icon-angle-down"></span></span> 
+</a> 
+</li> 
+ <li role="menuitem" class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="https://www.julianloss.com/cv" class="unifiednav__item  dmUDNavigationItem_010101701269" target="" data-target-page-alias="" tabindex="0"> <span class="nav-item-text " data-link-text="
+         CV
+        " data-auto="page-text-style">CV<span class="icon icon-angle-down"></span></span> 
+</a> 
+</li> 
+ <li role="menuitem" class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="https://www.julianloss.com/students/advising" class="unifiednav__item  dmUDNavigationItem_010101111647" target="" data-target-page-alias="" tabindex="0"> <span class="nav-item-text " data-link-text="
+         STUDENTS/ADVISING
+        " data-auto="page-text-style">STUDENTS/ADVISING<span class="icon icon-angle-down"></span></span> 
+</a> 
+</li> 
+ <li role="menuitem" class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="https://www.julianloss.com/personal" class="unifiednav__item  dmUDNavigationItem_010101771740" target="" data-target-page-alias="" tabindex="0"> <span class="nav-item-text " data-link-text="
+         PERSONAL
+        " data-auto="page-text-style">PERSONAL<span class="icon icon-angle-down"></span></span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow dmRespRowStable dmRespRowNoPadding dmPageTitleRow "> <div class="dmRespColsWrapper"> <div class="large-12 dmRespCol"> <div id="innerBar" class="innerBar lineInnerBar dmDisplay_None"> <div class="titleLine display_None"><hr></div> 
+<!-- Page title is hidden in css for new responsive sites. It is left here only so we don't break old sites. Don't copy it to new layouts --> <div id="pageTitleText"></div> 
+ <div class="titleLine display_None"><hr></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div dmwrapped="true" id="dmFirstContainer" class="dmBody u_dmStyle_template_home dm-home-page" themewaschanged="true"> <div id="allWrapper" class="allWrapper"><!-- navigation placeholders --> <div id="dm_content" class="dmContent"> <div dm:templateorder="170" class="dmHomeRespTmpl mainBorder dmRespRowsWrapper dmFullRowRespTmpl dmRespRowsWrapperSize6" id="1716942098" style="min-height: 1093px;"> <div class="u_1506589965 dmRespRow" style="text-align: center;" id="1506589965"> <div class="dmRespColsWrapper" id="1450439120"> <div class="u_1475506472 dmRespCol small-12 large-6 medium-6" id="1475506472"> <div data-inject="home-At5row2Paragraph" class="u_1663260243 dmNewParagraph" id="1663260243" style="transition: opacity 1s ease-in-out;"><div style="text-align: justify;"><span style="background-color: transparent;">I
+ am a tenured faculty member at CISPA Helmholtz Center for Information 
+Security. I am broadly interested in cryptography and its applications 
+to distributed algorithms. </span>My research is generously supported by an ERC Starting Grant and a grant from DFG (German Research Foundation).</div></div></div> 
+ <div class="dmRespCol empty-column large-6 medium-6 small-12 u_1918652435" id="1918652435"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmFooterContainer" style="">     <div id="fcontainer" class="f_hcontainer dmFooter p_hfcontainer"><div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428"><div class="dmRespRow u_1505905092" style="text-align: center;" id="1505905092"><div class="dmRespColsWrapper" id="1635811674"><div class="dmRespCol small-12 medium-12 large-12" id="1779751726"><div data-inject="home-At5subscriptionText" class="u_1167365642 dmNewParagraph" id="1167365642" style="transition: opacity 1s ease-in-out;">ABONNIER YOU OUR NEWS LETTER</div></div></div></div> 
+ 
+ 
+    
+ 
+ 
+    <div class="dmRespRow u_1472522769" style="text-align: center;" id="1472522769"> <div class="dmRespColsWrapper" id="1528715676"> <div class="dmRespCol small-12 medium-12 large-12 empty-column" id="1477716553"></div> 
+</div> 
+</div><div class="u_1820608773 dmRespRow dmReadySection" dm:templateid="Footer" id="1820608773"><div class="dmRespColsWrapper footerSection" id="1833700962"><div class="u_1075114159 dmRespCol small-12 large-4 medium-4" id="1075114159"><h3 id="1055873437" class="u_1055873437"><span style="font-family:'Open Sans', 'Open Sans Fallback';"><b><span style="font-weight: 700;" class="size-20 lh-1"><font data-inject="home-At5footerContactTitle" style="color: rgb(255, 255, 255);">Contact</font></span></b></span></h3>   <div class="u_1956747598 sectionContactBox" id="1956747598"><span class="size-14 lh-1"><font style="color: rgb(255, 255, 255);"><span data-inject="semantic-AddressLabel">Here you can find us:</span> 
+ <span data-inject="semantic-FullAddress">Prinz-Regent-Straße 5, 44799 Bochum, Germany</span> 
+ <br><span data-inject="semantic-EmailLabel">E-mail:</span> 
+ <span data-inject="semantic-EmailAddress">lossjulian-gmail.com</span> 
+ <br><span data-inject="semantic-PhoneLabel">Call us:</span> 
+ <span data-inject="semantic-PhoneNumber">+49 170 7075568</span></font></span></div> 
+  
+      
+ 
+   
+ 
+   
+ 
+   
+ 
+ 
+ 
+ 
+ 
+   
+ <span style="clear:both;display:block" id="1479065201"></span><div class="u_1755501396 align-center text-align-center dmSocialHub" id="1755501396" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv "> <a href="https://facebook.com/" target="_blank" dm_dont_rewrite_url="true" aria-label="facebook" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event('socialLink', 'click', 'Facebook')"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style5" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://twitter.com/" target="_blank" dm_dont_rewrite_url="true" aria-label="twitter" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event('socialLink', 'click', 'Twitter')"> <span class="dmSocialTwitter dm-social-icons-twitter oneIcon socialHubIcon style5" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="http://instagram.com/" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event('socialLink', 'click', 'Instagram')"> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style5" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://youtube.com/" target="_blank" dm_dont_rewrite_url="true" aria-label="youtube" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event('socialLink', 'click', 'Youtube')"> <span class="dmSocialYoutube dm-social-icons-youtube oneIcon socialHubIcon style5" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+</div> 
+</div> 
+</div></div><div class="u_1477142728 dmRespCol small-12 large-4 medium-4" id="1477142728"><span id="1411842046"></span><h3 id="1189610661" class="u_1189610661"><span style="font-family:'Open Sans', 'Open Sans Fallback';"><b><span style="font-weight: 700;" class="size-20 lh-1"><font data-inject="home-At5footerFindUsTitle" style="color: rgb(255, 255, 255);">Directions</font></span></b></span></h3>   
+ 
+ 
+   
+  <div class="u_1039136282 inlineMap" data-type="inlineMap" data-lat="" ""="" data-lng="" data-address="Prinz-Regent-Straße 5, 44799 Bochum, Germany" data-height="145" data-msid="" data-mapurl="" data-lang="de" data-color-scheme="" data-zoom="13" data-layout="layout4" data-popup-display="" data-popup-show="false" data-popup-title="" data-popup-title-visible="false" data-popup-description="" data-popup-description-visible="false" id="1039136282" dmle_extension="mapextension" data-element-type="mapextension" modedesktop="map" addresstodisplay="Prinz-Regent-Straße 5, 44799 Bochum, Germany" modemobile="button" geocompleteaddress="Prinz-Regent-Straße 5, 44799 Bochum, Germany" layout="layout4" data-inject="semantic-MapAddress" modetablet="map" wr="false" icon="true" surround="true" description="Anfahrt" icon-name="icon-map-marker" street="" city="" country="US" country_full="United States" zip="" provider="mapbox" lon="" lat="" height="145" zoom="13" data-popup-display-desktop="" data-popup-display-mobile=""> <div class="mapContainer" style="height: 100%; width: 100%; overflow: hidden; z-index: 0;"></div> 
+</div></div><div class="dmRespCol small-12 medium-4 large-4" id="1163702631"><span id="1634798767"></span><div class="u_1424311868 default dmHoursOfOperation" id="1424311868" dmle_extension="open_hours" data-element-type="open_hours" time_format="24" data-inject="home-At5businessHoursTitle" wr="true" displaytitle="true" forcedisplay="false" icon="true" surround="true" adwords="" editablewidget="true" data-widget-type="hoursOfOperation"><h3 class="dmwidget-title ">Opening times</h3> 
+   <dl class="open-hours-data"><div class="open-hours-item"><dt day="0">Mon - Fr</dt> 
+  <dd><time>9:00</time> 
+- <time>17:00</time></dd></div> 
+ 
+ 
+  <div class="open-hours-item"><dt day="5">Sa - Sun</dt> 
+ <dd>Closed</dd></div></dl></div></div></div></div></div> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+<div id="1236746004" dmle_extension="powered_by" data-element-type="powered_by" icon="true" surround="false"></div></div></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+
+    </div>
+</div>
+<!--  Add full CSS and Javascript before the close tag of the body if needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Google Fonts Include -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- loadCSS function fonts.jsp-->
+
+
+
+<link type="text/css" rel="stylesheet" href="Julian_Loss_files/css2.css">
+
+
+
+
+
+<!-- RT CSS Include d-css-runtime-desktop-one-package-structured-global-->
+<link rel="stylesheet" type="text/css" href="Julian_Loss_files/d-css-runtime-desktop-one-package-structured-global.min.css">
+
+<!-- End of RT CSS Include -->
+
+<link type="text/css" rel="stylesheet" href="Julian_Loss_files/6425156399a58424865b48bd7106d7c8.css" id="widgetCSS">
+
+<!-- Support `img` size attributes -->
+<style>img[width][height] {
+  height: auto;
+}</style>
+
+<!-- Support showing sticky element on page only -->
+<style>
+  body[data-page-alias="home"] #dm [data-show-on-page-only="home"] {
+    display: block !important;
+  }
+</style>
+
+<!-- This is populated in Ajax navigation -->
+<style id="pageAdditionalWidgetsCss" type="text/css">
+</style>
+
+
+
+
+<!-- Site CSS -->
+<link type="text/css" rel="stylesheet" href="Julian_Loss_files/be5f1646e5624dbb9ad470eed3fd6f37_withFlex_1.min.css" id="siteGlobalCss">
+
+
+<!-- additional css file per platform -->
+<link type="text/css" rel="stylesheet" href="Julian_Loss_files/1and1-runtime.css">
+
+
+<style id="customWidgetStyle" type="text/css">
+
+</style>
+<style id="innerPagesStyle" type="text/css">
+    
+</style>
+
+
+<style id="additionalGlobalCss" type="text/css">
+</style>
+
+<!-- Page CSS -->
+<link type="text/css" rel="stylesheet" href="Julian_Loss_files/be5f1646e5624dbb9ad470eed3fd6f37_home_withFlex_1.min.css" id="homeCssLink">
+
+<style id="pagestyle" type="text/css">
+    
+</style>
+
+<style id="pagestyleDevice" type="text/css">
+    
+</style>
+
+<!-- Flex Sections CSS -->
+
+
+
+
+
+<style id="globalFontSizeStyle" type="text/css">
+    .font-size-20, .size-20, .size-20 > font { font-size: 20px !important; }.font-size-14, .size-14, .size-14 > font { font-size: 14px !important; }
+</style>
+<style id="pageFontSizeStyle" type="text/css">
+</style>
+
+<!-- ========= JS Section ========= -->
+
+<script>
+    var isWLR = true;
+
+    window.customWidgetsFunctions = {};
+    window.customWidgetsStrings = {};
+    window.collections = {};
+    window.currentLanguage = "GERMAN"
+    window.isSitePreview = false;
+</script>
+<script type="text/javascript">
+
+    var d_version = "production_4754";
+    var build = "2024-09-12T14_07_42";
+    window['v' + 'ersion'] = d_version;
+
+    function buildEditorParent() {
+        window.isMultiScreen = true;
+        window.editorParent = {};
+        window.previewParent = {};
+        window.assetsCacheQueryParam = "?version=2024-09-12T14_07_42";
+        try {
+            var _p = window.parent;
+            if (_p && _p.document && _p.$ && _p.$.dmfw) {
+                window.editorParent = _p;
+            } else if (_p.isSitePreview) {
+                window.previewParent = _p;
+            }
+        } catch (e) {
+
+        }
+    }
+
+    buildEditorParent();
+</script>
+
+<!-- Load jQuery -->
+<script type="text/javascript" id="d-js-jquery" src="Julian_Loss_files/jquery.min.js"></script>
+<!-- End Load jQuery -->
+<!-- Injecting site-wide before scripts -->
+<!-- End Injecting site-wide to the head -->
+
+
+<script>
+    var _jquery = window.$;
+
+    var jqueryAliases = ['$', 'jquery', 'jQuery'];
+
+    jqueryAliases.forEach((alias) => {
+        Object.defineProperty(window, alias, {
+            get() {
+                return _jquery;
+            },
+            set() {
+                console.warn("Trying to over-write the global jquery object!");
+            }
+        });
+    });
+    window.jQuery.migrateMute = true;
+</script>
+<script>
+    window.cookiesNotificationMarkupPreview = 'null';
+</script>
+
+<!-- HEAD RT JS Include -->
+<script id="d-js-params">
+    window.INSITE = window.INSITE || {};
+    window.INSITE.device = "desktop";
+
+    window.rtCommonProps = {};
+    rtCommonProps["rt.ajax.ajaxScriptsFix"] =true;
+    rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
+    rtCommonProps["runtimecollector.url"] = 'https://rtc.website-editor.net';
+    rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+    rtCommonProps["inlineEditGrid.snap"] =true;
+    rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
+    rtCommonProps["rt.pushnotifs.force.button"] =true;
+    rtCommonProps["common.mapbox.token"] = 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw';
+    rtCommonProps["common.mapbox.js.override"] =false;
+    rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+    rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+    rtCommonProps["isCoverage.test"] =false;
+    rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+    rtCommonProps["feature.flag.mappy.kml"] =false;
+    rtCommonProps["common.resources.dist.cdn"] =true;
+    rtCommonProps["common.build.dist.folder"] = 'production/4754';
+    rtCommonProps["common.resources.cdn.host"] = 'https://static-cdn.website-editor.net';
+    rtCommonProps["common.resources.folder"] = 'https://static-cdn.website-editor.net/mnlt/production/4754';
+    rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.respectCssAnimationProps.enabled"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.sites.google.analytics.gtag"] =true;
+    rtCommonProps["feature.flag.runOnReadyNewTask"] =true;
+    rtCommonProps["isAutomation.test"] =false;
+
+    
+    rtCommonProps['common.mapsProvider'] = 'mapbox';
+    
+    rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+    rtCommonProps['common.geocodeProvider'] = 'mapbox';
+    rtCommonProps['common.map.defaults.radiusSize'] = '1500';
+    rtCommonProps['common.map.defaults.radiusBg'] = 'rgba(255, 255, 255, 0.4)';
+    rtCommonProps['common.map.defaults.strokeColor'] = 'rgba(255, 255, 255, 1)';
+    rtCommonProps['common.map.defaults.strokeSize'] = '2';
+    rtCommonProps['server.for.resources'] = '';
+    rtCommonProps['feature.flag.lazy.widgets'] = true;
+    rtCommonProps['feature.flag.single.wow'] = false;
+    rtCommonProps['feature.flag.disallowPopupsInEditor'] = true;
+    rtCommonProps['feature.flag.mark.anchors'] = true;
+    rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
+    rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
+    rtCommonProps["images.sizes.small"] =160;
+    rtCommonProps["images.sizes.mobile"] =640;
+    rtCommonProps["images.sizes.tablet"] =1280;
+    rtCommonProps["images.sizes.desktop"] =1920;
+    rtCommonProps["modules.resources.cdn"] =true;
+    rtCommonProps["import.images.storage.imageCDN"] = 'https://le-cdn.website-editor.net/';
+    rtCommonProps["facebook.api.version"] = '7.0';
+    rtCommonProps["feature.flag.runtime.inp.threshold"] =150;
+    rtCommonProps["feature.flag.performance.logs"] =true;
+    rtCommonProps["site.widget.form.captcha.type"] = 'g_recaptcha';
+    rtCommonProps["friendly.captcha.site.key"] = 'FCMGSQG9GVNMFS8K';
+    rtCommonProps["cookiebot.mapbox.consent.category"] = 'marketing';
+    rtCommonProps["platform.monolith.personalization.dateTimeCondition.popupMsgAction.moveToclient.enabled"] =false;
+
+    // feature flags that's used out of runtime module (in  legacy files)
+    rtCommonProps["site.runtime.video.background.ssr"] =true;
+
+    window.rtFlags = {};
+    rtFlags["unsuspendEcwidStoreOnRuntime.enabled"] =false;
+    rtFlags["scripts.widgetCount.enabled"] =true;
+    rtFlags["ecom.monolith.signup.widget.js.creds.via.body"] = true;
+    rtFlags["ecom.ecwid.categoryPage.modifyLinks"] = true;
+    rtFlags["ecom.ecwid.delegateNavigationToEcwid.enabled"] = false;
+    rtFlags["ecom.ecwidNewUrlStructure.enabled"] = false;
+    rtFlags["ecom.ecwid.old.store.fix.scrolling.enabled"] = true;
+    rtFlags["ecom.ecwid.old.store.fix.facebook.share"] = true;
+    rtFlags["ecom.ecwid.fallBackInCaseLinksNotFound.enabled"] = true;
+    rtFlags["feature.flag.photo.gallery.exact.size"] =true;
+    rtFlags["new.store.fix.ecwid.back.bug"] =true;
+    rtFlags["facebook.runtime.widgets.upgrade"] =true;
+    rtFlags["ecom.ecwid.solve.url.modifications"] = true;
+    rtFlags["ecom.ecwid.configOptions"] = true;
+    rtFlags["geocode.search.localize"] =false;
+    rtFlags["feature.flag.runtime.newAnimation.asyncInit.setTimeout.enabled"] =false;
+    rtFlags["site.contact.form.fix.for.attribute"] =true;
+    rtFlags["contact.form.date.format.enabled"] = true;
+    rtFlags["twitter.heightLimit.enabled"] = true;
+    rtFlags["ecom.ecwid.fixTranslations.enabled"] = true;
+    rtFlags["runtime.load.script.native"] =true;
+    rtFlags["editor.classicHybrid.photogallery.fix"] =true;
+    rtFlags["runtime.lottieOverflow"] =false;
+    rtFlags["runtime.monitoring.sentry.ignoreErrors"] = "";
+    rtFlags["ecom.ecwid.old.store.fix.scrolling.detect.enable"] =true;
+    rtFlags["contact.form.browserValidation.enabled"] =true;
+</script>
+<script src="Julian_Loss_files/d-js-one-runtime-unified-desktop.min.js" id="d-js-core"></script>
+<!-- End of HEAD RT JS Include -->
+<script>
+    
+    $(window).bind("orientationchange", function (e) {
+        $.layoutManager.initLayout();
+        
+    });
+    $(document).resize(function () {
+        
+    });
+</script>
+<script type="text/javascript" id="d_track_campaign">
+(function() {
+ 	var campaign = (/utm_campaign=([^&]*)/).exec(window.location.search);
+
+ 	if (campaign && campaign != null && campaign.length > 1) {
+ 		campaign = campaign[1];
+ 		document.cookie = "_dm_rt_campaign=" + campaign + ";expires=" + new Date().getTime() + 24*60*60*1000 + ";domain=" + window.location.hostname + ";path=/";
+ 	}
+}());
+</script>
+<script type="text/javascript">
+  var _dm_gaq = {};
+  var _gaq = _gaq || [];
+  var _dm_insite = [];
+</script>
+
+<script type="text/javascript" id="d_track_sp">
+;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//d1dxoqu0t5mb7j.cloudfront.net/sp-2.0.0-dm-0.1.min.js","snowplow"));
+window.dmsnowplow  = window.snowplow;
+
+dmsnowplow('newTracker', 'cf', 'd1dxoqu0t5mb7j.cloudfront.net', { // Initialise a tracker
+  appId: 'be5f1646e5624dbb9ad470eed3fd6f37'
+});
+
+// snowplow queries element styles so we wait until CSS calculations are done.
+requestAnimationFrame(() => {
+	dmsnowplow('trackPageView');
+	_dm_insite.forEach((rule) => {
+		// Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
+		// the tracking is in popup.js
+		if (rule.actionName !== "popup") {
+			dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
+		}
+		window?.waitForDeferred?.('dmAjax', () => {
+			$.DM.events.trigger('event-ruleTriggered', {value: rule});
+		});
+	});
+});
+</script>
+   <div style="display:none;" id="P6iryBW0Wu"></div>
+
+<!-- photoswipe markup -->
+
+
+
+
+
+
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (ESC)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Full screen on/off"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Enlarge/smaller"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Back (arrow to the left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Continue (arrow to the right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div id="fb-root" data-locale="de_DE"></div>
+<!-- Alias: be5f1646e5624dbb9ad470eed3fd6f37 -->
+<div class="dmPopupMask" id="dmPopupMask"></div>
+<div id="dmPopup" class="dmPopup">
+	<div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="dmHidePopup(event);"></div> </div>
+ 	<div class="dmPopupTitle"> <span></span>Share by:</div> 
+	<div class="data"></div>
+</div><script id="d_track_personalization">
+	window?.waitForDeferred?.('dmAjax', () => {
+		// Collects client data and updates cookies used by smart sites
+		window.expireDays = 365;
+		window.visitLength = 30 * 60000;
+		$.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), window.expireDays);
+			setSmartSiteCookiesInternal("dm_this_page_view","dm_last_page_view","dm_total_visits","dm_last_visit");
+	});
+</script>
+<script type="text/javascript">
+    
+    Parameters.NavigationAreaParams.MoreButtonText = '......';
+    
+    Parameters.NavigationAreaParams.LessButtonText = '......';
+    Parameters.HomeLinkText = 'Home';
+    </script>
+<!--  End Script tags -->
+
+<!--  Site Wide Html Markup -->
+<!--  Site Wide Html Markup -->
+<!--  Begin Product Custom HTML Markup -->
+<script>
+function call1and1Tracking() {
+	var externalId = dmAPI.getSiteExternalId();
+	var siteName = dmAPI.getSiteName();
+	var src = 'https://integration.mywebsite-editor.com/dakota-snippet-service/snippet/integration/snippet.js?sitename='+siteName+'&external_uid='+externalId+'&mode=visit'
+	var tracking = document.createElement('script');
+     tracking.setAttribute('src',src);
+   	document.head.appendChild(tracking);
+}
+call1and1Tracking();
+</script><!--  End Product Custom HTML Markup -->
+
+
+</body></html>

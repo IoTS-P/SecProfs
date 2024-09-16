@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Shiqing Ma's academic homepage. Assistant Professor at University of Massachusetts, Amherst."
+        />
+        <link rel="icon" href="img/icon.webp" />
+        <title>Shiqing Ma - Academic Homepage</title>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js"
+            defer
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/bibtex-js@2.2.0/bibtex.js"></script>
+        <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+            body {
+                font-family: "Roboto", sans-serif;
+                background-color: #f0f4f8;
+            }
+            .container {
+                max-width: 1000px;
+            }
+            h1,
+            h2 {
+                color: #2c5282;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-100">
+        <div
+            class="container mx-auto px-4 py-8"
+            x-data="{ activeTab: 'about' }"
+        >
+            <header class="bg-white shadow-lg rounded-lg p-6 mb-8">
+                <h1 class="text-4xl font-bold mb-2">Shiqing Ma</h1>
+                <p class="text-xl text-gray-600">Assistant Professor</p>
+                <p class="text-gray-600">
+                    <a
+                        href="https://www.cics.umass.edu/"
+                        class="text-blue-600 hover:text-blue-800"
+                        >Manning College of Information & Computer Sciences</a
+                    ><br />
+                    <a
+                        href="https://www.umass.edu/"
+                        class="text-blue-600 hover:text-blue-800"
+                        >University of Massachusetts, Amherst</a
+                    ><br />
+                    <a
+                        href="https://www.google.com/maps/place/140+Governors+Dr,+Amherst,+MA+01002/@42.3951291,-72.5338121,1172m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89e6d27ac52d2e6d:0x4fc3aeb980f69773!8m2!3d42.3951291!4d-72.5312372!16s%2Fg%2F11csfq_cfy?entry=ttu&g_ep=EgoyMDI0MDgyMy4wIKXMDSoASAFQAw%3D%3D"
+                        class="text-blue-600 hover:text-blue-800"
+                        >140 Governors Drive, Amherst, MA 01003-9264, USA
+                    </a>
+                </p>
+            </header>
+
+            <div class="flex flex-wrap mb-4">
+                <button
+                    @click="activeTab = 'about'"
+                    :class="{ 'bg-blue-500 text-white': activeTab === 'about', 'bg-white text-blue-500': activeTab !== 'about' }"
+                    class="flex-1 py-2 px-4 rounded-tl-lg rounded-tr-lg border-t border-l border-r"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 inline-block mr-1"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                            clip-rule="evenodd"
+                        />
+                    </svg>
+                    About
+                </button>
+                <button
+                    @click="activeTab = 'research'"
+                    :class="{ 'bg-green-500 text-white': activeTab === 'research', 'bg-white text-green-500': activeTab !== 'research' }"
+                    class="flex-1 py-2 px-4 border-t border-l border-r"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 inline-block mr-1"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                            clip-rule="evenodd"
+                        />
+                    </svg>
+                    Research
+                </button>
+                <button
+                    @click="activeTab = 'publications'"
+                    :class="{ 'bg-yellow-500 text-white': activeTab === 'publications', 'bg-white text-yellow-500': activeTab !== 'publications' }"
+                    class="flex-1 py-2 px-4 border-t border-l border-r"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 inline-block mr-1"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
+                            clip-rule="evenodd"
+                        />
+                    </svg>
+                    Publications
+                </button>
+                <button
+                    @click="activeTab = 'services'"
+                    :class="{ 'bg-red-500 text-white': activeTab === 'services', 'bg-white text-red-500': activeTab !== 'services' }"
+                    class="flex-1 py-2 px-4 border-t border-l border-r"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 inline-block mr-1"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                            clip-rule="evenodd"
+                        />
+                        <path
+                            d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"
+                        />
+                    </svg>
+                    Services
+                </button>
+                <button
+                    @click="activeTab = 'teaching'"
+                    :class="{ 'bg-purple-500 text-white': activeTab === 'teaching', 'bg-white text-purple-500': activeTab !== 'teaching' }"
+                    class="flex-1 py-2 px-4 border-t border-l border-r"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 inline-block mr-1"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"
+                        />
+                    </svg>
+                    Teaching
+                </button>
+                <button
+                    @click="activeTab = 'contact'"
+                    :class="{ 'bg-indigo-500 text-white': activeTab === 'contact', 'bg-white text-indigo-500': activeTab !== 'contact' }"
+                    class="flex-1 py-2 px-4 rounded-tr-lg rounded-tl-lg border-t border-l border-r"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 inline-block mr-1"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                        />
+                        <path
+                            d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                        />
+                    </svg>
+                    Contact
+                </button>
+            </div>
+
+            <main class="bg-white shadow-lg rounded-lg p-6">
+                <div x-show="activeTab === 'about'">
+                    <h2 class="text-2xl font-semibold mb-4">About</h2>
+                    <p class="text-gray-700">
+                        Shiqing Ma is an Assistant Professor in the Manning
+                        College of Information & Computer Sciences (CICS) at
+                        University of Massachusetts Amherst. He was an Assistant
+                        Professor in the Department of Computer Science at
+                        Rutgers University from September 2019 to June 2023. He
+                        earned his Ph.D. in Computer Science from Purdue
+                        University in 2019 and B.E. from Shanghai Jiao Tong
+                        University (SJTU) in 2013. His research focuses on
+                        improving the transparency of modern computing systems,
+                        which is an intersection of security, AI, and software
+                        systems. He is the recipient of Distinguished Paper
+                        Awards from NDSS 2016 and USENIX Security 2017, and the
+                        NSF CAREER award.
+                    </p>
+                </div>
+
+                <div x-show="activeTab === 'research'">
+                    <h2 class="text-2xl font-semibold mb-4">Research</h2>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>
+                            Current interests: software and system security, AI
+                            safety, programming languages and software
+                            engineering. In particular, I am interested in
+                            topics related to responsible and trustworthy GenAI,
+                            and leveraging GenAI in solving software, security,
+                            and system problems.
+                        </li>
+                        <li>
+                            Current students:
+                            <a
+                                href="https://dhl123.github.io"
+                                class="text-blue-600 hover:text-blue-800"
+                                >Hailun Ding</a
+                            >,
+                            <a
+                                href="https://zhentingwang.github.io"
+                                class="text-blue-600 hover:text-blue-800"
+                                >Zhenting Wang</a
+                            >,
+                            <a
+                                href="https://4ar0nma0.github.io/"
+                                class="text-blue-600 hover:text-blue-800"
+                                >Jinsong Mao</a
+                            >
+                        </li>
+                        <li>
+                            I am (always) looking for students and postdocs to
+                            work with. Please drop me an email if you are
+                            interested.
+                        </li>
+                    </ul>
+                </div>
+
+                <div x-show="activeTab === 'publications'">
+                    <div id="publications-list"></div>
+                </div>
+
+                <div x-show="activeTab === 'services'">
+                    <h2 class="text-2xl font-semibold mb-4">Services</h2>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>
+                            co-Organizer, Backdoor Attacks and Defenses in
+                            Machine Learning (BANDS), with ICLR 2023
+                        </li>
+                        <li>
+                            TPC/Reviewer, International Conference on Dependable
+                            Systems and Networks (DSN), 2025
+                        </li>
+                        <li>TPC/Reviewer, ACL Rolling Review (ARR), 2024</li>
+                        <li>
+                            TPC/Reviewer, Robotics: Science and Systems (RSS),
+                            2024
+                        </li>
+                        <li>
+                            TPC/Reviewer, International Conference on Computer
+                            Vision (ICCV), 2023
+                        </li>
+                        <li>
+                            TPC/Reviewer, AAAI Conference on Artificial
+                            Intelligence (AAAI), 2023, 2024
+                        </li>
+                        <li>
+                            TPC/Reviewer, International Symposium on Research in
+                            Attacks, Intrusions and Defenses (RAID), 2023
+                        </li>
+                        <li>
+                            TPC/Reviewer, ACM Conference on Data and Application
+                            Security and Privacy (CODASPY), 2023, 2024
+                        </li>
+                        <li>
+                            TPC/Reviewer, Conference on Computer Vision and
+                            Pattern Recognition (CVPR), 2022, 2023, 2024
+                        </li>
+                        <li>
+                            TPC/Reviewer, European COnference on Computer Vision
+                            (ECCV), 2022, 2024
+                        </li>
+                        <li>
+                            TPC/Reviewer, International Conference on Learning
+                            Representations (ICLR), 2022, 2023, 2024
+                        </li>
+                        <li>
+                            TPC/Reviewer, PAIR<sup>2</sup>Struct Workshop at
+                            ICLR 2022
+                        </li>
+                        <li>
+                            TPC/Reviewer, Conference on Neural Information
+                            Processing Systems (NeurIPS), 2021, 2022, 2023
+                        </li>
+                        <li>
+                            TPC/Reviewer, International Conference on Machine
+                            Learning (ICML), 2021, 2022, 2023, 2024
+                        </li>
+                        <li>TPC/Reviewer, USENIX Security Symposium, 2021</li>
+                        <li>
+                            TPC/Reviewer, Asia Conference on Computer and
+                            Communications Security (ASIACCS), 2021, 2022
+                        </li>
+                        <li>
+                            TPC/Reviewer, Conference on Computer and
+                            Communications Security (CCS), 2020, 2021, 2022,
+                            2023, 2024
+                        </li>
+                        <li>
+                            TPC/Reviewer, European Symposium on Research in
+                            Computer Security (ESORICS), 2020, 2021, 2022
+                        </li>
+                        <li>
+                            TPC/Reviewer, ACM SIGSOFT International Symposium on
+                            Software Testing and Analysis (ISSTA), 2021, 2024
+                        </li>
+                        <li>
+                            TPC/Reviewer, IEEE Conference on Dependable and
+                            Secure Computing (DSC)
+                        </li>
+                        <li>
+                            TPC/Reviewer, IEEE International Symposium on
+                            Software Reliability Engineering (ISSRE)
+                        </li>
+                        <li>
+                            TPC/Reviewer, ACM Transactions on Software
+                            Engineering and Methodology (TOSEM)
+                        </li>
+                        <li>
+                            TPC/Reviewer, Transactions on Dependable and Secure
+                            Computing (TDSC)
+                        </li>
+                        <li>
+                            TPC/Reviewer, Transactions on Software Engineering
+                            (TSE)
+                        </li>
+                        <li>
+                            TPC/Reviewer, Journal of Computer Security (JCS)
+                        </li>
+                        <li>
+                            TPC/Reviewer, ACM Transactions on Privacy and
+                            Security (TOPS)
+                        </li>
+                        <li>
+                            TPC/Reviewer, IEEE/ACM Transactions on Networking
+                            (TNET)
+                        </li>
+                        <li>
+                            TPC/Reviewer, Empirical Software Engineering (ESE)
+                        </li>
+                        <li>
+                            TPC/Reviewer, IEEE Transactions on Pattern Analysis
+                            and Machine Intelligence (TPAMI)
+                        </li>
+                        <li>
+                            TPC/Reviewer, Transactions on Information Forensics
+                            & Security (TIFS)
+                        </li>
+                        <li>
+                            TPC/Reviewer, Transactions on Image Processing (TIP)
+                        </li>
+                    </ul>
+                </div>
+
+                <div x-show="activeTab === 'teaching'">
+                    <h2 class="text-2xl font-semibold mb-4">Teaching</h2>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>
+                            Fall 2024: COMPSCI 360: Introduction to Comptuer and
+                            network Security
+                        </li>
+                        <li>
+                            Spring 24: COMPSCI 360: Introduction to Computer and
+                            Network Security
+                        </li>
+                        <li>
+                            Fall 2023: COMPSCI 360: Introduction to Computer and
+                            Network Security
+                        </li>
+                        <li>
+                            Spring 23: Computer System Security (Rutgers CS 546)
+                        </li>
+                        <li>Fall 2021: Computer Security (Rutgers CS 419)</li>
+                        <li>Spring 21: Computer Security (Rutgers CS 419)</li>
+                        <li>
+                            Fall 2020: Computer System Security (Rutgers CS 546)
+                        </li>
+                        <li>Spring 20: Computer Security (Rutgers CS 419)</li>
+                        <li>
+                            Fall 2019: Computer System Security (Rutgers CS 546)
+                        </li>
+                    </ul>
+                </div>
+
+                <div x-show="activeTab === 'contact'">
+                    <h2 class="text-2xl font-semibold mb-4">
+                        Contact Information
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Email</h3>
+                            <p class="font-mono bg-gray-200 p-2 rounded">
+                                $ echo c2hpcWluZ21hQHVtYXNzLmVkdQ== | base64
+                                --decode
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Office</h3>
+                            <p class="text-gray-700">
+                                A211G LGRC,<br />
+                                740 N Pleasant St,<br />
+                                Amherst, MA 01003, USA
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script type="text/babel">
+            const parseBibTeX = (bibText) => {
+                const entries = bibText.split("@");
+                return entries.slice(1).map((entry) => {
+                    const lines = entry.split("\n");
+                    const type = lines[0].split("{")[0].trim();
+                    const fields = {};
+                    lines.slice(1).forEach((line) => {
+                        const [key, value] = line
+                            .split("=")
+                            .map((s) => s.trim());
+                        if (key && value) {
+                            fields[key] = value
+                                .replace(/[{"}]/g, "")
+                                .replace(/,$/, "");
+                        }
+                    });
+                    return { type, ...fields };
+                });
+            };
+
+            const PublicationsList = () => {
+                const [publications, setPublications] = React.useState([]);
+
+                React.useEffect(() => {
+                    fetch("./publications.bib")
+                        .then((response) => response.text())
+                        .then((bibText) => {
+                            const parsedPublications = parseBibTeX(bibText);
+                            setPublications(parsedPublications);
+                        });
+                }, []);
+
+                const groupedPublications = publications.reduce((acc, pub) => {
+                    const year = pub.year;
+                    if (!acc[year]) {
+                        acc[year] = [];
+                    }
+                    acc[year].push(pub);
+                    return acc;
+                }, {});
+
+                const sortedYears = Object.keys(groupedPublications).sort(
+                    (a, b) => b - a,
+                );
+
+                const formatAuthors = (authors) => {
+                    return authors
+                        .split(" and ")
+                        .map((author, index, array) => {
+                            const nameParts = author.split(", ");
+                            let formattedName;
+                            if (nameParts.length === 2) {
+                                formattedName = `${nameParts[1]} ${nameParts[0]}`;
+                            } else {
+                                formattedName = author;
+                            }
+                            if (formattedName.trim() === "Shiqing Ma") {
+                                return (
+                                    <span
+                                        key={index}
+                                        className="font-bold italic"
+                                    >
+                                        {formattedName}
+                                    </span>
+                                );
+                            }
+                            return <span key={index}>{formattedName}</span>;
+                        })
+                        .reduce((prev, curr, index, array) => {
+                            if (index === 0) return [curr];
+                            if (index === array.length - 1)
+                                return [...prev, " and ", curr];
+                            return [...prev, ", ", curr];
+                        }, []);
+                };
+
+                return (
+                    <div className="space-y-6">
+                        <h2 className="text-2xl font-semibold mb-4">
+                            Publications
+                        </h2>
+                        {sortedYears.map((year) => (
+                            <div
+                                key={year}
+                                className="bg-white shadow rounded-lg p-6 mb-6"
+                            >
+                                <h3 className="text-xl font-semibold mb-4 text-gray-800">
+                                    {year}
+                                </h3>
+                                <ul className="space-y-4">
+                                    {groupedPublications[year].map(
+                                        (pub, index) => (
+                                            <li
+                                                key={index}
+                                                className="pb-4 border-b border-gray-200 last:border-b-0"
+                                            >
+                                                <p className="mb-2">
+                                                    {formatAuthors(pub.author)}.
+                                                </p>
+                                                <p className="font-semibold text-lg mb-1">
+                                                    <a
+                                                        href={pub.url}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                        				class="text-blue-600 hover:text-blue-800"
+                                                    >
+                                                        {pub.title}.
+                                                    </a>
+                                                    {pub.github && (
+                                                        <a
+                                                            href={pub.github}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="ml-2 text-sm font-normal text-blue-500 hover:text-blue-700"
+                                                        >
+                                                            [GitHub]
+                                                        </a>
+                                                    )}
+                                                </p>
+                                                <p className="text-gray-600 italic">
+                                                    {pub.journal ||
+                                                        pub.booktitle}
+                                                    , {pub.year}.
+                                                </p>
+                                                {pub.note && (
+                                                    <p className="mt-1 text-sm font-semibold text-red-600">
+                                                        {pub.note}
+                                                    </p>
+                                                )}
+                                            </li>
+                                        ),
+                                    )}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
+                );
+            };
+
+            ReactDOM.render(
+                <PublicationsList />,
+                document.getElementById("publications-list"),
+            );
+        </script>
+    </body>
+</html>
+

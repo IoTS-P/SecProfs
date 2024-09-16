@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Sebastian Faust – CAC - Chair of Applied Cryptography – TU Darmstadt</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<meta name="dcterms.language" content="en"/>
+<meta name="dcterms.title" content="Sebastian Faust"/>
+<meta property="og:title" content="Sebastian Faust"/>
+<meta property="og:site_name" content="CAC - Chair of Applied Cryptography – TU Darmstadt"/>
+<meta property="og:type" content="article"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Sebastian Faust"/>
+<meta name="keywords" content="Cryptography, Faust, Sebastian Faust"/>
+<meta name="dcterms.creator" content="CAC - Chair of Applied Cryptography"/>
+<meta name="robots" content="index,follow"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="generator" content="FirstSpirit 5.2.240408.6d7124a"/>
+<link href="/media/resources/css_2/app_1.1.8.css" rel="stylesheet"/>
+<link href="/media/resources/css_2/themes_css/theme-1d.css" rel="stylesheet"/>
+<link rel="shortcut icon" type="image/x-icon" href="https://www.tu-darmstadt.de/media/resources/images_1/favicon_48x48.png">
+<link rel="icon" type="image/png" href="https://www.tu-darmstadt.de/media/resources/images_1/favicon_48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="https://www.tu-darmstadt.de/media/resources/images_1/favicon_80x80.png" sizes="80x80">
+<link rel="apple-touch-icon" sizes="80x80" href="https://www.tu-darmstadt.de/media/resources/images_1/favicon_80x80.png">
+</head>
+<body>
+<div id="app">
+<div id="site" class="wrap-xl">
+<header id="site-header">
+<desktop-menu :sitemap="sitemap" :fast-blocks="fastBlocks" :menu-path="menuPath" inline-template>
+<div id="desktop-menu" class="d-none d-print-none d-lg-block" @keydown.esc="onEsc()" :style="modalOpenStyle">
+<a class="link skip-link show-on-focus" href="#site-main" aria-label="Skip menu">Skip menu</a>
+<div class="hold" ref="liner">
+<div v-show="searchIsOpen" class="desktop-meta" id="desktop-search" :class="{active: searchIsOpen}" ref="searchArea" :aria-hidden="!searchIsOpen" aria-labelledby="#schnell-btn">
+<div class="wrap-xl">
+<div class="frame py-2 bg-white">
+<div class="search-frame d-flex sans-h5">
+<form class="search-form" action="../../../suche.en.jsp" method="GET">
+<input class="search-input" ref="searchInput" type="text" aria-label="Search" placeholder="Search for …" name="q">
+<button type="submit" aria-label="Submit"><span class="icon fasr fa-search" aria-hidden="true"></span></button>
+</form>
+<button ref="searchClose" type="button" aria-label="Close element" aria-controls="desktop-search" aria-expanded="searchIsOpen" @click="toggleSearchArea"><span class="icon fasr fa-times" aria-hidden="true"></span></button>
+</div>
+</div>
+</div>
+</div>
+<div v-show="fastIsOpen" class="desktop-meta" id="desktop-fast" ref="fastArea" :aria-hidden="!fastIsOpen" :class="{active: fastIsOpen}" aria-labelledby="desktop-fast-open">
+<div class="frame py-4 bg-white">
+<div class="stack-4">
+<div class="sans-h5 strong d-flex">
+<div class="flex-grow-1">Quick access</div>
+<button type="button" ref="fastClose" id="desktop-fast-close" @click="toggleFastArea" @keydown.down="setFocus(itemRef('fast',0,0))" aria-label="Close element" aria-controls="desktop-fast" :aria-expanded="fastIsOpen"><span class="icon fasr fa-times" aria-hidden="true"></span></button></div>
+<div class="stop pb-1">
+<div class="grid-4 fast-outer">
+<div class="cell-1-2 outer-cell">
+<div class="grid-2 fast-inner">
+<div v-for="(group, i) in fastBlocks.slice(0,4)" class="fast-block cell-1-2 inner-cell" @mouseenter="fastBlocks[i].hover=true" @mouseleave="fastBlocks[i].hover=false" @focusin="fastBlocks[i].focus=true" @focusout="fastBlocks[i].focus=false">
+<div class="p-2 pb-4 h-100 hold" :class="fastBlockBgClass(group.code, group.hover||group.focus||isTouch)">
+<div v-if="!isTouch" class="block-overlay p-2 pb-4" :class="fastBlockOverClass(group.code, group.hover||group.focus)">
+<p class="block-heading sans-h5 strong" v-html="group.heading"></p>
+</div>
+<div class="block-content stack-2" :class="fastBlockTextClass(group.code, group.hover||group.focus||isTouch)">
+<p class="block-heading sans-h5 strong" v-html="group.heading"></p>
+<ul class="block-links list-unstyled stack-1">
+<li v-for="(child, j) in group.children" class="sans-small"><a class="link d-inline-flex" :href="child.href" :ref="itemRef('fast',i,j)" @keydown.up="setFocus(j==0 ? i==0 ? 'fastClose': itemRef('fast',i-1,0) : itemRef('fast',i,j-1))" @keydown.down="setFocus(j==(group.children.length - 1) ? itemRef('fast',i+1,0) : itemRef('fast',i,j+1))" @keydown.left="setFocus(itemRef('fast',i-1,0))" @keydown.right="setFocus(itemRef('fast',i+1,0))"><span class="d-inline-block" aria-hidden="true"><span class="icon fass fa-long-arrow-right"></span></span><span class="d-inline-block">{{ child.heading }}</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell-1-2 outer-cell">
+<div class="grid-2 fast-inner">
+<div v-for="(group, i) in fastBlocks.slice(4)" class="fast-block cell-1-2 inner-cell" @mouseenter="fastBlocks[i+4].hover=true" @mouseleave="fastBlocks[i+4].hover=false" @focusin="fastBlocks[i+4].focus=true" @focusout="fastBlocks[i+4].focus=false">
+<div class="p-2 pb-4 h-100" :class="fastBlockBgClass(group.code, group.hover||group.focus||isTouch)">
+<div v-if="!isTouch" class="block-overlay p-2 pb-4" :class="fastBlockOverClass(group.code, group.hover||group.focus)">
+<p class="block-heading sans-h5 strong" v-html="group.heading"></p>
+</div>
+<div class="block-content stack-2" :class="fastBlockTextClass(group.code, group.hover||group.focus||isTouch)">
+<p class="block-heading sans-h5 strong" v-html="group.heading"></p>
+<ul class="block-links list-unstyled stack-1">
+<li v-for="(child, j) in group.children" class="sans-small"><a class="link d-inline-flex" :href="child.href" :ref="itemRef('fast',i+4,j)" @keydown.up="setFocus(j==0 ? itemRef('fast',i+4-1,0) : itemRef('fast',i+4,j-1))" @keydown.down="setFocus(j==(group.children.length - 1) ? itemRef('fast',i+4+1,0) : itemRef('fast',i+4,j+1))" @keydown.left="setFocus(itemRef('fast',i+3,0))" @keydown.right="setFocus(itemRef('fast',i+5,0))"><span class="d-inline-block" aria-hidden="true"><span class="icon fass fa-long-arrow-right"></span></span><span class="d-inline-block">{{ child.heading }}</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="desktop-main" ref="mainArea">
+<div class="wrap-xl hold">
+<div class="menu-border border-key"></div>
+<div class="menu-logo frame bg-white">
+<div class="row">
+<div class="col-1-4 offset-9-12">
+<!-- noindex -->
+<div class="hold" style="margin-top:-14px;">
+<div class="menu-logo-area">
+<a class="bg-gr5 link link-outer" href="https://www.tu-darmstadt.de/" aria-label="Go to home of TU Darmstadt" title="Go to home of TU Darmstadt"><picture><source srcset="https://www.tu-darmstadt.de/media/resources/images_1/tu_logo_web.svg" media="(min-width: 900px)"><img src="https://www.tu-darmstadt.de/media/resources/images_1/tu_logo_web_h120.svg" alt="Logo of TU Darmstadt" /></picture></a>
+<a class="bg-key link link-outer" href="https://www.informatik.tu-darmstadt.de/cac/" accesskey="1" aria-label="Go to home of institution" title="Go to home of institution [Alt(+Shift)+1]">
+<div id="institution-name-container" class="fach-label overflow-hidden p-1 stack-1">
+<span id="institution-name" class="d-inline-block font-weight-normal hyphens link-inner pre-line sans-lead text-white">CAC - Chair of Applied Cryptography</span>
+</div>
+</a>
+</div>
+</div>
+<!-- index -->
+</div>
+</div>
+</div>
+<div class="menu-frame frame bg-white">
+<div class="py-2">
+<div class="grid">
+<div class="cell-3-4 stack-2">
+<ul class="meta-headings list-unstyled sans-mini strong w-75">
+<li class="meta-heading mr-auto"><button class="link text-gr1" type="button" id="desktop-fast-open" :ref="refPath('meta',0)" @keydown.left.prevent="setFocus(refPath('meta',3))" @keydown.right.prevent="setFocus(refPath('meta',1))" @keydown.down.prevent="setFocus(refPath('main',0))" @click="toggleFastArea"><span class="icon fasr fa-external-link-square" aria-hidden="true"></span>Quick access</button></li>
+<li class="meta-item mr-auto">
+<span class="language-selector link text-gr2"><span class="icon fasl fa-globe-europe" aria-hidden="true"></span>Deutsch</span>
+</li>
+<li class="meta-item mr-auto"><button class="link text-gr1" type="button" accesskey="4" title="[Alt(+Shift)+4]" :ref="refPath('meta',2)" @keydown.left.prevent="setFocus(refPath('meta',1))" @keydown.right.prevent="setFocus(refPath('meta',3))" @keydown.down.prevent="setFocus(refPath('main',2))" @click="toggleSearchArea"><span class="icon fasr fa-search" aria-hidden="true"></span>Search</button></li>
+<li class="meta-item mr-auto" data-matomo-mask>
+<!-- noindex -->
+<a class="text-gr1 link" accesskey="i" title="Login to website with TU-ID [Alt(+Shift)+i]" href="https://login.tu-darmstadt.de/idp/profile/cas/login?service=https%3A%2F%2Fwww.informatik.tu-darmstadt.de%2Fcac%2Fcac%2Fteam_cac%2Fsebastian_faust_cac%2Findex.en.jsp" :ref="refPath(&quot;meta&quot;,3)" @keydown.left.prevent="setFocus(refPath(&quot;meta&quot;,2))" @keydown.right.prevent="setFocus(refPath(&quot;meta&quot;,0))" @keydown.down.prevent="setFocus(refPath(&quot;main&quot;,3))"><span class="icon fasr fa-user" aria-hidden="true"></span>Login</a>
+<!-- index -->
+</li>
+</ul>
+<ul class="main-headings list-unstyled sans-h4b strong" :class="{'in-focus': path.length&gt;0}">
+<li v-for="(level0, i) in sitemap.slice(0,4)" class="main-heading" :key="level0.heading" :class="{active: menuPathDesktop.indexOf(level0.uid)>=0}"><a v-if="!level0.children || level0.displaySeparateSubmenu==true" :href="level0.href" :accesskey="level0.accesskey" :title="level0.title" :id="level0.headID" :aria-controls="level0.bodyID" :aria-expanded="hasPath(i)" :ref="refPath('main',i)" :class="{proxied: isFocPath(i,-1), onpath: hasFocPath(i)}" @focus="setFocPath(i)" @keydown.left.prevent="setFocus(refPath('main',i-1))" @keydown.right.prevent="setFocus(refPath('main',i+1))" @keydown.up.prevent="setFocus(refPath('meta',i))"><span v-html="level0.heading"></span><span class="icon fasr fa-lock text-right" v-if="level0.internal" title="Registered users only (TU ID)"></span></a><button v-else type="button" aria-haspopup="true" :id="level0.headID" :aria-controls="level0.bodyID" :aria-expanded="hasPath(i)" :ref="refPath('main',i)" :class="{proxied: isFocPath(i,-1), onpath: hasFocPath(i)}" @focus="setFocPath(i)" @click="setSubFocus(i)" @keydown.left.prevent="setFocus(refPath('main',i-1))" @keydown.right.prevent="setFocus(refPath('main',i+1))" @keydown.up.prevent="setFocus(refPath('meta',i))" v-html="level0.heading"></button></li>
+</ul>
+</div>
+<div class="cell-1-4">
+<div class="d-flex h-100 stack">
+<div class="sans-h5 align-self-end text-right w-100">
+<button type="button" @click="toggleSearchArea" aria-hidden="true" tabindex="-1"><span class="icon fasr fa-search"></span><span class="sr-only">Open search panel</span></button>
+<a class="text-gr0 ml-1 outline" aria-hidden="true" tabindex="-1" href="https://www.informatik.tu-darmstadt.de/cac/" title="Home of institution"><span class="icon fasr fa-home"></span><span class="sr-only">Home of institution</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="menu-collapse" class="d-none hold">
+<nav>
+<ul class="main-panels list-unstyled">
+<li v-for="(level0, i) in sitemap" v-show="hasPath(i)" class="main-panel" :key="level0.heading" :ref="refPath('panel', i)">
+<div v-if="level0.hasIndexPage && level0.href" class="panel-heading" :class="{'in-focus': hasPath(i, -1)}">
+<p class="sans-h5"><a class="link-outer strong d-block w-100 text-left p-2" :href="level0.href" :accesskey="level0.accesskey" :title="level0.title" :ref="refPath('main',i,-1)" :class="{selected: menuPathDesktop.indexOf(level0.headID)>=0}" @focus="setFocPath(i,-1)" @mouseenter="hoverFocus" @keydown.exact.tab.shift.prevent="setParentFocus(i)" @keydown.up.prevent="setParentFocus(i)" @keydown.down.prevent="setFocus(refPath('main',i,0))" @keydown.exact.tab.prevent="setFocus(refPath('main',i,0))"><span class="link-inner">Overview</span><span class="icon fasr fa-lock text-right" v-if="level0.internal" title="Registered users only (TU ID)"></span></a></p>
+</div>
+<ul v-show="hasPath(i)" class="panel-menu level-1 list-unstyled" :ref="refPath('panel-menu', i)" :id="level0.bodyID" :aria-hidden="!hasPath(i)" :aria-labelledby="level0.headID" :class="{ focusin: hasFocPath(i) }">
+<li v-for="(level1, j) in level0.children" class="menu-item sans-h5" :class="{'in-focus': hasPath(i,j)}"><a v-if="!level1.children || level1.displaySeparateSubmenu==true" class="strong d-block w-100 text-left px-2 py-1" :href="level1.href" :accesskey="level1.accesskey" :title="level1.title" :ref="itemRef('main',i,j)" :class="{onpath: hasFocPath(i,j), selected: menuPathDesktop.indexOf(level1.uid)>-1}" @focus="setFocPath(i,j)" @mouseenter="hoverFocus" @keydown.up.prevent="setFocus(refPath('main',i,j-1))" @keydown.down.prevent="setFocus(refPath('main',i,j+1))" @keydown.exact.tab.shift.prevent="setFocus(refPath('main',i,j-1))" @keydown.exact.tab.prevent="setFocus(refPath('main',i,j+1))"><span v-html="level1.heading"></span><span class="icon fasr fa-lock text-right" v-if="level1.internal" title="Registered users only (TU ID)"></span></a>
+<button v-else class="strong d-block w-100 text-left px-2 py-1" type="button" aria-haspopup="true" :id="level1.headID" :aria-controls="level1.bodyID" :aria-expanded="hasPath(i,j)" :ref="itemRef('main',i,j)" :class="{onpath: hasFocPath(i,j), selected: menuPathDesktop.indexOf(level1.uid)>-1}" @focus="setFocPath(i,j)" @mouseenter="hoverFocus" @keydown.up.prevent="setFocus(refPath('main',i,j-1))" @keydown.down.prevent="setFocus(refPath('main',i,j+1))" @keydown.exact.tab.shift.prevent="setFocus(refPath('main',i,j-1))" @keydown.exact.tab.prevent="setFocus(refPath('main',i,j+1))" @keydown.right.prevent="clickSelf" @click="setSubFocus(i,j);removeMenuPath();"><span v-html="iconifyLastWord(level1.heading)"></span></button>
+<ul v-if="level1.children && level1.displaySeparateSubmenu!=true" v-show="hasPath(i,j) || menuPathDesktop.indexOf(level1.uid)>-1" class="panel-menu level-2 list-unstyled" :ref="refPath('panel-menu', i,j)" :id="level1.bodyID" :aria-labelledby="level1.headID" :aria-hidden="!hasPath(i,j)" :class="{ focusin: hasFocPath(i,j)}">
+<li v-if="level1.hasIndexPage && level1.href" class="menu-heading"><a class="strong d-block w-100 text-left px-2 py-1" :href="level1.href" :accesskey="level1.accesskey" :title="level1.title" :ref="refPath('main',i,j,-1)" :class="{selected: menuPathDesktop.indexOf(level1.uid)>-1 && isSelected(level1.children) > 0}" @focus="setFocPath(i,j,-1)" @mouseenter="hoverFocus" @keydown.exact.tab.shift.prevent="setParentFocus(i,j)" @keydown.left.prevent="setParentFocus(i,j)" @keydown.up.prevent="setParentFocus(i,j)" @keydown.down.prevent="setFocus(refPath('main',i,j,0))" @keydown.exact.tab.prevent="setFocus(refPath('main',i,j,0))">Overview<span class="icon fasr fa-lock text-right" v-if="level1.internal" title="Registered users only (TU ID)"></span></a></li>
+<li v-for="(level2, k) in level1.children" class="menu-item sans-h5" :class="{'in-focus': hasPath(i,j,k)}"><a v-if="!level2.children || level2.displaySeparateSubmenu==true" class="strong d-block w-100 text-left px-2 py-1" :href="level2.href" :accesskey="level2.accesskey" :title="level2.title" :ref="itemRef('main',i,j,k)" :id="menuPath.indexOf(level2.uid)" :class="{onpath: hasFocPath(i,j,k), selected: menuPathDesktop.indexOf(level2.uid)>-1}" @focus="setFocPath(i,j,k)" @mouseenter="hoverFocus" @keydown.left.prevent="setFocus(refPath('main',i,j)); setPath(i)" @keydown.up.prevent="setFocus(refPath('main',i,j,k-1))" @keydown.down.prevent="setFocus(refPath('main',i,j,k+1))" @keydown.exact.tab.shift.prevent="setFocus(refPath('main',i,j,k-1))" @keydown.exact.tab.prevent="setFocus(refPath('main',i,j,k+1))"><span v-html="level2.heading"></span><span class="icon fasr fa-lock text-right" v-if="level2.internal" title="Registered users only (TU ID)"></span></a><button v-else class="strong d-block w-100 text-left px-2 py-1" type="button" aria-haspopup="true" :id="level2.headID" :aria-controls="level2.bodyID" :aria-expanded="hasPath(i,j,k)" :ref="itemRef('main',i,j,k)" :class="{onpath: hasFocPath(i,j,k), selected: menuPathDesktop.indexOf(level2.uid)>-1}" @focus="setFocPath(i,j,k)" @mouseenter="hoverFocus" @keydown.left.prevent="setFocus(refPath('main',i,j)); setPath(i)" @keydown.up.prevent="setFocus(refPath('main',i,j,k-1))" @keydown.down.prevent="setFocus(refPath('main',i,j,k+1))" @keydown.exact.tab.shift.prevent="setFocus(refPath('main',i,j,k-1))" @keydown.exact.tab.prevent="setFocus(refPath('main',i,j,k+1))" @keydown.right.prevent="clickSelf" @click="setSubFocus(i,j,k);removeMenuPath();"><span v-html="iconifyLastWord(level2.heading)"></span></button>
+<ul v-if="level2.children && level2.displaySeparateSubmenu!=true" v-show="hasPath(i,j,k) || menuPathDesktop.indexOf(level2.uid)>-1" class="panel-menu level-3 list-unstyled" :ref="refPath('panel-menu', i,j,k)" :id="level2.bodyID" :aria-hidden="!hasPath(i,j,k)" :aria-labelledby="level2.headID" :class="{ focusin: hasFocPath(i,j,k)}">
+<li v-if="level2.hasIndexPage && level2.href" class="menu-heading"><a class="strong d-block w-100 text-left px-2 py-1" :href="level2.href" :accesskey="level2.accesskey" :title="level2.title" :ref="refPath('main',i,j,k,-1)" :class="{selected: menuPathDesktop.indexOf(level2.uid)>-1 && isSelected(level2.children) > 0}" @focus="setFocPath(i,j,k,-1)" @mouseenter="hoverFocus" @keydown.exact.tab.shift.prevent="setParentFocus(i,j,k)" @keydown.left.prevent="setParentFocus(i,j,k)" @keydown.up.prevent="setParentFocus(i,j,k)" @keydown.down.prevent="setFocus(refPath('main',i,j,k,0))" @keydown.exact.tab.prevent="setFocus(refPath('main',i,j,k,0))">Overview<span class="icon fasr fa-lock text-right" v-if="level2.internal" title="Registered users only (TU ID)"></span></a></li>
+<li v-for="(level3, l) in level2.children" class="menu-item sans-h5" :class="{'in-focus': hasPath(i,j,k,l)}"><a class="strong d-block w-100 text-left px-2 py-1" :href="level3.href" :accesskey="level3.accesskey" :title="level3.title" :ref="itemRef('main',i,j,k,l)" :id="menuPath.indexOf(level3.uid)" :class="{selected: menuPathDesktop.indexOf(level3.uid)>-1}" @focus="setFocPath(i,j,k,l)" @mouseenter="hoverFocus" @keydown.left.prevent="setFocus(refPath('main',i,j,k)); setPath(i,j)" @keydown.up.prevent="setFocus(refPath('main',i,j,k,l-1))" @keydown.down.prevent="setFocus(refPath('main',i,j,k,l+1))" @keydown.exact.tab.shift.prevent="setFocus(refPath('main',i,j,k,l-1))" @keydown.exact.tab.prevent="setFocus(refPath('main',i,j,k,l+1))"><span v-html="level3.heading"></span><span class="icon fasr fa-lock text-right" v-if="level3.internal" title="Registered users only (TU ID)"></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="overlay" :class="{active: fastIsOpen||searchIsOpen}"></div>
+</div>
+</div>
+</div>
+</desktop-menu>
+<phablet-menu :sitemap="sitemap" :fast-blocks="fastBlocks" :menu-path="menuPath" inline-template>
+<div class="d-lg-none d-print-block" id="phablet-menu" :style="modalOpenStyle">
+<div class="menu-border border-key"></div>
+<div class="menu-logo frame bg-white">
+<div class="row">
+<div class="col-5-12 col-sm-1-3 col-md-1-4 offset-7-12 offset-sm-2-3 offset-md-3-4">
+<div class="bleed-right mr-sm-0">
+<!-- noindex -->
+<div class="hold" style="margin-top:-14px;">
+<div class="menu-logo-area">
+<a class="bg-gr5 link link-outer" href="https://www.tu-darmstadt.de/" aria-label="Go to home of TU Darmstadt" title="Go to home of TU Darmstadt"><picture><source srcset="https://www.tu-darmstadt.de/media/resources/images_1/tu_logo_web.svg" media="(min-width: 900px)"><img src="https://www.tu-darmstadt.de/media/resources/images_1/tu_logo_web_h120.svg" alt="Logo of TU Darmstadt" /></picture></a>
+</div>
+</div>
+<!-- index -->
+</div>
+</div>
+</div>
+</div>
+<div class="menu-frame frame bg-white border-key d-print-none">
+<div class="row h-100">
+<div class="col-7-12 col-sm-2-3 d-flex align-content-center">
+<button type="button" id="phablet-overlay-toggle" :aria-label="menuOpen?'Close Menu':'Open Menu'" aria-controls="phablet-overlay" :aria-expanded="menuOpen" @click="toggleMenu(level);if(initialOpening)setPath(0,2,);">
+<div class="bars"></div>
+</button>
+</div>
+</div>
+</div>
+<div id="phablet-overlay" class="d-print-none" :class="{active: menuOpen}" ref="overlay">
+<div class="py-4"></div>
+<div class="fast-pusher" :style="fastPusherStyle" ref="fastPusher">
+<div class="main-menu">
+<div class="main-pusher" :style="mainPusherStyle" ref="mainPusher">
+<div class="level level-0 frame" ref="top">
+<div class="stack-4 py-6 px-1">
+<div class="stack-5">
+<div class="sans-h3 strong" v-for="(lv0, k) in sitemap">
+<button type="button" class="next d-flex w-100" :class="{'text-key': menuPath.indexOf(lv0.uid)>=0}" @click="setPath(k)" v-if="lv0.children">
+<div class="text-left" v-html="lv0.heading"></div>
+<div class="ml-auto"><span class="icon fass fa-angle-right"></span></div>
+</button>
+<a class="next page" :href="lv0.href" :class="{'text-key': menuPath.indexOf(lv0.uid)>=0 && menuPath.indexOf(lv0.uid)==menuPath.length-1}" v-else><span v-html="lv0.heading"></span><span class="icon fasr fa-lock text-right" v-if="lv0.internal" title="Registered users only (TU ID)"></span></a></div>
+</div>
+</div>
+</div>
+<div class="level level-1 frame" :id="lv0.headID" v-for="(lv0, k) in sitemap" v-if="validLevel(lv0)" v-show="hasPath(k)" :ref="genPath(k)">
+<div class="stack-4 py-6 px-1">
+<div class="sans-h3 strong">
+<button type="button" class="back d-flex text-gr1" @click="setPath()">
+<span class="d-inline-block icon fass fa-angle-left mr my-auto"></span>
+<span class="d-inline-block" v-html="lv0.heading"></span>
+</button>
+</div>
+<div class="border-bottom border-gr3"></div>
+<div class="stack-5">
+<div class="sans-h3 strong d-flex pb-1" v-if="lv0.hasIndexPage && lv0.href">
+<a class="page" :href="lv0.href" :class="{'text-key': menuPath.indexOf(lv0.uid)>=0 && menuPath.indexOf(lv0.uid)==menuPath.length-1}">Overview<span class="icon fasr fa-lock text-right" v-if="lv0.internal" title="Registered users only (TU ID)"></span></a>
+</div>
+<div class="sans-h3 strong" v-for="(lv1, l) in lv0.children">
+<button type="button" class="next d-flex w-100" :class="{'text-key': menuPath.indexOf(lv1.uid)>=0}" @click="setPath(k,l)" v-if="validLevel(lv1)">
+<div class="text-left" v-html="lv1.heading"></div>
+<div class="ml-auto"><span class="icon fass fa-angle-right"></span></div>
+</button>
+<a class="next page" :href="lv1.href" :class="{'text-key': menuPath.indexOf(lv1.uid)>=0 && menuPath.indexOf(lv1.uid)==menuPath.length-1}" v-else><span v-html="lv1.heading"></span><span class="icon fasr fa-lock text-right" v-if="lv1.internal" title="Registered users only (TU ID)"></span></a>
+</div>
+</div>
+</div>
+</div>
+<template v-for="(lv0, k) in sitemap" v-if="validLevel(lv0)">
+<div class="level level-2 frame" :id="lv1.headID" v-for="(lv1, l) in lv0.children" v-if="validLevel(lv1)" v-show="hasPath(k,l)" :ref="genPath(k,l)">
+<div class="stack-4 py-6 px-1">
+<div class="sans-h3 strong">
+<button type="button" class="back d-flex text-gr1" @click="setPath(k)">
+<span class="d-inline-block icon fass fa-angle-left mr my-auto"></span>
+<span class="d-inline-block" v-html="lv1.heading"></span>
+</button>
+</div>
+<div class="border-bottom border-gr3"></div>
+<div class="stack-5">
+<div class="sans-h3 strong d-flex pb-1" v-if="lv1.hasIndexPage && lv1.href">
+<a class="page" :href="lv1.href" :class="{'text-key': menuPath.indexOf(lv1.uid)>=0 && menuPath.indexOf(lv1.uid)==menuPath.length-1}">Overview<span class="icon fasr fa-lock text-right" v-if="lv1.internal" title="Registered users only (TU ID)"></span></a>
+</div>
+<div class="sans-h3 strong" v-for="(lv2, m) in lv1.children">
+<button type="button" class="next d-flex w-100" :class="{'text-key': menuPath.indexOf(lv2.uid)>=0}" @click="setPath(k,l,m)" v-if="validLevel(lv2)">
+<div class="text-left" v-html="lv2.heading"></div>
+<div class="ml-auto"><span class="icon fass fa-angle-right"></span></div>
+</button>
+<a class="next page" :href="lv2.href" :class="{'text-key': menuPath.indexOf(lv2.uid)>=0 && menuPath.indexOf(lv2.uid)==menuPath.length-1}" v-else><span v-html="lv2.heading"></span><span class="icon fasr fa-lock text-right" v-if="lv2.internal" title="Registered users only (TU ID)"></span></a>
+</div>
+</div>
+</div>
+</div>
+</template>
+<template v-for="(lv0, k) in sitemap" v-if="validLevel(lv0)">
+<template v-for="(lv1, l) in lv0.children" v-if="validLevel(lv1)">
+<div class="level level-3 frame" :id="lv2.headID" v-for="(lv2, m) in lv1.children" v-if="validLevel(lv2)" v-show="hasPath(k,l,m)" :ref="genPath(k,l,m)">
+<div class="stack-4 py-6 px-1">
+<div class="sans-h3 strong">
+<button type="button" class="back d-flex text-gr1" @click="setPath(k,l)">
+<span class="d-inline-block icon fass fa-angle-left mr my-auto"></span>
+<span class="d-inline-block" v-html="lv2.heading"></span>
+</button>
+</div>
+<div class="border-bottom border-gr3"></div>
+<div class="stack-5">
+<div class="sans-h3 strong d-flex pb-1" v-if="lv2.hasIndexPage && lv2.href">
+<a class="page" :href="lv2.href" :class="{'text-key': menuPath.indexOf(lv2.uid)>=0 && menuPath.indexOf(lv2.uid)==menuPath.length-1}">Overview<span class="icon fasr fa-lock text-right" v-if="lv2.internal" title="Registered users only (TU ID)"></span></a>
+</div>
+<div class="sans-h3 strong" v-for="(lv3, n) in lv2.children">
+<button type="button" class="next d-flex w-100" :class="{'text-key': menuPath.indexOf(lv3.uid)>=0}" @click="setPath(k,l,m,n)" v-if="validLevel(lv3)">
+<div class="text-left" v-html="lv3.heading"></div>
+<div class="ml-auto"><span class="icon fass fa-angle-right"></span></div>
+</button>
+<a class="next page" :href="lv3.href" :class="{'text-key': menuPath.indexOf(lv3.uid)>=0 && menuPath.indexOf(lv3.uid)==menuPath.length-1}" v-else><span v-html="lv3.heading"></span><span class="icon fasr fa-lock text-right" v-if="lv3.internal" title="Registered users only (TU ID)"></span></a>
+</div>
+</div>
+</div>
+</div>
+</template>
+</template>
+<template v-for="(lv0, k) in sitemap" v-if="validLevel(lv0)">
+<template v-for="(lv1, l) in lv0.children" v-if="validLevel(lv1)">
+<template v-for="(lv2, m) in lv1.children" v-if="validLevel(lv2)">
+<div class="level level-4 frame" :id="lv3.headID" v-for="(lv3, n) in lv2.children" v-if="validLevel(lv3)" v-show="hasPath(k,l,m,n)" :ref="genPath(k,l,m,n)">
+<div class="stack-4 py-6 px-1">
+<div class="sans-h3 strong">
+<button type="button" class="back d-flex text-gr1" @click="setPath(k,l,m)">
+<span class="d-inline-block icon fass fa-angle-left mr my-auto"></span>
+<span class="d-inline-block" v-html="lv3.heading"></span>
+</button>
+</div>
+<div class="border-bottom border-gr2"></div>
+<div class="stack-5">
+<div class="sans-h3 strong d-flex pb-1" v-if="lv3.hasIndexPage && lv3.href">
+<a class="page" :href="lv3.href" :class="{'text-key': menuPath.indexOf(lv3.uid)>=0 && menuPath.indexOf(lv3.uid)==menuPath.length-1}">Overview<span class="icon fasr fa-lock text-right" v-if="lv3.internal" title="Registered users only (TU ID)"></span></a>
+</div>
+<div class="sans-h3 strong" v-for="(lv4, o) in lv3.children">
+<button type="button" class="next d-flex w-100" :class="{'text-key': menuPath.indexOf(lv4.uid)>=0}" @click="setPath(k,l,m,n,o)" v-if="validLevel(lv4)">
+<div class="text-left" v-html="lv4.heading"></div>
+<div class="ml-auto"><span class="icon fass fa-angle-right"></span></div>
+</button>
+<a class="next page" :href="lv4.href" :class="{'text-key': menuPath.indexOf(lv4.uid)>=0 && menuPath.indexOf(lv4.uid)==menuPath.length-1}" v-else><span v-html="lv4.heading"></span><span class="icon fasr fa-lock text-right" v-if="lv4.internal" title="Registered users only (TU ID)"></span></a>
+</div>
+</div>
+</div>
+</div>
+</template>
+</template>
+</template>
+<template v-for="(lv0, k) in sitemap" v-if="validLevel(lv0)">
+<template v-for="(lv1, l) in lv0.children" v-if="validLevel(lv1)">
+<template v-for="(lv2, m) in lv1.children" v-if="validLevel(lv2)">
+<template v-for="(lv3, n) in lv2.children" v-if="validLevel(lv3)">
+<div class="level level-5 frame" :id="lv4.headID" v-for="(lv4, o) in lv3.children" v-if="validLevel(lv4)" v-show="hasPath(k,l,m,n,o)" :ref="genPath(k,l,m,n,o)">
+<div class="stack-4 py-6 px-1">
+<div class="sans-h3 strong">
+<button type="button" class="back d-flex text-gr1" @click="setPath(k,l,m,n)">
+<span class="d-inline-block icon fass fa-angle-left mr my-auto"></span>
+<span class="d-inline-block" v-html="lv4.heading"></span>
+</button>
+</div>
+<div class="border-bottom border-gr2"></div>
+<div class="stack-5">
+<div class="sans-h3 strong d-flex pb-1" v-if="lv4.hasIndexPage && lv4.href">
+<a class="page" :href="lv4.href" :class="{'text-key': menuPath.indexOf(lv4.uid)>=0 && menuPath.indexOf(lv4.uid)==menuPath.length-1}">Overview<span class="icon fasr fa-lock text-right" v-if="lv4.internal" title="Registered users only (TU ID)"></span></a>
+</div>
+<div class="sans-h3 strong" v-for="(lv5, p) in lv4.children">
+<button type="button" class="next d-flex w-100" :class="{'text-key': menuPath.indexOf(lv5.uid)>=0}" @click="setPath(k,l,m,n,o,p)" v-if="validLevel(lv5)">
+<div class="text-left" v-html="lv5.heading"></div>
+<div class="ml-auto"><span class="icon fass fa-angle-right"></span></div>
+</button>
+<a class="next page" :href="lv5.href" :class="{'text-key': menuPath.indexOf(lv5.uid)>=0 && menuPath.indexOf(lv5.uid)==menuPath.length-1}" v-else><span v-html="lv5.heading"></span><span class="icon fasr fa-lock text-right" v-if="lv5.internal" title="Registered users only (TU ID)"></span></a>
+</div>
+</div>
+</div>
+</div>
+</template>
+</template>
+</template>
+</template>
+<template v-for="(lv0, k) in sitemap" v-if="validLevel(lv0)">
+<template v-for="(lv1, l) in lv0.children" v-if="validLevel(lv1)">
+<template v-for="(lv2, m) in lv1.children" v-if="validLevel(lv2)">
+<template v-for="(lv3, n) in lv2.children" v-if="validLevel(lv3)">
+<template v-for="(lv4, o) in lv3.children" v-if="validLevel(lv4)">
+<div class="level level-5 frame" :id="lv5.headID" v-for="(lv5, p) in lv4.children" v-if="validLevel(lv5)" v-show="hasPath(k,l,m,n,o,p)" :ref="genPath(k,l,m,n,o,p)">
+<div class="stack-4 py-6 px-1">
+<div class="sans-h3 strong">
+<button type="button" class="back d-flex text-gr1" @click="setPath(k,l,m,n,o)">
+<span class="d-inline-block icon fass fa-angle-left mr my-auto"></span>
+<span class="d-inline-block" v-html="lv5.heading"></span>
+</button>
+</div>
+<div class="border-bottom border-gr2"></div>
+<div class="stack-5">
+<div class="sans-h3 strong d-flex pb-1" v-if="lv5.hasIndexPage && lv5.href">
+<a class="page" :href="lv5.href" :class="{'text-key': menuPath.indexOf(lv5.uid)>=0 && menuPath.indexOf(lv5.uid)==menuPath.length-1}">Overview<span class="icon fasr fa-lock text-right" v-if="lv5.internal" title="Registered users only (TU ID)"></span></a>
+</div>
+<div class="sans-h3 strong" v-for="(lv6, q) in lv5.children">
+<a class="next page" :href="lv6.href" :class="{'text-key': menuPath.indexOf(lv6.uid)>=0 && menuPath.indexOf(lv6.uid)==menuPath.length-1}"><span v-html="lv6.heading"></span><span class="icon fasr fa-lock text-right" v-if="lv6.internal" title="Registered users only (TU ID)"></span></a>
+</div>
+</div>
+</div>
+</div>
+</template>
+</template>
+</template>
+</template>
+</template>
+</div>
+<div class="hanger frame">
+<div class="stack-5 pt-2 pb-6 px-1">
+<form class="stack-2" action="../../../suche.en.jsp" method="get">
+<div class="form-group row">
+<label class="sr-only strong form-text" for="phabletSearch">Search</label>
+<div class="col col-11-12">
+<input class="form-control" id="phabletSearch" type="search" placeholder="Search for …" name="q">
+</div>
+<div class="col col-1-12 my-auto">
+<button type="submit" aria-label="submit"><span class="icon fasr fa-search text-gr1"></span></button>
+</div>
+</div>
+</form>
+<div class="sans-body">
+<button type="button" class="link d-block text-gr1" id="phablet-schnell-btn" aria-label="Quick access" aria-controls="phablet-fast-menu" :aria-expanded="fastMenuOpen" @click="toggleFastMenu"><span class="icon fasr fa-external-link-square"></span>Quick access
+</button>
+</div>
+<div class="sans-body">
+<span class="language-selector link text-gr2 d-block"><span class="icon fasl fa-globe-europe" aria-hidden="true"></span>Deutsch</span>
+</div>
+<div class="sans-body" data-matomo-mask>
+<!-- noindex -->
+<a class="text-gr1 link d-block text-gr1" accesskey="i" title="Login to website with TU-ID [Alt(+Shift)+i]" href="https://login.tu-darmstadt.de/idp/profile/cas/login?service=https%3A%2F%2Fwww.informatik.tu-darmstadt.de%2Fcac%2Fcac%2Fteam_cac%2Fsebastian_faust_cac%2Findex.en.jsp"><span class="icon fasr fa-user" aria-hidden="true"></span>Login</a>
+<!-- index -->
+</div>
+<div class="sans-body">
+<a class="text-gr1 link d-block" href="https://www.informatik.tu-darmstadt.de/cac/" title="Home">
+<span class="icon fasr fa-home"></span>Home
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="frame" id="phablet-fast-menu">
+<div class="stack-6 py-6 px-1">
+<div class="sans-h3 strong d-flex">
+<p>Quick access</p>
+<button type="button" class="ml-auto" aria-controls="phablet-fast-menu" :aria-expanded="fastMenuOpen" @click="toggleFastMenu"><span class="icon fasr fa-times"></span></button>
+</div>
+<div class="stack-1">
+<div class="fast-block" v-for="(group, i) in fastBlocks">
+<phablet-fast-item @toggle="activeFastItem = fastBlocks[i]" :active="activeFastItem == fastBlocks[i]" :theme-key="group.code" :key="group.code">
+<span class="sans-h4" slot="tab">{{group.heading}}</span>
+<div class="stack-2 px-3 pt-3 pb-6 strong" slot="panel">
+<p v-for="(child, j) in group.children">
+<a class="link" :href="child.href">{{child.heading}}</a>
+</p>
+</div>
+</phablet-fast-item>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="phablet-fast-overlay" class="d-print-none" :class="{active: fastMenuOpen}" ref="fastOverlay"></div>
+</div>
+</phablet-menu>
+<page-header inline-template>
+<div id="page-header" class="d-print-none wrap-xl">
+<!-- noindex -->
+<a class="d-lg-none d-print-block" href="https://www.informatik.tu-darmstadt.de/cac/" title="Home of institution">
+<div class="fach-label bg-key text-white pt-3 pb-2">
+<div class="frame inner stack-1">
+<p class="sans-lead">
+CAC - Chair of Applied Cryptography
+</p>
+</div>
+</div>
+</a>
+<!-- index -->
+<div class="hold bg-gr2 illu-area">
+<div class="d-none d-md-block h-0 pb-25"></div>
+<div class="info-frame frame-md">
+<div class="row hold">
+<div class="col col-1-1 col-md-8 col-lg-9 align-self-end">
+<div class="frame px-md-0 hyphens">
+<h1 class="serif-h1 strong text-gr5 pt-4 pb-3">Principal Investigator</h1>
+</div>
+</div>
+</div>
+</div>
+<div class="overlay" :class="{active: overlay}" @click="overlayClick" tabindex="-1" aria-hidden="true"></div>
+</div>
+</div>
+</page-header>
+<!-- noindex -->
+<div id="breadcrumbs" class="wrap-xl d-print-none">
+<div class="frame pt-2">
+<nav aria-label="breadcrumb">
+<p class="sr-only">You are here:</p>
+<ol class="breadcrumb">
+<li class="breadcrumb-item">
+<a class="link" href="https://www.tu-darmstadt.de/">TU Darmstadt</a>
+</li>
+<li class="breadcrumb-item">
+<a class="link" href="http://www.informatik.tu-darmstadt.de" title="Informatik"><span class="icon" aria-hidden="true"><span class="fass fa-long-arrow-right"></span></span>Informatik</a>
+</li>
+<li class="breadcrumb-item"><a class="link" href="../../index.en.jsp">CAC</a></li><li class="breadcrumb-item"><a class="link" href="../index.en.jsp">Team</a></li><li class="breadcrumb-item"><span class="text-gr0">Sebastian Faust</span></li>
+</ol>
+</nav>
+</div>
+</div>
+<!-- index -->
+</header>
+<main id="site-main" class="theme-light" tabindex="-1">
+<div class="frame">
+<div class="grid">
+<div class="cell-12 d-none d-print-block">
+<div class="serif-h1 pt-4 pb-3">Principal Investigator</div>
+</div>
+<div class="cell-12 cell-md-9">
+<div class="pb-5"></div>
+<!-- noindex -->
+<div class="d-block d-md-none mb-5 d-print-none">
+<div class="position-relative sublogo">
+<img class="d-inline-block sublogo-img" src="/media/cac/logo_1/CAC-Logo-RGB_182.jpg" alt=""/>
+</div>
+</div>
+<!-- index -->
+<div class="main-column">
+<section itemscope itemtype="https://schema.org/Person" class="frame mb-5 vcard" id="kontakt">
+<div class="grid-2">
+<div class="foto-area cell-12 cell-sm-4 mb-2 d-none d-sm-block">
+<div class="position-relative w-100 mb-0 pb-100">
+<img class="contact-img d-flex position-absolute h-100 w-100 cover" src="/media/cac/portraits/Faust2_415x415.jpg" alt="" itemprop="image"/>
+</div>
+</div>
+<div class="cell-12 cell-sm-8 vcard">
+<div class="mb-4 stack-2">
+<h2 class="contact-name serif-h2">
+<span itemprop="honorificPrefix">Prof.</span>
+<span itemprop="name" class="fn">
+Sebastian
+Faust
+</span>
+</h2>
+</div>
+<div itemprop="jobTitle" class="mb-4 stack-1">
+<h3 class="sans-h6">
+Department of Computer Science
+</h3>
+</div>
+<div class="mb-4 stack-2">
+<h3 class="sans-h6 text-gr1">
+Working area(s)
+</h3>
+<p class="sans-body"><a class="link" href="https://www.informatik.tu-darmstadt.de/cac"><span class="icon fass fa-long-arrow-right" aria-hidden="true"></span>Applied Cryptography</a></p>
+</div>
+<div class="mb-4 stack-2">
+<h3 class="sans-h6 text-gr1">
+Contact
+</h3>
+<p class="sans-body"><span class="email" title="Replace «tu-» by «tu-darmstadt.de»">sebastian.faust&#064;tu-...</span></p>
+<p class="sans-body">
+<span class="tel" itemprop="telephone"><span class="type d-none">work </span>+49 6151 16-25710</span><br/>
+<span itemprop="faxNumber"><span class="icon fasr fa-fax mr"></span><span class="type d-none">fax </span>+49 6151 16-25717</span>
+</p>
+<p class="sans-body adr" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+<span class="type d-none">Work</span>
+<span class="icon fasr fa-building mr"></span>S2|20 308<br/>
+<span itemprop="streetAddress" class="street-address">Pankratiusstraße 2</span><br/>
+<span itemprop="postalCode" class="postal-code">64289</span>
+<span itemprop="addressLocality" class="locality">Darmstadt</span>
+<meta itemprop="addressCountry" content="DE"/>
+</p>
+</div>
+</div>
+<div class="cell-12">
+</div>
+</div>
+</section>
+<section class="frame mb-5 content-section" id="ueber">
+<div class="grid-2">
+<div class="cell-12 cell-md-8-9 stack-2">
+<p class="sans-body running-text">Prof. Sebastian Faust has been a member of the Department of Computer Science since 2017. He heads the department Applied Cryptography. He obtained his doctorate in 2010 at the KU Leuven in Belgium. Afterwards, he was a postdoctoral fellow at the Danish Aarhus University, before receiving a Marie Curie IEF scholarship at the EPFL in Switzerland and later an assistant professor at the Ruhr University Bochum. He now holds a full professorship in Darmstadt.</p>
+</div>
+</div>
+</section>
+<section class="content-section frame mb-5" id="awards">
+<div class="grid-2">
+<div class="cell-12">
+<h3 class="serif-h3">
+Awards
+</h3>
+</div>
+<div class="cell-12 content-stack table-responsive">
+<table id="tabelle_awards" class="table">
+<tbody>
+<tbody>
+<tr>
+<td class="sans-small">
+<strong>2020</strong>
+</td>
+<td class="sans-small">
+Copernicus Award
+</td>
+</tr>
+<tr>
+<td class="sans-small">
+<strong>2019</strong>
+</td>
+<td class="sans-small">
+2nd place with Perun in the category scientists at the TU Ideas Competition
+</td>
+</tr>
+<tr>
+<td class="sans-small">
+<strong>2015</strong>
+</td>
+<td class="sans-small">
+DFG Emmy Noether Programme, for project “Cryptography beyond the black-box model”
+</td>
+</tr>
+<tr>
+<td class="sans-small">
+<strong>2014</strong>
+</td>
+<td class="sans-small">
+Best paper award at Eurocrypt 2014, for publication “Unifying leakage models: from probing attacks to noisy leakage”
+</td>
+</tr>
+<tr>
+<td class="sans-small">
+<strong>2013</strong>
+</td>
+<td class="sans-small">
+Marie Curie Fellowship 2014
+</td>
+</tr>
+<tr>
+<td class="sans-small">
+<strong>2007</strong>
+</td>
+<td class="sans-small">
+Microsoft Research PhD Scholarship
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="frame mb-5" id="view_von_tu_biblio">
+<div class="grid-2">
+<div class="cell-12">
+<h3 class="serif-h3">
+Publications
+</h3>
+</div>
+<div class="cell-12">
+<!-- TUbiblio-URL (JSON): https://tubiblio.ulb.tu-darmstadt.de/cgi/exportview/person/Faust=3ASebastian=3A=3A/JSON/Faust=3ASebastian=3A=3A.js -->
+<figure class="d-flex flex-column align-items-center p-5" id="tubiblio-spinner_view_von_tu_biblio">
+<img src="https://www.tu-darmstadt.de/media/resources/images_1/spinner.gif" alt="Loading..."/>
+<figcaption class="sans-mini text-muted">Loading data from TUbiblio…</figcaption>
+</figure>
+<div id="tubiblio-error_view_von_tu_biblio" class="bg-gr5 d-none mt-2 px-2 py-1">
+<span class="d-inline-block icon fasr fa-exclamation-triangle fa-2x mr-1 my-auto text-key"></span>
+<div class="flex-grow-1 my-auto">
+<h3 class="sans-small text-gr1">Error on loading data</h3>
+<p class="running-text sans-mini text-gr1">
+An error has occured when loading publications data from <a class="link" href="https://tubiblio.ulb.tu-darmstadt.de"><span class="icon fass fa-long-arrow-right" aria-hidden="true"></span>TUbiblio</a>. Please try again later.
+</p>
+</div>
+</div>
+<tubiblio :section-id="'view_von_tu_biblio'" :tubiblio-url="'https://tubiblio.ulb.tu-darmstadt.de/cgi/exportview/person/Faust=3ASebastian=3A=3A/JSON/Faust=3ASebastian=3A=3A.js'" inline-template>
+<div id="tubiblio-list_view_von_tu_biblio" class="d-none sans-small stack-2">
+<nav v-if="years.length > 1" class="text-gr1">
+<ol class="d-inline list-unstyled m-0">
+<li class="d-inline" v-for="(year, key) in years">
+<span v-if="key !== 0"> | </span>
+<a class="link text-gr1" :href="'#group_' + year">{{ year }}</a>
+</li>
+</ol>
+</nav>
+<ul class="list-unstyled">
+<li class="pb-2" v-for="(year, key) in years">
+<h4 :id="'group_' + year" class="border-bottom border-gr5 sans-h6">{{ year }}</h4>
+<ul class="list-unstyled stack-2">
+<li class="running-text cell-md-8-9 px-0" v-for="publication in publicationsByYear(year)">
+<div>
+<template v-if="publication.creators">
+<template v-for="(creator, key) in publication.creators"><template v-if="creator.name"><span v-if="key !== 0">; </span><a class="link text-gr1" :href="creator.id?(creator.id.toString().startsWith('http')?creator.id:'https://tubiblio.ulb.tu-darmstadt.de/cgi/search/archive/advanced?dataset=archive&screen=Search&title%2Ftitlealternative_name_merge=ALL&title%2Ftitlealternative_name=&creators_name%2Feditors_name_merge=ALL&creators_name%2Feditors_name=&creators_id=' + creator.id + '&creators_id_match=EX&editors_id=&editors_id_match=EX&abstract%2Fabstractalternative_name_merge=ALL&abstract%2Fabstractalternative_name=&date=&keywords%2Fkeywordsalternative_name%2Fkeywordsswd_merge=ALL&keywords%2Fkeywordsalternative_name%2Fkeywordsswd=&divisions_merge=ANY&refereed=EITHER&book_title%2Fevent_title%2Fpublication%2Fseries%2Fvolume_merge=ALL&book_title%2Fevent_title%2Fpublication%2Fseries%2Fvolume=&note_merge=ALL&note=&isbn=&isbn_match=EX&satisfyall=ALL&order=-date%2Fcreators_name%2Ftitle&_action_search=Suchen') : ('https://tubiblio.ulb.tu-darmstadt.de/view/person/' + creator.name.family + '=3A' + (creator.name.given?creator.name.given.toString().replace('.', '=2E'):'') + '=3A=3A.date.html')">{{ creator.name.family }}<span v-if="creator.name.given">, {{ creator.name.given }}</span></a></template></template><br v-if="publication.editors || publication.corp_creators"/></template><template v-if="publication.editors">
+<template v-for="(editor, key) in publication.editors"><span v-if="key !== 0">; </span><strong v-if="editor.name">{{ editor.name.family }}<span v-if="editor.name.given">, {{ editor.name.given }}</span></strong></template>
+(eds.)<template v-if="publication.corp_creators">; </template></template><template v-if="publication.corp_creators">
+<template v-for="(creator, key) in publication.corp_creators"><span v-if="key !== 0">; </span><strong>{{ creator }}</strong></template>
+(Corporate Creator)</template> ({{ publication.date.toString().substring(0,4) }}):
+</div>
+<a class="link" :href="'https://tubiblio.ulb.tu-darmstadt.de/' + publication.eprintid + '/'"><em>{{ publication.title }}<span v-if="!publication.title.endsWith('.')">.</span></em></a>
+<br/>
+<span v-if="publication.series">In: {{ publication.series }},</span>
+<span v-if="publication.volume">{{ publication.volume }},</span>
+<span v-if="publication.book_title">
+In: {{ publication.book_title }},
+</span>
+<span v-else-if="publication.publication">
+In: {{ publication.publication }},
+</span>
+<span v-if="publication.journal_volume">{{ publication.journal_volume}}<span v-if="publication.number"> ({{ publication.number }})</span>,</span>
+<span v-if="publication.pagerange">
+<span v-if="publication.pagerange.toString().includes('-')">pp</span><span v-else>p</span>.
+{{ publication.pagerange }},
+</span>
+<span v-if="publication.place_of_pub">{{ publication.place_of_pub }},</span>
+<span v-if="publication.publisher">{{ publication.publisher }},</span>
+<span v-if="publication.institution">{{ publication.institution }},</span>
+<template v-if="publication.event_title">
+<span v-if="publication.event_title">{{ publication.event_title }},</span>
+</template>
+<span v-if="publication.event_location">{{ publication.event_location }},</span>
+<span v-if="publication.event_dates">{{ publication.event_dates }},</span>
+<span class="text-nowrap" v-if="publication.issn">ISSN {{ publication.issn }},</span>
+<span class="text-nowrap" v-if="publication.eissn">e-ISSN {{ publication.eissn }},</span>
+<span class="text-nowrap" v-if="publication.isbn">ISBN {{ publication.isbn }},</span>
+<template v-if="publication.doi">
+<a class="link text-gr1 text-nowrap" :href="'https://doi.org/' + publication.doi.toString().replace('http://','').replace('https://','').replace('dx.doi.org/','').replace('doi.org/','').replace('doi.org','').replace('DOI: ','').replace('doi:','')"><span class="icon fass fa-long-arrow-right"></span>DOI: {{ publication.doi.toString().replace('http://','').replace('https://','').replace('dx.doi.org/','').replace('doi.org/','').replace('doi.org','').replace("DOI: ", "").replace("doi:", "") }}</a>,
+</template>
+<template v-if="publication.official_url">
+<a class="link text-gr1 text-nowrap" :href="publication.official_url"><span class="icon fass fa-long-arrow-right"></span>Official URL</a>,
+</template>
+<span class="text-nowrap">
+{{ labels[publication.type]?labels[publication.type]:publication.type }}<template v-if="publication.pub_sequence && publication.pub_sequence!='bibliography'">, {{ labels[publication.pub_sequence] }}</template><template v-if="publication.doc_status">, {{ labels[publication.doc_status] }}
+</template>
+</span>
+</li>
+<li v-if="publicationsList.length == 1000" class="sans-mini strong text-gr1">
+[&#8230;]
+</li>
+</ul>
+</li>
+</ul>
+<p class="sans-mini text-muted">
+Number of items in this list: <strong><template v-if="publicationsList.length == 1000">&gt;</template>{{ publicationsList.length }}</strong>
+<span v-if="publicationsList.length == 1000">
+<br/>Only the {{publicationsList.length}} latest publications are displayed here.
+</span>
+</p>
+<p class="text-center">
+<a class="btn btn-key" role="button" href="https://tubiblio.ulb.tu-darmstadt.de/view/person/Faust=3ASebastian=3A=3A.html">
+<span v-if="publicationsList.length == 1000">
+View complete list at TUbiblio
+</span>
+<span v-else>
+View this list at TUbiblio
+</span>
+</a>
+</p>
+</div>
+</tubiblio>
+</div>
+</div>
+</section>
+</div>
+</div>
+<div class="cell-12 cell-md-3 d-print-none">
+<div class="d-none d-md-block d-print-none pt-5"></div>
+<!-- noindex -->
+<div class="d-none d-md-block cell-md-2-3 mb-4 p-0 d-print-none">
+<div class="position-relative sublogo">
+<img class="d-inline-block sublogo-img" src="/media/cac/logo_1/CAC-Logo-RGB_182.jpg" alt=""/>
+</div>
+</div>
+<!-- index -->
+</div>
+</div>
+</div>
+</main>
+<footer id="site-footer" class="d-print-none">
+<div class="d-print-none frame hold bg-key py-5">
+<!-- noindex -->
+<div class="grid">
+<div class="col-sm-9 col-md-7 col-lg-5 mx-auto pb-5 stack-5">
+<social-media inline-template>
+<nav class="d-flex justify-content-around">
+<div v-for="socialMediaItem in socialMediaItems">
+<a class="d-flex align-items-center bg-white border border-transparent link-outer hover-bg-key hover-border-white hover-text-white justify-content-center rounded-circle text-key sans-h4 social" :href="socialMediaItem.url" :title="socialMediaItem.label">
+<span class="fab" :class="'fa-' + socialMediaItem.icon" aria-hidden="true"></span>
+<span class="sr-only link-inner">{{ socialMediaItem.label }}</span>
+</a>
+</div>
+</nav>
+</social-media>
+</div>
+</div>
+<!-- index -->
+<div class="grid">
+<div class="col-12 stack-2">
+<nav>
+<div class="d-block d-sm-flex justify-content-center align-items-center sans-small strong text-center text-white">
+<div class="mx-2 mb-2">
+<a class="link" accesskey="3" href="../../../sitemap.en.jsp" title="[Alt(+Shift)+3]">Sitemap</a>
+</div>
+<div class="mx-2 mb-2">
+<a class="link" accesskey="8" href="../../../impressum.en.jsp" title="[Alt(+Shift)+8]">Legal note</a>
+</div>
+<div class="mx-2 mb-2">
+<a class="link" href="https://www.tu-darmstadt.de/barrierefreiheit">Accessibility</a>
+</div>
+<div class="mx-2 mb-2">
+<a class="link" accesskey="7" href="https://www.tu-darmstadt.de/datenschutzerklaerung" title="[Alt(+Shift)+7]">Privacy Policy</a>
+</div>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<!-- noindex -->
+<div id="btn-top" class="invisible position-fixed w-100 theme-light d-print-none">
+<div id="btn-top_wrapper" class="wrap-xl px-4 position-relative">
+<a id="btn-top_link" accesskey="t" title="[Alt(+Shift)+t]" class="d-inline-block border border-white bg-key link-outer position-absolute text-white text-center" href="#top"><span class="sr-only">Go to top</span><span class="icon fasr fa-arrow-up" aria-hidden="true"></span></a>
+</div>
+</div>
+<!-- index -->
+<cookie-modal inline-template>
+<div id="cookie-modal" class="d-print-none modal fade reveal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="cookie-modal" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-md" role="document">
+<div class="modal-content position-relative p-4">
+<div class="grid-2">
+<div class="cell-12 stack-1">
+<p class="running-text sans-mini">
+We would like to customise the information and usability of this website to your preferences and needs.
+To this end, we use so-called cookies. Please choose which cookies you would like to enable when visiting our webpages.<br/>
+Some of these cookies are required to load and correctly display this website on your device.
+These are strictly necessary or essential cookies and cannot be deselected.<br/>
+The preferences cookie saves your language setting, while the statistics cookie regulates
+how the open-source statistical software “Matomo” analyses your visits to and activities on our website.<br/>
+For more information about cookies we use, please refer to our
+<a class="link text-gr1" href="https://www.tu-darmstadt.de/datenschutzerklaerung"><span class="icon fass fa-long-arrow-right" aria-hidden="true"></span>privacy policy</a>.
+</p>
+<form class="my-1 sans-mini">
+<label class="d-block"><input type="checkbox" v-model="acceptedCookies" value="essential" checked="checked" disabled="disabled"/> Strictly necessary only</label>
+<label class="d-block"><input type="checkbox" v-model="acceptedCookies" value="usability"/> Preferences</label>
+<label class="d-block"><input type="checkbox" v-model="acceptedCookies" value="statistics"/> Statistics</label>
+<button type="button" class="btn btn-key mr-1 mt-1" @click="acceptCookies(true)">
+Accept all
+</button>
+<button type="button" class="btn btn-key mt-1" @click="acceptCookies(false)">
+Save & close
+</button>
+</form>
+<p class="sans-mini">
+<a class="link text-nowrap text-gr1" href="../../../impressum.en.jsp"><span class="icon fass fa-long-arrow-right" aria-hidden="true"></span>Legal note</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</cookie-modal>
+</div>
+<script src="https://www.tu-darmstadt.de/media/resources/scripts/lib_js/jquery-3.6.0.min.js"></script>
+<script src="https://www.tu-darmstadt.de/media/resources/scripts/lib_js/bootstrap-4.4.1.min.js"></script>
+<script src="https://www.tu-darmstadt.de/media/resources/scripts/lib_js/vue-2.6.11.min.js"></script>
+<script src="https://www.tu-darmstadt.de/media/resources/scripts/lib_1.0.0.js"></script>
+<script>
+const pageId = "11202797";
+const sitemapUrl = '../../../hauptmenue.en.json';
+const fastBlocksUrl = '/globalcontent/schnelleinstieg.en.json';
+const menuPath = ["cac","team_cac","sebastian_faust_cac"];
+var level = 0;
+var currentIndex = menuPath.indexOf("sebastian_faust_cac");
+if(currentIndex > -1){
+level = currentIndex+1;
+}
+</script>
+<script src="https://www.tu-darmstadt.de/media/resources/scripts/modules_js/tubiblio-1.0.0.en.js"></script>
+<script>
+var socialMediaItemsUrl = "/globalcontent/socialmedia.en.json";
+</script>
+<script src="https://www.tu-darmstadt.de/media/resources/scripts/modules_js/social-media.js"></script>
+<script src="https://www.tu-darmstadt.de/media/resources/scripts/app_1.1.5.en.js"></script>
+<script type="text/x-template" id="phablet-fast-item">
+<div class="phablet-fast-item" :class="bgClass">
+<button type="button" class="collapse-tab p-3" ref="source" :class="textClass" :aria-controls="targetID" :aria-expanded="String(isOpen)" :id="sourceID" @click="toggle"><slot name="tab"></slot><span class="icon fass fa-chevron-down fa-fw"></span></button>
+<transition :css="false" @enter="enter" @leave="leave" @after-enter="afterEnter" @before-leave="beforeLeave">
+<div class="collapse-panel" role="region" v-show="isOpen" ref="target" :id="targetID" :class="textClass" :aria-labelledby="sourceID" :aria-hidden="String(!isOpen)">
+<slot name="panel"></slot>
+</div>
+</transition>
+</div>
+</script>
+<script>
+if($(window).width() < 500){
+$('.foto-area').each(function(){
+$(this)
+.addClass("p-5")
+.removeClass("d-none")
+.insertAfter($(this).next().find('.contact-name'));
+});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,4882 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.6.2">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Jiang Ming">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Associate Professor of Computer Science">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://cs.tulane.edu/~jming/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/~jming/css/academic.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-69421968-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           document.location = url;
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target);  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-69421968-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+  <link rel="alternate" href="/~jming/index.xml" type="application/rss+xml" title="Jiang Ming">
+  
+
+  <link rel="manifest" href="/~jming/index.webmanifest">
+  <link rel="icon" type="image/png" href="/~jming/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/~jming/img/icon-192.png">
+
+  <link rel="canonical" href="https://cs.tulane.edu/~jming/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Jiang Ming">
+  <meta property="og:url" content="https://cs.tulane.edu/~jming/">
+  <meta property="og:title" content="Jiang Ming">
+  <meta property="og:description" content="Associate Professor of Computer Science"><meta property="og:image" content="https://cs.tulane.edu/~jming/img/icon-192.png">
+  <meta property="twitter:image" content="https://cs.tulane.edu/~jming/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    <meta property="og:updated_time" content="2024-04-16T00:00:00&#43;00:00">
+  
+
+  
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://cs.tulane.edu/~jming?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "url": "https://cs.tulane.edu/~jming"
+}
+</script>
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Jiang Ming</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    
+    
+      <a class="navbar-brand" href="/~jming/">Jiang Ming</a>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/~jming/#about" data-target="#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/~jming/#awards" data-target="#awards"><span>Honors & Awards</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/~jming/#featured" data-target="#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/~jming/#teaching" data-target="#teaching"><span>Teaching</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/~jming/#students" data-target="#students"><span>Team</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/~jming/#services" data-target="#services"><span>Services</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/~jming/#posts" data-target="#posts"><span>Versatility</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/~jming/#contact" data-target="#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/~jming" data-target="[]"><span></span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item">
+        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<span class="js-widget-page d-none"></span>
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  <section id="about" class="home-section wg-about   "  >
+    <div class="container">
+      
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-12 col-lg-4">
+    <div id="profile">
+
+      
+      
+      <img class="portrait" src="/~jming/authors/admin/avatar_hua93c32c57357d41d58a21451175e8581_131997_250x250_fill_q90_lanczos_center.jpg" alt="Avatar">
+      
+
+      <div class="portrait-title">
+        <h2>Jiang Ming</h2>
+        <h3>Associate Professor of Computer Science</h3>
+
+        
+        <h3>
+          <a href="http://tulane.edu/" target="_blank" rel="noopener">
+          <span>Tulane University</span>
+          </a>
+        </h3>
+        
+      </div>
+
+      <ul class="network-icon" aria-hidden="true">
+        
+        
+        
+        
+          
+        
+        
+        
+        
+        
+          
+        
+        <li>
+          <a href="/~jming/#contact" >
+            <i class="fas fa-envelope big-icon"></i>
+          </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+          
+        
+        <li>
+          <a href="https://scholar.google.com/citations?user=i4VFYKAAAAAJ" target="_blank" rel="noopener">
+            <i class="ai ai-google-scholar big-icon"></i>
+          </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+          
+        
+        <li>
+          <a href="https://dblp.uni-trier.de/pers/hd/m/Ming_0002:Jiang" target="_blank" rel="noopener">
+            <i class="ai ai-dblp big-icon"></i>
+          </a>
+        </li>
+        
+        
+        
+        
+          
+        
+        
+        
+        
+        
+          
+        
+        <li>
+          <a href="/~jming" >
+            <i class="fab fa-github big-icon"></i>
+          </a>
+        </li>
+        
+      </ul>
+
+    </div>
+  </div>
+  <div class="col-12 col-lg-8">
+
+    
+    
+
+    <h1 id="about-me">About Me</h1>
+<p><img src="img/Tulane-SSE.png" alt="Tulane-SSE"></p>
+<p>I am an Associate Professor in the <a href="https://sse.tulane.edu/cs">Department of Computer Science</a> at <a href="https://tulane.edu/">Tulane University</a>. 
+I received my PhD from <a href="https://www.psu.edu/">The Pennsylvania State University</a>.
+My research interests span Software and Systems Security. I strive to ground my efforts
+in practical security problems with an eye towards developing effective solutions
+to address realistic threats caused by today’s emerging technologies.</p>
+<blockquote>
+<p><strong>I am always looking for self-motivated Ph.D. students who would like to carry on top-notch research on Software and Systems Security. Candidates are expected to have a solid background in compilers, operating systems, formal methods, and strong programming skills. Please contact me if you are interested.</strong></p>
+</blockquote>
+<p><strong>Research Interests</strong>:</p>
+<ul>
+<li>💡Binary Code Analysis and Verification for Security Issues</li>
+<li>💡Hardware-Assisted Software Security Analysis</li>
+<li>💡Mobile Systems Security</li>
+<li>💡Language-based Security</li>
+</ul>
+
+
+    <div class="row">
+
+      
+
+      
+
+    </div>
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  <section id="awards" class="home-section wg-blank   "  >
+    <div class="container">
+      
+
+
+<div class="row">
+  
+    <div class="col-12 col-lg-4 section-heading">
+      <h1>Honors &amp; Awards</h1>
+      
+    </div>
+    <div class="col-12 col-lg-8">
+      <ul>
+<li>Google Research Scholar Award, 2024</li>
+<li>IEEE Top Picks in Hardware and Embedded Security Shortlist, 2023</li>
+<li>Carol Lavin Bernick Faculty Grant, 2023</li>
+<li>2nd Place in ACM Student Research Competition Grand Finalists (Faculty Advisor), 2022</li>
+<li>Cisco Research Gift, 2021</li>
+<li>ACM SIGPLAN Distinguished Paper Award, PLDI 2021</li>
+<li>CSAW Best Applied Security Paper Award TOP-10 Finalists, 2017</li>
+</ul>
+
+    </div>
+  
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  <section id="featured" class="home-section wg-featured   "  >
+    <div class="container">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-12 col-lg-4 section-heading">
+    <h1>Featured Publications</h1>
+    
+  </div>
+  <div class="col-12 col-lg-8">
+
+    
+
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/lin-jiang/">Lin Jiang</a></span>, <span><a href="/~jming/authors/feiyu-zhang/">Feiyu Zhang</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    April 2024
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 21st USENIX Symposium on Networked Systems Design and Implementation</em>, Santa Clara, CA, April 16–18, 2024. (Acceptance rate 18.6%=112/601
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/nsdi24/">[NSDI &#39;24] Towards Intelligent Automobile Cockpit via A New Container Architecture</a>
+  </h3>
+
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/shijia-li/">Shijia Li</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/pengda-qiu/">Pengda Qiu</a></span>, <span><a href="/~jming/authors/qiyuan-chen/">Qiyuan Chen</a></span>, <span><a href="/~jming/authors/lanqing-liu/">Lanqing Liu</a></span>, <span><a href="/~jming/authors/huaifeng-bao/">Huaifeng Bao</a></span>, <span><a href="/~jming/authors/qiang-wang/">Qiang Wang</a></span>, <span><a href="/~jming/authors/chunfu-jia/">Chunfu Jia</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    November 2023
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 30th ACM Conference on Computer and Communications Security</em>, Copenhagen, Denmark, November 26-30, 2023. (Acceptance rate 19.1%=234/1222)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/ccs23-packgenome/">[CCS &#39;23] PackGenome: Automatically Generating Robust YARA Rules for Accurate Malware Packer Detection</a>
+  </h3>
+
+  
+  <div class="article-style">
+    <p><p><img src="img/Badges-Availabe-Functional-left.jpg" alt="⭐ ACM Artifact Badges: Available, Functional"></p>
+</p>
+  </div>
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/binlin-cheng/">Binlin Cheng</a></span>, <span><a href="/~jming/authors/erika-a-leal/">Erika A Leal</a></span>, <span><a href="/~jming/authors/haotian-zhang/">Haotian Zhang</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    August 2023
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 32nd USENIX Security Symposium</em>, Anaheim, CA, August 09-11, 2023. (Acceptance rate 29.2%=422/1444)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/usenixsecurity23-loophpcs/">[USENIX Security &#39;23] On the Feasibility of Malware Unpacking via Hardware-assisted Loop Profiling</a>
+  </h3>
+
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/wen-li/">Wen Li</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/xiapu-luo/">Xiapu Luo</a></span>, <span><a href="/~jming/authors/haipeng-cai/">Haipeng Cai</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    August 2022
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 31st USENIX Security Symposium</em>, Boston, MA, USA, August 10-12, 2022. (Acceptance rate 17.2%=256/1492)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/usenixsecurity22-polycruise/">[USENIX Security &#39;22] PolyCruise: A Cross-Language Dynamic Information Flow Analysis</a>
+  </h3>
+
+  
+  <div class="article-style">
+    <p><p><img src="img/USEINX-Available-Functional-left.png" alt="⭐ USEINX Artifact Badges: Available & Functional"></p>
+</p>
+  </div>
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/haotian-zhang/">Haotian Zhang</a></span>, <span><a href="/~jming/authors/mengfei-ren/">Mengfei Ren</a></span>, <span><a href="/~jming/authors/yu-lei/">Yu Lei</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    March 2022
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      <em>In Proceedings of the 27th International Conference on Architectural Support for Programming Languages and Operating Systems</em>, Lausanne, Switzerland, Feb 28-March 4, 2022. (Acceptance rate 20.1%=80/397)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/asplos22/">[ASPLOS &#39;22] One Size Does Not Fit All: Security Hardening of MIPS Embedded Systems via Static Binary Debloating for Shared Libraries</a>
+  </h3>
+
+  
+  <div class="article-style">
+    <p><p><img src="img/Badges-Availabe-Functional-Reproduced-left.jpg" alt="⭐ ACM Artifact Badges: Available, Functional, Reproduced"></p>
+<p>🥇 <a href="https://pldi21.sigplan.org/track/pldi-2021-SRC"><strong>Champion of PLDI 2021 Student Research Competition (Graduate Track)</strong></a></p>
+<p>🥈 <a href="https://src.acm.org/grand-finalists/2022"><strong>2022 ACM Student Research Competition Grand Finalists: Second Place</strong></a></p>
+<p>🏅 <a href="https://www.ieee-hsttc.org/tp-candidate-2023/"><strong>Shortlisted for Top Picks in Hardware and Embedded Security 2023</strong></a></p>
+</p>
+  </div>
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/shijia-li/">Shijia Li</a></span>, <span><a href="/~jming/authors/chunfu-jia/">Chunfu Jia</a></span>, <span><a href="/~jming/authors/pengda-qiu/">Pengda Qiu</a></span>, <span><a href="/~jming/authors/qiyuan-chen/">Qiyuan Chen</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/debin-gao/">Debin Gao</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    February 2022
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 29th Network and Distributed System Security Symposium</em>, San Diego, California, 27 February – 3 March, 2022. (Acceptance rate 16.2%=83/513)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/ndss22/">[NDSS &#39;22] Chosen-Instruction Attack Against Commercial Code Virtualization Obfuscators</a>
+  </h3>
+
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/wenna-song/">Wenna Song</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/lin-jiang/">Lin Jiang</a></span>, <span><a href="/~jming/authors/yi-xiang/">Yi Xiang</a></span>, <span><a href="/~jming/authors/xuanchen-pan/">Xuanchen Pan</a></span>, <span><a href="/~jming/authors/jianming-fu/">Jianming Fu</a></span>, <span><a href="/~jming/authors/guojun-peng/">Guojun Peng</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    November 2021
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 28th ACM Conference on Computer and Communications Security</em>, Virtual Conference, November 15-19, 2021. (Acceptance rate 22.3%=196/879)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/ccs21-vpbox/">[CCS &#39;21]  Towards Transparent and Stealthy Android OS Sandboxing via Customizable Container-Based Virtualization</a>
+  </h3>
+
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/binbin-liu/">Binbin Liu</a></span>, <span><a href="/~jming/authors/junfu-shen/">Junfu Shen</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/qilong-zheng/">Qilong Zheng</a></span>, <span><a href="/~jming/authors/jing-li/">Jing Li</a></span>, <span><a href="/~jming/authors/dongpeng-xu/">Dongpeng Xu</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    August 2021
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 30th USENIX Security Symposium</em>, Virtual Event, August 11-13, 2021. (Acceptance rate 18.8%=248/1319)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/usenixsecurity21-mba/">[USENIX Security &#39;21] MBA-Blast: Unveiling and Simplifying Mixed Boolean-Arithmetic Obfuscation</a>
+  </h3>
+
+  
+  <div class="article-style">
+    <p><p><img src="img/USEINX-Artiface-Evaluated-left.jpg" alt="⭐ USENIX Artifact Evaluation Passed"></p>
+<p>📰 <a href="https://hex-rays.com/blog/deobfuscation-with-goomba/">Our work motiviates the new IDA-Pro plugin by Hex-Rays.</a></p>
+</p>
+  </div>
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/binlin-cheng/">Binlin Cheng*</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming*</a></span>, <span><a href="/~jming/authors/erika-a-leal/">Erika A Leal</a></span>, <span><a href="/~jming/authors/haotian-zhang/">Haotian Zhang</a></span>, <span><a href="/~jming/authors/jianming-fu/">Jianming Fu</a></span>, <span><a href="/~jming/authors/guojun-peng/">Guojun Peng</a></span>, <span><a href="/~jming/authors/jean-yves-marion-equal-contributions/">Jean-Yves Marion (*Equal Contributions)</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    August 2021
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 30th USENIX Security Symposium</em>, Virtual Event, August 11-13, 2021. (Acceptance rate 18.8%=248/1319)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/usenixsecurity21-api/">[USENIX Security &#39;21] Obfuscation-Resilient Executable Payload Extraction From Packed Malware</a>
+  </h3>
+
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/xiaolei-ren/">Xiaolei Ren</a></span>, <span><a href="/~jming/authors/michael-ho/">Michael Ho</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/yu-lei/">Yu Lei</a></span>, <span><a href="/~jming/authors/li-li/">Li Li</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    June 2021
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings the 42nd ACM SIGPLAN Conference on Programming Language Design and Implementation</em>, Virtual Event, June 23-25, 2021. (Acceptance rate 27.2%=87/320)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/pldi21-bintuner/">[PLDI &#39;21] Unleashing the Hidden Power of Compiler Optimization on Binary Code Difference: An Empirical Study</a>
+  </h3>
+
+  
+  <div class="article-style">
+    <p><p>🏆 <a href="https://pldi21.sigplan.org/track/pldi-2021-papers"><strong>PLDI Distinguished Paper Award</strong></a></p>
+<p>📰 <a href="https://blog.sigplan.org/2021/11/11/when-compiler-optimization-meets-binary-code-difference/">ACM SIGPLAN Blog: When Compiler Optimization Meets Binary Code Difference</a></p>
+</p>
+  </div>
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/dongpeng-xu/">Dongpeng Xu</a></span>, <span><a href="/~jming/authors/binbin-liu/">Binbin Liu</a></span>, <span><a href="/~jming/authors/weijie-feng/">Weijie Feng</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/qilong-zheng/">Qilong Zheng</a></span>, <span><a href="/~jming/authors/jing-li/">Jing Li</a></span>, <span><a href="/~jming/authors/qiaoyan-yu/">Qiaoyan Yu</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    June 2021
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings the 42nd ACM SIGPLAN Conference on Programming Language Design and Implementation</em>, Virtual Event, June 23-25, 2021. (Acceptance rate 27.2%=87/320)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/pldi21-mba/">[PLDI &#39;21] Boosting SMT Solver Performance on Mixed-Bitwise-Arithmetic Expressions</a>
+  </h3>
+
+  
+  <div class="article-style">
+    <p><p><img src="img/Badges-Availabe-Functional-left.jpg" alt="⭐ ACM Artifact Badges: Available & Functional"></p>
+<p>📰 <a href="https://hex-rays.com/blog/deobfuscation-with-goomba/">Our work motivates the new IDA-Pro plugin by Hex-Rays.</a></p>
+</p>
+  </div>
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/wenna-song/">Wenna Song</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/lin-jiang/">Lin Jiang</a></span>, <span><a href="/~jming/authors/han-yan/">Han Yan</a></span>, <span><a href="/~jming/authors/yi-xiang/">Yi Xiang</a></span>, <span><a href="/~jming/authors/yuan-chen/">Yuan Chen</a></span>, <span><a href="/~jming/authors/jianming-fu/">Jianming Fu</a></span>, <span><a href="/~jming/authors/guojun-peng/">Guojun Peng</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    May 2021
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 43rd International Conference on Software Engineering</em>, Virtual Event, May 25-28, 2021. (Acceptance rate 22.4%=138/615)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/icse21/">[ICSE &#39;21] App&#39;s Auto-Login Function Security Testing via Android OS-Level Virtualization</a>
+  </h3>
+
+  
+  <div class="article-style">
+    <p><p>💥 <strong>Zero-day Vulnerability Discovered:</strong> <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-15843">CVE-2019-15843</a>, VULBOX-2019-0221059, <a href="https://www.cnvd.org.cn/flaw/show/CNVD-2019-42028">CNVD-2019-42028</a>, <a href="https://www.cnvd.org.cn/flaw/show/CNVD-2019-42029">CNVD-2019-42029</a>, <a href="https://www.cnvd.org.cn/flaw/show/CNVD-2019-42030">CNVD-2019-42030</a>, <a href="https://www.cnvd.org.cn/flaw/show/CNVD-2019-42031">CNVD-2019-42031</a>, <a href="https://www.cnvd.org.cn/flaw/show/CNVD-2019-42032">CNVD-2019-42032</a>, <a href="https://www.cnvd.org.cn/flaw/show/CNVD-2019-42033">CNVD-2019-42033</a>, <a href="https://www.cnvd.org.cn/flaw/show/CNVD-2019-42034">CNVD-2019-42034</a></p>
+</p>
+  </div>
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/luman-shi/">Luman Shi</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/jianming-fu/">Jianming Fu</a></span>, <span><a href="/~jming/authors/guojun-peng/">Guojun Peng</a></span>, <span><a href="/~jming/authors/dongpeng-xu/">Dongpeng Xu</a></span>, <span><a href="/~jming/authors/kun-gao/">Kun Gao</a></span>, <span><a href="/~jming/authors/xuanchen-pan/">Xuanchen Pan</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    November 2020
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 27th ACM Conference on Computer and Communications Security</em>, Virtual Event, November 9-13, 2020. (Acceptance rate 16.9%=121/715)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/ccs20-vahunt/">[CCS &#39;20] VAHunt: Warding Off New Repackaged Android Malware in App-Virtualization&#39;s Clothing</a>
+  </h3>
+
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/lei-zhao/">Lei Zhao</a></span>, <span><a href="/~jming/authors/yuncong-zhu/">Yuncong Zhu</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/yichen-zhang/">Yichen Zhang</a></span>, <span><a href="/~jming/authors/haotian-zhang/">Haotian Zhang</a></span>, <span><a href="/~jming/authors/heng-yin/">Heng Yin</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    November 2020
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 27th ACM Conference on Computer and Communications Security</em>, Virtual Event, November 9-13, 2020. (Acceptance rate 16.9%=121/715)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/ccs20-patchscope/">[CCS &#39;20] PatchScope: Memory Object Centric Patch Diffing</a>
+  </h3>
+
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/luman-shi/">Luman Shi</a></span>, <span><a href="/~jming/authors/jianming-fu/">Jianming Fu</a></span>, <span><a href="/~jming/authors/zhengwei-guo/">Zhengwei Guo</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    June 2019
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 17th ACM International Conference on Mobile Systems, Applications, and Services</em>, Seoul, South Korea, June 17-21, 2019. (Acceptance rate 22.7%=39/172)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/mobisys19/">[MobiSys &#39;19] &#34;Jekyll and Hyde&#34; is Risky: Shared-Everything Threat Mitigation in Dual-Instance Apps</a>
+  </h3>
+
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/dongpeng-xu/">Dongpeng Xu</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/yu-fu/">Yu Fu</a></span>, <span><a href="/~jming/authors/dinghao-wu/">Dinghao Wu</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    October 2018
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 25th ACM Conference on Computer and Communications Security</em>, Toronto, Canada, October 15-19, 2018. (Acceptance rate 16.6%=134/809)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/ccs18-vmhunt/">[CCS &#39;18]  VMHunt: A Verifiable Approach to Partial-Virtualized Binary Code Simplification</a>
+  </h3>
+
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/binlin-cheng/">Binlin Cheng*</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming*</a></span>, <span><a href="/~jming/authors/jianming-fu/">Jianming Fu</a></span>, <span><a href="/~jming/authors/guojun-peng/">Guojun Peng</a></span>, <span><a href="/~jming/authors/ting-chen/">Ting Chen</a></span>, <span><a href="/~jming/authors/xiaosong-zhang/">Xiaosong Zhang</a></span>, <span><a href="/~jming/authors/jean-yves-marion-equal-contributions/">Jean-Yves Marion (*Equal Contributions)</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    October 2018
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 25th ACM Conference on Computer and Communications Security</em>, Toronto, Canada, October 15-19, 2018. (Acceptance rate 16.6%=134/809)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/ccs18-binunpack/">[CCS &#39;18] Towards Paving the Way for Large-Scale Windows Malware Analysis: Generic Binary Unpacking with Orders-of-Magnitude Performance Boost</a>
+  </h3>
+
+  
+  <div class="article-style">
+    <p><p>📰 <a href="https://www.uta.edu/news/news-releases/2018/11/20/jiang-ming-binary-packing-paper">UTA News Report</a></p>
+</p>
+  </div>
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/armon-barton/">Armon Barton</a></span>, <span><a href="/~jming/authors/mohsen-imani/">Mohsen Imani</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/matthew-wright/">Matthew Wright</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    August 2018
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 27th USENIX Security Symposium</em>, Baltimore, MD, USA, August 15-17, 2018. (Acceptance rate 19.1%=100/524)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/usenix18/">[USENIX Security &#39;18] Towards Predicting Efficient and Anonymous Tor Circuits</a>
+  </h3>
+
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/dongpeng-xu/">Dongpeng Xu</a></span>, <span><a href="/~jming/authors/yufei-jiang/">Yufei Jiang</a></span>, <span><a href="/~jming/authors/dinghao-wu/">Dinghao Wu</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    August 2017
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 26th USENIX Security Symposium</em>, Vancouver, BC, Canada, August 16-18, 2017. (Acceptance rate 16.3%=85/522)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/usenix17/">[USENIX Security &#39;17] BinSim: Trace-based Semantic Binary Diffing via System Call Sliced Segment Equivalence Checking</a>
+  </h3>
+
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/dongpeng-xu/">Dongpeng Xu</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/dinghao-wu/">Dinghao Wu</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    May 2017
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 38th IEEE Symposium on Security and Privacy</em>, San Jose, CA, May 22-24, 2017. (Acceptance rate 13.3%=60/450)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/sp17/">[S&amp;P &#39;17] Cryptographic Function Detection in Obfuscated Binaries via Bit-precise Symbolic Loop Mapping</a>
+  </h3>
+
+  
+  <div class="article-style">
+    <p><p>🏆 <a href="https://www.csaw.io/research"><strong>CSAW 2017 Best Applied Security Paper Award TOP-10 Finalists</strong></a></p>
+</p>
+  </div>
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/dinghao-wu/">Dinghao Wu</a></span>, <span><a href="/~jming/authors/jun-wang/">Jun Wang</a></span>, <span><a href="/~jming/authors/gaoyao-xiao/">Gaoyao Xiao</a></span>, <span><a href="/~jming/authors/peng-liu/">Peng Liu</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    September 2016
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 31st IEEE/ACM International Conference on Automated Software Engineering</em>, Singapore, September 3-7, 2016. (Acceptance rate 19.1%=57/298)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/ase16/">[ASE &#39;16] StraightTaint: Decoupled Offline Symbolic Taint Analysis</a>
+  </h3>
+
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/dongpeng-xu/">Dongpeng Xu</a></span>, <span><a href="/~jming/authors/li-wang/">Li Wang</a></span>, <span><a href="/~jming/authors/dinghao-wu/">Dinghao Wu</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    October 2015
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 22nd ACM Conference on Computer and Communications Security</em>, Denver, Colorado, October 12-16, 2015. (Acceptance rate 19.3%=128/660)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/ccs15/">[CCS &#39;15] LOOP: Logic-Oriented Opaque Predicate Detection in Obfuscated Binary Code</a>
+  </h3>
+
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/dinghao-wu/">Dinghao Wu</a></span>, <span><a href="/~jming/authors/gaoyao-xiao/">Gaoyao Xiao</a></span>, <span><a href="/~jming/authors/jun-wang/">Jun Wang</a></span>, <span><a href="/~jming/authors/peng-liu/">Peng Liu</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    August 2015
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 24th USENIX Security Symposium</em>, Washington, D.C., August 12-14, 2015. (Acceptance rate 15.7%=67/426)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/usenix15/">[USENIX Security &#39;15] TaintPipe: Pipelined Symbolic Taint Analysis</a>
+  </h3>
+
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/~jming/authors/lannan-luo/">Lannan Luo</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/dinghao-wu/">Dinghao Wu</a></span>, <span><a href="/~jming/authors/peng-liu/">Peng Liu</a></span>, <span><a href="/~jming/authors/sencun-zhu/">Sencun Zhu</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    November 2014
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      In <em>Proceedings of the 22nd ACM SIGSOFT International Symposium on the Foundations of Software Engineering</em>, Hong Kong, China, November 16-22, 2014. (Acceptance rate 21.8%=61/280)
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/publication/fse14/">[FSE &#39;14] Semantics-Based Obfuscation-Resilient Binary Code Similarity Comparison with Applications to Software Plagiarism Detection</a>
+  </h3>
+
+  
+  <div class="article-style">
+    <p><p>⭐ <a href="http://fse22.gatech.edu/dpa"><strong>Distinguished Paper Award Nomination</strong></a></p>
+</p>
+  </div>
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  <section id="publications" class="home-section wg-pages   "  >
+    <div class="container">
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="row">
+  <div class="col-12 col-lg-4 section-heading">
+    <h1>Recent Publications</h1>
+    
+  </div>
+  <div class="col-12 col-lg-8">
+
+    <!-- raw HTML omitted -->
+
+
+    
+      
+        
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="view-list-item">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+  <a href="/~jming/publication/nsdi24/" >[NSDI &#39;24] Towards Intelligent Automobile Cockpit via A New Container Architecture</a>
+
+  
+
+  
+  <div class="article-metadata">
+    
+
+
+
+  
+  <span><a href="/~jming/authors/lin-jiang/">Lin Jiang</a></span>, <span><a href="/~jming/authors/feiyu-zhang/">Feiyu Zhang</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>
+
+  </div>
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="view-list-item">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+  <a href="/~jming/publication/ccs23-packgenome/" >[CCS &#39;23] PackGenome: Automatically Generating Robust YARA Rules for Accurate Malware Packer Detection</a>
+
+  
+
+  
+  <div class="article-metadata">
+    
+
+
+
+  
+  <span><a href="/~jming/authors/shijia-li/">Shijia Li</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/pengda-qiu/">Pengda Qiu</a></span>, <span><a href="/~jming/authors/qiyuan-chen/">Qiyuan Chen</a></span>, <span><a href="/~jming/authors/lanqing-liu/">Lanqing Liu</a></span>, <span><a href="/~jming/authors/huaifeng-bao/">Huaifeng Bao</a></span>, <span><a href="/~jming/authors/qiang-wang/">Qiang Wang</a></span>, <span><a href="/~jming/authors/chunfu-jia/">Chunfu Jia</a></span>
+
+  </div>
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="view-list-item">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+  <a href="/~jming/publication/esorics23/" >[ESORICS &#39;23] Intelligent Zigbee Protocol Fuzzing via Constraint-Field Dependency Inference</a>
+
+  
+
+  
+  <div class="article-metadata">
+    
+
+
+
+  
+  <span><a href="/~jming/authors/mengfei-ren/">Mengfei Ren</a></span>, <span><a href="/~jming/authors/haotian-zhang/">Haotian Zhang</a></span>, <span><a href="/~jming/authors/xiaolei-ren/">Xiaolei Ren</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/yu-lei/">Yu Lei</a></span>
+
+  </div>
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="view-list-item">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+  <a href="/~jming/publication/usenixsecurity23-loophpcs/" >[USENIX Security &#39;23] On the Feasibility of Malware Unpacking via Hardware-assisted Loop Profiling</a>
+
+  
+
+  
+  <div class="article-metadata">
+    
+
+
+
+  
+  <span><a href="/~jming/authors/binlin-cheng/">Binlin Cheng</a></span>, <span><a href="/~jming/authors/erika-a-leal/">Erika A Leal</a></span>, <span><a href="/~jming/authors/haotian-zhang/">Haotian Zhang</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>
+
+  </div>
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="view-list-item">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+  <a href="/~jming/publication/usenixsecurity22-polycruise/" >[USENIX Security &#39;22] PolyCruise: A Cross-Language Dynamic Information Flow Analysis</a>
+
+  
+
+  
+  <div class="article-metadata">
+    
+
+
+
+  
+  <span><a href="/~jming/authors/wen-li/">Wen Li</a></span>, <span><a href="/~jming/authors/jiang-ming/">Jiang Ming</a></span>, <span><a href="/~jming/authors/xiapu-luo/">Xiapu Luo</a></span>, <span><a href="/~jming/authors/haipeng-cai/">Haipeng Cai</a></span>
+
+  </div>
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+
+    
+    <div class="see-all">
+      <a href="/~jming/publication/">
+        See all publications
+        <i class="fas fa-angle-right"></i>
+      </a>
+    </div>
+    
+
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  <section id="teaching" class="home-section wg-blank   "  >
+    <div class="container">
+      
+
+
+<div class="row">
+  
+    <div class="col-12 col-lg-4 section-heading">
+      <h1>Teaching</h1>
+      
+    </div>
+    <div class="col-12 col-lg-8">
+      <p><strong>I teach the following courses at Tulane University</strong>:</p>
+<ul>
+<li>CMPS 4662/6662: Information Security</li>
+<li>CMPS 3661/6661: Introduction to Software Security</li>
+</ul>
+
+    </div>
+  
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  <section id="students" class="home-section wg-blank   "  >
+    <div class="container">
+      
+
+
+<div class="row">
+  
+    <div class="col-12 col-lg-4 section-heading">
+      <h1>Team</h1>
+      
+    </div>
+    <div class="col-12 col-lg-8">
+      <p><strong>I'm fortunate to advise many talented students</strong>.</p>
+<p><strong>Current PhD Students:</strong></p>
+<ul>
+<li>Cristian C. Garces</li>
+<li>Kun Liu</li>
+<li>Keith Mitchell</li>
+<li>Chenke Luo (visiting student from Wuhan University)</li>
+</ul>
+<p><strong>Current Master Thesis Students:</strong></p>
+<ul>
+<li>J. Liu</li>
+</ul>
+<p><strong>Alumni:</strong></p>
+<ul>
+<li>Dr. Erika A. Leal (PhD &lsquo;24), Assistant Professor, Baylor University</li>
+<li><a href="https://blog.uta.edu/xiaoleiren/">Dr. Xiaolei Ren</a> (PhD &lsquo;23, co-advised with Jeff Lei), Assistant Professor, Macau University of Science and Technology</li>
+<li><a href="https://mengfei-ren.github.io/">Dr. Mengfei Ren</a> (PhD &lsquo;23, co-advised with Jeff Lei), Assistant Professor, The University of Alabama in Huntsville</li>
+<li>Dr. Haotian Zhang (PhD &lsquo;23), Startup</li>
+<li><a href="https://armonbarton.com/">Dr. Armon Barton</a> (PhD &lsquo;18, co-advised with Matthew Wright), Assistant Professor, Naval Postgraduate School.</li>
+<li><a href="https://www.linkedin.com/in/mohsinjuni/">Dr. Mohsin Junaid</a> (PhD &lsquo;17, co-advised with David Kung), Senior Engineer, Samsung Research America.</li>
+<li>John Podolanko (M.Sc. &lsquo;19), Cyber Security Manager, Tenet Healthcare.</li>
+<li>Jay Mayank Patel (M.Sc. &lsquo;19), Software Engineer, Amazon.</li>
+<li>Anchal Raheja (M.Sc. &lsquo;18), Information Security Engineer, Copart.</li>
+<li>Ashwini Balkrushna Kardile (M.Sc. &lsquo;18), Software Engineer, Intel.</li>
+</ul>
+
+    </div>
+  
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  <section id="services" class="home-section wg-blank   "  >
+    <div class="container">
+      
+
+
+<div class="row">
+  
+    <div class="col-12 col-lg-4 section-heading">
+      <h1>Services</h1>
+      
+    </div>
+    <div class="col-12 col-lg-8">
+      <p>Technical Program Committee:</p>
+<ul>
+<li>[USENIX Security]: USENIX Security Symposium, <a href="https://www.usenix.org/conference/usenixsecurity21">2021</a>, <a href="https://www.usenix.org/conference/usenixsecurity22">2022</a>, <a href="https://www.usenix.org/conference/usenixsecurity24">2024</a></li>
+<li>[CCS]: ACM Conference on Computer and Communications Security, <a href="https://www.sigsac.org/ccs/CCS2019/">2019</a>, <a href="https://www.sigsac.org/ccs/CCS2020/index.html">2020</a>.</li>
+<li>[ICICS]: International Conference on Information and Communications Security, <a href="http://icics.cn/">2019</a>, <a href="http://icics2020.compute.dtu.dk/">2020</a>, <a href="https://icics.cn/">2021</a></li>
+<li>[FEAST]: ACM CCS Workshop on Forming an Ecosystem Around Software Transformation, <a href="https://feastworkshop.github.io/2018/">2018</a>, <a href="https://feastworkshop.github.io/2019/index.html">2019</a>, 
+<a href="https://feastworkshop.github.io/2020/index.html">2020</a>.</li>
+<li>Security and Communication Networks, Special Issue &ldquo;Attack and Defence of Smart Systems&rdquo;, <a href="https://www.hindawi.com/journals/scn/si/756137/">Guest Editor</a>.</li>
+<li>Frontiers in Computer Science, Special Issue &ldquo;Intelligent Defenses for Secure Mobile Software and Systems&rdquo;, <a href="https://www.frontiersin.org/research-topics/24744/intelligent-defenses-for-secure-mobile-software-and-systems">Guest Editor</a>.</li>
+</ul>
+
+    </div>
+  
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  <section id="posts" class="home-section wg-pages   "  >
+    <div class="container">
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="row">
+  <div class="col-12 col-lg-4 section-heading">
+    <h1>Versatility</h1>
+    
+  </div>
+  <div class="col-12 col-lg-8">
+
+    
+
+    
+      
+        
+
+
+
+
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Dec 5, 2022
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    2 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+  
+  <a href="/~jming/post/versatility/">
+      <img src="/~jming/post/versatility/featured_hu9228f1db8bd90f9a5a693f759b9d2f9d_1813326_918x517_fill_q90_lanczos_center.jpg" class="article-banner" alt="">
+  </a>
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/~jming/post/versatility/">Photography</a>
+  </h3>
+
+  
+  <div class="article-style">
+    <p>I enjoy taking pictures to remember a particular moment in my life. My favorite topics are landscape, nature, and the night sky.</p>
+  </div>
+  
+
+  
+
+</div>
+
+      
+    
+
+    
+
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  <section id="contact" class="home-section wg-contact   "  >
+    <div class="container">
+      
+
+
+
+
+
+<div class="row contact-widget">
+  <div class="col-12 col-lg-4 section-heading">
+    <h1>Contact</h1>
+    
+  </div>
+  <div class="col-12 col-lg-8">
+    
+
+    
+
+    <ul class="fa-ul">
+
+      
+      <li>
+        <i class="fa-li fas fa-envelope fa-2x" aria-hidden="true"></i>
+        <span id="person-email"><a href="mailto:jming[at]tulane[dot]edu">jming[at]tulane[dot]edu</a></span>
+      </li>
+      
+
+      
+
+      
+      
+        
+        <li>
+          <i class="fa-li fas fa-map-marker fa-2x" aria-hidden="true"></i>
+          <span id="person-address">303C Stanley Thomas Hall, New Orleans, LA 70118</span>
+        </li>
+      
+
+      
+
+      
+      <li>
+        <i class="fa-li fas fa-clock fa-2x" aria-hidden="true"></i>
+        <span>Thursday 10:00 am to 11:50 am or email for appointment</span>
+      </li>
+      
+
+      
+
+      
+      
+
+    </ul>
+
+    
+
+  </div>
+</div>
+
+    </div>
+  </section>
+
+
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/~jming/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/~jming/js/academic.min.bcfae8267aba63cc55af53a503896bd9.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2023 Jiang Ming &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1904 @@
+<html>
+  <head>
+    <title>Hong's Home Page</title>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <style type="text/css">
+      html {
+        scroll-padding-top: 50px; /* height of sticky header */
+      }
+
+      body {
+        margin: auto;
+        padding: auto;
+        width: 1024px;
+
+        color: #2E3436;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.4em;
+      }
+
+      .collapsible {
+        cursor: pointer;
+      }
+
+      .collapsible:hover {
+        background-color: #f1f1f1;
+      }
+
+      .collapsible:hover::after {
+        font-weight: bold;
+        float: right;
+        content: '\2913';
+      }
+
+      .active::after {
+        font-weight: bold;
+        float: right;
+        content: "\2912";
+      }
+
+      .active:hover::after {
+        font-weight: bold;
+        float: right;
+        content: "\2912";
+      }
+
+      .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+      }
+
+      pre {
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 4px;
+        border-color: lightgrey;
+        padding: 5px 5px 5px 5px;
+        overflow: auto;
+        background-color: #f1f1f1
+      } 
+
+      .pub-title {
+        font-weight: bold;
+      }
+      .pub-links {
+        font-weight: bold;
+        float:right;
+      }
+      .pub-conf {
+        font-style: italic;
+      }
+
+      img { vertical-align: bottom; }
+  
+      a {  color: #008cba; text-decoration: none; }
+
+      li { margin-bottom: 15px; }
+
+      #menu {
+        position: sticky;
+        top: 0;
+
+        background-color: #333;
+        height: 2.2em;
+        margin: auto;
+      }
+      
+      #menu #nav {
+        float: left;
+        top:0;
+        width:100%;
+      }
+      
+      #menu #nav ul {
+        float: left;
+        margin: 6px;
+        padding: 0;
+      }
+      
+      #menu #nav ul li {
+        display: inline;
+      }
+      
+      #menu #nav ul li a {
+        color: white;
+        padding: 8px 16px;
+        font-weight: bold;
+      }
+
+      #menu #nav ul li a:hover:not(.active) {
+        background-color: #111;
+      }
+    </style> 
+  </head>
+
+  <body bgcolor="#ffffff">
+
+    <div id="menu">
+      <div id="nav">
+        <ul>
+        <li><a href=#>Home</a></li>
+        <li><a href=#publications>Publications</a></li>
+        <li><a href=#students>Students</a></li>
+        <li><a href=#experiences>Experiences</a></li>
+        <li><a href=#services>Services</a></li>
+        <li><a href=#teaching>Teaching</a></li>
+        <li><a href=#grants>Grants</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <table border="0">
+      <tbody>
+      <tr height="5"></tr>
+      <tr>
+        <td>
+          <img align="middle" border="0" src="./images/photo.jpg" width="220" class="imgborder">
+        </td>
+        <td width="30">
+          <br>
+        </td>
+        <td align="left">
+          <p> <h2> Hong Hu </h2></p>
+          Assistant Professor<br>
+          College of Information Sciences and Technology<br>
+          The Pennsylvania State University<br><br>
+    
+          E312 Westgate Building<br>
+          288 Burrowes Rd<br>
+          University Park, PA 16802-6823<br>
+          <br>
+          gmail.com: huhong789 <br>
+          psu.edu: honghu <br>
+          <br>
+          <a href=./cv/cv.pdf>CV</a>
+          ---
+          <a href=https://scholar.google.com/citations?user=3aaJwkoAAAAJ&hl=en>Google Scholar</a>
+          ---
+          <a href="https://twitter.com/huhong789?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Twitter</a>
+          <br>
+        </td>
+      </tr></tbody>
+    </table>
+  
+    <hr>
+    <strong>Short Bio:</strong>
+    I am an Assistant Professor in the <a href="https://ist.psu.edu/">College of Information Sciences and Technology</a> 
+    at the <a href="https://www.psu.edu/">Pennsylvania State University</a>.
+    My research interests include system and software security. 
+    I like to work on vulnerability detection, exploitation and defense. 
+
+    <br><br>
+
+    <strong>To prospective students:</strong>
+    I'm looking for motivated students in system security and software security research. 
+    If you are interested in working with me, please contact me via 
+    <a href="mailto:honghu@psu.edu">honghu@psu.edu</a>
+
+    <hr>
+    <h2 id="publications">Publications</h2>
+    <h3>Conference Proceedings</h3>
+    <ol reversed>
+
+      <li class=collapsible>
+        <span class=pub-title>
+          Too Subtle to Notice: Investigating Executable Stack Issues in Linux System
+        </span>
+        <span class=pub-links>
+        </span>
+        <br>
+        Hengkai Ye, and Hong Hu.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 32nd Annual Network and Distributed System Security Symposium (NDSS 2025).
+        </span>
+      </li>
+      <div class=content>
+Code injection was a favored technique for attackers to exploit buffer overflow vulnerabilities decades ago. Subsequently, the widespread adoption of lightweight solutions like write-xor-execute (W⊕X) effectively mitigated most of these attacks by disallowing writable-and-executable memory. However, we observe multiple concerning cases where software developers accidentally disabled W⊕X and reintroduced executable stacks to popular applications. Although each violation has been properly fixed, a lingering question remains: what underlying factors contribute to these recurrent mistakes among developers, even in contemporary software development practices?
+<br><br>
+In this paper, we conduct two investigations to gain a comprehensive understanding of the challenges associated with properly enforcing W⊕X in Linux systems. First, we delve into program-hardening tools to assess whether experienced security developers consistently catch the necessary steps to avoid executable stacks. Second, we analyze the enforcement of W⊕X on Linux by inspecting the source code of the compilation toolchain, the kernel and the loader. Our investigation reveals that properly enforcing W⊕X on Linux requires close collaboration among multiple components. These tools form a complex chain of trust and dependency to safeguard the program stack. However, developers, including security researchers, may overlook the subtle yet essential .note.GNU-stack section when writing assembly code for various purposes, and inadvertently introduce executable stacks. For example, 11 program-hardening tools implemented as inlined reference monitors (IRM) introduce executable stacks to all hardened applications. Based on these findings, we discuss potential exploitation scenarios by attackers and provide suggestions to mitigate this issue.
+      <pre>@inproceedings{ye:badass,
+  title        = {{Too Subtle to Notice: Investigating Executable Stack Issues in Linux System}},
+  author       = {Hengkai Ye and Hong Hu},
+  booktitle    = {Proceedings of the 32nd Annual Network and Distributed System Security Symposium (NDSS 2025)},
+  month        = feb,
+  year         = {2025},
+  address      = {San Diego, CA},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          CountDown: Refcount-guided Fuzzing for Exposing Temporal Memory Errors in Linux Kernel
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/psu-security-universe/countdown"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/bai:countdown.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Shuangpeng Bai, Zhechang Zhang, and Hong Hu.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 31st ACM Conference on Computer and Communications Security (CCS 2024).
+        </span>
+      </li>
+      <div class=content>
+Kernel use-after-free (UAF) bugs are severe threats to system security due to their complex root causes and high exploitability. We find that 36.1% of recent kernel UAF bugs are caused by improper uses of reference counters, dubbed refcount-related UAF bugs. Current kernel fuzzing tools based on code coverage can detect common memory errors, but none of them is aware of the root cause. As a consequence, they only trigger refcount-related UAF bugs passively and coincidentally, and may miss many deep hidden vulnerabilities.
+<br><br>
+To actively trigger refcount-related UAF bugs, in this paper, we propose CountDown, a novel refcount-guided kernel fuzzer. CountDown collects diverse refcount operations from kernel executions and reshapes syscall relations based on commonly accessed refcounts. When generating user-space programs, CountDown prefers to combine syscalls that ever access the same refcounts, aiming to trigger complex refcount behaviors. It also injects refcountdecreasing and refcount-accessing syscalls to intentionally free the refcounted object and trigger invalid accesses through dangling pointers. We test CountDown on mainstream Linux kernels and compare it with popular fuzzers. On average, our tool can detect 66.1% more UAF bugs and 32.9% more KASAN reports than stateof-the-art tools. CountDown has found nine new kernel memory bugs, where two are fixed and one is confirmed.
+      <pre>@inproceedings{bai:countdown,
+  title        = {{CountDown: Refcount-guided Fuzzing for Exposing Temporal Memory Errors in Linux Kernel}},
+  author       = {Shuangpeng Bai and Zhechang Zhang and Hong Hu},
+  booktitle    = {Proceedings of the 31st ACM Conference on Computer and Communications Security (CCS 2024)},
+  month        = oct,
+  year         = {2024},
+  address      = {Salt Lake City, UT},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          DEEPTYPE: Refining Indirect Call Targets with Strong Multi-layer Type Analysis
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/s3team/DeepType"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/xia:deeptype.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Tianrou Xia, Hong Hu, and Dinghao Wu.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 33rd USENIX Security Symposium (USENIX 2024).
+          [Acc Rate: 17.6% - 19.1%]
+        </span>
+      </li>
+      <div class=content>
+Indirect calls, while facilitating dynamic execution characteristics in C and C++ programs, impose challenges on precise construction of the control-flow graphs (CFG). This hinders effective program analyses for bug detection (e.g., fuzzing) and program protection (e.g., control-flow integrity). Solutions using data-tracking and type-based analysis are proposed for identifying indirect call targets, but are either time-consuming or imprecise for obtaining the analysis results. Multi-layer type analysis (MLTA), as the state-of-the-art approach, upgrades type-based analysis by leveraging multi-layer type hierarchy, but their solution to dealing with the information flow between multi-layer types introduces false positives.
+<br><br>
+In this paper, we propose strong multi-layer type analysis (SMLTA) and implement the prototype, DEEPTYPE, to further refine indirect call targets. It adopts a robust solution to record and retrieve type information, avoiding information loss and enhancing accuracy. We evaluate DEEPTYPE on Linux kernel, 5 web servers, and 14 user applications. Compared to TypeDive, the prototype of MLTA, DEEPTYPE is able to narrow down the scope of indirect call targets by 43.11% on average across most benchmarks and reduce runtime overhead by 5.45% to 72.95%, which demonstrates the effectiveness, efficiency and applicability of SMLTA.
+      <pre>@inproceedings{xia:deeptype,
+  title        = {{DEEPTYPE: Refining Indirect Call Targets with Strong Multi-layer Type Analysis}},
+  author       = {Tianrou Xia and Hong Hu and Dinghao Wu},
+  booktitle    = {Proceedings of the 33rd USENIX Security Symposium (USENIX 2024)},
+  month        = aug,
+  year         = {2024},
+  address      = {Philadelphia, PA},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          MalwareTotal: Multi-Faceted and Sequence-Aware Bypass Tactics Against Static Malware Detection
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/Optimus-He/MalwareTotal"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/he:malware-total.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Shuai He, Cai Fu, Hong Hu, Jiahe Chen, Jianqiang Lv, and Shuai Jiang.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 46th International Conference on Software Engineering (ICSE 2024).
+          [Acc Rate: 22.3%]
+        </span>
+      </li>
+      <div class=content>
+Recent methods have demonstrated that machine learning (ML) based static
+malware detection models are vulnerable to adversarial attacks. However, the
+generated malware often fails to generalize to production-level anti-malware
+software, as they usually involve multiple detection methods. This calls for
+universal solutions to the problem of malware variants generation. In this
+work, we demonstrate how the proposed method, MalwareTotal, has allowed
+malware variants to continue to abound in ML-based, signature-based, and
+hybrid anti-malware software. Given a malicious binary, we develop sequential
+bypass tactics that enable malicious behavior to be concealed within
+multi-faceted manipulations. Through 12 experiments on real-world malware, we
+demonstrate that an attacker can consistently bypass detection (98.67%, and
+100% attack success rate against ML-based methods EMBER and MalConv,
+respectively; 95.33%, 92.63%, and 98.52% attack success rate against
+production-level anti-malware software ClamAV, Avast, and ESET, respectively)
+without modifying the malware functionality. We further demonstrate that our
+approach outperforms state-of-the-art adversarial malware generation
+techniques both in attack success rate and query consumption (the number of
+queries to the target model). Moreover, the samples generated by our method
+have demonstrated transferability in the real-world integrated malware
+detector, VirusTotal. In addition, we show that common mitigation such as
+adversarial training on known attacks cannot effectively defend against the
+proposed attack. Finally, we investigate the value of the generated
+adversarial examples as a means of hardening victim models through an
+adversarial training procedure, and demonstrate that the accuracy of the
+retrained model against generated adversarial examples increases
+by 88.51% points.
+      <pre>@inproceedings{he:malware-total,
+  title        = {{MalwareTotal: Multi-Faceted and Sequence-Aware Bypass Tactics Against Static Malware Detection}},
+  author       = {Shuai He and Cai Fu and Hong Hu and Jiahe Chen and Jianqiang Lv and Shuai Jiang},
+  booktitle    = {Proceedings of the 46th International Conference on Software Engineering (ICSE 2024)},
+  month        = apr,
+  year         = {2024},
+  address      = {Lisbon, Portugal},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          VIPER: Spotting Syscall-Guard Variables for Data-Only Attacks
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/PSU-Security-Universe/viper"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/ye:viper-slides.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+          <a href="./papers/ye:viper.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Hengkai Ye, Song Liu, Zhechang Zhang, and Hong Hu.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 32nd USENIX Security Symposium (USENIX 2023).
+          [Acc Rate: 29%]
+        </span>
+      </li>
+      <div class=content>
+As control-flow protection techniques are widely deployed, it is difficult for
+attackers to modify control data, like function pointers, to hijack program
+control flow. Instead, data-only attacks corrupt security-critical non-control
+data (critical data), and can bypass all control-flow protections to revive
+severe attacks. Previous works have explored various methods to help construct
+or prevent data-only attacks. However, no solution can automatically detect
+program-specific critical data.
+<br><br>
+In this paper, we identify an important category of critical data,
+syscall-guard variables, and propose a set of solutions to automatically
+detect such variables in a scalable manner. Syscall-guard variables determine
+to invoke security-related system calls (syscalls), and altering them will
+allow attackers to request extra privileges from the operating system. We
+propose branch force, which intentionally flips every conditional branch
+during the execution and checks whether new security-related syscalls are
+invoked. If so, we conduct data-flow analysis to estimate the feasibility to
+flip such branches through common memory errors. We build a tool, VIPER, to
+implement our ideas. VIPER successfully detects 34 previously unknown
+syscall-guard variables from 13 programs. We build four new data-only attacks
+on sqlite and v8, which execute arbitrary command or delete arbitrary file.
+VIPER completes its analysis within five minutes for most programs, showing
+its practicality for spotting syscall-guard variables.
+      <pre>@inproceedings{ye:viper,
+  title        = {{VIPER: Spotting Syscall-Guard Variables for Data-Only Attacks}},
+  author       = {Hengkai Ye and Song Liu and Zhechang Zhang and Hong Hu},
+  booktitle    = {Proceedings of the 32nd USENIX Security Symposium (USENIX 2023)},
+  month        = aug,
+  year         = {2023},
+  address      = {Anaheim, CA},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          μFuzz: Redesign of Parallel Fuzzing Using Microservice Architecture
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/OMH4ck/mufuzz"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/chen:mufuzz.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Yongheng Chen, Rui Zhong, Yupeng Yang, Hong Hu, Dinghao Wu, and Wenke Lee.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 32nd USENIX Security Symposium (USENIX 2023).
+          [Acc Rate: 29%]
+        </span>
+      </li>
+      <div class=content>
+Fuzzing has been widely adopted as an effective testing technique for
+detecting software bugs. Researchers have explored many parallel fuzzing
+approaches to speed up bug detection. However, existing approaches are built
+on top of serial fuzzers and rely on periodic fuzzing state synchronization.
+Such a design has two limitations. First, the synchronous serial design of
+the fuzzer might waste CPU power due to blocking I/O operations. Second, state
+synchronization is either too late so that we fuzz with a suboptimal strategy
+or too frequent so that it causes enormous overhead.
+<br><br>
+In this paper, we redesign parallel fuzzing with microservice architecture
+and propose the prototype μFuzz. To better utilize CPU power in the
+existence of I/O, μFuzz breaks down the synchronous fuzzing loops into
+concurrent microservices, each with multiple workers. To avoid state
+synchronization, μFuzz partitions the state into different services and
+their workers so that they can work independently but still achieve a great
+aggregated result. Our experiments show that μFuzz outperforms the second-best
+existing fuzzers with 24% improvements in code coverage and 33% improvements
+in bug detection on average in 24 hours. Besides, μFuzz finds 11 new bugs in
+well-tested real-world programs.
+      <pre>@inproceedings{chen:mufuzz,
+  title        = {{μFuzz: Redesign of Parallel Fuzzing Using Microservice Architecture}},
+  author       = {Yongheng Chen and Rui Zhong and Yupeng Yang and Hong Hu and Dinghao Wu and Wenke Lee},
+  booktitle    = {Proceedings of the 32nd USENIX Security Symposium (USENIX 2023)},
+  month        = aug,
+  year         = {2023},
+  address      = {Anaheim, CA},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          SFuzz: Slice-based Fuzzing for Real-Time Operating Systems
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/NSSL-SJTU/SFuzz"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/chen:sfuzz.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Libo Chen, Quanpu Cai, Zhenbang Ma, Yanhao Wang, Hong Hu, Minghang Shen, Yue Liu, Shanqing Guo, Haixin Duan, Kaida Jiang, and Zhi Xue.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 29th ACM Conference on Computer and Communications Security (CCS 2022).
+          [Acc Rate: 22.5%]
+        </span>
+      </li>
+      <div class=content>
+Real-Time Operating System (RTOS) has become the main category of embedded
+systems. It is widely used to support tasks requiring real-time response such
+as printers and switches. The security of RTOS has been long overlooked as it
+was running in special environments isolated from attackers. However, with the
+rapid development of IoT devices, tremendous RTOS devices are connected to the
+public network. Due to the lack of security mechanisms, these devices are
+extremely vulnerable to a wide spectrum of attacks. Even worse, the monolithic
+design of RTOS combines various tasks and services into a single binary, which
+hinders the current program testing and analysis techniques working on RTOS
+systems.
+<br><br>
+In this paper, we propose SFuzz, a novel slice-based fuzzer, to detect
+security vulnerabilities in RTOS systems. Our insight is that RTOS usually
+divides a complicated binary into many separated but single-minded tasks. Each
+task accomplishes a particular event in a deterministic way and its control
+flow is usually straightforward and independent. Therefore, we identify such
+code from the monolithic RTOS binary and synthesize a slice for effective
+testing. Specifically, SFuzz first identifies functions that handle user
+input, constructs call graphs that start from callers of these functions, and
+leverages forward slicing to build the execution tree based on the call graphs
+and pruning the paths independent of external inputs. Then, it detects
+roadblocks within the coarse-grain scope that hinders effective fuzzing, such
+as instructions unrelated to the user input. And then, it conducts
+coverage-guided fuzzing on these code snippets. Finally, SFuzz leverages
+forward and backward slicing to track and verify each path constraint and
+determine whether a bug discovered in the fuzzer is a real vulnerability. We
+applied SFuzz on 35 RTOS samples. SFuzz successfully discovered 77 zero-day
+bugs, and 67 of them have been assigned CVE or CNVD IDs. Our empirical
+evaluation shows that SFuzz outperforms the state-of-the-art tools (e.g.,
+UnicornAFL) on testing RTOS.
+      <pre>@inproceedings{chen:sfuzz,
+  title        = {{SFuzz: Slice-based Fuzzing for Real-Time Operating Systems}},
+  author       = {Libo Chen and Quanpu Cai and Zhenbang Ma and Yanhao Wang and Hong Hu and Minghang Shen and Yue Liu and Shanqing Guo and Haixin Duan and Kaida Jiang and Zhi Xue},
+  booktitle    = {Proceedings of the 29th ACM Conference on Computer and Communications Security (CCS 2022)},
+  month        = nov,
+  year         = {2022},
+  address      = {Los Angeles, CA},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          Detecting Logical Bugs of DBMS with Coverage-based Guidance
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/PSU-Security-Universe/sqlright"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/liang:sqlright-slides.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+          <a href="./papers/liang:sqlright.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Yu Liang, Song Liu, and Hong Hu.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 31st USENIX Security Symposium (USENIX 2022).
+          [Acc Rate: 18%]
+        </span>
+      </li>
+      <div class=content>
+Database management systems (DBMSs) are critical components of modern
+data-intensive applications. Developers have adopted many testing techniques
+to detect DBMS bugs such as crashes and assertion failures. However, most
+previous efforts cannot detect logical bugs that make the DBMS return
+incorrect results. Recent work proposed several oracles to identify incorrect
+results, but they rely on rule-based expression generation to synthesize
+queries without any guidance.
+<br><br>
+In this paper, we propose to combine coverage-based guidance,
+validity-oriented mutations and oracles to detect logical bugs in DBMS
+systems. Specifically, we first design a set of general APIs to decouple the
+logic of fuzzers and oracles, so that developers can easily port fuzzing tools
+to test DBMSs and write new oracles for existing fuzzers. Then, we provide
+validity-oriented mutations to generate high-quality query statements in order
+to find more logical bugs. Our prototype, SQLRight, outperforms existing tools
+that only rely on oracles or code coverage. In total, SQLRight detects 18
+logical bugs from two well-tested DBMSs, SQLite and MySQL. All bugs have been
+confirmed and 14 of them have been fixed.
+      <pre>@inproceedings{liang:sqlright,
+  title        = {{Detecting Logical Bugs of DBMS with Coverage-based Guidance}},
+  author       = {Yu Liang and Song Liu and Hong Hu},
+  booktitle    = {Proceedings of the 31st USENIX Security Symposium (USENIX 2022)},
+  month        = aug,
+  year         = {2022},
+  address      = {Boston, MA},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          FreeWill: Automatically Diagnosing Use-after-free Bugs via Reference Miscounting Detection on Binaries
+        </span>
+        <span class=pub-links>
+          <a href="./papers/he:freewill-slides.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+          <a href="./papers/he:freewill.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Liang He*, Hong Hu*, Purui Su, Yan Cai, and Zhenkai Liang.
+        <i>*Co-First Author</i>
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 31st USENIX Security Symposium (USENIX 2022).
+          [Acc Rate: 18%]
+        </span>
+      </li>
+      <div class=content>
+Memory-safety issues in operating systems and popular applications are still
+top security threats. As one widely exploited vulnerability, Use After Free
+(UAF) resulted in hundreds of new incidents every year. Existing bug diagnosis
+techniques report the locations that allocate or deallocate the vulnerable
+object, but cannot provide sufficient information for developers to reason
+about a bug or synthesize a correct patch. In this work, we identified
+incorrect reference counting as one common root cause of UAF bugs: if the
+developer forgets to increase the counter for a newly created reference, the
+program may prematurely free the actively used object, rendering other
+references dangling pointers. We call this problem reference miscounting. By
+proposing an omission-aware counting model, we developed an automatic method,
+FreeWill, to diagnose UAF bugs. FreeWill first reproduces a UAF bug and
+collects related execution trace. Then, it identifies the UAF object and
+related references. Finally, FreeWill compares reference operations with our
+model to detect reference miscounting. We evaluated FreeWill on 76 real-world
+UAF bugs and it successfully confirmed reference miscounting as root causes
+for 48 bugs and dangling usage for 18 bugs. FreeWill also identified five
+null-pointer dereference bugs and failed to analyze five bugs. FreeWill can
+complete its analysis within 15 minutes on average, showing its practicality
+for diagnosing UAF bugs.
+      <pre>@inproceedings{he:freewill,
+  title        = {{FreeWill: Automatically Diagnosing Use-after-free Bugs via Reference Miscounting Detection on Binaries}},
+  author       = {Liang He and Hong Hu and Purui Su and Yan Cai and Zhenkai Liang},
+  booktitle    = {Proceedings of the 31st USENIX Security Symposium (USENIX 2022)},
+  month        = aug,
+  year         = {2022},
+  address      = {Boston, MA},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          Cooper: Testing the Binding Code of Scripting Languages with Cooperative Mutation
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/TCA-ISCAS/Cooper"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/xu:cooper-slides.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+          <a href="./papers/xu:cooper.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Peng Xu, Yanhao Wang, Hong Hu, and Purui Su.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 29th Annual Network and Distributed System Security Symposium (NDSS 2022).
+          [Acc Rate: 16.2%]
+        </span>
+      </li>
+      <div class=content>
+Scripting languages like JavaScript are being integrated into commercial
+software to support easy file modification. For example, Adobe Acrobat accepts
+JavaScript to dynamically manipulate PDF files. To bridge the gap between the
+high-level scripts and the low-level languages (like C/C++) used to implement
+the software, a binding layer is necessary to transfer data and transform
+representations. However, due to the complexity of two sides, the binding code
+is prone to inconsistent semantics and security holes, which lead to severe
+vulnerabilities. Existing efforts for testing binding code merely focus on the
+script side, and thus miss bugs that require special program native inputs.
+<br><br>
+In this paper, we propose cooperative mutation, which modifies both the script
+code and the program native input to trigger bugs in binding code. Our insight
+is that many bugs are due to the interplay between the program initial state
+and the dynamic operations, which can only be triggered through
+two-dimensional mutations. We develop three novel techniques to enable
+practical cooperative mutation on popular scripting languages: we first
+cluster objects into semantics similar classes to reduce the mutation space of
+native inputs; then, we statistically infer the relationship between script
+code and object classes based on a large number of executions; at last, we use
+the inferred relationship to select proper objects and related script code for
+targeted mutation. We applied our tool, COOPER, on three popular systems that
+integrate scripting languages, including Adobe Acrobat, Foxit Reader and
+Microsoft Word. COOPER successfully found 134 previously unknown bugs. We have
+reported all of them to the developers. At the time of paper publishing, 59
+bugs have been fixed and 33 of them are assigned CVE numbers. We are awarded
+totally 22K dollars bounty for 17 out of all reported bugs.
+      <pre>@inproceedings{xu:cooper,
+  title        = {{Cooper: Testing the Binding Code of Scripting Languages with Cooperative Mutation}},
+  author       = {Peng Xu and Yanhao Wang and Hong Hu and Purui Su},
+  booktitle    = {Proceedings of the 29th Annual Network and Distributed System Security Symposium (NDSS 2022)},
+  month        = apr,
+  year         = {2022},
+  address      = {San Diego, CA},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          Who Goes First? Detecting Go Concurrency Bugs via Message Reordering
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/system-pclub/GFuzz"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/liu:gfuzz-slides.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+          <a href="./papers/liu:gfuzz.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Ziheng Liu, Shihao Xia, Yu Liang, Linhai Song, and Hong Hu.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 27th International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS 2022).
+          [Acc Rate: 20.2%]
+        </span>
+      </li>
+      <div class=content>
+Go is a young programming language invented to build safe and efficient
+concurrent programs. It provides goroutines as lightweight threads and
+channels for inter-goroutine communication. Programmers are encouraged to
+explicitly pass messages through channels to connect goroutines, with the
+purpose of reducing the chance of making programming mistakes and introducing
+concurrency bugs. Go is one of the most beloved programming languages and has
+already been used to build many critical infrastructure software systems in
+the data-center environment. However, a recent study shows that
+channel-related concurrency bugs are still common in Go programs, severely
+hurting the reliability of Go applications.
+<br><br>
+This paper presents GFuzz, a dynamic detector that can effectively pinpoint
+channel-related concurrency bugs by mutating the processing orders of
+concurrent messages. We build GFuzz in three steps. We first adopt an
+effective approach to identify concurrent messages and transform a program to
+process those messages in any given order. We then take a fuzzing approach to
+generate new processing orders by mutating exercised ones and rely on
+execution feedback to prioritize orders close to triggering bugs. Finally, we
+design a runtime sanitizer to capture triggered bugs that are missed by the Go
+runtime. We evaluate GFuzz on seven popular Go software systems, including
+Docker, Kubernetes, and gRPC. GFuzz finds 184 previously unknown bugs and
+reports a negligible number of false positives. Programmers have already
+confirmed 124 reports as real bugs and fixed 67 of them based on our
+reporting. A careful inspection of the detected concurrency bugs from gRPC
+shows the effectiveness of each component of GFuzz and confirms the
+components’ rationality.
+      <pre>@inproceedings{liu:gfuzz,
+  title        = {{Who Goes First? Detecting Go Concurrency Bugs via Message Reordering}},
+  author       = {Ziheng Liu and Shihao Xia and Yu Liang and Linhai Song and Hong Hu},
+  booktitle    = {Proceedings of the 27th International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS 2022)},
+  month        = feb # {--} # mar,
+  year         = {2022},
+  address      = {Lausanne, Switzerland},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          Identifying Behavior Dispatchers for Malware Analysis
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/kp2bit/bdhunter"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/park:bdhunter.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Kyuhong Park, Burak Sahin, Yongheng Chen, Jisheng Zhao, Evan Downing, Hong Hu, and Wenke Lee.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 16th ACM ASIA Conference on Computer and Communications Security (AsiaCCS 2021).
+          [Acc Rate: 18.9%]
+        </span>
+      </li>
+      <div class=content>
+Malware is a major threat to modern computer systems. Malicious behaviors are
+hidden by a variety of techniques: code obfuscation, message encoding and
+encryption, etc. Countermeasures have been developed to thwart these
+techniques in order to expose malicious behaviors. However, these
+countermeasures rely heavily on identifying specific API calls, which has
+significant limitations as these calls can be misleading or hidden from the
+analyst. In this paper, we show that malicious programs share a key component
+which we call a behavior dispatcher, a code structure which is intercepted
+between various condition checks and malicious actions. By identifying these
+behavior dispatchers, a malware analysis can be guided into behavior
+dispatchers and activate hidden malicious actions more easily.
+<br><br>
+We propose BDHunter, a system that automatically identifies dispatchers to
+assist triggering malicious behaviors. BDHunter takes advantage of the
+observation that a dispatcher compares an input with a set of expected values
+to determine which malicious behaviors to execute next. We evaluate BDHunter
+on recent malware samples to identify behavior dispatchers and show that these
+dispatchers can help trigger more malicious behaviors (otherwise hidden). Our
+experimental results show that BDHunter identifies 77.4% of dispatchers within
+the top 20 candidates discovered. Furthermore, BDHunter-guided concolic
+execution successfully triggers 13.0× and 2.6× more malicious behaviors,
+compared to unguided symbolic and concolic execution, respectively. These
+demonstrate that BDHunter effectively identifies behavior dispatchers, which
+are useful for exposing malicious behaviors.
+      <pre>@inproceedings{park:bdhunter,
+  title        = {{Identifying Behavior Dispatchers for Malware Analysis}},
+  author       = {Kyuhong Park and Burak Sahin and Yongheng Chen and Jisheng Zhao and Evan Downing and Hong Hu and Wenke Lee},
+  booktitle    = {Proceedings of the 16th ACM ASIA Conference on Computer and Communications Security (AsiaCCS 2021)},
+  month        = jun,
+  year         = {2021},
+  address      = {Hong Kong, China},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          Sharing More and Checking Less: Leaveraging Common Input Keywords to Detect Bugs in Embedded Systems
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/NSSL-SJTU/SaTC"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/chen:satc-slides.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+          <a href="./papers/chen:satc.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Libo Chen, Yanhao Wang, Quanpu Cai, Yunfan Zhan, Hong Hu, Jiaqi Linghu, Qinsheng Hou, Chao Zhang, Haixin Duan, and Zhi Xue.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 30th USENIX Security Symposium (USENIX 2021).
+          [Acc Rate: 19%]
+        </span>
+      </li>
+      <div class=content>
+IoT devices have brought invaluable convenience to our daily life. However,
+their pervasiveness also amplifies the impact of security vulnerabilities.
+Many popular vulnerabilities of embedded systems reside in their vulnerable
+web services. Unfortunately, existing vulnerability detection methods cannot
+effectively nor efficiently analyze such web services: they either introduce
+heavy execution overheads or have many false positives and false negatives.
+<br><br>
+In this paper, we propose a novel static taint checking solution, SaTC, to
+effectively detect security vulnerabilities in web services provided by
+embedded devices. Our key insight is that, string literals on web interfaces
+are commonly shared between front-end files and back-end binaries to encode
+user input. We thus extract such common keywords from the front-end, and use
+them to locate reference points in the back-end, which indicate the input
+entry. Then, we apply targeted data-flow analysis to accurately detect
+dangerous uses of the untrusted user input. We implemented a prototype of SaTC
+and evaluated it on 39 embedded system firmwares from six popular vendors.
+SaTC discovered 33 unknown bugs, of which 30 are confirmed by CVE/CNVD/PSV.
+Compared to the state-of-the-art tool KARONTE, SaTC found significantly more
+bugs on the test set. It shows that, SaTC is effective in discovering bugs in
+embedded systems.
+      <pre>@inproceedings{chen:satc,
+  title        = {{Sharing More and Checking Less: Leaveraging Common Input Keywords to Detect Bugs in Embedded Systems}},
+  author       = {Libo Chen and Yanhao Wang and Quanpu Cai and Yunfan Zhan and Hong Hu and Jiaqi Linghu and Qinsheng Hou and Chao Zhang and Haixin Duan and Zhi Xue},
+  booktitle    = {Proceedings of the 30th USENIX Security Symposium (USENIX 2021)},
+  month        = aug,
+  year         = {2021},
+  address      = {Vancouver, B.C., Canada},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          Abusing Hidden Properties to Attack the Node.js Ecosystem
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/xiaofen9/Lynx"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/xiao:lynx-slides.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+          <a href="./papers/xiao:lynx.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Feng Xiao, Jianwei Huang, Yichang Xiong, Guangliang Yang, Hong Hu, Guofei Gu, and Wenke Lee.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 30th USENIX Security Symposium (USENIX 2021).
+          [Acc Rate: 19%]
+        </span>
+      </li>
+      <div class=content>
+Nowadays, Node.js has been widely used in the development of server-side and
+desktop programs (e.g., Skype), with its cross-platform and high-performance
+execution environment of JavaScript. In past years, it has been reported other
+dynamic programming languages (e.g., PHP and Ruby) are unsafe on sharing
+objects. However, this security risk is not well studied and understood in
+JavaScript and Node.js programs.
+<br><br>
+In this paper, we fill the gap by conducting the first systematic study on the
+communication process between clientand server-side code in Node.js programs.
+We extensively identify several new vulnerabilities in popular Node.js
+programs. To demonstrate their security implications, we design and develop
+a novel feasible attack, named hidden property abusing (HPA). Our further
+analysis shows HPA attacks are subtly different from existing findings
+regarding exploitation and attack effects. Through HPA attacks, a remote web
+attacker may obtain dangerous abilities, such as stealing confidential data,
+bypassing security checks, and launching DoS (Denial of Service) attacks.
+<br><br>
+To help Node.js developers vet their programs against HPA, we design a novel
+vulnerability detection and verification tool, named LYNX, that utilizes
+hybrid program analysis to automatically reveal HPA vulnerabilities and even
+synthesize exploits. We apply LYNX on a set of widely-used Node.js programs
+and identify 15 previously unknown vulnerabilities. We have reported all of
+our findings to the Node.js community. 10 of them have been assigned with CVE,
+and 8 of them are rated as “Critical” or “High” severity. This indicates HPA
+attacks can cause serious security threats.
+      <pre>@inproceedings{xiao:lynx,
+  title        = {{Abusing Hidden Properties to Attack the Node.js Ecosystem}},
+  author       = {Feng Xiao and Jianwei Huang and Yichang Xiong and Guangliang Yang and Hong Hu and Guofei Gu and Wenke Lee},
+  booktitle    = {Proceedings of the 30th USENIX Security Symposium (USENIX 2021)},
+  month        = aug,
+  year         = {2021},
+  address      = {Vancouver, B.C., Canada},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          Preventing Use-After-Free Attacks with Fast Forward Allocation
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/bwickman97/ffmalloc"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/wickman:ffmalloc-slides.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+          <a href="./papers/wickman:ffmalloc.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Brian Wickman, Hong Hu, Insu Yun, Daehee Jang, JungWon Lim, Sanidhya Kashyap, and Taesoo Kim.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 30th USENIX Security Symposium (USENIX 2021).
+          [Acc Rate: 19%]
+        </span>
+      </li>
+      <div class=content>
+Memory-unsafe languages are widely used to implement critical systems like
+kernels and browsers, leading to thousands of memory safety issues every year.
+A use-after-free bug is a temporal memory error where the program accidentally
+visits a freed memory location. Recent studies show that useafter-free is one
+of the most exploited memory vulnerabilities. Unfortunately, previous efforts
+to mitigate use-after-free bugs are not widely deployed in real-world programs
+due to either inadequate accuracy or high performance overhead.
+<br><br>
+In this paper, we propose to resurrect the idea of one-time allocation (OTA)
+and provide a practical implementation with efficient execution and moderate
+memory overhead. With onetime allocation, the memory manager always returns a
+distinct memory address for each request. Since memory locations are not
+reused, attackers cannot reclaim freed objects, and thus cannot exploit
+use-after-free bugs. We utilize two techniques to render OTA practical: batch
+page management and the fusion of bump-pointer and fixed-size bins memory
+allocation styles. Batch page management helps reduce the number of system
+calls which negatively impact performance, while blending the two allocation
+methods mitigates the memory overhead and fragmentation issues. We implemented
+a prototype, called FFmalloc, to demonstrate our techniques. We evaluated
+FFmalloc on widely used benchmarks and real-world large programs. FFmalloc
+successfully blocked all tested useafter-free attacks while introducing
+moderate overhead. The results show that OTA can be a strong and practical
+solution to thwart use-after-free threats.
+      <pre>@inproceedings{wickman:ffmalloc,
+  title        = {{Preventing Use-After-Free Attacks with Fast Forward Allocation}},
+  author       = {Brian Wickman and Hong Hu and Insu Yun and Daehee Jang and JungWon Lim and Sanidhya Kashyap and Taesoo Kim},
+  booktitle    = {Proceedings of the 30th USENIX Security Symposium (USENIX 2021)},
+  month        = aug,
+  year         = {2021},
+  address      = {Vancouver, B.C., Canada},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          One Engine to Fuzz 'em All: Generic Language Processor Testing with Semantic Validation
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/s3team/Polyglot"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/chen:polyglot.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Yongheng Chen, Rui Zhong, Hong Hu, Hangfan Zhang, Yupeng Yang, Dinghao Wu, and Wenke Lee.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 42nd IEEE Symposium on Security and Privacy (Oakland 2021).
+          [Acc Rate: 12.08%]
+        </span>
+      </li>
+      <div class=content>
+Language processors, such as compilers and interpreters, are indispensable in
+building modern software. Errors in language processors can lead to severe
+consequences, like incorrect functionalities or even malicious attacks.
+However, it is not trivial to automatically test language processors to find
+bugs. Existing testing methods (or fuzzers) either fail to generate
+high-quality (i.e., semantically correct) test cases, or only support limited
+programming languages.
+<br><br>
+In this paper, we propose POLYGLOT, a generic fuzzing framework that generates
+high-quality test cases for exploring processors of different programming
+languages. To achieve the generic applicability, POLYGLOT neutralizes the
+difference in syntax and semantics of programming languages with a uniform
+immediate representation (IR). To improve the language validity, POLYGLOT
+performs constrained mutation and semantic validation to preserve syntactic
+correctness and fix semantic errors. We have applied POLYGLOT on 21 popular
+language processors of 9 programming languages, and identified 173 new bugs,
+113 of which are fixed with 18 CVEs assigned. Our experiments show that
+POLYGLOT can support a wide range of programming languages, and outperforms
+existing fuzzers with up to 30× improvement in code coverage.
+      <pre>@inproceedings{chen:polyglot,
+  title        = {{One Engine to Fuzz 'em All: Generic Language Processor Testing with Semantic Validation}},
+  author       = {Yongheng Chen and Rui Zhong and Hong Hu and Hangfan Zhang and Yupeng Yang and Dinghao Wu and Wenke Lee},
+  booktitle    = {Proceedings of the 42nd IEEE Symposium on Security and Privacy (Oakland 2021)},
+  month        = may,
+  year         = {2021},
+  address      = {San Francisco, CA},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          WINNIE: Fuzzing Windows Applications with Harness Synthesis and Fast Cloning
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/sslab-gatech/winnie"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/jung:winnie-slides.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+          <a href="./papers/jung:winnie.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Jinho Jung, Stephen Tong, Hong Hu, Jungwon Lim, Yonghwi Jin, and Taesoo Kim.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 28th Annual Network and Distributed System Security Symposium (NDSS 2021).
+          [Acc Rate: 15.2%]
+        </span>
+      </li>
+      <div class=content>
+Fuzzing is an emerging technique to automatically validate programs and
+uncover bugs. It has been widely used to test many programs and has found
+thousands of security vulnerabilities. However, existing fuzzing efforts are
+mainly centered around Unix-like systems, as Windows imposes unique challenges
+for fuzzing: a closed-source ecosystem, the heavy use of graphical interfaces
+and the lack of fast process cloning machinery.
+<br><br>
+In this paper, we propose two solutions to address the challenges Windows
+fuzzing faces. Our system, WINNIE, first tries to synthesize a harness for the
+application, a simple program that directly invokes target functions, based on
+sample executions. It then tests the harness, instead of the original
+complicated program, using an efficient implementation of fork on Windows.
+Using these techniques, WINNIE can bypass irrelevant GUI code to test logic
+deep within the application. We used WINNIE to fuzz 59 closed-source Windows
+executables, and it successfully generated valid fuzzing harnesses for all of
+them. In our evaluation, WINNIE can support 2.2× more programs than existing
+Windows fuzzers could, and identified 3.9× more program states and achieved
+26.6× faster execution. In total, WINNIE found 61 unique bugs in 32 Windows
+executables.
+      <pre>@inproceedings{jung:winnie,
+  title        = {{WINNIE: Fuzzing Windows Applications with Harness Synthesis and Fast Cloning}},
+  author       = {Jinho Jung and Stephen Tong and Hong Hu and Jungwon Lim and Yonghwi Jin and Taesoo Kim},
+  booktitle    = {Proceedings of the 28th Annual Network and Distributed System Security Symposium (NDSS 2021)},
+  month        = feb,
+  year         = {2021},
+  address      = {Virtual},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          SQUIRREL: Testing Database Management Systems with Language Validity and Coverage Feedback
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/s3team/Squirrel"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/zhong:squirrel-slides.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+          <a href="./papers/zhong:squirrel.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Rui Zhong, Yongheng Chen, Hong Hu, Hangfan Zhang, Wenke Lee, and Dinghao Wu.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 27th ACM Conference on Computer and Communications Security (CCS 2020).
+          [Acc Rate: 16.9%]
+        </span>
+      </li>
+      <div class=content>
+Fuzzing is an increasingly popular technique for verifying software
+functionalities and finding security vulnerabilities. However, current
+mutation-based fuzzers cannot effectively test database management systems
+(DBMSs), which strictly check inputs for valid syntax and semantics.
+Generation-based testing can guarantee the syntax correctness of the inputs,
+but it does not utilize any feedback, like code coverage, to guide the path
+exploration.
+<br><br>
+In this paper, we develop Squirrel, a novel fuzzing framework that considers
+both language validity and coverage feedback to test DBMSs. We design an
+intermediate representation (IR) to maintain SQL queries in a structural and
+informative manner. To generate syntactically correct queries, we perform
+type-based mutations on IR, including statement insertion, deletion and
+replacement. To mitigate semantic errors, we analyze each IR to identify the
+logical dependencies between arguments, and generate queries that satisfy
+these dependencies. We evaluated Squirrel on four popular DBMSs: SQLite,
+MySQL, PostgreSQL and MariaDB. Squirrel found 51 bugs in SQLite, 7 in MySQL
+and 5 in MariaDB. 52 of the bugs are fixed with 12 CVEs assigned. In our
+experiment, Squirrel achieves 2.4× -- 243.9× higher semantic correctness than
+state-of-the-art fuzzers, and explores 2.0×-10.9× more new edges than
+mutation-based tools. These results show that Squirrel is effective in finding
+memory errors in database management systems.
+      <pre>@inproceedings{zhong:squirrel,
+  title        = {{SQUIRREL: Testing Database Management Systems with Language Validity and Coverage Feedback}},
+  author       = {Rui Zhong and Yongheng Chen and Hong Hu and Hangfan Zhang and Wenke Lee and Dinghao Wu},
+  booktitle    = {Proceedings of the 27th ACM Conference on Computer and Communications Security (CCS 2020)},
+  month        = nov,
+  year         = {2020},
+  address      = {Orlando, USA},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          APOLLO: Automatic Detection and Diagnosis of Performance Regressions in Database Systems
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/sslab-gatech/apollo"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/jung:apollo-slides.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+          <a href="./papers/jung:apollo.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Jinho Jung, Hong Hu, Joy Arulraj, Taesoo Kim, and Woonhak Kang.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 46th International Conference on Very Large Data Bases (VLDB 2020).
+          [Acc Rate: 25%]
+        </span>
+      </li>
+      <div class=content>
+The practical art of constructing database management systems (DBMSs) involves
+a morass of trade-offs among query execution speed, query optimization speed,
+standards compliance, feature parity, modularity, portability, and other
+goals. It is no surprise that DBMSs, like all complex software systems,
+contain bugs that can adversely affect their performance. The performance of
+DBMSs is an important metric as it determines how quickly an application can
+take in new information and use it to make new decisions.
+<br><br>
+Both developers and users face challenges while dealing with performance
+regression bugs. First, developers usually find it challenging to manually
+design test cases to uncover performance regressions since DBMS components
+tend to have complex interactions. Second, users encountering performance
+regressions are often unable to report them, as the regression-triggering
+queries could be complex and database-dependent. Third, developers have to
+expend a lot of effort on localizing the root cause of the reported bugs, due
+to the system complexity and software development complexity.
+<br><br>
+Given these challenges, this paper presents the design of APOLLO, a toolchain
+for automatically detecting, reporting, and diagnosing performance regressions
+in DBMSs. We demonstrate that APOLLO automates the generation of
+regression-triggering queries, simplifies the bug reporting process for users,
+and enables developers to quickly pinpoint the root cause of performance
+regressions. By automating the detection and diagnosis of performance
+regressions, APOLLO reduces the labor cost of developing efficient DBMSs.
+      <pre>@inproceedings{jung:apollo,
+  title        = {{APOLLO: Automatic Detection and Diagnosis of Performance Regressions in Database Systems}},
+  author       = {Jinho Jung and Hong Hu and Joy Arulraj and Taesoo Kim and Woonhak Kang},
+  booktitle    = {Proceedings of the 46th International Conference on Very Large Data Bases (VLDB 2020)},
+  month        = aug,
+  year         = {2020},
+  address      = {Tokyo, Japan},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          DESENSITIZATION: Privacy-Aware and Attack-Preserving Crash Report
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/sslab-gatech/desensitization"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/ding:desensitization-slides.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+          <a href="./papers/ding:desensitization.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Ren Ding*, Hong Hu*, Wen Xu, and Taesoo Kim.
+        <i>*Co-First Author</i>
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 27th Annual Network and Distributed System Security Symposium (NDSS 2020).
+          [Acc Rate: 17.0%]
+        </span>
+      <br>
+<font color=#DD0000> <i><b>Top 10 Finalist, CSAW 2020 </b></i></font>      </li>
+      <div class=content>
+Software vendors collect crash reports from end-users to assist in the
+debugging and testing of their products. However, crash reports may contain
+users' private information, like names and passwords, rendering the user
+hesitant to share the reports with developers. We need a mechanism to protect
+users' privacy in crash reports on the client side while keeping sufficient
+information to support server-side debugging and analysis.
+<br><br>
+In this paper, we propose the DESENSITIZATION technique, which generates
+privacy-aware and attack-preserving crash reports from crashed executions. Our
+tool adopts lightweight methods to identify bug-related and attack-related
+data from the memory, and removes other data to protect users' privacy. Since
+a large portion of the desensitized memory contains null bytes, we store crash
+reports in spare files to save the network bandwidth and the server-side
+storage. We prototype DESENSITIZATION and apply it to a large number of
+crashes of real-world programs, like browsers and the JavaScript engine. The
+result shows that our DESENSITIZATION technique can eliminate 80.9% of
+non-zero bytes from coredumps, and 49.0% from minidumps. The desensitized
+crash report can be 50.5% smaller than the original one, which significantly
+saves resources for report submission and storage. Our DESENSITIZATION
+technique is a push-button solution for the privacy-aware crash report.
+      <pre>@inproceedings{ding:desensitization,
+  title        = {{DESENSITIZATION: Privacy-Aware and Attack-Preserving Crash Report}},
+  author       = {Ren Ding and Hong Hu and Wen Xu and Taesoo Kim},
+  booktitle    = {Proceedings of the 27th Annual Network and Distributed System Security Symposium (NDSS 2020)},
+  month        = feb,
+  year         = {2020},
+  address      = {San Diego, CA},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          Where Does It Go? Refining Indirect-Call Targets with Multi-Layer Type Analysis
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/umnsec/mlta"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/lu:typedive-slides.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+          <a href="./papers/lu:typedive.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Kangjie Lu, and Hong Hu.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 26th ACM Conference on Computer and Communications Security (CCS 2019).
+          [Acc Rate: 16.0%]
+        </span>
+      <br>
+<font color=#DD0000> <i><b>Awarded Best Paper </b></i></font>      </li>
+      <div class=content>
+System software commonly uses indirect calls to realize dynamic program
+behaviors. However, indirect-calls also bring challenges to constructing a
+precise control-flow graph that is a standard prerequisite for many static
+program-analysis and system-hardening techniques. Unfortunately, identifying
+indirect-call targets is a hard problem. In particular, modern compilers do
+not recognize indirect-call targets by default. Existing approaches identify
+indirect-call targets based on type analysis that matches the types of
+function pointers and the ones of address-taken functions. Such approaches,
+however, suffer from a high false-positive rate as many irrelevant functions
+may share the same types.
+<br><br>
+In this paper, we propose a new approach, namely Multi-Layer Type Analysis
+(MLTA), to effectively refine indirect-call targets for C/C++ programs. MLTA
+relies on an observation that function pointers are commonly stored into
+objects whose types have a multi-layer type hierarchy; before indirect calls,
+function pointers will be loaded from objects with the same type hierarchy
+"layer by layer". By matching the multi-layer types of function pointers and
+functions, MLTA can dramatically refine indirect-call targets. MLTA is
+effective because multi-layer types are more restrictive than single-layer
+types. It does not introduce false negatives by conservatively tracking
+targets propagation between multi-layer types, and the layered design allows
+MLTA to safely fall back whenever the analysis for a layer becomes infeasible.
+We have implemented MLTA in a system, namely TypeDive, based on LLVM and
+extensively evaluated it with the Linux kernel, the FreeBSD kernel, and the
+Firefox browser. Evaluation results show that TypeDive can eliminate 86% to
+98% more indirect-call targets than existing approaches do, without
+introducing new false negatives. We also demonstrate that TypeDive not only
+improves the scalability of static analysis but also benefits semantic-bug
+detection. With TypeDive, we have found 35 new deep semantic bugs in the Linux
+kernel.
+      <pre>@inproceedings{lu:typedive,
+  title        = {{Where Does It Go? Refining Indirect-Call Targets with Multi-Layer Type Analysis}},
+  author       = {Kangjie Lu and Hong Hu},
+  booktitle    = {Proceedings of the 26th ACM Conference on Computer and Communications Security (CCS 2019)},
+  month        = nov,
+  year         = {2019},
+  address      = {London, UK},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          RAZOR: A Framework for Post-deployment Software Debloating
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/cxreet/razor"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/qian:razor-slides.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+          <a href="./papers/qian:razor.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Chenxiong Qian*, Hong Hu*, Mansour A Alharthi, Pak Ho Chung, Taesoo Kim, and Wenke Lee.
+        <i>*Co-First Author</i>
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 28th USENIX Security Symposium (USENIX 2019).
+          [Acc Rate: 16.0%]
+        </span>
+      </li>
+      <div class=content>
+Commodity software typically includes a large number of functionalities
+for a broad user population. However, each individual user usually only
+needs a small subset of all supported functionalities. The bloated code
+not only hinders optimal execution, but also leads to a larger attack
+surface. Recent works have explored program debloating as an emerging
+solution to this problem. Unfortunately, these works require program
+source code, limiting their real-world deployability.
+<br><br>
+In this paper, we propose a practical debloating framework, RAZOR,
+that performs code reduction for deployed binaries. Based on users’
+specifications, our tool customizes the binary to generate a functional
+program with minimal code size. Instead of only supporting given test
+cases, RAZOR takes several control-flow heuristics to infer
+complementary code that is necessary to support user-expected
+functionalities. We evaluated RAZOR on commonly used benchmarks and
+real-world applications, including the web browser FireFox and the
+close-sourced PDF reader FoxitReader. The result shows that RAZOR is
+able to reduce over 70% of the code from the bloated binary. It
+produces functional programs and does not introduce any security
+issues. RAZOR is thus a practical framework for debloating real-world
+programs.
+      <pre>@inproceedings{qian:razor,
+  title        = {{RAZOR: A Framework for Post-deployment Software Debloating}},
+  author       = {Chenxiong Qian and Hong Hu and Mansour A Alharthi and Pak Ho Chung and Taesoo Kim and Wenke Lee},
+  booktitle    = {Proceedings of the 28th USENIX Security Symposium (USENIX 2019)},
+  month        = aug,
+  year         = {2019},
+  address      = {Santa Clara, CA},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          Fuzzification: Anti-Fuzzing Techniques
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/sslab-gatech/fuzzification"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/jung:fuzzification-slides.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+          <a href="./papers/jung:fuzzification.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Jinho Jung, Hong Hu, David Solodukhin, Daniel Pagan, Kyu Hyung Lee, and Taesoo Kim.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 28th USENIX Security Symposium (USENIX 2019).
+          [Acc Rate: 16.0%]
+        </span>
+      </li>
+      <div class=content>
+Fuzzing is a software testing technique that quickly and automatically
+explores the input space of a program without knowing its internals.
+Therefore, developers commonly use fuzzing as part of test integration
+throughout the software development process. Unfortunately, it also means that
+such a blackbox and the automatic natures of fuzzing are appealing to
+adversaries who are looking for zero-day vulnerabilities.
+<br><br>
+To solve this problem, we propose a new mitigation approach, called
+Fuzzification , that helps developers protect the released, binary-only
+software from attackers who are capable of applying state-of-the-art fuzzing
+techniques. Given a performance budget, this approach aims to hinder the
+fuzzing process from adversaries as much as possible. We propose three
+Fuzzification techniques: 1) SpeedBump, which amplifies the slowdown in normal
+executions by hundreds of times to the fuzzed execution, 2) BranchTrap,
+interfering with feedback logic by hiding paths and polluting coverage maps,
+and 3) AntiHybrid, hindering taint-analysis and symbolic execution. Each
+technique is designed with best-effort, defensive measures that attempt to
+hinder adversaries from bypassing Fuzzification .
+<br><br>
+Our evaluation on popular fuzzers and real-world applications shows that
+Fuzzification effectively reduces the number of discovered paths by 70.3% and
+decreases the number of identified crashes by 93.0% from real-world binaries,
+and decreases the number of detected bugs by 67.5% from LAVA-M dataset while
+under user-specified overheads for common workloads. We discuss the robustness
+of Fuzzification techniques against adversarial analysis techniques. We
+open-source our Fuzzification system to foster future research.
+      <pre>@inproceedings{jung:fuzzification,
+  title        = {{Fuzzification: Anti-Fuzzing Techniques}},
+  author       = {Jinho Jung and Hong Hu and David Solodukhin and Daniel Pagan and Kyu Hyung Lee and Taesoo Kim},
+  booktitle    = {Proceedings of the 28th USENIX Security Symposium (USENIX 2019)},
+  month        = aug,
+  year         = {2019},
+  address      = {Santa Clara, CA},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          Enforcing Unique Code Target Property for Control-Flow Integrity
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/uCFI-GATech"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/hu:mucfi-slides.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+          <a href="./papers/hu:mucfi.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Hong Hu, Chenxiong Qian, Carter Yagemann, Simon Pak Ho Chung, William R. Harris, Taesoo Kim, and Wenke Lee.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 25th ACM Conference on Computer and Communications Security (CCS 2018).
+          [Acc Rate: 16.6%]
+        </span>
+      </li>
+      <div class=content>
+The goal of control-flow integrity (CFI) is to stop control-hijacking attacks
+by ensuring that each indirect control-flow transfer (ICT) jumps to its
+legitimate target. However, existing implementations of CFI have fallen short
+of this goal because their approaches are inaccurate and as a result, the set
+of allowable targets for an ICT instruction is too large, making illegal jumps
+possible.
+<br><br>
+In this paper, we propose the Unique Code Target (UCT) property for CFI.
+Namely, for each invocation of an ICT instruction, there should be one and
+only one valid target. We develop a prototype called μCFI to enforce this new
+property. During compilation, μCFI identifies the sensitive instructions that
+influence ICT and instruments the program to record necessary execution
+context. At runtime, μCFI monitors the program execution in a different
+process, and performs points-to analysis by interpreting sensitive
+instructions using the recorded execution context in a memory safe manner. It
+checks runtime ICT targets against the analysis results to detect CFI
+violations. We apply μCFI to SPEC benchmarks and 2 servers (nginx and vsftpd)
+to evaluate its efficacy of enforcing UCT and its overhead. We also test μCFI
+against control-hijacking attacks, including 5 real-world exploits, 1 proof of
+concept COOP attack, and 2 synthesized attacks that bypass existing defenses.
+The results show that μCFI strictly enforces the UCT property for protected
+programs, successfully detects all attacks, and introduces less than 10%
+performance overhead.
+      <pre>@inproceedings{hu:mucfi,
+  title        = {{Enforcing Unique Code Target Property for Control-Flow Integrity}},
+  author       = {Hong Hu and Chenxiong Qian and Carter Yagemann and Simon Pak Ho Chung and William R. Harris and Taesoo Kim and Wenke Lee},
+  booktitle    = {Proceedings of the 25th ACM Conference on Computer and Communications Security (CCS 2018)},
+  month        = oct,
+  year         = {2018},
+  address      = {Toronto, ON, Canada},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          The "Web/Local" Boundary Is Fuzzy – A Security Study of Chrome's Process-based Sandboxing
+        </span>
+        <span class=pub-links>
+          <a href="https://github.com/jiayaoqijia/Web-Local-Attacks"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/jia:chrome-attack-slides.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+          <a href="./papers/jia:chrome-attack.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Yaoqi Jia, Zheng Leong Chua, Hong Hu, Shuo Chen, Prateek Saxena, and Zhenkai Liang.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 23rd ACM Conference on Computer and Communications Security (CCS 2016).
+          [Acc Rate: 16.5%]
+        </span>
+      </li>
+      <div class=content>
+Process-based isolation, suggested by several research prototypes, is a
+cornerstone of modern browser security architectures. Google Chrome is the
+first commercial browser that adopts this architecture. Unlike several
+research prototypes, Chrome’s process-based design does not isolate different
+web origins, but primarily promises to protect “the local system” from “the
+web”. However, as billions of users now use web-based cloud services (e.g.,
+Dropbox and Google Drive), which are integrated into the local system, the
+premise that browsers can effectively isolate the web from the local system
+has become questionable. In this paper, we argue that, if the process-based
+isolation disregards the same-origin policy as one of its goals, then its
+promise of maintaining the “web/local system (local)” separation is doubtful.
+Specifically, we show that existing memory vulnerabilities in Chrome’s
+renderer can be used as a stepping-stone to drop executables/scripts in the
+local file system, install unwanted applications and misuse system sensors.
+These attacks are purely data-oriented and do not alter any control flow or
+import foreign code. Thus, such attacks bypass binary-level protection
+mechanisms, including ASLR and in-memory partitioning. Finally, we discuss
+various full defenses and present a possible way to mitigate the attacks
+presented.
+      <pre>@inproceedings{jia:chrome-attack,
+  title        = {{The "Web/Local" Boundary Is Fuzzy – A Security Study of Chrome's Process-based Sandboxing}},
+  author       = {Yaoqi Jia and Zheng Leong Chua and Hong Hu and Shuo Chen and Prateek Saxena and Zhenkai Liang},
+  booktitle    = {Proceedings of the 23rd ACM Conference on Computer and Communications Security (CCS 2016)},
+  month        = oct,
+  year         = {2016},
+  address      = {Vienna, Austria},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          Data-Oriented Programming: On the Expressiveness of Non-Control Data Attacks
+        </span>
+        <span class=pub-links>
+          <a href="http://huhong789.github.io/advanced-DOP/"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/hu:dop-slides.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+          <a href="./papers/hu:dop.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Hong Hu, Shweta Shinde, Sendroiu Adrian, Zheng Leong Chua, Prateek Saxena, and Zhenkai Liang.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 37th IEEE Symposium on Security and Privacy (Oakland 2016).
+          [Acc Rate: 13.8%]
+        </span>
+      </li>
+      <div class=content>
+As control-flow hijacking defenses gain adoption, it is important to
+understand the remaining capabilities of adversaries via memory exploits.
+Attacks targeting non-control data in memory can exhibit information leakage
+or privilege escalation. Compared to control-flow hijacking attacks, such
+noncontrol data exploits have limited expressiveness; however, the question
+is: what is the real expressive power of non-control data attacks? In this
+paper we show that such attacks are Turing-complete. We present a systematic
+technique called data-oriented programming (DOP) to construct expressive
+non-control data exploits for arbitrary x86 programs. In the experimental
+evaluation using 9 programs, we identified 7518 data-oriented x86 gadgets and
+5052 gadget dispatchers, which are the building blocks for DOP. 8 out of 9
+real-world programs have gadgets to simulate arbitrary computations and 2 of
+them are confirmed to be able to build Turing-complete attacks. We build 3
+end-to-end attacks to bypass randomization defenses without leaking addresses,
+to run a network bot which takes commands from the attacker, and to alter the
+memory permissions. All the attacks work in the presence of ASLR and DEP,
+demonstrating how the expressiveness offered by DOP significantly empowers the
+attacker.
+      <pre>@inproceedings{hu:dop,
+  title        = {{Data-Oriented Programming: On the Expressiveness of Non-Control Data Attacks}},
+  author       = {Hong Hu and Shweta Shinde and Sendroiu Adrian and Zheng Leong Chua and Prateek Saxena and Zhenkai Liang},
+  booktitle    = {Proceedings of the 37th IEEE Symposium on Security and Privacy (Oakland 2016)},
+  month        = may,
+  year         = {2016},
+  address      = {San Francisco, CA},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          Identifying Arbitrary Memory Access Vulnerabilities in Privilege-Separated Software
+        </span>
+        <span class=pub-links>
+          <a href="./papers/hu:dui-slides.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+          <a href="./papers/hu:dui.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Hong Hu, Zheng Leong Chua, Zhenkai Liang, and Prateek Saxena.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 20th European Symposium on Research in Computer Security (ESORICS 2015).
+          [Acc Rate: 20%]
+        </span>
+      </li>
+      <div class=content>
+Privilege separation is a widely used technique to secure complex software
+systems. With privilege separation, software components are divided into
+several partitions and these partitions can only communicate through limited
+interfaces. However, the interfaces still provide a channel for one partition
+to influence code in other partitions. As a result, certain memory access
+patterns can be leveraged by attackers to perform arbitrary memory access. We
+refer to this type of memory access errors by the acronym DUI (Dereference
+Under the Influence). In this paper, we present a systematic method to detect
+vulnerabilities leading to DUI through binary analysis, and to estimate the
+capability attackers can obtain through DUI exploits. The evaluation shows
+that our approach can accurately identify vulnerable code that leads to
+arbitrary memory access in real-world software components and programs, when
+they are transformed to privilege-separated designs.
+      <pre>@inproceedings{hu:dui,
+  title        = {{Identifying Arbitrary Memory Access Vulnerabilities in Privilege-Separated Software}},
+  author       = {Hong Hu and Zheng Leong Chua and Zhenkai Liang and Prateek Saxena},
+  booktitle    = {Proceedings of the 20th European Symposium on Research in Computer Security (ESORICS 2015)},
+  month        = september,
+  year         = {2015},
+  address      = {Vienna, Austria},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          Automatic Generation of Data-Oriented Exploits
+        </span>
+        <span class=pub-links>
+          <a href="http://huhong789.github.io/advanced-DOP/"><img alt="Website" src="./images/www.svg" height=15px></a>
+          <a href="./papers/hu:flowstitch-slides.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+          <a href="./papers/hu:flowstitch.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Hong Hu, Zheng Leong Chua, Sendroiu Adrian, Prateek Saxena, and Zhenkai Liang.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 24th USENIX Security Symposium (USENIX 2015).
+          [Acc Rate: 16.0%]
+        </span>
+      </li>
+      <div class=content>
+As defense solutions against control-flow hijacking attacks gain wide
+deployment, control-oriented exploits from memory errors become difficult. As
+an alternative, attacks targeting non-control data do not require diverting
+the application’s control flow during an attack. Although it is known that
+such data-oriented attacks can mount significant damage, no systematic methods
+to automatically construct them from memory errors have been developed. In
+this work, we develop a new technique called data-flow stitching, which
+systematically finds ways to join data flows in the program to generate
+data-oriented exploits. We build a prototype embodying our technique in a tool
+called FLOWSTITCH that works directly on Windows and Linux binaries. In our
+experiments, we find that FLOWSTITCH automatically constructs 16 previously
+unknown and three known data-oriented attacks from eight real-world vulnerable
+programs. All the automatically-crafted exploits respect fine-grained CFI and
+DEP constraints, and 10 out of the 19 exploits work with standard ASLR
+defenses enabled. The constructed exploits can cause significant damage, such
+as disclosure of sensitive information (e.g., passwords and encryption keys)
+and escalation of privilege.
+      <pre>@inproceedings{hu:flowstitch,
+  title        = {{Automatic Generation of Data-Oriented Exploits}},
+  author       = {Hong Hu and Zheng Leong Chua and Sendroiu Adrian and Prateek Saxena and Zhenkai Liang},
+  booktitle    = {Proceedings of the 24th USENIX Security Symposium (USENIX 2015)},
+  month        = aug,
+  year         = {2015},
+  address      = {Santa Clara, CA},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          DroidVault: A Trusted Data Vault for Android Devices
+        </span>
+        <span class=pub-links>
+          <a href="./papers/li:droidvault.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Xiaolei Li, Hong Hu, Guangdong Bai, Yaoqi Jia, Zhenkai Liang, and Prateek Saxena.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 19th International Conference on Engineering of Complex Computer Systems (ICECCS 2014).
+          [Acc Rate: 27.4%]
+        </span>
+      <br>
+<font color=#DD0000> <i><b>Awarded Best Paper </b></i></font>      </li>
+      <div class=content>
+Mobile OSes and applications form a large, complex and vulnerability-prone
+software stack. In such an environment, security techniques to strongly
+protect sensitive data in mobile devices are important and challenging. To
+address such challenges, we introduce the concept of the trusted data vault, a
+small trusted engine that securely manages the storage and usage of sensitive
+data in an untrusted mobile device. In this paper, we design and build
+DroidVault— the first realization of a trusted data vault on the Android
+platform. DroidVault establishes a secure channel between data owners and data
+users while allowing data owners to enforce strong control over the sensitive
+data with a minimal trusted computing base (TCB). We prototype DroidVault via
+the novel use of hardware security features of ARM processors, i.e.,
+TrustZone. Our evaluation demonstrates its functionality for processing
+sensitive data and its practicality for adoption in the real world.
+      <pre>@inproceedings{li:droidvault,
+  title        = {{DroidVault: A Trusted Data Vault for Android Devices}},
+  author       = {Xiaolei Li and Hong Hu and Guangdong Bai and Yaoqi Jia and Zhenkai Liang and Prateek Saxena},
+  booktitle    = {Proceedings of the 19th International Conference on Engineering of Complex Computer Systems (ICECCS 2014)},
+  month        = aug,
+  year         = {2015},
+  address      = {Tianjin, China},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          Practical Analysis Framework for Software-based Attestation Scheme
+        </span>
+        <span class=pub-links>
+          <a href="./papers/li:attestation.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Li Li, Hong Hu, Jun Sun, Yang Liu, and Jin Song Dong.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 16th International Conference on Formal Engineering Methods (ICFEM 2014).
+          [Acc Rate: 30%]
+        </span>
+      </li>
+      <div class=content>
+An increasing number of "smart" embedded devices are employed in our living
+environment nowadays. Unlike traditional computer systems, these devices are
+often physically accessible to the attackers. It is therefore almost
+impossible to guarantee that they are un-compromised, i.e., that indeed the
+devices are executing the intended software. In such a context, software-based
+attestation is deemed as a promising solution to validate their software
+integrity. It guarantees that the software running on the embedded devices are
+un-compromised without any hardware support. However, designing software-based
+attestation protocols are shown to be error-prone. In this work, we develop a
+framework for design and analysis of software-based attestation protocols. We
+first propose a generic attestation scheme that captures most existing
+software-based attestation protocols. After formalizing the security criteria
+for the generic scheme, we apply our analysis framework to several well-known
+software-based attestation protocols and report various potential
+vulnerabilities. To the best of our knowledge, this is the first practical
+analysis framework for software-based attestation protocols.
+      <pre>@inproceedings{li:attestation,
+  title        = {{Practical Analysis Framework for Software-based Attestation Scheme}},
+  author       = {Li Li and Hong Hu and Jun Sun and Yang Liu and Jin Song Dong},
+  booktitle    = {Proceedings of the 16th International Conference on Formal Engineering Methods (ICFEM 2014)},
+  month        = nov,
+  year         = {2014},
+  address      = {Luxembourg},
+}</pre>
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          A Quantitative Evaluation of Privilege Separation in Web Browser Designs
+        </span>
+        <span class=pub-links>
+          <a href="./papers/dong:browser-isolation.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span>
+        <br>
+        Xinshu Dong, Hong Hu, Zhenkai Liang, and Prateek Saxena.
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 18th European Symposium on Research in Computer Security (ESORICS 2013).
+          [Acc Rate: 17.8%]
+        </span>
+      </li>
+      <div class=content>
+Privilege separation is a fundamental security concept that has been used in
+designing many secure systems. A number of recent works propose redesigning
+web browsers with greater privilege separation for better security. In
+practice, however, privilege-separated designs require a fine balance between
+security benefits and other competing concerns, such as performance. In fact,
+performance overhead has been a main cause that prevents many privilege
+separation proposals from being adopted in real systems. In this paper, we
+develop a new measurement-driven methodology that quantifies security benefits
+and performance costs for a given privilege-separated browser design. Our
+measurements on a large corpus of web sites provide key insights on the
+security and performance implications of partitioning dimensions proposed in 9
+recent browser designs. Our results also provide empirical guidelines to
+resolve several design decisions being debated in recent browser re-design
+efforts.
+      <pre>@inproceedings{dong:browser-isolation,
+  title        = {{A Quantitative Evaluation of Privilege Separation in Web Browser Designs}},
+  author       = {Xinshu Dong and Hong Hu and Zhenkai Liang and Prateek Saxena},
+  booktitle    = {Proceedings of the 18th European Symposium on Research in Computer Security (ESORICS 2013)},
+  month        = sep,
+  year         = {2013},
+  address      = {Egham, UK},
+}</pre>
+      </div>
+
+    </ol>
+
+    <h3>Journal Articles</h3>
+    <ol reversed>
+
+      <li class=collapsible>
+        <span class=pub-title>
+          BinCola: Diversity-sensitive Contrastive Learning for Binary Code Similarity Detection
+        </span>
+        <span class=pub-links>
+          <a href="https://ieeexplore.ieee.org/abstract/document/10589540"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span> 
+        <br>
+        Shuai Jiang, Cai Fu, Shuai He, Jianqiang Lv, Lansheng Han and Hong Hu
+        <br>
+        <span class=pub-conf>
+          IEEE Transactions on Software Engineering (TSE 2024)
+        </span>
+      </li>
+      <div class=content>
+Binary Code Similarity Detection (BCSD) is a fundamental binary analysis technique in the area of software security. Recently, advanced deep learning algorithms are integrated into BCSD platforms to achieve superior performance on well-known benchmarks. However, real-world large programs embed more complex diversities due to different compilers, various optimization levels, multiple architectures and even obfuscations. Existing BCSD solutions suffer from low accuracy issues in such complicated real-world application scenarios.
+<br><br>
+In this paper, we propose BinCola, a novel Transformer-based dual diversity-sensitive contrastive learning framework that comprehensively considers the diversity of compiler options and candidate functions in the real-world application scenarios and employs the attention mechanism to fuse multi-granularity function features for enhancing generality and scalability. BinCola simultaneously compares multiple candidate functions across various compilation option scenarios to learn the differences caused by distinct compiler options and different candidate functions. We evaluate BinCola’s performance in a variety of ways, including binary similarity detection and real-world vulnerability search in multiple application scenarios. The results demonstrate that BinCola achieves superior performance compared to state-of-the-art (SOTA) methods, with improvements of 2.80%, 33.62%, 22.41%, and 34.25% in cross-architecture, cross-optimization level, cross-compiler, and cross-obfuscation scenarios, respectively.
+      <pre>@article{jiang:bincola,
+  title        = {{BinCola: Diversity-sensitive Contrastive Learning for Binary Code Similarity Detection}},
+  author       = {Shuai Jiang and Cai Fu and Shuai He and Jianqiang Lv and Lansheng Han and Hong Hu},
+  journal      = {IEEE Transactions on Software Engineering (TSE 2024)},
+  year         = {2024},
+  publisher    = {IEEE},
+}</pre>
+      </div>
+
+    </ol>
+
+    <h3>Others</h3>
+    <ol reversed>
+      <li>
+        <span class=pub-title>
+          One Flip is All It Takes: Identifying Syscall-Guard Variables for Data-Only Attacks
+        </span> (Industry Conference)
+        <span class=pub-links>
+          <a href="https://www.blackhat.com/asia-24/briefings/schedule/index.html#one-flip-is-all-it-takes-identifying-syscall-guard-variables-for-data-only-attacks-36285"><img alt="Paper" src="./images/www.svg" height=15px></a>
+        </span> 
+        <br>
+        Hengkai Ye, Song Liu, Zhechang Zhang and Hong Hu
+        <br>
+        <span class=pub-conf>
+          Black Hat Asia Briefings (Black Hat Asia 2024)
+        </span>
+      </li>
+
+      <li>
+        <span class=pub-title>
+          Cooper Knows the Shortest Stave: Finding 134 Bugs in the Binding Code of Scripting Languages with Cooperative Mutation
+        </span> <br> (Industry Conference)
+        <span class=pub-links>
+          <a href="https://www.blackhat.com/asia-22/briefings/schedule/index.html#cooper-knows-the-shortest-stave-finding--bugs-in-the-binding-code-of-scripting-languages-with-cooperative-mutation-25914"><img alt="Paper" src="./images/www.svg" height=15px></a>
+        </span> 
+        <br>
+        Peng Xu, Yanhao Wang, Hong Hu and Purui Su
+        <br>
+        <span class=pub-conf>
+          Black Hat Asia Briefings (Black Hat Asia 2022)
+        </span>
+      </li>
+
+      <li>
+        <span class=pub-title>
+          Discovering Hidden Properties to Attack the Node.js Ecosystem
+        </span> &nbsp; (Industry Conference)
+        <span class=pub-links>
+          <a href="https://www.blackhat.com/us-20/briefings/schedule/#discovering-hidden-properties-to-attack-the-nodejs-ecosystem-19594"><img alt="Paper" src="./images/www.svg" height=15px></a>
+        </span> 
+        <br>
+        Feng Xiao, Jianwei Huang, Yichang Xiong, Guangliang Yang, Hong Hu, Guofei Gu and Wenke Lee.
+        <br>
+        <span class=pub-conf>
+          Black Hat USA Briefings (Black Hat USA 2020)
+        </span>
+      </li>
+
+      <li>
+        <span class=pub-title>
+          On the Effectiveness of Kernel Debloating via Compile-time Configuration
+        </span> &nbsp; (Position Paper)
+        <br>
+        Mansour Alharthi, Hong Hu, Hyungon Moon, and Taesoo Kim.
+        <br>
+        <span class=pub-conf>
+          First International Workshop on SoftwAre debLoating And Delayering (SALAD 2018).
+        </span>
+      </li>
+
+      <li>
+        <span class=pub-title>
+          Automatically Assessing Crashes from Heap Overflows
+        </span> &nbsp; (Short Paper)
+        <span class=pub-links>
+          <a href="./papers/HCSifter.pdf"><img alt="Paper" src="./images/file.svg" height=15px></a>
+        </span> 
+        <br>
+        Liang He, Yan Cai, Hong Hu, Purui Su, Zhenkai Liang, Yi Yang, Huafeng Huang, Jia Yan, Xiangkun Jia, and Dengguo Feng.
+        <br>
+        <span class=pub-conf>
+          Proceedings of the 32nd IEEE/ACM International Conference on Automated Software Engineering (ASE 2017).
+        </span>
+      </li>
+
+      <li>
+        <span class=pub-title>
+          Dereference Under the Influence (DUI), You Can't Afford It
+        </span> &nbsp; (Poster)
+        <span class=pub-links>
+          <a href="./papers/ndss15-DUI.pdf"><img alt="Slides" src="./images/slides.svg" height=15px></a>
+        </span> 
+        <br>
+        Hong Hu, Zheng Leong Chua, Zhenkai Liang and Prateek Saxena.
+        <br>
+        In <span class=pub-conf>
+          22nd Network and Distributed System Security Symposium (NDSS 2015).
+        </span>
+      </li>
+
+    </ol>
+    <hr>
+
+    <h2 id="students">Students</h2>
+
+    <h3>Current</h3>
+
+    <ul>
+      <li><a href="https://1ncande5cence.github.io/">Zhechang Zhang</a> (PhD)
+          <span style="float:right;">Fall 2023</span><br>
+      </li>
+
+      <li><a href="https://shuangpengbai.github.io/">Shuangpeng Bai</a> (PhD)
+          <span style="float:right;">Fall 2022</span><br>
+      </li>
+
+      <li><a href="https://vancir.github.io/">Song Liu</a> (PhD)
+          <span style="float:right;">Fall 2022</span><br>
+      </li>
+
+      <li><a href="https://hengkai-ye.github.io/">Hengkai Ye</a> (PhD)
+          <span style="float:right;">Summer 2022</span><br>
+      </li>
+
+      <li><a href="https://charlesxsh.github.io/">Shihao Xia</a> (PhD, co-advised with <a href="https://songlh.github.io/">Linhai Song</a>)
+          <span style="float:right;">Spring 2021</span><br>
+      </li>
+
+    </ul>
+
+    <h3>Alumni</h3>
+
+    <ul>
+      <li><a href="https://steveleungyl.github.io/">Yu Liang</a> (PhD &#8674 Penn State PhD)
+          <span style="float:right;">Spring 2021 - Summer 2024</span><br>
+      </li>
+    </ul>
+      
+    <hr>
+    <h2 id="experiences">Experiences</h2>
+    <ul>
+      <li><strong>Assistant Professor</strong>
+      <span style="float:right;">[Aug 2020 - Present]</span> <br>
+      College of Information Sciences and Technology, Pennsylvania State University
+      </li>
+
+      <li><strong>Research Scientist</strong>
+      <span style="float:right;">[Feb 2019 - Aug 2020]</span> <br>
+      School of Computer Science, Georgia Institute of Technology
+      </li>
+
+      <li><strong>Postdoctoral Fellow</strong>
+      <span style="float:right;"> [Feb 2017 - Feb 2019]</span> <br>
+      School of Computer Science, Georgia Institute of Technology
+      </li>
+
+      <li><strong>Research Fellow</strong>
+      <span style="float:right;"> [Jul 2016 - Jan 2017]</span> <br>
+      National University of Singapore, Singapore
+      </li>
+
+    </ul>
+    <hr>
+
+    <h2 id="services">Services</h2>
+    <ul>
+      <li><strong>Program Committee Member</strong> <br>
+
+        ACM Conference on Computer and Communications Security (CCS)
+        <span style="float:right;">[2024, 2023, 2022]</span> <br>
+
+        USENIX Security Symposium
+        <span style="float:right;">[2025]</span> <br>
+
+        Network and Distributed System Security Symposium (NDSS) 
+        <span style="float:right;">[2025, 2024, 2023, 2022]</span> <br>
+
+        ACM ASIA Conference on Computer and Communications Security (ASIACCS) 
+        <span style="float:right;">[2022, 2021, 2019]</span> <br>
+
+      </li>
+    </ul>
+    
+    <ul>
+      <li><strong>Journal Reviewer</strong> <br>
+        IEEE Transactions on Dependable and Secure Computing (TDSC)
+        <span style="float:right;">[2022, 2021, 2020, 2019]</span> <br>
+
+        IEEE Transactions on Software Engineering (TSE)
+        <span style="float:right;">[2020, 2019]</span> <br>
+
+        IEEE Transactions on Computers (TC)
+        <span style="float:right;">[2020, 2018, 2016]</span> <br>
+
+        IEEE Transactions on Information Forensics and Security (TIFS)
+        <span style="float:right;">[2018]</span> <br>
+      </li>
+    </ul>
+    <hr>
+
+    <h2 id="teaching">Teaching</h2>
+    <ul>
+      <li><strong>IST 543</strong> Foundations of Software Security
+          <span style="float:right;">Spring 2024</span><br>
+      </li>
+      <li><strong>IST 454</strong> Computer and Cyber Forensics
+          <span style="float:right;">Spring/Fall 2023, Fall 2022, Spring/Fall 2021, Fall 2020</span><br>
+      </li>
+    </ul>
+    <hr>
+
+    <h2 id="grants">Grants</h2>
+    My research is currently supported by the following grants.
+    <ul>
+      <li>
+          <a href= https://www.nsf.gov/awardsearch/showAward?AWD_ID=2339848>
+            NSF CNS-2339848
+          </a>
+          CAREER: Enhancing Practical Defense Mechanisms against Memory Errors and Attacks
+          <span style="float:right;">2024 - 2029</span><br>
+      </li>
+      <li>
+          <a href= https://www.nsf.gov/awardsearch/showAward?AWD_ID=2247652>
+            NSF CNS-2247652
+          </a>
+          SaTC: CORE: Small: Automatic Identification of Privilege-guard Variables for Data-only Attacks and Defenses
+          <span style="float:right;">2023 - 2026</span><br>
+      </li>
+    </ul>
+    <hr>
+
+
+    <br>
+    <br>
+
+  </body>
+
+  <script>
+    function collapse_it(c, i) {
+      console.log(coll);
+      console.log(i)
+      c[i].classList.toggle("active");
+      var content = c[i].nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+
+      var j;
+      for (j = 0; j < c.length; j++) {
+        if (j == i) continue;
+        var other_content = c[j].nextElementSibling;
+        if (other_content.style.display === "block") {
+          c[j].classList.toggle("active")
+          other_content.style.display = "none";
+        }
+      } 
+    }
+
+    var coll = document.getElementsByClassName("collapsible");
+    var index;
+
+    for (index = 0; index < coll.length; index++) {
+      coll[index].addEventListener("click", collapse_it.bind(null, coll, index));
+    }
+  </script>
+
+</html>

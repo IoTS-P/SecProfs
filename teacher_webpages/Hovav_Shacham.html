@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hovav Shacham</title>
+    <link rel="stylesheet" href="hovav.css" />
+    <link rel="stylesheet" href="TeX.css" /> 
+    <link rel="canonical" href="https://cseweb.ucsd.edu/~hovav/" />
+    <meta name="viewport" content="width = 640"/>
+    <link rel="icon" type="image/png"
+      href="https://cse.ucsd.edu/sites/cse/files/cse/zeropoint_favicon.png">
+<!--
+    <script src="//use.edgefonts.net/source-sans-pro.js"></script>
+-->
+    <script type="text/javascript">
+      var image_index = 0;
+      var image_paths = 
+      [ "shacham-vossbrink.jpg", "shacham-bessell.jpg", "daemon.png" ];
+
+      var preload_images = function () {
+        new Image().src = "shacham-bessell.jpg";
+        new Image().src = "daemon.png";
+      }
+
+      var swap_images = function () {
+        image_index = (image_index+1)%3;
+        document.getElementById("portrait").src
+          = image_paths[image_index];
+      }
+
+    </script>
+  </head>
+  <body onload="preload_images()">
+
+    <h1>
+      <img class="floating" id="portrait" onclick="swap_images()"
+      src="shacham-vossbrink.jpg" />
+      Hovav Shacham</h1>
+
+    <p>Professor<br/>
+      Department of Computer Science and Engineering<br/>
+      University of California, San Diego
+    </p>
+    
+    <table>
+      <tr>
+        <th>Office:</th>
+        <td>EBU&thinsp;3B 3124</td>
+      </tr>
+      <tr>
+        <th>E-mail:</th>
+        <td><a href="mailto:hovav@cs.ucsd.edu">hovav@cs.ucsd.edu</a></td>
+      </tr>
+      <tr>
+        <th>Address:</th>
+        <td>UCSD Dept. of CSE<br/>
+          9500 Gilman Drive, MC 0404<br/>
+          La Jolla, CA 92093-0404</td>
+      </tr>
+      <tr>
+        <th>Phone:</th>
+        <td>(858) 822-7921</td>
+      </tr>
+      <tr>
+        <th>Fax:</th>
+        <td>(858) 534-7029</td>
+      </tr>
+    </table>
+
+    
+    <p>
+      On this page:
+    </p>
+
+    <ul>
+      <li><a href="#activities">Professional Activities</a></li>
+      <li><a href="#pubs">Recent Publications</a> (and 
+               <a href="papers.html">all publications</a>)</li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#students">Students</a></li>
+      <li><a href="#bio">Brief Biography</a></li>
+    </ul>
+
+    <p>
+      Elsewhere:
+    </p>
+
+    <ul>
+      <li><a href="https://scholar.google.com/citations?user=E0NwK2AAAAAJ&hl=en">Google
+      Scholar profile</a></li>
+      <li><a href="http://hovav.net/">Personal Site</a></li>
+    </ul>
+
+    <hr/>
+
+    <p style="color: #bf5700">
+      In Fall, 2018, I will join the <a style="color: #bf5700"
+      href="https://www.cs.utexas.edu/">Computer Science Department</a>
+      at <a style="color: #bf5700" href="https://www.utexas.edu/">The
+      University of Texas at Austin</a>.  I look forward to working
+      with talented <a style="color: #bf5700"
+      href="https://www.cs.utexas.edu/graduate/prospective-students/apply">graduate
+      students</a> and <a style="color: #bf5700"
+      href="https://www.cs.utexas.edu/turing-scholars/admissions">undergraduate
+      Turing Scholars</a>&mdash;please apply!
+    </p>
+    
+    <h2 id="activities">Professional Activities</h2>
+
+    <p>
+      I am co-program chair (with
+      <a href="https://www.cs.ucsb.edu/~chris/">Christopher Kruegel</a>) of
+      <a href="https://www.ieee-security.org/TC/SP2019/">IEEE Security and Privacy
+        (&ldquo;Oakland&rdquo;) 2019</a>.
+    </p>
+
+    <p>
+      I am co-program chair (with
+      <a href="https://www.cc.gatech.edu/~aboldyre/">Alexandra Boldyreva</a>) of
+      <a href="https://crypto.iacr.org/2018/">Crypto 2018</a>.
+    </p>
+
+    <p>
+      In February, 2016, I submitted, along with other security
+      researchers, a
+      <a href="https://cyberlaw.stanford.edu/files/blogs/CIS%20Technologists%20Apple%20Brief%20Final.pdf">brief
+      of <i>amici curiae</i></a> in support of Apple, organized by
+      <a href="https://cyberlaw.stanford.edu/">Stanford&rsquo;s Center
+      for Internet and Society</a>.
+    </p>
+
+    <p>
+      In January, 2014, I signed an open letter from US researchers in
+      cryptography and information security:
+      <a href="http://masssurveillance.info/">masssurveillance.info</a>.
+    </p>
+
+    <h2 id="pubs">Publications</h2>
+
+    <p>Recent publications include:</p>
+
+    <p class="recent-pub">
+      H. Shacham. <strong>&ldquo;Short Unique Signatures from RSA
+      with a Tight Security Reduction (in the Random Oracle
+      Model).&rdquo;</strong>  In S. Meiklejohn and K. Sako, eds.,
+      <em>Proceedings of Financial Crypto 2018</em>.  Feb. 2018.
+      To appear.
+    </p>
+
+    <p class="recent-pub">
+      D. Kohlbrenner and H. Shacham, <strong>&ldquo;On the
+      Effectiveness of Mitigations Against Floating-Point Timing
+      Channels.&rdquo;</strong>  In E. Kirda and T.  Ristenpart, eds.,
+      <em>Proceedings of USENIX Security 2017</em>.  USENIX, Aug. 2017.
+    </p>
+
+    <p class="recent-pub">
+      W. Lian, H. Shacham, and S. Savage, <strong>&ldquo;A Call to ARMs:
+      Understanding the Costs and Benefits of JIT Spraying
+      Mitigations.&rdquo;</strong>  In A. Juels, ed., <em>Proceedings
+      of NDSS 2017</em>.  Internet Society, Feb. 2017.
+    </p>
+
+    <p class="recent-pub">
+      S. Checkoway, J. Maskiewicz, C. Garman, J. Fried, S. Cohney,
+      M. Green, N. Heninger, R.-P. Weinmann, E. Rescorla, and H. Shacham,
+      <a href="papers/cmg+16.html"><strong>&ldquo;A Systematic Analysis
+      of the Juniper Dual EC Incident.&rdquo;</strong></a> In C. Kruegel,
+      A. Myers, and S. Halevi, eds., <em>Proceedings of CCS 2016</em>. ACM
+      Press, Oct. 2016.  (<a href="papers/cmg+16.html">Details</a>;
+       <a href="dist/juniper.pdf">PDF</a>)
+      <span class="award">Best paper award!</span>
+    </p>
+
+    <p class="recent-pub">
+      W. Lian, H. Shacham, and S. Savage.
+      <a href="papers/lss16.html"><strong>&ldquo;An Investigation
+      of the FreeBSD r278907 RNG Bugfix.&rdquo;</strong></a>
+      Manuscript, Oct. 2016.
+      (<a href="papers/lss16.html">Details</a>;
+       <a href="dist/freebsd.pdf">PDF</a>)
+    </p>
+
+    <p class="recent-pub">
+      D. Kohlbrenner and H. Shacham.  <a
+      href="papers/ks16.html"><strong>&ldquo;Trusted Browsers for
+      Uncertain Times.&rdquo;</strong></a> In T. Holz and S. Savage, eds.,
+      <em>Proceedings of USENIX Security 2016</em>, pages 463&ndash;80.
+      USENIX, Aug. 2016. (<a href="papers/ks16.html">Details</a>)
+    </p>
+
+    <p class="recent-pub">
+      S. Hill, Z. Zhou, L. Saul, and H. Shacham.
+      <a href="papers/hzss16.html"><strong>&ldquo;On the
+      (In)effectiveness of Mosaicing and Blurring as Tools for
+      Document Redaction.&rdquo;</strong></a> <em>Proc. Privacy
+      Enhancing Technologies</em> 2016(4):403&ndash;17, Oct. 2016.
+      Presented at PETS 2016. (<a href="papers/hzss16.html">Details</a>;
+      <a href="dist/redaction.pdf">PDF</a>)
+    </p>
+
+    <p class="recent-pub">
+      A. Venkat, S. Shamasunder, D.  Tullsen, and H. Shacham.  <a
+      href="papers/vsts16.html"><strong>&ldquo;HIPStR&mdash;Heterogeneous-ISA
+      Program State Relocation.&rdquo;</strong></a> In Y. Zhou, ed.,
+      <em>Proceedings of ASPLOS 2016</em>, pages 727&ndash;41.  ACM Press,
+      Apr. 2016.  (<a href="papers/vsts16.html">Details</a>;
+       <a href="dist/hipstr.pdf">PDF</a>)
+    </p>
+
+<!--
+
+    <p class="recent-pub">
+      M. Andrysco, D. Kohlbrenner, K. Mowery, R. Jhala, S.  Lerner,
+      and H. Shacham. <a href="papers/akmjls15.html"><strong>&ldquo;On
+          Subnormal Floating Point and Abnormal
+          Timing.&rdquo;</strong></a>
+      In L. Bauer and V. Shmatikov, eds., <em>Proceedings of IEEE
+        Security and Privacy (&ldquo;Oakland&rdquo;) 2015</em>.
+      IEEE Computer Society, May 2015.  (<a
+      href="papers/akmjls15.html">Details</a>; <a
+      href="dist/subnormal.pdf">PDF</a>)
+    </p>
+-->
+
+    <p>All my publications <a href="papers.html">are available online</a>.</p>
+
+
+    <h2 id="teaching">Teaching</h2>
+
+    <ul>
+      <li>
+        CSE 127, Computer Security: Winter 2018;
+        Spring 2017; Fall 2016; Spring 2016; Spring 2015; Spring 2014;
+        Spring 2013; Fall 2011; Spring 2011; Spring 2010; Fall 2008;
+        Winter 2008.
+      </li>
+      <li>
+        CSE 0175, Demo Programming:
+        <a href="cse0175-wi17/">Winter 2017</a>.
+      </li>
+      <li>
+        CSE 290, Early Papers in Computer Security:
+          <a href="https://cseweb.ucsd.edu/~hovav/early-papers/">Fall
+          2016</a> (with Deian Stefan).
+      </li>
+      <li>
+        CSE 209B, Transport Layer Security:
+        <a href="https://cseweb.ucsd.edu/~hovav/tls/">Winter 2016</a>.
+      </li>
+      <li>
+        CSE 105, Automata and Computability Theory: Winter 2016;
+        Winter 2015; Fall 2014; Fall 2013; Fall 2012; Winter 2012;
+        Winter 2011; Fall 2009.
+      </li>
+      <li>
+        CSE 290, Subexponential Algorithms for Factoring and Discrete
+        Logarithm: <a href="https://cseweb.ucsd.edu/classes/sp14/cse290-e/">Spring
+          2014</a> (with Sorina Ionica and Shachar Lovett).
+      </li>
+      <li>
+        CSE 227, (Graduate) Computer Security: Winter 2014;
+        Winter 2011; Winter 2009.
+      </li>
+      <li>
+        IRGN 490, Cybersecurity Policy: Spring 2012 (with Peter
+        F. Cowhey).
+      </li>
+      <li>
+        CSE 208, Pairings in Cryptography:
+        Winter 2010;
+        <a href="teaching/2006-pic.html">Weizmann Institute, Spring 2006</a>.
+      </li>
+    </ul>
+
+    <h2 id="students">Current Students</h2>
+    
+    <p>
+      Ph.D. students:
+   </p>
+
+    <ul>
+      <li><a href="https://cseweb.ucsd.edu/~dkohlbre/">David Kohlbrenner</a></li>
+    </ul>
+
+    <h2 id="students">Former Students</h2>
+
+    <ul>
+      <li><a href="https://cseweb.ucsd.edu/~wlian/">Wilson Lian</a>
+        (Ph.D. 2016) &rarr; Google</li>
+      <li><a href="https://jakemask.com/">Jacob Maskiewicz</a>
+        (M.S. 2016) &rarr; Facebook</li>
+      <li><a href="https://cseweb.ucsd.edu/~kmowery/">Keaton
+      Mowery</a> (Ph.D. 2015) &rarr; Apple</li>
+      <li>Daniel Cashman (M.S. 2013) &rarr; Google</li>
+      <li><a href="https://www2.cs.uic.edu/~s/">Stephen
+      Checkoway</a> (Ph.D. 2012) &rarr; Johns Hopkins &rarr; UI Chicago</li>
+      <li><a href="https://cseweb.ucsd.edu/~avenkata/">Aishwarya
+             Venkataraman</a> (M.S. 2012) &rarr; Stack iQ</li>
+      <li>Grace Wang (M.S. 2010) &rarr; Qualcomm</li>
+    </ul>
+
+
+    <h2 id="bio">Brief Biography</h2>
+
+    <p>
+      Hovav Shacham&rsquo;s research interests are in applied
+      cryptography, systems security, privacy-enhancing technologies,
+      and technology policy.  Shacham was a student at Stanford and a
+      postdoctoral fellow at the Weizmann Institute.  From 2007 to 2018,
+      he was on the faculty at the University of California, San Diego.
+      He received the 2017 ACM CCS Test-of-Time Award for his 2007 paper
+      that introduced return-oriented programming.  Shacham took part in
+      California&rsquo;s 2007 &ldquo;Top-to-Bottom&rdquo; voting systems
+      review and served on the advisory committee for California&rsquo;s
+      2011&ndash;13 post-election risk-limiting audit pilot program.
+      His work has been cited by the Federal Trade Commission, the
+      National Highway Traffic Safety Administration, and the RAND
+      Corporation.
+    </p>
+
+    <hr/>
+
+    <h2 id="imagecred">Image Credits</h2>
+
+    <p class="imagecred">
+      Photo copyright 2010 by <a href="https://www.flickr.com/photos/rlnv/">Nick
+      Vossbrink</a>.  All rights reserved.
+    </p>
+
+    <p class="imagecred">
+      Portrait copyright 2011 by 
+      <a href="https://natalie-bessell.squarespace.com/">Natalie Bessell</a>.
+      All rights reserved.
+    </p>
+
+    <p class="imagecred">
+      BSD Daemon Copyright 1988 by Marshall Kirk McKusick.<br/>
+      All Rights Reserved.
+    </p>
+      
+    <p class="imagecred">
+    Permission to use the daemon may be obtained from:
+    </p>
+
+    <div class="imagecred">
+	Marshall Kirk McKusick<br/>
+	1614 Oxford St<br/>
+	Berkeley, CA 94709&ndash;1608<br/>
+	USA<br/>
+    </div>
+
+    <p class="imagecred">
+    or via email at
+    <a href="mailto:mckusick@mckusick.com"><code>mckusick@mckusick.com</code></a>.
+    </p>
+
+    <hr/>
+
+    <h2>Navigation: <a href="index.html">Hovav Shacham</a></h2>
+
+  </body>  
+</html>

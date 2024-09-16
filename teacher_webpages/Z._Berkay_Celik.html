@@ -1,0 +1,1010 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.3.1">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Z. Berkay Celik">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Z. Berkay Celik Purdue University Department of Computer Science">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://beerkay.github.io/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.ad19d9c9abbad8eec0d2b4cb5f26d537.css">
+
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-56069371-2', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://beerkay.github.io/">
+
+  
+  
+  
+  
+    
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@ZBerkayCelik">
+  <meta property="twitter:creator" content="@ZBerkayCelik">
+  
+  <meta property="og:site_name" content="">
+  <meta property="og:url" content="https://beerkay.github.io/">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="Z. Berkay Celik Purdue University Department of Computer Science"><meta property="og:image" content="https://beerkay.github.io/img/BerkayAtPurduCs.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="og:updated_time" content="2030-06-01T13:00:00&#43;00:00">
+  
+
+  
+
+  
+
+  <title></title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/"></a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about" data-target="#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications" data-target="#publications">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/students">
+            
+            <span>Students</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#teaching" data-target="#teaching">
+            
+            <span>Teaching</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/activities">
+            
+            <span>Activities</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/personal">
+            
+            <span>Personal</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+
+        
+
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+
+<span class="js-widget-page d-none"></span>
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  <section id="about" class="home-section wg-about   "  >
+    <div class="container">
+      
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+<div class="row" itemprop="author" itemscope itemtype="http://schema.org/Person" itemref="person-email person-telephone person-address">
+  <div class="col-12 col-lg-4">
+    <div id="profile">
+
+      
+      
+      <img class="portrait" src="/authors/admin/avatar_hu92cd36e558b3ac93aaa46acc0bdaa183_24261_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+      
+
+      <div class="portrait-title">
+        <h2 itemprop="name">Z. Berkay Celik</h2>
+        <h3 itemprop="jobTitle">Assistant Professor</h3>
+
+        
+        <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+          <a href="https://www.cs.purdue.edu/" target="_blank" itemprop="url" rel="noopener">
+          <span itemprop="name">Department of Computer Science Purdue University</span>
+          </a>
+        </h3>
+        
+      </div>
+
+      <link itemprop="url" href="">
+
+      <ul class="network-icon" aria-hidden="true">
+        
+        
+        
+        
+          
+        
+        
+        
+        
+        
+        <li>
+          <a itemprop="sameAs" href="mailto:zcelik@purdue.edu" >
+            <i class="fas fa-envelope big-icon"></i>
+          </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+          
+        
+        <li>
+          <a itemprop="sameAs" href="https://scholar.google.com/citations?user=g1I269gAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+            <i class="ai ai-google-scholar big-icon"></i>
+          </a>
+        </li>
+        
+        
+        
+        
+          
+        
+        
+        
+        
+        
+          
+        
+        <li>
+          <a itemprop="sameAs" href="https://github.com/Beerkay" target="_blank" rel="noopener">
+            <i class="fab fa-github big-icon"></i>
+          </a>
+        </li>
+        
+        
+        
+        
+          
+        
+        
+        
+        
+        
+          
+        
+        <li>
+          <a itemprop="sameAs" href="https://twitter.com/ZBerkayCelik" target="_blank" rel="noopener">
+            <i class="fab fa-twitter big-icon"></i>
+          </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+          
+        
+        <li>
+          <a itemprop="sameAs" href="/cv/BerkayCV.pdf" >
+            <i class="ai ai-cv big-icon"></i>
+          </a>
+        </li>
+        
+      </ul>
+
+    </div>
+  </div>
+  <div class="col-12 col-lg-8" itemprop="description">
+
+    
+    
+
+    <p>I am an Assistant Professor in the Department of Computer Science at Purdue University and co-director of Purdue Security Laboratory (<a href="https://pursec.cs.purdue.edu/">PurSec Lab</a>). I am also affiliated with the Center for Education and Research in Information Assurance and Security (<a href="https://www.cerias.purdue.edu/">CERIAS</a>), aiming to broaden interdisciplinary collaboration for security and privacy. I earned my Ph.D. in Computer Science and Engineering from Penn State University, where I was advised by Professor <a href="https://patrickmcdaniel.org/">Patrick McDaniel</a> and was the lead graduate student of the Systems and Internet Infrastructure Security Laboratory (SIIS).</p>
+<p>My research investigates the design and evaluation of security for software and systems, specifically on emerging computing platforms and the complex environments in which they operate. Through systems design, program analysis, and formal methods, my research seeks to improve security and privacy guarantees in commodity computer systems. My research approach is best illustrated by my extensive work in the safety, security, and privacy of the Internet of Things (IoT)/Cyber-Physical Systems (CPS), robotic vehicles, automobiles, and autonomous vehicles. My research group actively publishes at top security conferences, including USENIX Security, Oakland, CCS, and NDSS.</p>
+<p>I am a recipient of the <strong>Ross-Lynn Research Scholars Grant</strong> (2020), <strong>Google Aspire Award</strong> (2021, 2022, and 2023), <strong>NSF CAREER Award</strong> (2022), <strong>SecureComm Best Paper Award</strong> (2018), <strong>AutoSec General Motors AutoDriving Security Award</strong> (2022), <strong>VehicleSec Qualcomm Best Demo Runner-up Award</strong> (2023),  <strong>The Most Influential Professor Award</strong> by Purdue CS Graduate Student Board (2020), and  <strong>College of Science Faculty Leadership Award</strong> (2024). My group&rsquo;s work has been sponsored by National Science Foundation (NSF), Office of Naval Research (ONR), Defense Advanced Research Projects Agency (DARPA), Department of Transportation (USDOT), Google, Apple, Cisco, Rolls Royce, Denso North America Foundation, and Sandia National Laboratories.</p>
+<h4 id="current-students">Current Students:</h4>
+<ul>
+<li><a href="https://ozgurozmen.github.io">M. Ozgur Ozmen</a> (PhD)</li>
+<li><a href="https://rehammaburas.github.io/">Reham Aburas</a> (PhD)</li>
+<li><a href="https://arjunaru97.github.io/">Arjun Arunasalam</a> (PhD)</li>
+<li><a href="https://raymond-muller.netlify.app/">Raymond Muller</a> (PhD)</li>
+<li><a href="https://chandms.github.io/">Chandrika Mukherjee</a> (PhD)</li>
+<li><a href="">Ananth Shreekumar</a> (PhD)</li>
+<li>PhD co-advising:
+<ul>
+<li><a href="https://ruoyu.bio/">Ruoyu Song</a> (PhD) (co-advised with Antonio Bianchi)</li>
+<li><a href="">Doguhan Yeke</a> (PhD) (co-advised with Antonio Bianchi)</li>
+</ul>
+</li>
+<li>Msc Students: Devin Ersoy, Jyun-Jhu Syu</li>
+<li>Undergraduate Student Researchers: Xueyuan Cao</li>
+</ul>
+<h4 id="past-phd-students">Past PhD Students:</h4>
+<ul>
+<li><a href="https://ozgurozmen.github.io/">Muslum Ozgur Ozmen</a> (2024) - incoming Assistant Professor in the School of Computing and Augmented Intelligence at Arizona State University</li>
+<li><a href="https://rehammaburas.github.io/">Reham Aburas</a> (2024) - incoming Assistant Professor in the Department of Computer Science and Engineering at the American University of Sharjah</li>
+<li><a href="https://habiba-farrukh.github.io/">Habiba Farrukh</a> (2023) - now Assistant Professor in the Department of Computer Science at the University of California, Irvine</li>
+</ul>
+<h4 id="past-co-advised-phd-students">Past Co-advised PhD Students</h4>
+<ul>
+<li><a href="https://kimhyungsub.github.io/">Hyungsub Kim</a> (2024) - incoming Assistant Professor in the Department of Computer Science at Indiana University (co-advised with Dongyan Xu and Antonio Bianchi)</li>
+<li><a href="https://khaled-alsharif.github.io/">Khaled Serag</a> (2023)  - now Research Scientist at Qatar Computing Research Institute (QCRI) (co-advised with Dongyan Xu)</li>
+<li>Abdulellah Alsaheel (2023) - now private Security Consultant (co-advised with Dongyan Xu)</li>
+</ul>
+<h5 id="prospective-students">Prospective Students:</h5>
+<p><span style="color:red"><strong>[Spring 24 and Fall 24]</strong></span> I&rsquo;m looking for motivated PhD students and research interns. If you are a motivated student with an interest in security, I would be interested in speaking with you. If you are not a student at Purdue, please fill the following <a href="https://forms.gle/dwXkUCKx2XxWuQW67">form</a> for more information. If you are a student at Purdue, there are research opportunities for undergraduate/graduate students interested in security/privacy of Internet of Things and Cyber-Physical Systems, and  Machine Learning Systems, please <a href="mailto:zcelik@purdue.edu">email</a> me for details.</p>
+<h4 id="recent-news">Recent News</h4>
+<ul>
+<li>I&rsquo;m so proud of my first Ph.D. student, <a href="https://habiba-farrukh.github.io/">Habiba Farrukh</a>, who successfully defended her thesis. Habiba will join UC Irvine as an Assistant Professor in the <a href="https://www.ics.uci.edu/">Department of Computer Science</a>. Congratulations Habiba!</li>
+<li>[ELLIIT Symposium Talk 24] I gave a talk at Lund University (Sweden) for the <a href="https://elliit.se/news-and-events/focus-period-lund-2024/symposium/">ELLIIT focus period</a> Symposium on Security and Fault Tolerance of Cyber-Physical Systems. Thank you Martina Maggio and Mikael Asplund for hosting me!</li>
+<li>[CPSRC Seminar Talk 24] I gave a virtual talk at University of California Santa Cruz Baskin School of Engineering, Cyber-Physical Systems Research Center (CPSRC). Thank you Ricardo Sanfelice, Alvaro Cardenas, and Daniel Fremont for hosting me!</li>
+<li>Congratulations to <a href="https://ozgurozmen.github.io">Ozgur Ozmen</a> on receiving the <a href="https://www.cerias.purdue.edu/site/people/student_awards/diamond">2024 CERIAS Diamond Award</a> for his outstanding acadamic achievement.</li>
+<li>Congratulations to <a href="https://raymond-muller.netlify.app/">Raymond Muller</a> on being selected for <a href="https://risingstars.linklab.virginia.edu/2024/">2024 CPS Rising Stars</a>.</li>
+<li>Congratulations to <a href="https://arjunaru97.github.io/">Arjun Arunasalam</a> and <a href="https://ruoyu.bio/">Ruoyu Song</a> on receiving the Graduate Teaching Award.</li>
+<li>[USENIX Security 24] <a href="/papers/Berkay2024SainUSENIXSecurity.pdf">SAIN: Improving ICS Attack Detection Sensitivity via State-Aware Invariants</a></li>
+<li>[USENIX Security 24] <a href="/papers/Berkay2024VoguesUSENIXSecurity.pdf">VOGUES: Validation of Object Guise using Estimated Components</a></li>
+<li>[PETS 24] <a href="/papers/Berkay2024IntermittentPETS.pdf">Physical Side-Channel Attacks against Intermittent Devices</a></li>
+<li>[IEEE S&amp;P 24] <a href="/papers/Berkay2024SensorSpoofingOakland.pdf">A Systematic Study of Physical Sensor Attack Hardness</a></li>
+<li>[IEEE S&amp;P 24] <a href="/papers/Berkay2024WearOSOakland.pdf">Wear’s my Data? Understanding the Cross-Device Runtime Permission Model in Wearables</a></li>
+<li>[USENIX Security 24] <a href="/papers/Berkay2024ATTUSENIXSecurity.pdf">ATTention Please! An Investigation of the App Tracking Transparency Permission</a></li>
+<li>[USENIX Security 24] <a href="/papers/Berkay2024ToxicContentUSENIXSecurity.pdf">Understanding the Security and Privacy Implications of Online Toxic Content on Refugees</a></li>
+<li>[NDSS 24] <a href="/papers/Berkay2024DropshippingNDDS.pdf">The Dark Side of E-commerce: Dropshipping Abuse as a Business Model</a></li>
+<li>[T-IFS] I joined the Associate Editor team of IEEE Transactions on Information Forensics and Security (T-IFS)</li>
+<li>[VehicleSec 24] <a href="https://www.ndss-symposium.org/ndss2024/co-located-events/vehiclesec/">General Co-chair - Symposium on Vehicle Security and Privacy  (VehicleSec) 2024</a> will be co-located with NDSS at San Diego on Feb 26, 2024 <a href="https://twitter.com/vehiclesec_conf">Follow @VehicleSec2024</a></li>
+<li>[SafeThings] <a href="https://safe-things-2024.github.io/">PC Co-chair - IEEE/ACM Workshop on the Internet of Safe Things 2024</a> will be co-located with IEEE S&amp;P Sympoisum on Mar 23, 2024 <a href="https://twitter.com/SafeThings2024">Follow @SafeThings2024</a></li>
+<li>[ACSAC 23] <a href="/papers/Berkay2023LLMMisconceptions.pdf">Can Large Language Models Provide Security &amp; Privacy Advice? Measuring the Ability of LLMs to Refute Misconceptions</a></li>
+<li>[CS Distinguished Speaker 23] I gave a talk at Univerity of Virginia. Thank you Tianhao Wang, Adwait Jog, and  David Evans for hosting me!</li>
+<li>[Keynote Speaker 23] I gave a talk at Workshop on Security and Privacy of Sensing Systems (Sensors S&amp;P) colocated
+with ACM SenSys. Thank you Luis Garcia and Fatima Anwar for hosting me!</li>
+<li>Excited to be a part of the new <a href="https://action.ucsb.edu/">NSF AI Institute for Agent-based Cyber Threat Intelligence and OperatioN (ACTION)</a> (led by Giovanni Vigna) with a great team of colleagues.</li>
+<li>Excited to be part of the <a href="https://gsabusiness.com/news/education/83217/">multi-university transportation center</a> focusing on cybersecurity sponsored by the United States Department of Transportation (USDOT).</li>
+<li>Congratulations to <a href="https://raymond-muller.netlify.app/">Raymond Muller</a> on receiving the Graduate Teaching Award.</li>
+<li>Congratulations to <a href="https://raymond-muller.netlify.app/">Raymond Muller</a> on receiving the <a href="https://www.cs.purdue.edu/news/articles/2023/purdue-cs-graduate-student-secures-x-force-fellowship.html?utm_source=sfmc&amp;utm_medium=email&amp;utm_campaign=230713PurdueToday&amp;utm_term=CS+graduate+student+secures+X-Force+Fellowship%2c+focusing+on+national+security+projects+&amp;utm_id=761352&amp;sfmc_id=0038c00002tusszAAA">X-Force Fellowship</a> through the National Security Innovation Network to solve national security problems in collaboration with the U.S. military.</li>
+<li>[USENIX Security 23] <a href="/papers/Berkay2023AceroUSENIXSecurity.pdf">Discovering Adversarial Driving Maneuvers against Autonomous Vehicles</a></li>
+<li>[USENIX Security 23] <a href="/papers/Berkay2023LocInUSENIXSecurity.pdf">LocIn: Inferring Semantic Location from Spatial Maps in Mixed Reality</a></li>
+<li>[USENIX Security 23] <a href="/papers/Berkay2023ZBCANUSENIXSecurity.pdf">ZBCAN: A Zero-Byte CAN Defense System</a></li>
+<li>[USENIX Security 23] <a href="/papers/Berkay2023PercepGuardUSENIXSecurity.pdf">That Person Moves Like A Car: Misclassification Attack Detection for Autonomous Systems using Spatiotemporal Consistency</a></li>
+<li>[USENIX Security 23] <a href="/papers/Berkay2023PatchVerifUSENIXSecurity.pdf">PatchVerif: Discovering Faulty Patches in Robotic Vehicles</a></li>
+<li>[IEEE S&amp;P 23] <a href="/papers/Berkay2023IoTCupidOakland.pdf">One Key to Rule Them All: Secure Group Pairing for Heterogeneous IoT Devices</a></li>
+<li>[PETS 23] <a href="/papers/Berkay2023IStelanPETS.pdf">iStelan: Disclosing Sensitive User Information by Mobile Magnetometer from Finger Touches</a></li>
+<li>[NDSS 23] <a href="papers/Berkay2023EvasionEVSNDDS.pdf">Evasion Attacks and Defenses on Smart Home Physical Event Verification</a></li>
+<li>[VehicleSec 23] <a href="/papers/Berkay2023SwarmPairingVehicleSec.pdf">Rethinking Secure Pairing in Drone Swarms (Position Paper)</a></li>
+</ul>
+<p><a href="/newsarchieve">Older news</a></p>
+<!---
+- [Hyungsub Kim](https://kimhyungsub.github.io/) (2023) (now Postdoctoral Researcher in Department of Computer Science at Purdue University) (co-advised with Dongyan Xu and Antonio Bianchi)
+- [Khaled Serag](https://khaled-alsharif.github.io/) (2023) (now Research Scientist at Qatar Computing Research Institute) (co-advised with Dongyan Xu)
+- [Abdulellah Alsaheel](https://cssaheel.github.io/) (2023) (now Private Security Consultant) (co-advised with Dongyan Xu)
+
+<p style="text-align: center;"> 
+<a href="https://www.ndss-symposium.org/ndss2022/cfp-autosec-workshop/">The AutoSec (Automotive & Autonomous Vehicle Security) Workshop will be hosted with NDSS again in 2022!</a></span><br class="auto-style3">
+<a href="https://twitter.com/autosec_conf?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @autosec_conf</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>
+I am a research assistant in the Department of Electrical Engineering and Computer Science at the Pennsylvania State University working with [Prof. Patrick McDaniel](http://www.patrickmcdaniel.org/) and lead graduate student of the [Systems and Internet Infrastructure Security Lab (SIIS)](http://siis.cse.psu.edu/people.html). During my Msc. studies, I worked with [Prof. George Kesidis](http://www.cse.psu.edu/~gik2/) and [Prof. David J. Miller](http://www.ee.psu.edu/directory/FacultyInfo/Miller/MillerProfilePage.aspx). My research was on machine learning (ML) systems and network security. Previously I worked at [VMware](https://www.vmware.com/) evaluating the security of VMware software source code, [Vencore Labs](https://www.perspectalabs.com/) building ML systems under privileged information, and [Istanbul Technical University](http://www.itu.edu.tr/en/) doing research on feature engineering for malware detection.
+
+### Recent News
+I will be joining the [Department of Computer Science](https://www.cs.purdue.edu/) at [Purdue University](https://www.purdue.edu/) as an assistant professor beginning Fall 2019. 
+- [IoTDI'20] [IoTRepair: Systematically Addressing Device Faults in Commodity IoT](papers/Berkay2020IoTRepairIoTDI)
+- [IEEE CNS (CPS-Sec)'20] [On the Feasibility of Exploiting Traffic Collision Avoidance System Vulnerabilities](https://arxiv.org/pdf/2006.14679.pdf) (Press: [The Register Article](https://www.theregister.com/2020/06/30/aircraft_traffic_collision_avoidance_systems/))
+
+-->
+
+
+    <div class="row">
+
+      
+
+      
+
+    </div>
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  <section id="teaching" class="home-section wg-blank   "  >
+    <div class="container">
+      
+
+
+<div class="row">
+  
+    <div class="col-12 col-lg-4 section-heading">
+      <h1>Teaching</h1>
+      
+    </div>
+    <div class="col-12 col-lg-8">
+      <h5 id="cs-426-computer-security-undergraduate-spring-23-syllabuscs426cs426pdf">CS 426: Computer Security (Undergraduate) [Spring 23] <a href="/cs426/CS426.pdf">[Syllabus]</a></h5>
+<p>This introductory undergraduate course focuses on the principles and foundations of building secure computer systems, security best practices, and security failures in existing and emerging computer networks and systems. The course covers four key topic areas: basics of cryptography and crypto protocols, network security, systems security, and privacy. Students successfully completing this class will be able to understand and assess security threats, become familiar with security engineering best practices, write better software, protocols, and systems, and have rudimentary skills in security research.</p>
+<h5 id="cs-590-iotcps-security-graduate-spring-20-spring-22-syllabuscs592s22cs592iotcpspdf">CS 590: IoT/CPS Security (Graduate) [Spring 20, Spring 22] <a href="/cs592S22/CS592IoTCPS.pdf">[Syllabus]</a></h5>
+<p>In this course, we will study the latest research in the design of Internet of Things (IoT) and Cyber-Physical Systems (CPS) and methods for securing them. The course will provide foundations of safety and security of IoT/CPS and covers the topics of policy verification, approaches for designing safe and secure systems, techniques for detecting problems in conventional IoT/CPS design and repairing such problems. Example topics include the security of voice-controlled devices, IoT applications, edge computing, industrial control systems, and autonomous vehicles.</p>
+<h5 id="cs-529-security-analytics-graduate-fall-22-fall-21-fall-20-fall-19-syllabuscs529contentsyllabuscs529pdf">CS 529: Security Analytics (Graduate) [Fall 22, Fall 21, Fall 20, Fall 19] <a href="/cs529/content/syllabus/CS529.pdf">[Syllabus]</a></h5>
+<p>This graduate-level course will provide students with materials to discuss the intersection of two ubiquitous concepts: Security and Machine Learning. The course is structured in two parts: (1) Machine Learning for Security and (2) Security of Machine Learning Systems. The focus of the first part will be on building a principled understanding of key learning algorithms and techniques, and their applications within the security domain, as well as general questions related to analyzing and handling datasets. The first part will provide students with the necessary background to understand the second half of the course. The second part covers recently discovered security implications of deploying machine learning algorithms in the physical realm. Students will learn about attacks against computer systems leveraging machine learning algorithms, as well as defense techniques to mitigate such attacks during learning and inference.</p>
+<p><a href="/fullteaching">Full list of courses</a></p>
+<!---
+The course aims to motivate the exploration of new problems that advance the state-of-the-art; thus, the course will include reviewing recent papers from top-tier conferences. Students successfully completing this class will be able to evaluate the security of Internet of Things and Cyber-Physical systems in academic and commercial security, and will have rudimentary skills in security research.
+
+The course aims to motivate the exploration of new problems that advance the state-of-the-art; thus, the course will include reviewing recent papers from top-tier conferences. Students successfully completing this class will be able to evaluate machine learning systems in academic and commercial security, and will have rudimentary skills in security and machine learning research. 
+
+[Detailed Course Page](fullpublication)
+[[Presentation Schedule]](https://docs.google.com/spreadsheets/d/1e4amoP9AOUKHDvMhRJBohL4XyXANeJqqEr2csbyGndg/edit?usp=sharing)
+-->
+
+    </div>
+  
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  <section id="publications" class="home-section wg-blank   "  >
+    <div class="container">
+      
+
+
+<div class="row">
+  
+    <div class="col-12 col-lg-4 section-heading">
+      <h1>Selected Publications</h1>
+      <p>2011-2021</p>
+    </div>
+    <div class="col-12 col-lg-8">
+      <p><a href="papers/Berkay2024IntermittentPETS.pdf">Physical Side-Channel Attacks against Intermittent Devices</a><br>
+Muslum Ozgur Ozmen, Habiba Farrukh, and Z. Berkay Celik<br>
+Privacy Enhancing Technologies (PoPETS), 2024<br>
+Acceptance Rate: 19.5%</p>
+<p><a href="papers/Berkay2024VoguesUSENIXSecurity.pdf">VOGUES: Validation of Object Guise using Estimated Components</a><br>
+Raymond Muller, Yanmao Man, Ming Li, Ryan Gerdes, Jonathan Petit, and Z. Berkay Celik<br>
+USENIX Security Symposium, 2024<br>
+Acceptance Rate: TBD</p>
+<p><a href="papers/Berkay2024SainUSENIXSecurity.pdf">SAIN: Improving ICS Attack Detection Sensitivity via State-Aware Invariants</a>)<br>
+Syed Ghazanfar Abbas, Muslum Ozgur Ozmen, Abdulellah Alsaheel, Arslan Khan, Z. Berkay Celik, and Dongyan Xu<br>
+USENIX Security Symposium, 2024<br>
+Acceptance Rate: TBD</p>
+<p><a href="papers/Berkay2024SensorSpoofingOakland.pdf">A Systematic Study of Physical Sensor Attack Hardness</a><br>
+Hyungsub Kim, Rwitam Bandyopadhyay, Muslum Ozgur Ozmen, Z. Berkay Celik, Antonio Bianchi, Yongdae Kim, and Dongyan Xu<br>
+IEEE Security and Privacy (IEEE S&amp;P), 2024<br>
+Acceptance Rate: 17.8%</p>
+<p><a href="papers/Berkay2024WearOSOakland.pdf">Wear’s my Data? Understanding the Cross-Device Runtime Permission Model in Wearables</a><br>
+Doguhan Yeke, Muhammad Ibrahim, Guliz Seray Tuncay, Habiba Farrukh, Abdullah Imran, Antonio Bianchi, and Z. Berkay Celik<br>
+IEEE Security and Privacy (IEEE S&amp;P), 2024<br>
+Acceptance Rate: 17.8%</p>
+<p><a href="papers/Berkay2024ATTUSENIXSecurity.pdf">ATTention Please! An Investigation of the App Tracking Transparency Permission</a><br>
+Reham Mohamed, Arjun Arunasalam, Habiba Farrukh, Jason Tong, Antonio Bianchi, and Z. Berkay Celik<br>
+USENIX Security Symposium, 2024<br>
+Acceptance Rate: TBD</p>
+<p><a href="papers/Berkay2024ToxicContentUSENIXSecurity.pdf">Understanding the Security and Privacy Implications of Online Toxic Content on Refugees</a><br>
+Arjun Arunasalam, Habiba Farrukh, Eliz Tekcan, and Z. Berkay Celik<br>
+USENIX Security Symposium, 2024<br>
+Acceptance Rate: TBD</p>
+<p><a href="papers/Berkay2024DropshippingNDDS.pdf">The Dark Side of E-commerce: Dropshipping Abuse as a Business Model</a><br>
+Arjun Arunasalam, Andrew Chu, M. Ozgur Ozmen, Habiba Farrukh, and Z. Berkay Celik<br>
+Network and Distributed System Security Symposium (NDSS), 2024<br>
+Acceptance Rate: 15.0%</p>
+<p><a href="papers/Berkay2023LLMMisconceptions.pdf">Can Large Language Models Provide Security &amp; Privacy Advice? Measuring the Ability of LLMs to Refute Misconceptions.</a><br>
+Yufan Chen, Arjun Arunasalam, and Z. Berkay Celik.<br>
+In Annual Computer Security Applications Conference (ACSAC), 2023<br>
+Acceptance Rate: 24%</p>
+<p><a href="papers/Berkay2023AceroUSENIXSecurity.pdf">Discovering Adversarial Driving Maneuvers against Autonomous Vehicles</a><br>
+Ruoyu Song, M. Ozgur Ozmen, Hyungsub Kim, Raymond Muller, Z. Berkay Celik, and Antonio Bianchi<br>
+USENIX Security Symposium, 2023<br>
+Acceptance Rate: 29.2%</p>
+<p><a href="papers/Berkay2023LocInUSENIXSecurity.pdf">LocIn: Inferring Semantic Location from Spatial Maps in Mixed Reality</a><br>
+Habiba Farrukh, Reham Mohamed, Aniket Nare, Antonio Bianchi, and Z. Berkay Celik<br>
+USENIX Security Symposium, 2023<br>
+Acceptance Rate: 29.2%</p>
+<p><a href="/papers/Berkay2023ZBCANUSENIXSecurity.pdf">ZBCAN: A Zero-Byte CAN Defense System</a><br>
+Khaled Serag, Rohit Bhatia, Akram Faqih, Vireshwar Kumar, Muslum Ozgur Ozmen, Z. Berkay Celik, and Dongyan Xu<br>
+USENIX Security Symposium, 2023<br>
+Acceptance Rate: 29.2%</p>
+<p><a href="papers/Berkay2023PercepGuardUSENIXSecurity.pdf">That Person Moves Like A Car: Misclassification Attack Detection for Autonomous Systems Using Spatiotemporal Consistency</a><br>
+Yanmao Man, Raymond Muller, Ming Li, Z. Berkay Celik, and Ryan Gerdes<br>
+USENIX Security Symposium, 2023<br>
+Acceptance Rate: 29.2%</p>
+<p><a href="papers/Berkay2023PatchVerifUSENIXSecurity.pdf">PatchVerif: Discovering Faulty Patches in Robotic Vehicles</a><br>
+Hyungsub Kim, M. Ozgur Ozmen, Z. Berkay Celik, Antonio Bianchi, and Dongyan Xu<br>
+USENIX Security Symposium, 2023<br>
+Acceptance Rate: 29.2%</p>
+<p><a href="papers/Berkay2023IoTCupidOakland.pdf">One Key to Rule Them All: Secure Group Pairing for Heterogeneous IoT Devices</a><br>
+Habiba Farrukh, M. Ozgur Ozmen, F. Kerem Ors, and Z. Berkay Celik<br>
+IEEE Security and Privacy (IEEE S&amp;P), 2023<br>
+Acceptance Rate: 17%</p>
+<p><a href="/papers/Berkay2023LocINUSENIXSecurity.pdf">iStelan: Disclosing Sensitive User Information by Mobile Magnetometer from Finger Touches</a><br>
+Reham Mohamed, Habiba Farrukh, He Wang, Yidong Lu, and Z. Berkay Celik<br>
+Privacy Enhancing Technologies (PoPETS), 2023<br>
+Acceptance Rate: 25%</p>
+<p><a href="papers/Berkay2023EvasionEVSNDDS.pdf">Evasion Attacks and Defenses on Smart Home Physical Event Verification</a><br>
+M. Ozgur Ozmen, Ruoyu Song, Habiba Farrukh, and Z. Berkay Celik <br>
+Network and Distributed System Security Symposium (NDSS), 2023<br>
+Acceptance Rate: 16.2%</p>
+<p><a href="papers/Berkay2022IoTPhysicalCCS.pdf">Discovering IoT Physical Channel Vulnerabilities</a><br>
+M. Ozgur Ozmen, Xuansong Li, Andrew Chun-An Chu,  Z. Berkay Celik, Bardh Hoxha, and Xiangyu Zhang<br>
+ACM Conference on Computer and Communications Security (CCS), 2022<br>
+Acceptance Rate: 22%</p>
+<p><a href="papers/Berkay2022PhysicalHijackingCCS.pdf">Physical Hijacking Attacks against Object Trackers</a><br>
+Raymond Muller, Yanmao Man, Z. Berkay Celik, Ryan Gerdes, and Ming Li<br>
+ACM Conference on Computer and Communications Security (CCS), 2022<br>
+Acceptance Rate: 22%</p>
+<p><a href="papers/Berkay2022PGPatchIEEESP.pdf">PGPatch: Policy-Guided Logic Bug Patching for Robotic Vehicles</a><br>
+Hyungsub Kim, M. Ozgur Ozmen, Z. Berkay Celik, Antonio Bianchi, and Dongyan Xu<br>
+IEEE Security and Privacy (IEEE S&amp;P), 2022<br>
+Acceptance Rate: 14.5%</p>
+<p><a href="papers/Berkay2022YoutubeUSENIXSecurity.pdf">Behind the Tube: Exploitative Monetization of Content on YouTube</a><br>
+Andrew Chu, Arjun Arunaslam, M. Ozgur Ozmen, and  Z. Berkay Celik<br>
+USENIX Security Symposium, 2022<br>
+Acceptance Rate:  18.1%</p>
+<p><a href="papers/Berkay2021XAITrojan.pdf">What do you see? Evaluation of Explainable Artificial Intelligence (XAI) Interpretability through Neural Backdoors</a><br>
+Yi-Shan Lin, Wen-Chuan Lee, and Z. Berkay Celik<br>
+ACM SIGKDD Conference on Knowledge Discovery &amp; Data Mining (KDD), 2021<br>
+Acceptance Rate: 15.4%</p>
+<p><a href="papers/berkay2021S3UbiComp.pdf">S3: Side-channel Attack on Stylus Pencil Through Sensors</a><br>
+Habiba Farrukh, Tinghan Yang, Yuxuan Yin, Hanwen Xu, He Wang, and Z. Berkay Celik<br>
+ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT/UbiComp), 2021<br>
+Acceptance Rate: TBD</p>
+<p><a href="papers/Berkay2021CanoxUSENIXSecurity.pdf">Exposing New Vulnerabilities of Error Handling Mechanism in CAN</a><br>
+Khaled Serag, Rohit Bhatia, Vireshwar Kumar, Z. Berkay Celik, and Dongyan Xu<br>
+USENIX Security Symposium, 2021<br>
+Acceptance Rate: 18.8%</p>
+<p><a href="papers/Berkay2021DuetNDSS.pdf">Evading Voltage-Based Intrusion Detection on Automotive CAN</a><br>
+Rohit Bhatia, Vireshwar Kumar, Khaled Serag,  Z. Berkay Celik,  Mathias Payer, and Dongyan Xu<br>
+Network and Distributed System Security Symposium (NDSS), 2021<br>
+Acceptance Rate: 15.2%</p>
+<p><a href="papers/Berkay2021AtlasUSENIXSecurity.pdf">ATLAS: A Sequence-based Learning Approach for Attack Investigation</a><br>
+Abdulellah Alsaheel, Yuhong Nan, Shiqing Ma, Le Yu, Gregory Walkup, Z. Berkay Celik, Dongyan Xu, and Xiangyu Zhang<br>
+USENIX Security Symposium, 2021<br>
+Acceptance Rate: 18.8%</p>
+<p><a href="/fullpublication">Full list of Publications</a></p>
+
+    </div>
+  
+</div>
+
+    </div>
+  </section>
+
+
+<div class="container">
+  <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.270bd00dc4a19e10fad7ee411b9acc80.js"></script>
+
+  </body>
+</html>
+
+

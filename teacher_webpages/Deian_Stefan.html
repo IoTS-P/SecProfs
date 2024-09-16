@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-security-policy" content="upgrade-insecure-requests" />
+
+
+  <title> Deian Stefan </title>
+
+  <!-- Bootstrap core CSS -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300italic' rel='stylesheet' type='text/css'>
+  <link href="https://cseweb.ucsd.edu/~dstefan/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cseweb.ucsd.edu/~dstefan/css/jumbotron-narrow.css" rel="stylesheet">
+  <link href="https://cseweb.ucsd.edu/~dstefan/css/main.css" rel="stylesheet">
+
+
+
+  <script src="https://cseweb.ucsd.edu/~dstefan/js/jquery-1.11.0.min.js"></script>
+  <script src="https://cseweb.ucsd.edu/~dstefan/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // add a hash to the URL when the user clicks on a tab
+      $('a[data-toggle="tab"]').on('click', function(e) {
+	history.pushState(null, null, $(this).attr('href'));
+      });
+      // navigate to a tab when the history changes
+      window.addEventListener("popstate", function(e) {
+	var activeTab = $('[href=' + location.hash + ']');
+	if (activeTab.length) {
+	  activeTab.tab('show');
+	} else {
+	  $('a[href=#about]').tab('show');
+	}
+      });
+      $('a[href=#about]').tab('show');
+    })
+  </script>
+  </head>
+
+  <body>
+
+<div class="container">
+  <div class="header">
+    <ul class="nav nav-pills pull-right" id="tabs">
+      <li><a href="#about" data-toggle="tab">about</a></li>
+      <li><a href="#pubs" data-toggle="tab">publications</a></li>
+      <!-- <li><a href="#projects" data-toggle="tab">projects</a></li> -->
+      <li><a href="#teaching" data-toggle="tab">teaching</a></li>
+      <li><a href="#activities" data-toggle="tab">activities</a></li>
+      <li><a href="#apps" data-toggle="tab" class="hidden">apps</a></li>
+    </ul>
+    <h3><strong>Deian Stefan</strong></h3>
+  </div>
+<div class="tab-content">
+
+<div class="col-lg-12">
+    <div class="media">
+      <div class="media-left pull-left effect">
+        <img src="https://cseweb.ucsd.edu/~dstefan/images/deian.jpg" class="image img-rounded" width="140px">
+
+      </div>
+      <div class="media-body">
+        Associate Professor
+        <br/>
+	<a href="http://cs.ucsd.edu">Computer Science and Engineering</a> <br/>
+        <a href="http://ucsd.edu">UC San Diego</a>
+        <br />
+        Office: CSE 3126
+        <br />
+        Email: deian@cs.ucsd.edu
+        <br/>
+        Interests: security, programming languages, systems.
+        <br />
+        | <a href="http://cryptosec.ucsd.edu/">CryptoSec</a>
+        | <a href="http://cseweb.ucsd.edu/groups/progsys/">ProgSys</a>
+        ]
+      </div>
+    </div>
+</div>
+
+<div class="tab-pane" id="about">
+<div class="col-lg-12">
+  <h3>About Me</h3>
+      <p>
+        I am an associate professor in the <a
+          href="http://www.cse.ucsd.edu/">UCSD CSE Department</a>.
+        I like building principled and practical secure systems.
+        I am interested in research that spans
+        security, programming languages, and systems.
+
+	My students and I work on on secure systems (from Web frameworks, to
+new browser designs, sandboxing, and runtime systems), language-based security
+(constant-time programming, memory safety, and information flow control),
+verification for security, and (static and symbolic) program analysis tools.
+I spend a lot of my time thinking about WebAssembly and JavaScript JITs.
+
+      </p>
+<!--
+-->
+      <p>
+	I was a co-founder and the Chief Scientist at <a
+href="https://intrinsic.com">Intrinsic</a> a web-security startup (acquired by
+VMWare).
+        I also spent a bit of time on the W3C WebAppSec
+        and Node.js Security Working Groups.
+      </p>
+      <p>
+        I completed my PhD in Computer Science at <a href="http://cs.stanford.edu">Stanford</a>
+        under
+        <a href="https://www.scs.stanford.edu/~dm">David Mazi&egrave;res</a>,
+        <a href="https://theory.stanford.edu/people/jcm/">John C.  Mitchell</a> and 
+        <a href="http://www.cse.chalmers.se/~russo/">Alejandro Russo</a>.
+        Prior to Stanford, I obtained a BE and ME in Electrical Engineering
+        at <a href="https://cooper.edu">Cooper Union</a>.
+<!--
+        At Cooper, I worked on GPU and FPGA crypto implementations (largely for cryptanalysis). I
+        am still interested in hardware architectures
+        for security.
+-->
+      </p>
+</div>
+</div>
+
+<div class="tab-pane" id="activities">
+<div class="col-lg-12">
+  <h3>Program Committtees</h3>
+
+  <dl class="dl-horizontal">
+    <dt>2023:</dt>
+    <dd>
+	<a href="https://www.usenix.org/conference/usenixsecurity23">Security</a>,
+	<a href="https://sigops.org/s/conferences/hotos/2023/">HotOS</a>,
+    </dd>
+    <dt>2022:</dt>
+    <dd>
+	<a href="https://www.usenix.org/conference/usenixsecurity22">Security</a>,
+	<a href="https://conf.researchr.org/home/pldi-2022">PLDI</a>,
+    </dd>
+    <dt>2021:</dt>
+    <dd>
+	<a href="https://popl21.sigplan.org/home/prisc-2021">PriSC</a> (PC co-chair),
+	<a href="https://www.usenix.org/conference/usenixsecurity21">Security</a>,
+	<a href="https://www.ieee-security.org/TC/SP2021">S&P</a>,
+	<a href="https://www.sigsac.org/ccs/CCS2021/">CCS</a>,
+	<a href="https://sigops.org/s/conferences/hotos/2021/">HotOS</a>
+    </dd>
+    <dt>2020:</dt>
+    <dd>
+	<a href="https://popl20.sigplan.org/home/prisc-2020">PriSC</a> (PC co-chair),
+	<a href="https://www.usenix.org/conference/usenixsecurity20">Security</a>,
+	<a href="https://www.ieee-security.org/TC/SP2020">S&P</a>,
+        <a href="https://secdev.ieee.org/2020/home">SecDev</a>,
+	<a href="https://pages.cispa.de/plas2020/">PLAS</a>
+    </dd>
+    <dt>2019:</dt>
+    <dd>
+	<a href="http://sigops.org/sosp/sosp19/">SOSP</a>,
+	<a href="https://www.usenix.org/conference/usenixsecurity19">Security</a>,
+	<a href="https://www.ieee-security.org/TC/SP2019/">S&P</a>,
+	<a href="https://popl19.sigplan.org/track/prisc-2019">PriSC</a>,
+	<a href="https://www2018.thewebconf.org/">TheWebConf</a>
+    </dd>
+    <dt>2018:</dt>
+    <dd>
+	<a href="https://www.ieee-security.org/TC/SP2018">S&P</a>,
+	<a href="https://conf.researchr.org/home/pldi-2018">PLDI</a>,
+	<a href="http://secdev.ieee.org/">SecDev</a>
+	<a href="http://www.cs.ox.ac.uk/conferences/csf2018/">CSF</a>,
+	<a href="https://www.andrew.cmu.edu/user/liminjia/events/fcs2018/">FCS</a>
+    </dd>
+    <dt>2017:</dt>
+    <dd>
+      <a href="https://www.sigsac.org/ccs/CCS2017/">CCS</a>,
+      <a href="https://www.usenix.org/conference/usenixsecurity17">Security</a>,
+      <a href="http://www.ieee-security.org/TC/EuroSP2017/">Euro S&P</a>,
+      <a href="http://www.dmi.unict.it/~giamp/sac/cfp2017.php">SEC@SAC</a>,
+      <a href="http://www.www2017.com.au/">WWW</a>,
+      <a href="http://secdev.ieee.org/">SecDev (Tutorial track)</a>
+    </dd>
+    <dt>2016:</dt>
+    <dd>
+      <a href="http://www.dmi.unict.it/~giamp/sac/cfp2016.php">SEC@SAC</a>,
+      <a href="http://www.etaps.org/index.php/2016/post">POST</a>,
+      <a href="https://www.usenix.org/conference/usenixsecurity16">Security</a>,
+      <a href="https://plas2016.programming.systems">PLAS</a> (PC co-chair) ,
+      <a href="http://secdev.ieee.org/">SecDev</a>
+    </dd>
+    <dt>2015:</dt>
+    <dd>
+      <a href="http://software.imdea.org/~bkoepf/FCS15/">FCS</a>,
+      <a href="https://wiki.haskell.org/HaskellImplementorsWorkshop/2015/Call_for_Contributions">HiW</a>
+    </dd>
+  </dl>
+</div>
+</div>
+
+<div class="tab-pane" id="teaching">
+<div class="col-lg-12">
+  <h3>Teaching</h3>
+  <dl class="dl-horizontal">
+    <dt>Spring 2024:</dt> 
+    <dd><a href="https://plsyssec.github.io/cse291j-spring24">CSE 291: Blockchain Security</a> (with Stefan Savage)</dd>
+    <dt>Spring 2022:</dt> 
+    <dd><a href="cse227-spring22">CSE 227: Graduate Computer Security</a></dd>
+    <dt>Winter 2022:</dt> 
+    <dd><a href="cse291-winter22">CSE 291: JIT Security</a></dd>
+    <dt>Fall 2021:</dt> 
+    <dd><a href="cse127-fall21">CSE 127: Computer Security</a></dd>
+    <dt>Spring 2021:</dt> 
+    <dd><a href="cse291-spring21">CSE 291: Trustworthy Browsers // Secure Compilation using WebAssembly</a></dd>
+    <dd><a href="cse227-spring21">CSE 227: Graduate Computer Security</a></dd>
+    <dt>Fall 2020:</dt> 
+    <dd><a href="cse127-fall20">CSE 127: Computer Security</a></dd>
+    <dt>Spring 2020:</dt> 
+    <dd><a href="cse227-spring20">CSE 227: Graduate Computer Security</a></dd>
+    <dt>Winter 2020:</dt> 
+    <dd><a href="cse127-winter20">CSE 127: Computer Security</a></dd>
+    <dt>Fall 2019:</dt> 
+    <dd><a href="https://cseweb.ucsd.edu/classes/fa19/cse127-ab">CSE 127: Computer Security</a></dd>
+    <dt>Spring 2019:</dt> 
+    <dd><a href="cse227-spring19">CSE 227: Graduate Computer Security (largely for PhD students)</a></dd>
+    <dt>Winter 2019:</dt> 
+    <dd><a href="cse127-winter19">CSE 127: Computer Security</a></dd>
+    <dt>Fall 2018:</dt> 
+    <dd><a href="cse227-fall18">CSE 227: Graduate Computer Security</a></dd>
+    <dt>Winter 2018:</dt> 
+    <dd><a href="cse130-winter18">CSE 130: Programming Languages: Principles and Paradigms</a></dd>
+    <dd><a href="cse291-winter18">CSE 291: Language-based Security</a></dd>
+    <dt>Winter 2017:</dt> 
+    <dd><a href="cse130-winter17">CSE 130: Programming Languages: Principles and Paradigms</a></dd>
+
+    <dt>Fall 2016:</dt> 
+    <dd><a href="cse291-fall16">CSE 291: Building Secure Systems using Programming Languages and Analysis</a></dd>
+    <dt>         </dt> 
+    <dd><a href="https://cseweb.ucsd.edu/~hovav/early-papers/">CSE 290: Early Papers in Computer Security</a> (co-taught with <a href="http://cseweb.ucsd.edu/~hovav">Hovav Shacham</a>)</dd>
+  </dl>
+
+  <p>
+  Prior to UCSD, I was also an instructor and teaching assistant for several
+  courses at Stanford and Cooper.
+  </p>
+
+  <h4>Stanford</h4>
+  <dl class="dl-horizontal">
+  <dt>Fall 2014:</dt> <dd><a href="https://class.stanford.edu/courses/Engineering/CS-242/Fall2014/about">CS242: Programming Languages</a> (co-taught with <a href="http://ezyang.com/">Edward Z. Yang</a>)</dd>
+  <dt>Fall 2013:</dt> <dd><a href="https://class.stanford.edu/courses/Engineering/CS242/Programming_Languages/about">CS242: Programming Languages</a> (co-taught with <a href="http://ezyang.com/">Edward Z. Yang</a>)</dd>
+  <dt>Winter 2013:</dt> <dd><a href="http://www.scs.stanford.edu/13wi-cs240/">CS240: Advanced Topics in Operating Systems</a> (assistant)</dd>
+  <dt>Fall 2011:</dt> <dd><a href="https://courseware.stanford.edu/pg/courses/214531/cs242-fall-2011">CS242: Programming Languages</a> (assistant)</dd>
+  </dl>
+
+  <h4>Cooper Union</h4>
+  <dl class="dl-horizontal">
+  <dt>Summer 2010:</dt> <dd>Advanced Programming in Java (retraining program instructor)</dd>
+  <dt>Spring 2010:</dt> <dd>Programming in Java (retraining program instructor)</dd>
+  <dt>Spring 2009:</dt> <dd>ECE403: Selected Topics in Probability and Stochastic Processes (assistant)</dd>
+  <dt>Spring 2007:</dt> <dd>ECE150: Digital Logic Design (assistant)</dd>
+  <dt>Fall   2006:</dt> <dd>ECE150: Digital Logic Design (assistant)</dd>
+  </dl>
+
+</div>
+</div>
+
+<div class="tab-pane" id="pubs">
+<div class="col-lg-12">
+  <h3>Publications</h3>
+  <p>Below you will find most papers I've worked on.
+<a href="https://dblp.uni-trier.de/pers/hd/s/Stefan:Deian">DBLP</a> has a slightly more complete list.
+  </p>
+
+<!-- DO NOT EDIT BELOW THIS -->
+<div>
+<h4>Papers</h4>
+<ul>
+
+
+ <li>
+   <span class="paper-authors">Hosein Yavarzadeh, Archit Agarwal, Max Christman, Christina Garman, Daniel Genkin, Andrew Kwong, Daniel Moghimi, Deian Stefan, Kazem Taram, and Dean Tullsen.</span>
+   <span class="paper-title">Pathfinder: High-Resolution Control-Flow Attacks Exploiting the Conditional Branch Predictor </span>
+   In Proceedings of <span class="paper-conf">Architectural Support for Programming Languages and Operating Systems, ACM.</span>
+   May, 2024.
+   <div>
+   [ <a href="pubs/yavarzadeh:2024:pathfinder.pdf">paper</a> |
+     <a href="pubs/yavarzadeh:2024:pathfinder.bib">bibtex</a> ]
+   </div>
+ </li>
+
+
+
+ <li>
+   <span class="paper-authors">Evan Johnson, Evan Laufer, Zijie Zhao, Dan Gohman, Shravan Narayan, Stefan Savage, Deian Stefan, and Fraser Brown.</span>
+   <span class="paper-title">WaVe: a verifiably secure WebAssembly sandboxing runtime.</span>
+   In Proceedings of <span class="paper-conf">Symposium on Security and Privacy, IEEE.</span>
+   May, 2023.
+   Distinguished paper award.
+   <div>
+   [ <a href="pubs/johnson:2023:wave.pdf">paper</a> |
+     <a href="pubs/johnson:2023:wave.bib">bibtex</a> ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">
+	Hosein Yavarzadeh, Mohammadkazem Taram, Shravan Narayan, Deian Stefan, and Dean Tullsen.
+   </span>
+   <span class="paper-title">Half&amp;Half: Demystifying Intel's Directional Branch Predictors for Fast, Secure Partitioned Execution.</span>
+   In Proceedings of <span class="paper-conf">Symposium on Security and Privacy, IEEE.</span>
+   May, 2023.
+   <div>
+   [ <a href="pubs/yavarzadeh:2023:half.pdf">paper</a> |
+     <a href="pubs/yavarzadeh:2023:half.bib">bibtex</a> ]
+   </div>
+ </li>
+
+
+
+ <li>
+   <span class="paper-authors">Shravan Narayan, Tal Garfinkel, Mohammadkazem Taram, Joey Rudek, Daniel Moghimi, Evan Johnson, Chris Fallin, Anjo Vahldiek-Oberwagner, Michael LeMay, Ravi Sahita, Dean Tullsen, and Deian Stefan.</span>
+   <span class="paper-title">Going beyond the Limits of SFI: Flexible and Secure Hardware-Assisted In-Process Isolation with HFI.</span>
+   In Proceedings of <span class="paper-conf">Architectural Support for Programming Languages and Operating Systems, ACM.</span>
+   March, 2023.
+   Distinguished paper award. IEEE MICRO Top Picks 2024.
+   <div>
+   [ <a href="pubs/narayan:2023:hfi.pdf">paper</a> |
+     <a href="pubs/narayan:2023:hfi.bib">bibtex</a> ]
+   </div>
+ </li>
+
+
+
+ <li>
+   <span class="paper-authors">Alexandra E. Michael, Anitha Gollamudi, Jay Bosamiya, Evan Johnson, Aidan Denlinger, Craig Disselkoen, Conrad Watt, Bryan Parno, Marco Patrignani, Marco Vassena, and Deian Stefan.</span>
+   <span class="paper-title">MSWasm: Soundly Enforcing Memory-Safe Execution of Unsafe Code.</span>
+   In Proceedings of <span class="paper-conf">ACM SIGPLAN Symposium on Principles of Programming Languages (POPL).</span>
+   January, 2023.
+   <div>
+   [ <a href="pubs/michael:2023:mswasm.pdf">paper</a> |
+     <a href="pubs/michael:2023:mswasm.bib">bibtex</a> | <a href="https://arxiv.org/abs/2208.13583">arXiv</a> ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Michael Smith, Peter Snyder, Moritz Haller, Ben Livshits, Deian Stefan, and Hamed Haddadi.</span>
+   <span class="paper-title">Blocked or Broken? Automatically Detecting When Privacy Interventions Break Websites.</span>
+   In Proceedings of <span class="paper-conf">Privacy Enhancing Technologies Symposium (PoPETS)</span>
+   July, 2022.
+   <div>
+   [ <a href="pubs/smith:2022:blocked.pdf">paper</a>
+   | <a href="pubs/smith:2022:blocked.bib">bibtex</a>
+   | <a href="https://arxiv.org/abs/2203.03528">arXiv</a>
+   ]
+   </div>
+ </li>
+
+
+ <li>
+   <span class="paper-authors">Sunjay Cauligi, Craig Disselkoen, Daniel Moghimi, Gilles Barthe, and Deian Stefan.</span>
+   <span class="paper-title">SoK: Practical Foundations for Software Spectre Defenses.</span>
+   In Proceedings of <span class="paper-conf">Symposium on Security and Privacy, IEEE.</span>
+   May, 2022.
+   <div>
+	   [ <a href="pubs/cauligi:2022:sok.pdf">paper</a> | <a href="pubs/cauligi:2022:sok.bib">bibtex</a> | <a href="https://arxiv.org/abs/2105.05801">arXiv</a> ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Matthew Kolosick, Shravan Ravi Narayan, Evan Johnson, Conrad Watt, Michael LeMay, Deepak Garg, Ranjit Jhala, and Deian Stefan.</span>
+   <span class="paper-title">Isolation Without Taxation: Near Zero Cost Transitions for WebAssembly and SFI.</span>
+   In Proceedings of <span class="paper-conf">ACM SIGPLAN Symposium on Principles of Programming Languages (POPL).</span>
+   January, 2022.
+   <div>
+	   [ <a href="pubs/kolosick:2022:isolation.pdf">paper</a> | <a href="pubs/kolosick:2022:isolation.bib">bibtex</a> | <a href="https://arxiv.org/abs/2105.00033">arXiv</a> ]
+   </div>
+ </li>
+
+
+
+ <li>
+   <span class="paper-authors">Klaus von Gleissenthall, Rami GÃ¶khan KÄ±cÄ±, Deian Stefan, and Ranjit Jhala.</span>
+   <span class="paper-title">Solver-Aided Constant-Time Hardware Verification</span>
+   In Proceedings of <span class="paper-conf">ACM Conference on Computer and Communications Security (CCS).</span>
+   October, 2021.
+   <div>
+   [ <a href="pubs/gleissenthall:2021:xenon.pdf">paper</a>
+   | <a href="pubs/gleissenthall:2021:xenon.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Michael Smith, Peter Snyder, Ben Livshits, and Deian Stefan.</span>
+   <span class="paper-title">SugarCoat: Programmatically generating privacy-Preserving, Web-compatible resource replacements for content blocking.</span>
+   In Proceedings of <span class="paper-conf">ACM Conference on Computer and Communications Security (CCS).</span>
+   October, 2021.
+   <div>
+   [ <a href="pubs/smith:2021:sugarcoat.pdf">paper</a>
+   | <a href="pubs/smith:2021:sugarcoat.bib">bibtex</a>
+   | <a href="https://github.com/SugarCoatWeb">code</a>
+   ]
+   </div>
+ </li>
+
+
+ <li>
+   <span class="paper-authors">Shravan Narayan, Craig Disselkoen, Daniel Moghimi, Sunjay Cauligi, Evan Johnson, Zhao Gang, Anjo Vahldiek-Oberwagner, Ravi Sahita, Hovav Shacham, Dean Tullsen, and Deian Stefan.</span>
+   <span class="paper-title">Swivel: Hardening WebAssembly against Spectre.</span>
+   In Proceedings of <span class="paper-conf">USENIX Security Symposium.</span>
+   August, 2021.
+   <div>
+   [ <a href="pubs/narayan:2021:swivel.pdf">paper</a>
+   | <a href="pubs/narayan:2021:swivel.bib">bibtex</a>
+   | <a href="https://arxiv.org/abs/2102.12730">arXiv</a>
+   | <a href="https://swivel.programming.systems">code</a>
+   ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Nico Lehmann, Rose Kunkel, Jordan Brown, Jean Yang, Niki Vazou, Nadia Polikarpova, Deian Stefan, and Ranjit Jhala.</span>
+   <span class="paper-title">STORM: Refinement Types for Secure Web Applications.</span>
+   In Proceedings of <span class="paper-conf">Symposium on Operating Systems Design and Implementation (OSDI), USENIX.</span>
+   July, 2021.
+   <div>
+   [ <a href="pubs/lehmann:2021:storm.pdf">paper</a>
+   | <a href="pubs/lehmann:2021:storm.bib">bibtex</a>
+   | <a href="https://github.com/storm-framework">code</a>
+   ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">John Renner, Alex Sanchez-Stern, Fraser Brown, Sorin Lerner, and Deian Stefan.</span>
+   <span class="paper-title">Scooter &amp; Sidecar: A Domain-Specific Approach to Writing Secure Database Migrations.</span>
+   In Proceedings of <span class="paper-conf">Conference on Programming Language Design and Implementation (PLDI), ACM SIGPLAN.</span>
+   June, 2021.
+   <div>
+   [ <a href="pubs/renner:2021:scooter.pdf">paper</a>
+   | <a href="pubs/renner:2021:scooter.bib">bibtex</a>
+   | <a href="https://scooter.programming.systems">code</a>
+   ]
+   </div>
+ </li>
+
+
+
+ <li>
+   <span class="paper-authors">Evan Johnson, David Thien, Yousef Alhessi, Shravan Narayan, Fraser Brown, Sorin Lerner, Tyler McMullen, Stefan Savage, and Deian Stefan.</span>
+   <span class="paper-title">ÐÐ¾Ð²ÐµÑÑÌÐ¹, Ð½Ð¾ Ð¿ÑÐ¾Ð²ÐµÑÑÌÐ¹: SFI safety for native-compiled Wasm.</span>
+   In Proceedings of <span class="paper-conf">Network and Distributed System Security Symposium (NDSS), Internet Society.</span>
+   February, 2021. (VeriWasm)
+   <div>
+   [ <a href="pubs/johnson:2021:veriwasm.pdf">paper</a> | <a href="pubs/johnson:2021:veriwasm.bib">bibtex</a> | <a href="https://veriwasm.programming.systems">code</a> ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Marco Vassena, Craig Disselkoen, Klaus v. Gleissenthall, Sunjay Cauligi, Rami GÃ¶khan KÄ±cÄ±, Ranjit Jhala, Dean Tullsen, and Deian Stefan.</span>
+   <span class="paper-title">Automatically Eliminating Speculative Leaks from Cryptographic Code with Blade.</span>
+   In Proceedings of <span class="paper-conf">ACM SIGPLAN Symposium on Principles of Programming Languages (POPL).</span>
+   January, 2021.
+   <span class="paper-note">Distinguished paper award.</span>
+   <div>
+   [ <a href="pubs/vassena:2021:blade.pdf">paper</a> | <a href="pubs/vassena:2021:blade.bib">bibtex</a> | <a href="https://arxiv.org/abs/2005.00294">arXiv</a> | <a href="https://github.com/PLSysSec/blade-benchmarks">code</a> ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Tal Garfinkel, Shravan Narayan, Craig Disselkoen, Hovav Shacham, and Deian Stefan.
+</span>
+   <span class="paper-title">The Road to Less Trusted Code: Lowering the Barrier to In-Process Sandboxing.</span>
+   <span class="paper-conf">USENIX ;login:</span>
+   Winter, 2020, Vol. 45, No.5.
+   <div>
+   [ <a href="https://www.usenix.org/publications/login/winter2020/garfinkel-tal">paper</a> | <a href="pubs/garfinkel:2020:login.bib">bibtex</a> | <a href="pubs/garfinkel:2020:login.pdf">local copy</a> ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Nadia Polikarpova, Deian Stefan, Jean Yang, Shachar Itzhaky, Travis Hance, Armando Solar-Lezama.</span>
+   <span class="paper-title">Liquid Information Flow Control.</span>
+   In Proceedings of <span class="paper-conf">International Conference on Functional Programming (ICFP), ACM SIGPLAN.</span>
+   August, 2020.
+   <span class="paper-note">Distinguished paper award.</span>
+   <span class="paper-note">SIGPLAN research highlight.</span>
+   <div>
+   [ <a href="pubs/polikarpova:2020:lifty.pdf">paper</a> | <a href="pubs/polikarpova:2020:lifty.bib">bibtex</a> | <a href="pubs/polikarpova:2020:lifty-extended.pdf">extended</a> ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Fraser Brown, Deian Stefan, and Dawson Engler.</span>
+   <span class="paper-title">Sys: a Static/Symbolic Tool for Finding Good Bugs in Good (Browser) Code.</span>
+   In Proceedings of <span class="paper-conf">USENIX Security Symposium.</span>
+   August, 2020.
+   <div>
+   [ <a href="pubs/brown:2020:sys.pdf">paper</a> | <a href="pubs/brown:2020:sys.bib">bibtex</a> | <a href="https://sys.programming.systems">code</a> ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Shravan Narayan, Craig Disselkoen, Tal Garfinkel, Nathan Froyd, Eric Rahm, Sorin Lerner, Hovav Shacham, and Deian Stefan.
+</span>
+   <span class="paper-title">Retrofitting Fine Grain Isolation in the Firefox Renderer.</span>
+   In Proceedings of <span class="paper-conf">USENIX Security Symposium.</span>
+   August, 2020. (RLBox)
+   <span class="paper-note">Distinguished paper award.</span>
+   <span class="paper-note">First place at <a href="https://www.csaw.io/">CSAW 2020</a> for applied research.</span>
+   <span class="paper-note">IEEE Cybersecurity Award for Practice 2022.</span>
+   <div>
+   [ <a href="pubs/narayan:2020:rlbox.pdf">paper</a> | <a href="https://arxiv.org/abs/2003.00572">arXiv</a> | <a href="pubs/narayan:2020:rlbox.bib">bibtex</a> | <a href="https://docs.rlbox.dev">site</a> ]
+   </div>
+ </li>
+
+
+ <li>
+   <span class="paper-authors">Fraser Brown, John Renner, Andres NÃ¶etzli, Sorin Lerner, Hovav Shacham, and Deian Stefan.</span>
+   <span class="paper-title">Towards a verified range analysis for JavaScript JITs.</span>
+   In Proceedings of <span class="paper-conf">Conference on Programming Language Design and Implementation (PLDI), ACM SIGPLAN.</span>
+   June, 2020.
+   <div>
+   [ <a href="pubs/brown:2020:vera.pdf">paper</a> | <a href="pubs/brown:2020:vera.bib">bibtex</a> | <a href="https://vera.programming.systems">code</a> ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Sunjay Cauligi, Craig Disselkoen, Klaus v. Gleissenthall, Dean Tullsen, Deian Stefan, Tamara Rezk, and Gilles Barthe.</span>
+   <span class="paper-title">Constant-Time Foundations for the New Spectre Era.</span>
+   In Proceedings of <span class="paper-conf">Conference on Programming Language Design and Implementation (PLDI), ACM SIGPLAN.</span>
+   June, 2020.
+   <div>
+   [ <a href="pubs/cauligi:2020:ct-foundations.pdf">paper</a> | <a href="pubs/cauligi:2020:ct-foundations.bib">bibtex</a> | <a href="https://arxiv.org/abs/1910.01755">arXiv</a> | <a href="https://pitchfork.programming.systems">code</a> ]
+   </div>
+ </li>
+
+
+
+ <li>
+   <span class="paper-authors">Klaus von Gleissenthall, Rami GÃ¶khan KÄ±cÄ±, Deian Stefan, and Ranjit Jhala.</span>
+   <span class="paper-title">IODINE: Verifying Constant-Time Execution of Hardware.</span>
+   In Proceedings of <span class="paper-conf">USENIX Security Symposium.</span>
+   August, 2019.
+   <div>
+   [ <a href="pubs/gleissenthall:2019:iodine.pdf">paper</a> | <a href="pubs/gleissenthall:2019:iodine.bib">bibtex</a> | <a href="https://iodine.programming.systems">code</a> ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Sunjay Cauligi, Gary Soeller, Brian Johannesmeyer, Fraser Brown, Riad S. Wahby, John Renner, Benjamin Gregoire, Gilles Barthe, Ranjit Jhala, and Deian Stefan.</span>
+   <span class="paper-title">FaCT: A DSL for timing-sensitive computation.</span>
+   In Proceedings of <span class="paper-conf">Conference on Programming Language Design and Implementation (PLDI), ACM SIGPLAN.</span>
+   June, 2019.
+   <div>
+   [ <a href="pubs/cauligi:2019:fact.pdf">paper</a> | <a href="pubs/cauligi:2019:fact.bib">bibtex</a> | <a href="https://fact.programming.systems">code</a> ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Craig Disselkoen, John Renner, Conrad Watt, Tal Garfinkel, Amit Levy, and Deian Stefan.</span>
+   <span class="paper-title">Position Paper: Bringing Memory Safety to WebAssembly.</span>
+   In Proceedings of <span class="paper-conf">Hardware and Architectural Support for Security and Privacy (HASP).</span>
+   June, 2019.
+   <div>
+   [ <a href="pubs/disselkoen:2019:ms-wasm.pdf">paper</a> | <a href="pubs/disselkoen:2019:ms-wasm.bib">bibtex</a> ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Marco Vassena, Gary Soeller, Peter Amidon, Matthew Chan, John Renner, and Deian Stefan.</span>
+   <span class="paper-title">Foundations for parallel information flow control runtime systems.</span>
+   In Proceedings of <span class="paper-conf">Conference on Principles of Security and Trust (POST), Springer.</span>
+   April, 2019.
+   <div>
+   [ <a href="pubs/vassena:2019:foundations.pdf">paper</a>
+   | <a href="pubs/vassena:2019:foundations.bib">bibtex</a> ]
+   </div>
+ </li>
+
+
+
+ <li>
+   <span class="paper-authors">Conrad Watt, John Renner, Natalie Popescu, Sunjay Cauligi, and Deian Stefan</span>
+   <span class="paper-title">CT-Wasm: Type-Driven Secure Cryptography for the Web Ecosystem.</span>
+   In Proceedings of <span class="paper-conf">ACM SIGPLAN Symposium on Principles of Programming Languages (POPL).</span>
+   January, 2019.
+   <div>
+   [ <a href="pubs/watt:2019:ct-wasm.pdf">paper</a>
+   | <a href="pubs/watt:2019:ct-wasm.bib">bibtex</a> 
+   | <a href="https://fact.programming.systems">code</a> ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Klaus von Gleissenthall, Rami GÃ¶khan KÄ±cÄ±, Alexander Bakst, Deian Stefan, and Ranjit Jhala.</span>
+   <span class="paper-title">Pretend Synchrony: Synchronous Verification of Asynchronous Distributed Programs.</span>
+   In Proceedings of <span class="paper-conf">ACM SIGPLAN Symposium on Principles of Programming Languages (POPL).</span>
+   January, 2019.
+   <div>
+   [ <a href="pubs/gleissenthall:2019:pretend.pdf">paper</a>
+   | <a href="pubs/gleissenthall:2019:pretend.bib">bibtex</a> ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Marco Vassena, Alejandro Russo, Deepak Garg, Vineet Rajani, and Deian Stefan.</span>
+   <span class="paper-title">From Fine- to Coarse-Grained Dynamic Information Flow Control and Back.</span>
+   In Proceedings of <span class="paper-conf">ACM SIGPLAN Symposium on Principles of Programming Languages (POPL).</span>
+   January, 2019.  <span class="paper-note">Distinguished paper award.</span>
+   <div>
+   [ <a href="pubs/vassena:2019:from.pdf">paper</a>
+   | <a href="pubs/vassena:2019:from.bib">bibtex</a> ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Craig Disselkoen, Tal Garfinkel, Deian Stefan, and Conrad Watt.</span>
+   <span class="paper-title">Trestle: Bridging the Performance and Safety Divide in WebAssembly.</span>
+   In <span class="paper-conf">Workshop on Principles of Secure Compilation (PriSC).</span>
+   January, 2019.
+   <!-- <div> [ paper | bibtex ] </div> -->
+ </li>
+
+ <li>
+   <span class="paper-authors">Marc Andrysco, Andres NÃ¶etzli, Fraser Brown, Ranjit Jhala, and Deian Stefan.</span>
+   <span class="paper-title">Towards Verified, Constant-time Floating Point Operations.</span>
+   In Proceedings of <span class="paper-conf">ACM Conference on Computer and Communications Security (CCS).</span>
+   October, 2018.
+   <div>
+   [ <a href="pubs/andrysco:2018:towards.pdf">paper</a>
+   | <a href="pubs/andrysco:2018:towards.bib">bibtex</a> ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Michael Smith, Craig Disselkoen, Shravan Narayan, Fraser Brown, and Deian Stefan.</span>
+   <span class="paper-title">Browser history re:visited.</span>
+   In Proceedings of <span class="paper-conf">USENIX Workshop on Offensive Technologies (WOOT).</span>
+   August, 2018.
+   <div>
+   [ <a href="pubs/smith:2018:browser.pdf">paper</a>
+   | <a href="pubs/smith:2018:browser.bib">bibtex</a> ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">John Renner, Sunjay Cauligi, and Deian Stefan.</span>
+   <span class="paper-title">Constant-Time WebAssembly.</span>
+   In <span class="paper-conf">Workshop on Principles of Secure Compilation (PriSC).</span>
+   January, 2018.
+   <div>
+   [ <a href="pubs/renner:2018:ct-wasm.pdf">paper</a>
+   | <a href="pubs/renner:2018:ct-wasm.bib">bibtex</a> ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Sunjay Cauligi, Gary Soeller, Fraser Brown, Brian Johannesmeyer, Yunlu Huang, Ranjit Jhala, and Deian Stefan.</span>
+   <span class="paper-title">FaCT: A Flexible, Constant-Time Programming Language.</span>
+   In Proceedings of <span class="paper-conf">Cybersecurity Development (SecDev), IEEE.</span>
+   September, 2017.
+   <div>
+   [ <a href="pubs/cauligi:2017:fact.pdf">paper</a>
+   | <a href="pubs/cauligi:2017:fact.bib">bibtex</a> ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Gary Soeller and Deian Stefan.</span>
+   <span class="paper-title">Multi-core IFC: Securing the space-time continuum.</span>
+   In <span class="paper-conf">Workshop on Foundations of Computer Security (FCS).</span> August, 2017.
+   <div>
+   [ <a href="pubs/soeller:2017:multi-core-ifc.pdf">paper</a>
+   | <a href="pubs/soeller:2017:multi-core-ifc.bib">bibtex</a> ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Fraser Brown, Shravan Narayan, Riad S. Wahby, Dawson Engler, Ranjit Jhala, and Deian Stefan.</span>
+   <span class="paper-title"> Finding and Preventing Bugs in JavaScript Bindings.</span>
+   In Proceedings of <span class="paper-conf">Symposium on Security and Privacy, IEEE.</span>
+   May, 2017.
+   <div>
+   [ <a href="pubs/brown:2017:finding.pdf">paper</a>
+   | <a href="pubs/brown:2017:finding.bib">bibtex</a>
+   | <a href="https://bindings.programming.systems">code</a> ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Daniel B. Giffin, Amit Levy, Deian Stefan, David Terei, David MaziÃ¨res, John Mitchell, and Alejandro Russo. </span>
+   <span class="paper-title">Hails: Protecting Data Privacy in Untrusted Web Applications</span>
+   <span class="paper-conf">Journal of Computer Security, IOS Press.</span>
+   Volume 25, Issue 4-5, 2017.
+   <div>
+   [ <a href="pubs/giffin:2017:hails.pdf">paper</a>
+   | <a href="pubs/giffin:2017:hails.bib">bibtex</a>
+   | <a href="http://content.iospress.com/articles/journal-of-computer-security/jcs15801">publisher</a>
+   | <a href="https://hackage.haskell.org/package/hails">hackage</a>
+   ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Deian Stefan, Alejandro Russo, David MaziÃ¨res, and John C. Mitchell.</span>
+   <span class="paper-title">Flexible Dynamic Information Flow Control in the Presence of Exceptions.</span>
+   <span class="paper-conf">Journal of Functional Programming, Cambridge University Press.</span>
+   Volume 27, 2017.
+   <div>
+   [ <a href="pubs/stefan:2017:flexible.pdf">paper</a>
+   | <a href="pubs/stefan:2017:flexible.bib">bibtex</a>
+   | <a href="https://github.com/scslab/lio-semantics">proofs</a>
+   | <a href="https://www.cambridge.org/core/journals/journal-of-functional-programming/article/div-classtitleflexible-dynamic-information-flow-control-in-the-presence-of-exceptionsa-hrefafn1-ref-typefnadiv/DA92A6BA5FBBDC534F1B498217D160A8">publisher</a>
+   | <a href="https://hackage.haskell.org/package/lio">hackage</a> ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Stefan Heule, Devon Rifkin, Deian Stefan, and Alejandro Russo.</span>
+   <span class="paper-title">The Most Dangerous Code in the Browser.</span>
+   In Proceedings of <span class="paper-conf">Workshop on Hot Topics in Operating Systems (HotOS), USENIX.</span>
+   May, 2015.
+   <div>
+   [ <a href="pubs/heule:2015:the-most.pdf">paper</a>
+   | <a href="pubs/heule:2015:the-most.bib">bibtex</a>
+   | <a href="pubs/heule:2015:the-most-slides.pdf">slides</a> ]
+   </div>
+</li>
+ <li>
+   <span class="paper-authors">Stefan Heule, Deian Stefan, Edward Z. Yang, John C. Mitchell, and Alejandro Russo.</span>
+   <span class="paper-title">IFC Inside: Retrofitting Languages with Dynamic Information Flow Control.</span>
+   In Proceedings of <span class="paper-conf">Conference on Principles of Security and Trust (POST), Springer.</span>
+   April, 2015.
+   <div>
+   [ <a href="pubs/heule:2015:ifc-inside.pdf">paper</a>
+   | <a href="pubs/heule:2015:ifc-inside.bib">bibtex</a>
+   | <a href="pubs/heule:2015:ifc-inside-extended.pdf">extended</a>
+   ]
+   </div>
+</li>
+ <li>
+   <span class="paper-authors">Deian Stefan, Edward Z. Yang, Petr Marchenko, Alejandro Russo, Dave Herman, Brad Karp, and David MaziÃ¨res.</span>
+   <span class="paper-title">Protecting Users by Confining JavaScript with COWL.</span>
+   In Proceedings of <span class="paper-conf">Symposium on Operating Systems Design and Implementation (OSDI), USENIX.</span>
+   October, 2014.
+   <div>
+   [ <a href="pubs/stefan:2014:protecting.pdf">paper</a>
+   | <a href="pubs/stefan:2014:protecting.bib">bibtex</a>
+   | <a href="pubs/stefan:2014:protecting-slides.pdf">slides</a>
+   | <a href="https://www.usenix.org/conference/osdi14/technical-sessions/presentation/stefan">video</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Pablo Buiras, Deian Stefan, and Alejandro Russo.</span>
+   <span class="paper-title">On Dynamic Flow-sensitive Floating-Label Systems.</span>
+   In Proceedings of <span class="paper-conf">Computer Security Foundations Symposium (CSF), IEEE.</span>
+   July, 2014.
+   <div>
+   [ <a href="pubs/buiras:2014:on-dynamic.pdf">paper</a>
+   | <a href="pubs/buiras:2014:on-dynamic.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Deian Stefan, Pablo Buiras, Edward Z. Yang, Amit Levy, David Terei, Alejandro Russo, and David MaziÃ¨res.</span>
+   <span class="paper-title">Eliminating Cache-based Timing Attacks with Instruction-based Scheduling.</span>
+   In Proceedings of <span class="paper-conf">European Symposium on Research in Computer Security (ESORICS), Springer.</span>
+   September, 2013.
+   <div>
+   [ <a href="pubs/stefan:2013:eliminating.pdf">paper</a>
+   | <a href="pubs/stefan:2013:eliminating.bib">bibtex</a>
+   | <a href="pubs/stefan:2013:eliminating-slides.pdf">slides</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Pablo Buiras, Amit Levy, Deian Stefan, Alejandro Russo, and David MaziÃ¨res.</span>
+   <span class="paper-title">A Library for Removing Cache-Based Attacks in Concurrent Information Flow Systems.</span>
+   In Proceedings of <span class="paper-conf">Trustworthy Global Computing (TGC), Springer.</span>
+   August, 2013.
+   <div>
+   [ <a href="pubs/buiras:2013:a-library.pdf">paper</a>
+   | <a href="pubs/buiras:2013:a-library.bib">bibtex</a>
+   | <a href="pubs/buiras:2013:a-library-extended.pdf">extended</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Edward Yang, Deian Stefan, John Mitchell, David MaziÃ¨res, Petr Marchenko, and Brad Karp.</span>
+   <span class="paper-title">Toward Principled Browser Security.</span>
+   In Proceedings of <span class="paper-conf">Workshop on Hot Topics in Operating Systems (HotOS), USENIX.</span>
+   May, 2013.
+   <div>
+   [ <a href="pubs/yang:2013:towards.pdf">paper</a>
+   | <a href="pubs/yang:2013:towards.bib">bibtex</a>
+   | <a href="pubs/yang:2013:towards-slides.pdf">slides</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Daniel B. Giffin, Amit Levy, Deian Stefan, David Terei, David MaziÃ¨res, John Mitchell, and Alejandro Russo.</span>
+   <span class="paper-title">Hails: Protecting Data Privacy in Untrusted Web Applications.</span>
+   In Proceedings of <span class="paper-conf">Symposium on Operating Systems Design and Implementation (OSDI), USENIX.</span>
+   October, 2012.
+   <div>
+   [ <a href="pubs/giffin:2012:hails.pdf">paper</a>
+   | <a href="pubs/giffin:2012:hails.bib">bibtex</a>
+   | <a href="pubs/giffin:2012:hails-slides.pdf">slides</a>
+   | <a href="https://www.usenix.org/conference/osdi12/technical-sessions/presentation/giffin">video</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Deian Stefan, Alejandro Russo, Pablo Buiras, Amit Levy, John C. Mitchell, and David MaziÃ¨res.</span>
+   <span class="paper-title">Addressing Covert Termination and Timing Channels in Concurrent Information Flow Systems.</span>
+   In Proceedings of <span class="paper-conf">International Conference on Functional Programming (ICFP), ACM SIGPLAN.</span>
+   September, 2012.
+   <span class="paper-note">Most Influential Paper Award at ICFP 2022</span>
+   <div>
+   [ <a href="pubs/stefan:2012:addressing.pdf">paper</a>
+   | <a href="pubs/stefan:2012:addressing.bib">bibtex</a>
+   | <a href="pubs/stefan:2012:addressing-slides.pdf">slides</a>
+   | <a href="https://www.youtube.com/watch?v=ak3z50FAqA8">video</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">John C. Mitchell, Rahul Sharma, Deian Stefan, and Joe Zimmerman.</span>
+   <span class="paper-title">Information-flow control for programming on encrypted data.</span>
+   In Proceedings of <span class="paper-conf">Computer Security Foundations Symposium (CSF), IEEE.</span>
+   June, 2012.
+   <div>
+   [ <a href="pubs/mitchell:2012:information.pdf">paper</a>
+   | <a href="pubs/mitchell:2012:information.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Deian Stefan, Xiaokui Shu, and Danfeng (Daphne) Yao.</span>
+   <span class="paper-title">Robustness of keystroke-dynamics based biometrics against synthetic forgeries.</span>
+   <span class="paper-conf">Computers & Security, Elsevier.</span>
+   31(1)
+   2012.
+   <div>
+   [ <a href="pubs/stefan:2011:robust.pdf">paper</a>
+   | <a href="pubs/stefan:2011:robust.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Kui Xu, Huijun Xiong, Chehai Wu, Deian Stefan, and Danfeng Yao.</span>
+   <span class="paper-title">Data-Provenance Verification For Secure Hosts.</span>
+   <span class="paper-conf">Transactions on Dependable and Secure Computing, IEEE.</span>
+   2012.
+   <div>
+   [ <a href="pubs/xu:2011:data.pdf">paper</a>
+   | <a href="pubs/xu:2011:data.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Deian Stefan, Alejandro Russo, David MaziÃ¨res, and John C. Mitchell.</span>
+   <span class="paper-title">Disjunction Category Labels.</span>
+   In Proceedings of <span class="paper-conf">Nordic Conference on Security IT Systems (NordSec), Springer.</span>
+   October, 2011.
+   <div>
+   [ <a href="pubs/stefan:2011:dclabels.pdf">paper</a>
+   | <a href="pubs/stefan:2011:dclabels.bib">bibtex</a>
+   | <a href="pubs/stefan:2011:dclabels-slides.pdf">slides</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Deian Stefan, Alejandro Russo, John C. Mitchell, and David MaziÃ¨res.</span>
+   <span class="paper-title">Flexible Dynamic Information Flow Control in Haskell.</span>
+   In Proceedings of <span class="paper-conf">Haskell Symposium, ACM SIGPLAN.</span>
+   September, 2011.
+   <div>
+   [ <a href="pubs/stefan:2011:flexible.pdf">paper</a>
+   | <a href="pubs/stefan:2011:flexible.bib">bibtex</a>
+   | <a href="pubs/stefan:2011:flexible-slides.pdf">slides</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Deian Stefan and Danfeng Yao.</span>
+   <span class="paper-title">Keystroke-dynamics authentication against synthetic forgeries.</span>
+   In Proceedings of <span class="paper-conf">Collaborative Computing: Networking, Applications and Worksharing (CollaborateCom), IEEE.</span>
+   October, 2010.
+  <span class="paper-note">Best paper award.</span>
+   <div>
+   [ <a href="pubs/stefan:2010:keystroke.pdf">paper</a>
+   | <a href="pubs/stefan:2010:keystroke.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Joppe W. Bos and Deian Stefan.</span>
+   <span class="paper-title">Performance analysis of the SHA-3 candidates on exotic multi-core architectures.</span>
+   In Proceedings of <span class="paper-conf">Cryptographic Hardware and Embedded Systems (CHES), Springer.</span>
+   August, 2010.
+   <div>
+   [ <a href="pubs/bos:2010:performance.pdf">paper</a>
+   | <a href="pubs/bos:2010:performance.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Shahram Khazaei, Simon Knellwolf, Willi Meier, and Deian Stefan.</span>
+   <span class="paper-title">Improved Linear Differential Attacks on CubeHash.</span>
+   In Proceedings of <span class="paper-conf">International Conference on Cryptology (AFRICACRYPT), Springer.</span>
+   May, 2010.
+  <span class="paper-note">Awarded the 2010.01 Prize by DJB.</span>
+   <div>
+   [ <a href="pubs/khazaei:2010:improved.pdf">paper</a>
+   | <a href="pubs/khazaei:2010:improved.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Dag Arne Osvik, Joppe W. Bos, Deian Stefan, and David Canright.</span>
+   <span class="paper-title">Fast software AES encryption.</span>
+   In Proceedings of <span class="paper-conf">International Workshop on Fast Software Encryption (FSE), Springer.</span>
+   February, 2010.
+   <div>
+   [ <a href="pubs/osvik:2010:fast.pdf">paper</a>
+   | <a href="pubs/osvik:2010:fast.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Deian Stefan.</span>
+   <span class="paper-title">Hardware Framework for the Rabbit Stream Cipher.</span>
+   In Proceedings of <span class="paper-conf">International Conference on Information Security and Cryptology (INSCRYPT), Springer.</span>
+   December, 2009.
+   <div>
+   [ <a href="pubs/stefan:2009:hardware.pdf">paper</a>
+   | <a href="pubs/stefan:2009:hardware.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Jared Harwayne-Gidansky, Deian Stefan, and Ishaan L. Dalal.</span>
+   <span class="paper-title">FPGA-based SoC for real-time network intrusion detection using counting bloom filters.</span>
+   In Proceedings of <span class="paper-conf">SoutheastCon, IEEE.</span>
+   March, 2009.
+   <div>
+   [ <a href="pubs/harwayne-gidansky:2009:fpga.pdf">paper</a>
+   | <a href="pubs/harwayne-gidansky:2009:fpga.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Ishaan L. Dalal, Deian Stefan, and Jared Harwayne-Gidansky.</span>
+   <span class="paper-title">Low discrepancy sequences for Monte Carlo simulations on reconfigurable platforms.</span>
+   In Proceedings of <span class="paper-conf">International Conference on Application-Specific Systems, Architectures and Processors (ASAP), IEEE.</span>
+   July, 2008.
+   <div>
+   [ <a href="pubs/dalal:2008:low.pdf">paper</a>
+   | <a href="pubs/dalal:2008:low.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Deian Stefan, David B. Nummey, Jared Harwayne-Gidansky, and Ishaan L. Dalal.</span>
+   <span class="paper-title">On Parallelizing the CryptMT Stream Cipher.</span>
+   In Proceedings of <span class="paper-conf">Vehicular Technology Conference (VTC Spring), IEEE.</span>
+   May, 2008.
+   <div>
+   [ <a href="pubs/stefan:2008:on-parallelizing.pdf">paper</a>
+   | <a href="pubs/stefan:2008:on-parallelizing.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Ishaan L. Dalal and Deian Stefan.</span>
+   <span class="paper-title">A hardware framework for the fast generation of multiple long-period random number streams.</span>
+   In Proceedings of <span class="paper-conf">International Symposium on Field Programmable Gate Arrays (FPGA), ACM.</span>
+   February, 2008.
+   <div>
+   [ <a href="pubs/dalal:2008:a-hardware.pdf">paper</a>
+   | <a href="pubs/dalal:2008:a-hardware.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Deian Stefan and Christopher Mitchell.</span>
+   <span class="paper-title">On the Parallelization of the MICKEY-128 2.0 Stream Cipher.</span>
+   In Proceedings of <span class="paper-conf">The State of the Art of Stream Ciphers (SASC), Springer.</span>
+   February, 2008.
+   <div>
+   [ <a href="pubs/stefan:2008:on-the-parallelization.pdf">paper</a>
+   | <a href="pubs/stefan:2008:on-the-parallelization.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+</ul>
+</div>
+<!-- DO NOT EDIT ABOVE THIS -->
+<div>
+<h4>Specifications</h4>
+<ul>
+ <li>
+   <span class="paper-authors">Deian Stefan.</span>
+   <span class="paper-title">Confinement with Origin Web Labels.</span>
+   <span class="paper-conf">World Wide Web Consortium, First Public
+     Working Draft WD-COWL-20151015.</span>
+   October, 2015.
+   <div>
+   [ <a href="http://www.w3.org/TR/COWL/">spec</a>
+   | <a href="pubs/stefan:2015:cowl-fpwd.bib">bibtex</a>
+   | <a href="http://cowl.ws">site</a>
+   ]
+   </div>
+ </li>
+</div>
+<!-- DO NOT EDIT BELOW THIS -->
+<div>
+<h4>Demos</h4>
+<ul>
+ <li>
+   <span class="paper-authors">Deian Stefan, Amit Levy, Alejandro Russo, and David MaziÃ¨res.</span>
+   <span class="paper-title">Building Secure Systems with LIO.</span>
+   In Proceedings of <span class="paper-conf">Haskell Symposium, ACM SIGPLAN.</span>
+   September, 2014.
+   <div>
+   [ <a href="pubs/stefan:2014:building-haskell.pdf">paper</a>
+   | <a href="pubs/stefan:2014:building-haskell.bib">bibtex</a>
+   | <a href="pubs/stefan:2014:building-haskell-slides.pdf">slides</a>
+   | <a href="https://www.youtube.com/watch?v=Yq0D0McVPz0">video</a>
+   | <a href="https://github.com/deian/lio-demo-haskell2014">code</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Amit Levy, David Terei, and David MaziÃ¨res.</span>
+   <span class="paper-title">Making Web Applications -XSafe.</span>
+   In Proceedings of <span class="paper-conf">Haskell Symposium, ACM SIGPLAN.</span>
+   September, 2014.
+   <div>
+   [ <a href="pubs/levy:2014:making.pdf">paper</a>
+   | <a href="pubs/levy:2014:making.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Deian Stefan and David MaziÃ¨res.</span>
+   <span class="paper-title">Building Secure Systems with LIO.</span>
+   In Proceedings of <span class="paper-conf">Workshop on Programming Languages and Analysis for Security (PLAS), ACM SIGPLAN.</span>
+   July, 2014.
+  <span class="paper-note">Invited talk.</span>
+   <div>
+   [ <a href="pubs/stefan:2014:building-plas.pdf">paper</a>
+   | <a href="pubs/stefan:2014:building-plas.bib">bibtex</a>
+   | <a href="pubs/stefan:2014:building-plas-slides.pdf">slides</a>
+   | <a href="http://github.com/deian/lio-demo-plas2014">code</a>
+   ]
+   </div>
+ </li>
+</ul>
+</div>
+<!-- DO NOT EDIT ABOVE THIS -->
+
+<div>
+<h4>Non-refereed/Unpublished</h4>
+<ul>
+
+
+
+ <li>
+   <span class="paper-authors">Shravan Narayan, Tal Garfinkel, Sorin Lerner, Hovav Shacham, and Deian Stefan.</span>
+   <span class="paper-title">Gobi: WebAssembly as a Practical Path to Library Sandboxing.</span>
+   In <span class="paper-conf"> arXiv preprint arXiv:1912.02285.</span>
+   December, 2019.
+   <div>
+   [ <a href="https://arxiv.org/abs/1912.02285">arXiv</a> ]
+   </div>
+ </li>
+
+
+ <li>
+   <span class="paper-authors">Jean Pierre Talpin, Jean Joseph Marty, Shravan Narayan, Deian Stefan, and Rajesh Gupta.</span>
+   <span class="paper-title">Towards verified programming of embedded devices.</span>
+   In Proceedings of <span class="paper-conf">IEEE Design, Automation and Test in Europe (DATE).</span>
+   March, 2019. Invited paper.
+   <div>
+   [ <a href="pubs/talpin:2019:towards.pdf">paper</a> | <a href="pubs/talpin:2019:towards.bib">bibtex</a> ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Fraser Brown, Ariana Mirian, Atyansh Jaiswal, Andres NÃ¶etzli, Deian Stefan.</span>
+   <span class="paper-title">SPAM: a Secure Package Manager.</span>
+   April, 2017.
+   <div>
+   [ <a href="pubs/brown:2017:spam.pdf">paper</a>
+   | <a href="pubs/brown:2017:spam.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+
+ <li>
+   <span class="paper-authors">Daniel B. Giffin, Stefan Heule, Amit Levy , David MaziÃ¨res, John Mitchell, Alejandro Russo, Amy Shen, Deian Stefan, David Terei, and Edward Z. Yang.</span>
+   <span class="paper-title">Security and the average programmer.</span>
+   In Proceedings of <span class="paper-conf">Conference on Principles of Security and Trust (POST), Springer.</span>
+   April, 2014.
+  <span class="paper-note">Invited paper.</span>
+   <div>
+   [ <a href="pubs/giffin:2014:security.pdf">paper</a>
+   | <a href="pubs/giffin:2014:security.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Alex Bain, John Mitchell, Rahul Sharma, Deian Stefan, and Joe Zimmerman.</span>
+   <span class="paper-title">A Domain-Specific Language for Computing on Encrypted Data.</span>
+   In Proceedings of <span class="paper-conf">Foundations of Software Technology and Theoretical Computer Science (FSTTCS), LIPIcs.</span>
+   December, 2011.
+  <span class="paper-note">Invited paper.</span>
+   <div>
+   [ <a href="pubs/bain:2011:domain.pdf">paper</a>
+   | <a href="pubs/bain:2011:domain.bib">bibtex</a>
+   | <a href="pubs/bain:2011:domain-extended.pdf">extended</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Deian Stefan and John C. Mitchell.</span>
+   <span class="paper-title">Analysing Object-Capability Patterns With MurÏ.</span>
+   April, 2011.
+   <div>
+   [ <a href="pubs/stefan:2011:ocap.pdf">paper</a>
+   | <a href="pubs/stefan:2011:ocap.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+</ul>
+</div>
+
+<div>
+  <h4 id="pubs">Theses</h4>
+<ul>
+ <li>
+   <span class="paper-authors">Deian Stefan.</span>
+   <span class="paper-title">Principled and Practical Web Application Security.</span>
+   <span class="paper-conf">Ph.D. Thesis, Stanford University.</span>
+   December, 2015.
+   <div>
+   [ <a href="pubs/stefan:2015:phdthesis.pdf">thesis</a>
+   | <a href="pubs/stefan:2015:phdthesis.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+ <li>
+   <span class="paper-authors">Deian Stefan.</span>
+   <span class="paper-title">Analysis and Implementation of eSTREAM and SHA-3 Cryptologic Algorithms.</span>
+   <span class="paper-conf">M.Eng. Thesis, Cooper Union.</span>
+   May, 2011.
+   <div>
+   [ <a href="pubs/stefan:2011:analysis.pdf">thesis</a>
+   | <a href="pubs/stefan:2011:analysis.bib">bibtex</a>
+   ]
+   </div>
+ </li>
+</ul>
+</div>
+
+<p>
+<hr>
+<small>
+  The documents distributed by this server have been provided as a means
+  to ensure timely dissemination of scholarly and technical work on a
+  noncommercial basis. Copyright and all rights therein are maintained
+  by the authors or by other copyright holders, notwithstanding that the
+  works are offered here electronically. It is understood that all persons
+  copying this information will adhere to the terms and constraints invoked
+  by each author's copyright. These works may not be distributed without
+  the explicit permission of the copyright holder.
+</small>
+</p>
+
+</div>
+</div>
+
+
+<div class="tab-pane" id="apps">
+<div class="col-lg-12">
+  <h3>Application Materials</h3>
+  Below you can find my curriculum vitae, research statement, and
+  teaching statement. My curriculum vitae contains the contact
+  information for my references.
+  <p>
+  <ul>
+    <li><a class="paper-title" href="cv.pdf">Curriculum Vitae</a></li>
+    <li><a class="paper-title" href="research.pdf">Research Statement</a></li>
+    <li><a class="paper-title" href="teaching.pdf">Teaching Statement</a></li>
+  </ul>
+  </p>
+  <p>
+  The following three papers are representative:
+  <ul>
+   <li>
+     <a href="pubs/stefan:2014:protecting.pdf"
+        class="paper-title">Protecting Users by Confining JavaScript with COWL</a>,
+     published in the proceedings of
+     <span class="paper-conf">Symposium on Operating Systems Design and
+       Implementation (OSDI)</span>, 2014.
+   </li>
+   <li>
+     <a href="pubs/giffin:2012:hails.pdf"
+        class="paper-title">Hails: Protecting Data Privacy in Untrusted Web Applications</a>,
+     published in the proceedings of
+     <span class="paper-conf">Symposium on Operating Systems Design and
+       Implementation (OSDI)</span>, 2012.
+   </li>
+   <li>
+     <a href="pubs/stefan:2017:flexible.pdf"
+        class="paper-title">Flexible Dynamic Information Flow Control in the Presence of Exceptions</a>,
+     under revision at the
+     <span class="paper-conf">Journal of Functional Programming (JFP)</span>.
+   </li>
+  </ul>
+  </p>
+</div>
+</div>
+
+</div> <!-- tab-content -->
+</div> <!-- container -->
+
+
+</body>
+</html>

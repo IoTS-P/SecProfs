@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>fabianmonrose.github.io</title>
+    <link rel="stylesheet" type="text/css" href="cv.css">
+
+    <!-- Based heavily off Colin Raffel's github shared templates; https://github.com/craffel/craffel.github.io -->
+   
+    <!-- Inline stylesheet since there isn't a lot of classes -->
+    <style>
+
+        /* Browser reset */
+        html {
+            box-sizing: border-box;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+        }
+
+        /* roboto-regular - latin */
+        @font-face {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          src: url('../fonts/roboto-v18-latin-regular.eot'); /* IE9 Compat Modes */
+          src: local('Roboto'), local('Roboto-Regular'),
+               url('../fonts/roboto-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+               url('../fonts/roboto-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+               url('../fonts/roboto-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
+               url('../fonts/roboto-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+               url('../fonts/roboto-v18-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+        }
+        /* roboto-italic - latin */
+        @font-face {
+          font-family: 'Roboto';
+          font-style: italic;
+          font-weight: 400;
+          src: url('../fonts/roboto-v18-latin-italic.eot'); /* IE9 Compat Modes */
+          src: local('Roboto Italic'), local('Roboto-Italic'),
+               url('../fonts/roboto-v18-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+               url('../fonts/roboto-v18-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+               url('../fonts/roboto-v18-latin-italic.woff') format('woff'), /* Modern Browsers */
+               url('../fonts/roboto-v18-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+               url('../fonts/roboto-v18-latin-italic.svg#Roboto') format('svg'); /* Legacy iOS */
+        }
+        /* roboto-700 - latin */
+        @font-face {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 700;
+          src: url('../fonts/roboto-v18-latin-700.eot'); /* IE9 Compat Modes */
+          src: local('Roboto Bold'), local('Roboto-Bold'),
+               url('../fonts/roboto-v18-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+               url('../fonts/roboto-v18-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+               url('../fonts/roboto-v18-latin-700.woff') format('woff'), /* Modern Browsers */
+               url('../fonts/roboto-v18-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+               url('../fonts/roboto-v18-latin-700.svg#Roboto') format('svg'); /* Legacy iOS */
+        }
+
+        body {
+
+            /* Nice light gray background to offset the text a little */
+            background-color: #fefefe;
+            color: #333;
+            margin: 0 auto;
+            max-width: 50em;
+
+            /* System fonts as fallbacks */
+            font-family: "Roboto", -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", "San Francisco", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+            line-height: 1.5;
+            padding: 2em 1em;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        strong {
+            color: #333;
+            font-family: "Roboto", -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", "San Francisco", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+        }
+
+        h2 a {
+            color: #333;
+        }
+
+        h2 {
+            display: inline;
+        }
+
+        section {
+            margin-top: 1.5em;
+        }
+
+        a {
+            color: #005fd3;
+        }
+
+        .headshot {
+            float: left;
+            width: 10em;
+            padding-right: 1em;
+        }
+
+        .headshot img {
+            width: 100%;
+        }
+
+        @media (max-width: 650px) {
+            .headshot {
+                width: 10em;
+            }
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-flow: row;
+        }
+
+        @media (max-width: 650px) {
+            header {
+                display: flex;
+                align-items: baseline;
+                flex-flow: column;
+            }
+
+            .social-links {
+                margin-top: 0.5em;
+            }
+        }
+
+        @media (max-width: 390px) {
+            header {
+                width: 8em;
+            }
+
+            .social-links {
+                width: 8em;
+            }
+        }
+
+        .social-links a {
+            text-decoration: none;
+        }
+
+        svg {
+            margin-left: 10px;
+            margin-right: 10px;
+            height: 25px;
+            width: 25px;
+        }
+
+        svg path {
+            fill: #005fd3;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Headshot -->
+    <div class="headshot">
+        <a href="images/me.png"><img src="images/me.png" border=2 alt="Fabian" title="Profile Pic"/></a>
+    </div>
+
+    <!-- Header with social links -->
+    <header>
+        <h1 style="margin-top: 0px; margin-bottom: 4px">Fabian Monrose</h1>
+
+        <div class="social-links">
+           
+                <a href="https://scholar.google.com/citations?user=a6u7NTgAAAAJ" target="_blank"> <svg
+                    xmlns="http://www.w3.org/2000/svg" width="260" height="300" viewBox="0 0 260 300">
+                    <path d="M103.72829,298.88172 C76.34128,296.29847 55.07609,284.76559 45.35826,267.22554 C41.88286,260.95267 41.53217,259.17959 41.53217,247.88048 C41.53217,236.92091 41.98334,234.4643 45.32507,227.22802 C55.34292,205.5351 81.81566,191.58318 121.07774,187.30412 C128.8195,186.46036 135.15369,185.29711 135.15369,184.71913 C135.15369,184.14113 133.53332,181.17574 131.55287,178.12935 C128.28338,173.10012 127.95204,171.47589 127.95204,160.47801 L127.95204,148.36556 L120.66352,148.36613 C95.21126,148.36813 75.12542,136.82734 65.03001,116.40067 C61.35084,108.95637 60.18949,104.78799 59.59142,96.88019 L58.83097,86.82528 L29.89344,86.82528 L0.95591,86.82528 L44.15096,43.61534 L87.346,0.40541 L173.73232,0.40541 L260.11864,0.40541 L252.63063,7.97238 L245.14262,15.53935 L245.14262,26.8935 C245.14262,35.05352 245.64139,38.54221 246.91555,39.29476 C251.32526,41.89915 251.68958,45.81489 251.68958,90.60576 C251.68958,120.92264 251.21713,136.18648 250.21033,138.39615 C246.89693,145.66826 235.53195,145.66826 232.21855,138.39615 C230.12498,133.80126 230.16142,47.62569 232.25885,43.02226 C233.09461,41.18796 234.27307,39.68717 234.87763,39.68717 C235.4822,39.68717 235.97151,36.29911 235.96499,32.15816 L235.95319,24.62916 L216.93681,43.74684 C198.13874,62.64504 197.93843,62.9081 199.48873,66.66119 C200.35263,68.75261 201.07886,76.63301 201.10567,84.20649 C201.18037,105.2887 199.00077,109.8059 179.53153,128.9215 C163.79908,144.36813 161.34149,147.91827 161.34149,155.19815 C161.34149,159.77841 166.77833,165.59815 186.76371,182.41089 C200.69031,194.12665 207.39839,202.24827 210.82478,211.54212 C214.67985,221.99874 215.3643,230.71556 213.16028,241.28612 C205.02561,280.30018 159.69108,304.16036 103.72825,298.88172 L103.72829,298.88172 Z M147.82552,283.18755 C154.75843,282.26978 161.10718,280.35673 167.47343,277.26712 C182.12774,270.15523 188.86239,259.963 188.81001,244.97642 C188.75861,230.27494 182.21614,220.86779 161.11753,205.15845 L149.39848,196.43284 L134.74707,197.20777 C111.70669,198.42641 95.8907,203.69967 84.90527,213.8257 C76.58521,221.49484 73.60929,228.25646 73.62507,239.4555 C73.65787,262.75366 92.18981,279.06402 123.36916,283.23638 C134.11128,284.67388 136.63593,284.66884 147.82552,283.18758 L147.82552,283.18755 Z M151.85933,133.13328 C155.64618,131.31754 160.26234,127.84197 162.11749,125.40975 C175.33106,108.08587 168.93712,68.34304 149.51809,47.09552 C141.02561,37.80341 132.23698,33.87543 122.01307,34.80251 C102.63987,36.55921 91.52619,50.26903 91.51737,72.42196 C91.50517,103.13522 108.02842,131.43235 129.04142,136.68421 C135.22411,138.22947 144.11702,136.84554 151.85933,133.13328 Z"
+                        transform="translate(-1)" /></svg> </a>
+    
+
+            
+        </div>
+    </header>
+
+    <!-- Bio and stuff -->
+    <main>
+        <p>
+            I am the Julian T. Hightower Chair Professor in Cybersecurity within the <a href="https://www.ece.gatech.edu/">School of Electrical and Computer Engineering</a>. I also hold a courtesy appointment in the <a href="https://scp.cc.gatech.edu/">School of Cybersecurity and Privacy</a>. My research interests include all aspects of computer and network security.
+        </p>
+
+
+        <div class="vline"></div>
+        <br clear=both>
+        <h2 id="academic">Academic Positions</h2>
+
+        <div class="block">
+            
+            <div class="onelineitem">
+                <div class="yearrange">2022&#8211;now</div>
+                <div class="yearright">
+                    <strong>Julian T. Hightower Chair</strong>, College of Engineering and School of Cyber Security and Privacy, Georgia Tech
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2017&#8211;2022</div>
+                <div class="yearright">
+                    <strong>Kenan Distinguished Professor</strong>, Department of Computer Science, UNC Chapel Hill
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2012&#8211;2017</div>
+                <div class="yearright">
+                    <strong>Professor</strong>, Department of Computer Science, UNC Chapel Hill
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2008&#8211;2012</div>
+                <div class="yearright">
+                    <strong>Associate Professor</strong>, Department of Computer Science, UNC Chapel Hill
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2007&#8211;2008</div>
+                <div class="yearright">
+                    <strong>Associate Professor</strong>, Department of Computer Science, Johns Hopkins University
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2002&#8211;2007</div>
+                <div class="yearright">
+                    <strong>Assistant Professor</strong>, Department of Computer Science, Johns Hopkins University
+                </div>
+            </div>
+            
+        </div>
+
+        <h2 id="education">Education</h2>
+
+        <div class="block">
+            
+            <div class="item">
+                <div class="yearrange">1996&#8211;1999</div>
+                <div class="yearright">
+                    <strong>New York University, New York, NY</strong><br />
+                    Ph.D. in Computer Science<br />
+                    Distributed Computing and Systems Lab<br />
+                    Advisor: <a href="https://cs.nyu.edu/~kedem/">Zvi</a> M. Kedem and <a href="https://engineering.jhu.edu/faculty/aviel-rubin/">Aviel </a> D. Rubin<br />
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="yearrange">1993&#8211;1996</div>
+                <div class="yearright">
+                    <strong>New York University, New York, NY</strong><br />
+                    M.Sc. in Computer Science<br />
+                    Distributed Computing and Systems Lab<br />
+                    Advisor: Zvi M. Kedem<br />
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="yearrange">1989&#8211;1993</div>
+                <div class="yearright">
+                    <strong>Barry University, Miami, FL</strong><br />
+                    B.Sc. Computer Science<br />
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+
+        <h2 id="publications">Recent Publications</h2> <i>(<a href="pubs.html#publications">more</a>)</i>
+
+
+        <div class="block">
+        
+        
+        
+        
+        <p>Comparing Malware Evasion Theory with Practice: Results from Interviews with Expert Analysts<br />
+        Miuyin Yong, Matthew Landen, Frank Li, <b>Fabian Monrose</b> and Mustaque Ahamad<br />
+        <i>USENIX Symposium on Usable Privacy and Security (SOUPS)</i>, 2024 (to appear).<br />
+
+        </p>
+
+        <p>CrashTalk: Automated Generation of Precise, Human Readable, Descriptions of Software Security Bugs<br />
+        Kedrian James, Kevin Valakuzhy, Kevin Snow, <b>Fabian Monrose</b><br />
+        <i>ACM Conference on Data and Application Security and Privacy</i>, 2024 (to appear).<br />
+
+        </p>
+
+        <p>Towards Practical Fabrication Stage Attacks Using Interrupt-Resilient Hardware Trojans<br />
+        Athanasios Moschos, <b>Fabian Monrose</b> and Angelos Keromytis<br />
+        <i>IEEE International Symposium on Hardware Oriented Security and Trust</i>, 2024.<br />
+
+        </p>
+
+        <p><a href="https://dl.acm.org/doi/10.1145/3576915.3623098">Improving Security Tasks Using Compiler Provenance Information Recovered At the Binary-Level</a><br />
+        Yufei Du, Omar Alwari, Kevin Snow, Manos Antonakakis and <b>Fabian Monrose</b><br />
+        <i>ACM Conference on Computer and Communications Security</i>, 2023.<br />
+
+        </p>
+
+        <p><a href="https://dl.acm.org/doi/10.1145/3618257.3624802">Stale TLS Certificates: Investigating Precarious Third-Party Access to Valid TLS Keys</a><br />
+        Zane Ma, Aaron Faulkenberry, Thomas Papastergiou, Zakir Durumeric, Michael D. Bailey, Angelos D. Keromytis, <b>Fabian Monrose</b> and Manos Antonakakis<br />
+        <i>ACM Internet Measurement Conference</i>, 2023.<br />
+
+        </p>
+
+        <p><a href="papers/alwari23.pdf">Beyond the Gates: An Empirical Analysis of HTTP-managed password stealers and operators</a><br />
+        Omar Alrawi, Athanasios Avgetidis, Kevin Valakuzhy, Charles Lever, Paul Burbage, Angelos Keromytis, <b>Fabian Monrose</b>, and Manos Antonakakis<br />
+        <i>USENIX Security Symposium</i>, 2023.<br />
+
+        </p>
+
+        <p><a href="papers/carrot23.pdf">More Carrot or Less Stick: Organically Improving Student Time Management With Practice Tasks and Gamified Assignments</a><br />
+        Mac Malone and <b>Fabian Monrose</b><br />
+        <i>ACM Conference on Innovation and Technology in Computer Science Education</i>, 2023.<br />
+
+        </p>
+
+        <p><a href="papers/autograding23.pdf">Securely Autograding Cybersecurity Exercises Using Web Accessible Jupyter Notebooks</a><br />
+        Mac Malone, Yicheng Wang and <b>Fabian Monrose</b><br />
+        <i>ACM SIGCSE Technical Symposium</i>, 2023.<br />
+
+        </p>
+
+        <p><a href="papers/avgetidis22.pdf">View from Above: Exploring the Malware Ecosystem from the Upper DNS Hierarchy</a><br />
+        Aaron Faulkenberry, Athanasios Avgetidis, Zane Ma, Omar Alrawi, Charles Lever, Panagiotis Kintis, <b>Fabian Monrose</b>, Angelos Keromytis, and Manos Antonakakis<br />
+        <i>ACM Annual Computer Security Applications Conference</i>, 2022.<br />
+
+        </p>
+
+        <p><a href="papers/james22.pdf">Separating the Wheat from the Chaff: Using Indexing and Sub-sequence Mining Techniques to Identify Related Crashes During Bug Triage</a><br />
+        Kedrian James, Yufei Du, Sanjeev Das and <b>Fabian Monrose</b><br />
+        <i>IEEE International Conference on Software Quality, Reliability, and Security</i>, 2022.<br />
+
+        </p>
+
+        <p><a href="papers/atc22-du.pdf">Automatic Recovery of Fine-grained Compiler Provenance Information at the Binary Level</a><br />
+        Yufei Du, Ryan Court, Kevin Z. Snow and <b>Fabian Monrose</b><br />
+        <i>USENIX Annual Technical Conference</i>, 2022.<br />
+
+        </p>
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+          
+            
+        </div>
+
+        <h2 id="awards">Honors and Awards</h2>
+
+        <div class="block">
+            
+            <div class="item">
+                <div class="year">2021</div>
+                <div class="yearright">
+                    <strong>CSSA Graduate Teaching Award</strong><br />
+                    UNC Computer Science Department
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="year">2015</div>
+                <div class="yearright">
+                    <strong>Undergraduate Students Teaching Award</strong><br />
+                    UNC Computer Science Department
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="year">2013</div>
+                <div class="yearright">
+                    <strong>Best Student Paper Award</strong><br />
+                    IEEE Symposium on Security and Privacy
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="year">2012</div>
+                <div class="yearright">
+                    <strong>Outstanding Research in Privacy Enhancing Technologies</strong><br />
+                    Privacy Enhancing Technologies
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="year">2011</div>
+                <div class="yearright">
+                    <strong>ATT Best Applied Security Paper Award</strong><br />
+                    NYU-Poly CSAW
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="year">2011</div>
+                <div class="yearright">
+                    <strong>Best Paper Award</strong><br />
+                    IEEE Symposium on Security and Privacy
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="year">2006</div>
+                <div class="yearright">
+                    <strong>CAREER Award</strong><br />
+                    National Science Foundation
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="year">1999</div>
+                <div class="yearright">
+                    <strong>Best Overall and Best Student Paper Awards</strong><br />
+                    USENIX Security Symposium
+                </div>
+            </div>
+            
+        </div>
+
+
+
+        <h2 id="teaching">Recent Courses</h2>
+
+        <div class="block">
+            
+            <div class="onelineitem">
+                <div class="year">2021</div>
+                <div class="yearright">
+                    <strong>Introduction to Computer Security</strong>, UNC Chapel Hill
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="year">2021</div>
+                <div class="yearright">
+                    <strong>Computer and Network Forensics</strong>, UNC Chapel Hill
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="year">2020</div>
+                <div class="yearright">
+                    <strong>Technical Communications and Writing in CS</strong>, UNC Chapel Hill
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="year">2017</div>
+                <div class="yearright">
+                    <strong>Computer Forensics</strong>, UNC Chapel Hill
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="year">2014</div>
+                <div class="yearright">
+                    <strong>Network Security</strong>, UNC Chapel Hill
+                </div>
+            </div>
+            
+        </div>
+
+        <h2 id="mentorship">Recent Advising (GT and UNC)</h2>
+
+        <div class="block">
+            
+            <div class="onelineitem">
+                <div class="yearrange">2023&#8211;now</div>
+                <div class="yearright">
+                    <strong>Boo Fullwood</strong>, PhD student
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2022&#8211;now</div>
+                <div class="yearright">
+                    <strong>Vinny Adjibi</strong>, PhD student (co-advised)
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2020&#8211;now</div>
+                <div class="yearright">
+                    <strong>Kevin Valakuzhy</strong>, PhD student (co-advised)
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2020&#8211;now</div>
+                <div class="yearright">
+                    <strong>Yufei Du</strong>, PhD student
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2018&#8211;now</div>
+                <div class="yearright">
+                    <strong>Kedrian James</strong>, PhD student (at UNC)
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2018&#8211;2023</div>
+                <div class="yearright">
+                    <strong>Mac Malone</strong>, PhD student
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2019&#8211;2021</div>
+                <div class="yearright">
+                    <strong>John Lim</strong>, Master's student
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2020&#8211;2022</div>
+                <div class="yearright">
+                    <strong>Kevin Lane</strong>, Master's student
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2010&#8211;2014</div>
+                <div class="yearright">
+                    <strong>Srinivas Krishnan</strong>, Master's Student
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2015&#8211;2017</div>
+                <div class="yearright">
+                    <strong>Roman Rogowski</strong>, Master's student
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2012&#8211;2016</div>
+                <div class="yearright">
+                    <strong><a href="https://researcher.watson.ibm.com/researcher/view.php?person=ibm-terylt">Teryl Taylor</a></strong>, Ph.D. student
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2016&#8211;2012</div>
+                <div class="yearright">
+                    <strong>Yi Xu</strong>, Ph.D student
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2010&#8211;2015</div>
+                <div class="yearright">
+                    <strong><a href="https://scholar.google.com/citations?user=OPmiOyUAAAAJ&hl=en">Andrew M. White</a></strong>, PhD. student
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2009&#8211;2014</div>
+                <div class="yearright">
+                    <strong>Kevin Z. Snow</strong>, PhD. student
+                </div>
+            </div>
+            
+        </div>
+
+        
+        <h2 id="service">Recent Doctoral Committees</h2>
+
+        <div class="block">
+            
+            <div class="onelineitem">
+                <div class="yearrange">2019&#8211;now</div>
+                <div class="yearright">
+                    <strong>Omar Alwari</strong>, GaTech, GA
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2019&#8211;2021</div>
+                <div class="yearright">
+                    <strong>Salman Ahmed</strong>, Virginia Tech, VA
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2018&#8211;2021</div>
+                <div class="yearright">
+                    <strong>Tapti Palit</strong>, Stony Brook University, NY
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2019&#8211;2021</div>
+                <div class="yearright">
+                    <strong>Calvin Deutschbein</strong>, University of North Carolina, Chapel Hill
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2016&#8211;2018</div>
+                <div class="yearright">
+                    <strong>Adrian Tang</strong>, Columbia University, NY
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2014&#8211;2017</div>
+                <div class="yearright">
+                    <strong>Chaz Lever</strong>, GaTech, GA
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2016&#8211;2018</div>
+                <div class="yearright">
+                    <strong>Louis Soleyn</strong>, University of the West Indies, Barbados
+                </div>
+            </div>
+            
+            <div class="onelineitem">
+                <div class="yearrange">2016&#8211;2017</div>
+                <div class="yearright">
+                    <strong>Tracy John</strong>, University of the West Indies, Barbados
+                </div>
+            </div>
+            
+        </div>
+
+    <br clear=both>
+    <div class="vline"></div>
+    </main>
+  
+      
+</body>
+</html>

@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]>              <html class="no-js ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" xmlns:og="http://ogp.me/ns#" lang="en-gb" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!-- CSS files are split up to support IE9 and below - http://blesscss.com/ -->
+	<!--[if gt IE 9]> -->
+            <link rel="stylesheet" href="/css/common.css">
+        <!-- <![endif]-->
+        <!--[if lte IE 9]>
+	    <link rel="stylesheet" href="/css/split/common-blessed1.css">
+<link rel="stylesheet" href="/css/split/common.css">
+        <![endif]-->
+        
+	<!-- IE8 and below also have a problem with multiple fonts in a single file -->
+        <!-- http://www.smashingmagazine.com/2012/07/avoiding-faux-weights-styles-google-web-fonts/ -->
+        <!--[if gt IE 8]> -->
+            <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+        <!-- <![endif]-->
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400">
+            <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:700">
+            <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400italic">
+            <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:700italic">
+        <![endif]-->
+
+	<!-- HTML5 shim, Respond.js and ie9.js for IE8 support -->
+        <!-- WARNING: Must be in the <head> but *after* the CSS files -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="/js/ie8.js"></script>
+        <![endif]-->
+
+        <!-- nth-child() support for IE9 -->
+        <!--[if IE 9]>
+            <script src="/js/ie9.js"></script>
+        <![endif]-->
+
+        <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" href="/apple-touch-icon-114x114.png">
+        <link rel="shortcut icon" href="/favicon.ico">
+	
+	
+<style type="text/css">
+
+.site-header-logo
+{
+	margin-right: 110px;
+}
+
+#breadcrumb
+{
+	display: none;
+}
+
+wbr:after { content: "\00200B"; }
+
+.slideshow .bx-pager-link
+{
+	outline: none;
+}
+
+.video16_9
+{
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.video16_9 iframe,
+.video16_9 object,
+.video16_9 embed
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.picturebox
+{
+	margin-bottom: 15px;
+	margin-right: -15px;
+}
+
+
+.newcaption
+{
+	min-height: 2.25em;
+	
+	background-color: rgb(224, 222, 217);
+	color: #4c463f;
+	font-weight: bold;
+	width: 100%;
+	display: block;
+}
+
+.subcaption
+{
+	min-height: 2em;
+	font-size: 95%;
+	padding-top: 0.45em;
+	
+	width: 100%;
+	display: block;
+	
+	color: #4c463f;
+}
+
+.subcaptionrole
+{
+	min-height: 3.3em;
+	font-size: 90%;
+	padding: 0 0.45em 0.45em 0.45em;
+	
+	width: 100%;
+	display: block;
+	
+	color: #4c463f;
+	background-color: rgb(224, 222, 217);
+}
+
+
+.piccy
+{
+	height: 300px;
+	display: block;
+	background-repeat: no-repeat;
+	background-size:contain;
+	background-position: 50% 40%;
+	background-color: rgb(224, 222, 217);
+	border: 13px solid rgb(224, 222, 217);
+}
+
+@media(min-width: 320px)
+{
+	.piccy
+	{
+		height: 160px;
+		border: 11px solid rgb(224, 222, 217);
+	}
+}
+
+@media(min-width: 480px)
+{
+	.piccy
+	{
+		height: 245px;
+		border: 13px solid rgb(224, 222, 217);
+	}
+}
+
+@media(min-width: 700px)
+{
+	.piccy
+	{
+		height: 192px;
+		border: 13px solid rgb(224, 222, 217);
+	}
+}
+
+@media(min-width: 950px)
+{
+	.piccy
+	{
+		height: 200px;
+		border: 15px solid rgb(224, 222, 217);
+	}
+}
+
+.extraiconrow a
+{
+	font-size: 16px;
+	border-color: #b1aca6;
+	background-color: transparent;
+	margin-top: 8px;
+	z-index: 1000;
+	position: relative;
+}
+
+@media (min-width:700px)
+{
+	.site-header-icons
+	{
+		padding-top: 14px;
+	}
+	
+	.extraiconrow a
+	{
+		margin-top: -35px;
+	}
+	
+}
+
+</style>
+
+
+      <style type="text/css">
+    	
+	@media (min-width: 0px)
+	{
+
+		.scaled-text
+		{
+			font-size: 85%
+		}
+
+	}
+	@media (min-width: 319px)
+	{
+
+		.scaled-text
+		{
+			font-size: 100%
+		}
+
+	}
+	@media (min-width: 700px)
+	{
+
+		.scaled-text
+		{
+			font-size: 100%
+		}
+
+	}
+	
+	@media (min-width: 938px)
+	{
+
+		.scaled-text
+		{
+			font-size: 69%
+		}
+	}
+	@media (min-width: 1050px)
+	{
+
+		.scaled-text
+		{
+			font-size: 80%
+		}
+	}
+	@media (min-width: 1100px)
+	{
+
+		.scaled-text
+		{
+			font-size: 84%
+		}
+	}
+	@media (min-width: 1150px)
+	{
+
+		.scaled-text
+		{
+			font-size: 89%
+		}
+	}
+	@media (min-width: 1200px)
+	{
+
+		.scaled-text
+		{
+			font-size: 91%
+		}
+	}
+	
+	.indent
+	{
+		text-indent: -10px;
+		padding-left: 10px;
+	}
+     </style>
+	<title>Ivan Martinovic | Department of Computer Science</title>
+        <link rel="canonical" href="https://www.cs.ox.ac.uk/people/ivan.martinovic/"/>
+        <meta name="keywords" content="Ivan Martinovic,People,Department of Computer Science"/>
+        <meta name="robots" content="noodp,noydir"/>
+        <meta name="description" content="Ivan Martinovic at the Department of Computer Science"/>
+        <link title="schema(og)" rel="schema.og" href="http://ogp.me/ns#"/>
+        <link title="schema(profile)" rel="schema.profile" href="http://ogp.me/ns/profile#"/>
+        <link title="schema(DC)" rel="schema.dc" href="http://purl.org/dc/elements/1.1/"/>
+        <meta property="og:title" content="Ivan Martinovic"/>
+        <meta property="og:description" content="The personal page of Ivan Martinovic at the Department of Computer Science"/>
+        <meta property="og:type" content="profile"/>
+        <meta property="og:url" content="https://www.cs.ox.ac.uk/people/ivan.martinovic/"/>
+        <meta property="profile:first_name" content="Ivan"/>
+        <meta property="profile:last_name" content="Martinovic"/>
+        <meta property="og:locale" content="en_GB"/>
+        <meta property="og:site_name" content="Department of Computer Science"/>
+        <meta property="og:image" content="http://www.cs.ox.ac.uk/files/4434//ivan-pic.png"/>
+        <meta property="og:image:secure_url" content="https://www.cs.ox.ac.uk/files/4434//ivan-pic.png"/>
+        <meta property="og:image:secure_url" content="https://www.cs.ox.ac.uk/images/Oxford-dept-of-Computer-Science-POS-KEY_RGB-social-large.png"/>
+        <meta property="og:image:secure_url" content="https://www.cs.ox.ac.uk/images/Oxford-dept-of-Computer-Science-POS-KEY_RGB-social.png"/>
+        <meta property="og:image" content="http://www.cs.ox.ac.uk/images/Oxford-dept-of-Computer-Science-POS-KEY_RGB-social-large.png"/>
+        <meta property="og:image" content="http://www.cs.ox.ac.uk/images/Oxford-dept-of-Computer-Science-POS-KEY_RGB-social.png"/>
+        <meta name="dc.title" content="Ivan Martinovic"/>
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:description" content="Ivan Martinovic at the Department of Computer Science"/>
+        <meta name="twitter:title" content="Ivan Martinovic"/>
+        <meta property="twitter:image" content="https://www.cs.ox.ac.uk/files/4434//ivan-pic.png"/>
+
+<script type="text/javascript">
+// <![CDATA[
+
+	/**
+	**  Honour the "do not track" browser setting.
+	**/
+	if(typeof navigator.doNotTrack === "undefined" || (navigator.doNotTrack !== 'yes' && navigator.doNotTrack !== '1'))
+	{
+
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-25164877-1', 'auto');
+		ga('send', 'pageview');
+	}
+  
+// ]]>
+</script>
+
+    </head>
+    <body>
+	<!-- ACCESSIBILITY LINKS -->
+        <a href="#maincontent" class="screen-reader-shortcut">Skip to main content</a>
+
+        <!-- COOKIES ALERT -->
+        <div class="cookies-alert-placeholder"></div>
+
+        <!-- PRINT HEADER -->
+        <div class="print-title">
+            University of Oxford Department of Computer Science
+        </div>
+
+        <!-- SITE HEADER -->
+        <header class="site-header">
+            <div class="site-header-content content-width clearfix">
+		<div class="site-header-logo clearfix">
+		    
+                        <!-- Keep the new line for Firefox / in case images are disabled (see CSS) -->
+                        <img src="/img/Oxford-dept-of-Computer-Science-POS-KEY_RGB-optimised.png" srcset="/img/Oxford-dept-of-Computer-Science-POS-KEY_RGB-optimised.svg" alt="University of Oxford Department of Computer Science" class="img-responsive" usemap="#compscimap">
+			<map name="compscimap" id="compscimap">
+                                <area shape="rect" coords="0,0,110,110" href="http://www.ox.ac.uk/" alt="University of Oxford" title="University of Oxford"/>
+                                <area shape="rect" coords="130,0,322,109" href="/" alt="Department of Computer Science - Home" title="Department of Computer Science - Home"/>
+                        </map>			
+		    
+                </div>
+                <div class="site-header-icons">
+                    <a href="/aboutus/contact.html" class="btn btn-icon btn-header-icon" data-toggle="tooltip" data-placement="left" data-container=".site-header" title="Contact Us">
+                        <img src="/img/icon-mail.png" width="41" height="41" alt="&nbsp;&nbsp;Contact Us&nbsp;&nbsp;">
+                    </a>
+                    <a href="http://www.cs.ox.ac.uk/search/" class="btn btn-icon btn-header-icon site-header-search-toggle" data-toggle="tooltip" data-placement="left" data-container=".site-header" title="Search">
+                        <img src="/img/icon-search.png" width="41" height="41" alt="&nbsp;&nbsp;Search&nbsp;&nbsp;">
+                    </a>
+                </div>
+		<div class="site-header-search">
+                    
+		    <form action="https://www.cs.ox.ac.uk/search/" method="get" class="site-header-search-form form-inline form-oxford-blue-on-white">
+                        <div class="form-group form-group-lg">
+                            <label for="site-search-term" class="control-label sr-only">Search for</label>
+                            <input id="site-search-term" name="q" type="text" class="form-control squared" size="25" placeholder="Enter search terms...">
+                        </div>
+                        <!-- This is the type selector, using radio buttons
+                        <div class="form-group form-group-lg site-header-search-type">
+                            <label class="radio-inline">
+                                <input type="radio" name="type" value="website" checked>
+                                Website
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="type" value="people">
+                                People
+                            </label>
+                        </div>
+                        -->
+                        <!-- This is an alternative - dropdown instead of radio buttons
+                        <div class="form-group form-group-lg">
+                            <label for="site-search-type" class="control-label no-bold">in</label>
+                            <select id="site-search-type" name="type" class="form-control squared">
+                                <option value="website">Website</option>
+                                <option value="people">People</option>
+                            </select>
+                        </div>
+                        -->
+                        <div class="form-group form-group-lg">
+                            <button type="submit" class="btn btn-oxford-blue btn-icon squared">
+                                <img src="/img/icon-search-white.png" alt="&nbsp;">
+                                <span class="btn-icon-text text-uppercase" style="padding-right: 11px;">Search</span>
+                            </button>
+                            <input type="hidden" name="cx" value="015502513156171547487:pcshjhkjzqe">
+                            <input type="hidden" name="cof" value="FORID:11">
+                        </div>
+                    </form>
+                </div>
+            </div>
+	    <!--div class="content-width clearfix extraiconrow">
+		<a class="btn btn-white-outline-on-dark-brown pull-right text-uppercase" href="https://www.cs.ox.ac.uk/covid19information/">Covid-19 Information</a>
+	   </div-->
+        </header>
+
+        <!-- TOP NAVIGATION -->
+        <nav class="navbar navbar-default navbar-primary">
+            <div class="container-fluid content-width">
+
+                <div class="navbar-header">
+                    <button type="button" class="btn-block navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-top" aria-expanded="false">
+                        <span class="sr-only">Toggle</span>
+                        Main Menu
+                        <span class="icon">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-collapse-top">
+                    <ul class="nav navbar-nav">
+                        <li class="">
+                            <a href="/" class="text-uppercase">
+                                Home
+                                
+                            </a>
+                        </li><li class="">
+                            <a href="/admissions/" class="text-uppercase">
+                                Study with us
+                                 
+                            </a>
+                        </li><li class="">
+                            <a href="/research/" class="text-uppercase">
+                                Research
+                                
+                            </a>
+                        </li><li class="">
+                            <a href="/news-events/latest-news.html" class="text-uppercase">
+                                News
+                                
+                            </a>
+                        </li><span class="visible-sm visible-md"></span><!-- Break line on sm md -->
+                        <li class="">
+                            <a href="/news-events/seminarsEvents.html" class="text-uppercase">
+                                Events
+                                
+                            </a>
+                        </li><li class="active">
+                            <a href="/aboutus/" class="text-uppercase">
+                                About Us
+                                 <span class="sr-only">(current)</span>
+                            </a>
+                        </li><li class="">
+                            <a href="/ourstudents/index.html" class="text-uppercase">
+                                Student Space
+                                 
+                            </a>
+                        </li><li class="">
+                            <a href="/partner/" class="text-uppercase">
+                                Partner with us
+                                 
+                            </a>
+                        </li>
+                        <!-- <li class="disabled"><a>Disabled</a></li> -->
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+	
+
+<!-- BREADCRUMBS --><div class="content-width"><ol class="breadcrumb text-uppercase"><li><a href="/">Home</a></li><li><a href="/aboutus/">About Us</a></li><li><a href="/people/">People</a></li><li><a href="/people/faculty.html">Faculty</a></li><li class="active">Ivan Martinovic</li></ol></div><!-- MOBILE NAVIGATION --><div class="content-width space-below mobile-menu-placeholder visible-xs visible-sm"></div><!-- COLUMNS --><div class="container-fluid content-width"><div class="row"><div class="col-xs-12 col-md-9 col-md-push-3" id="maincontent" itemscope="itemscope" itemtype="http://schema.org/Person"><!-- CONTENT (Column 2) --><div class="page-title"><h1><span itemprop="name">Ivan Martinovic</span></h1></div><div class="no-gutters"><div class="row"><div class="col-xs-12 col-md-4 panel panel-medium-brown equal-height equal-height-center-vertical">
+        							<img class="img-responsive center-block" itemprop="image" src="/files/4434//ivan-pic.png" alt="Personal photo - Ivan Martinovic" /></div><div class="col-xs-12 col-md-4 panel panel-dark-blue panel-condensed equal-height"><div class="panel-body"><p><strong><span itemprop="honorificPrefix">Professor</span> <span itemprop="givenName">Ivan</span> <span itemprop="familyName">Martinovic</span> <span itemprop="honorificSuffix"></span></strong></p><p></p><div itemprop="jobTitle" class="indent">Professor of Computer Science</div><p></p><p></p><div class="indent"><span itemprop="jobTitle">Governing Body Fellow</span>, <span itemprop="memberof" itemscope="itemscope" itemtype="http://www.schema.org/Organization"><meta itemprop="url" content="http://www.kellogg.ox.ac.uk"><a href="http://www.kellogg.ox.ac.uk" class="panel-link"><span itemprop="legalName">Kellogg College</span></a></span></div><p></p><p></p><div><div itemprop="email" class="scaled-text"><strong>E:</strong> firstname.lastname@cs.ox.ac.uk</div></div><div><div itemprop="telephone" class="scaled-text"><strong>T:</strong> +44 (0)1865 6-10745</div></div><p></p><p class="no-bottom-margin"><span itemprop="workLocation" class="scaled-text">
+											Department of Computer Science,<br>
+											Robert Hooke Building,
+											Room 117<br><a class="panel-link" href="https://www.cs.ox.ac.uk/aboutus/directions.html" target="directions">Directions</a> <a class="panel-link" href="https://www.cs.ox.ac.uk/aboutus/contact.html" target="postal">Postal Address</a></span></p></div></div><div class="col-xs-12 col-md-4 panel panel-light-blue panel-condensed equal-height"><div class="panel-body"><h2 class="panel-subheading text-uppercase no-top-margin">Themes:</h2><ul class="list-comma-separated"><li><a href="/research/security" class="panel-link"><span itemprop="affiliation">Security</span></a></li></ul><h2 class="panel-subheading text-uppercase">Completed Projects:</h2><ul class="list-comma-separated" style="overflow: hidden; text-overflow: ''"><li><a href="/projects/wifire/index.html" class="panel-link">WiFire</a></li><li><a href="#CompletedProjects" class="panel-link">more…</a></li></ul></div></div></div></div><h2>Interests</h2><p><span style="font-size: medium;">Most of my research interests are in the area of cyber-physical system security and network security. Some of my concrete research topics include authentication and intrusion detection using physical-layer information, RF reactive jamming (such as Wireless Firewalls), traffic analysis, and the analysis of trade-offs between system/network security and performance. In this respect, I work with various technologies, such as software-defined radios (SDRs), wireless sensors, and NFC/RFIDs. As another incarnation of cyber-physical security, I'm also intrested in behavioural biometrics and their applications, such as continuous authentication using physiological signals. Previously, I also worked on other non-functional aspects of distributed systems like network performance (network calculus), resource management, and decentralized coordination in wireless networks.</span></p>
+<p><span style="font-size: medium;">As part of our research we are a founding member of <a href="https://opensky-network.org">OpenSky</a>:&nbsp;OpenSky is a participatory sensor network which aims at collecting real-world air transportation communication data, such as ADS-B/Mode-S at large scale (covering over 720,000 km&sup2; in Europe). It offers insights&nbsp;into the ADS-B communication channel, characterising typical reception quality and loss patterns in real world.&nbsp;It is intended to serve researchers from different areas as a solid basis for realistic evaluations and simulations.</span><a href="https://ora.ox.ac.uk/objects/uuid:0175c157-2c9b-47d0-aa77-febaf07fca71"></a></p>
+<p><span style="font-size: medium;">If you are interested in the QPEP project (fast &amp; secure VPN for GEO Satellite Broadband), the paper can be found <a title="here" href="https://www.ndss-symposium.org/wp-content/uploads/ndss2021_4A-1_24074_paper.pdf">here</a>, and the implementation is available from <a title="GitHub" href="https://github.com/ssloxford/qpep">github</a>&nbsp;</span></p>
+<p><span style="font-size: medium;">If you are interested in the Brokenwire vulnerability, see: <a href="https://brokenwire.fail">https://brokenwire.fail</a>&nbsp;</span></p><h2>Biography</h2><p><span style="font-size: medium;">Ivan is a Professor at the Department of Computer Science, University of Oxford. Before coming to Oxford he was a postdoctoral researcher at the Security Research Lab, UC Berkeley and at the Secure Computing and Networking Centre, UC Irvine. From 2009 until 2011 he enjoyed a Carl-Zeiss Foundation Fellowship and he was an associate lecturer at TU Kaiserslautern, Germany.&nbsp; He obtained his PhD (2008) from TU Kaiserslautern under supervision of Prof. Jens B. Schmitt and MSc (2004) from TU Darmstadt, Germany.</span></p><h2>Selected Publications</h2><p><a href="/people/publications/date/Ivan.Martinovic.html" class="btn btn-dark-brown-outline btn-thin text-uppercase">View All</a><a href="https://www.cs.ox.ac.uk/research/publications/manage" class="btn btn-dark-brown-outline btn-thin text-uppercase">Manage publications</a></p><ul class="list-unbulleted list-unbulleted-spaced"><li> <p class="publicationTitle"> <strong>
+            Sticky Fingers: Resilience of Satellite Fingerprinting against Jamming Attacks </strong> </p>
+	    <p class="publicationAuthors"> <em> Joshua Smailes&#x201a; Edd Salkield&#x201a; Sebastian K&#xf6;hler&#x201a; Simon Birnbach&#x201a; Martin Strohmeier and Ivan Martinovic  </em> </p>
+	
+	
+	<p class="publicationDetails"> 
+            In  
+            <em>
+            2nd Workshop on Security of Space and Satellite Systems (SpaceSec)</em>.
+        March,
+            2024.
+        </p>
+	
+        <p class="publicationlinks"> <a
+        
+            href="/publications/publication16261-abstract.html"> Details   <span class="sr-only" > about <em> Sticky Fingers: Resilience of Satellite Fingerprinting against Jamming Attacks  </em></span> </a> | <a
+        
+            href="/publications/publication16261.bib"> BibTeX  <span class="sr-only" > data for <em> Sticky Fingers: Resilience of Satellite Fingerprinting against Jamming Attacks  </em></span>   </a> 
+	    
+	     |
+                <a 
+                    href="http://www.cs.ox.ac.uk/files/14618/main.pdf">Download
+		     (pdf)
+		    
+		    <span class="sr-only" > of <em> Sticky Fingers: Resilience of Satellite Fingerprinting against Jamming Attacks  </em></span>
+		    
+		    </a>
+		
+		
+	     | <a
+             href="http://dx.doi.org/10.14722/spacesec.2024.23054">
+            DOI (10.14722/spacesec.2024.23054)
+            </a> </li><li> <p class="publicationTitle"> <strong>
+            Watch This Space: Securing Satellite Communication through Resilient Transmitter Fingerprinting </strong> </p>
+	    <p class="publicationAuthors"> <em> Joshua Smailes&#x201a; Sebastian K&#xf6;hler&#x201a; Simon Birnbach&#x201a; Martin Strohmeier and Ivan Martinovic  </em> </p>
+	
+	
+	<p class="publicationDetails"> 
+            In  
+            <em>
+            Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security (CCS 23)</em>.
+        November,
+            2023.
+        </p>
+	
+        <p class="publicationlinks"> <a
+        
+            href="/publications/publication15808-abstract.html"> Details   <span class="sr-only" > about <em> Watch This Space: Securing Satellite Communication through Resilient Transmitter Fingerprinting  </em></span> </a> | <a
+        
+            href="/publications/publication15808.bib"> BibTeX  <span class="sr-only" > data for <em> Watch This Space: Securing Satellite Communication through Resilient Transmitter Fingerprinting  </em></span>   </a> 
+	    
+	     |
+                <a 
+                    href="http://www.cs.ox.ac.uk/files/14356/main.pdf">Download
+		     (pdf)
+		    
+		    <span class="sr-only" > of <em> Watch This Space: Securing Satellite Communication through Resilient Transmitter Fingerprinting  </em></span>
+		    
+		    </a>
+		
+		
+	     | <a
+             href="http://dx.doi.org/10.1145/3576915.3623135">
+            DOI (10.1145/3576915.3623135)
+            </a> 
+					| <a href="https://arxiv.org/abs/2305.06947"> Link <span class="sr-only" > to <em> Watch This Space: Securing Satellite Communication through Resilient Transmitter Fingerprinting  </em></span> </a>
+  				</li><li> <p class="publicationTitle"> <strong>
+            RADAR: A TTP&#x2212;based Extensible&#x201a; Explainable&#x201a; and Effective System for Network Traffic Analysis and Malware Detection </strong> </p>
+	    <p class="publicationAuthors"> <em> Yashovardhan Sharma&#x201a; Simon Birnbach and Ivan Martinovic  </em> </p>
+	
+	
+	<p class="publicationDetails"> 
+            In  
+            <em>
+            Proceedings of the 2023 European Interdisciplinary Cybersecurity Conference (EICC'23)</em>.
+        
+                Pages 159&#x2013;166.
+            Association for Computing Machinery (ACM).
+        June,
+            2023.
+        </p>
+	
+        <p class="publicationlinks"> <a
+        
+            href="/publications/publication15841-abstract.html"> Details   <span class="sr-only" > about <em> RADAR: A TTP&#x2212;based Extensible&#x201a; Explainable&#x201a; and Effective System for Network Traffic Analysis and Malware Detection  </em></span> </a> | <a
+        
+            href="/publications/publication15841.bib"> BibTeX  <span class="sr-only" > data for <em> RADAR: A TTP&#x2212;based Extensible&#x201a; Explainable&#x201a; and Effective System for Network Traffic Analysis and Malware Detection  </em></span>   </a>  | <a
+             href="http://dx.doi.org/https://doi.org/10.1145/3590777.3590804">
+            DOI (https://doi.org/10.1145/3590777.3590804)
+            </a> 
+					| <a href="https://dl.acm.org/doi/10.1145/3590777.3590804"> Link <span class="sr-only" > to <em> RADAR: A TTP&#x2212;based Extensible&#x201a; Explainable&#x201a; and Effective System for Network Traffic Analysis and Malware Detection  </em></span> </a>
+  				</li></ul><h2>Activities</h2><ul class="list-comma-separated"><li><a href="/activities/SSRG/"><span itemprop="affiliation">Software and Systems Security</span></a></li><li><a href="/activities/cybersecuritycentre/"><span itemprop="affiliation">Cyber Security Oxford</span></a></li></ul><a name="CompletedProjects"></a><h2>Completed Projects</h2><ul class="list-comma-separated" style="overflow: hidden; text-overflow: ''"><li><a href="/projects/wifire/index.html"><span itemprop="affiliation">WiFire</span></a></li><li><a href="/projects/attackcontainment/index.html"><span itemprop="affiliation">Physical attack containment</span></a></li><li><a href="/projects/wirelesskeys/index.html"><span itemprop="affiliation">Wireless key generation</span></a></li><li><a href="/projects/SecurityofElectricVehicleChargingInfrastructure/index.html"><span itemprop="affiliation">Security of Electric Vehicle Charging Infrastructure</span></a></li><li><a href="/projects/SecurityofSatelliteCommunicationLinks/index.html"><span itemprop="affiliation">Security of Satellite Communication Links</span></a></li></ul>
+						
+							     <h2>Current Students</h2>
+							     <div class="row"><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3  clear-xs clear-sm clear-md clear-lg"><a class="piccy" href="/people/Frederick.Barr-Smith/" style="background-image:url('/files/13588//Selection_999%284390%29.png')"></a><center><a href="/people/Frederick.Barr-Smith/"><span class="newcaption"><span itemprop="name">Frederick&nbsp;Barr-Smith</span></span></a></center></div><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3 "><a class="piccy" href="/people/Edd.Salkield/" style="background-image:url('/files/13313//3rd_year_report_2.jpg')"></a><center><a href="/people/Edd.Salkield/"><span class="newcaption"><span itemprop="name">Edd&nbsp;Salkield</span></span></a></center></div><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3  clear-xs"><a class="piccy" href="/people/Joshua.Smailes/" style="background-image:url('/files/13963//self.jpeg')"></a><center><a href="/people/Joshua.Smailes/"><span class="newcaption"><span itemprop="name">Joshua&nbsp;Smailes</span></span></a></center></div><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3  clear-sm"><a class="piccy" href="/people/Jack.Sturgess/" style="background-image:url('/files/11486//Jack.jpg')"></a><center><a href="/people/Jack.Sturgess/"><span class="newcaption"><span itemprop="name">Jack&nbsp;Sturgess</span></span></a></center></div><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3  clear-xs clear-md clear-lg"><a class="piccy" href="/people/Marcell.Szakaly/"></a><center><a href="/people/Marcell.Szakaly/"><span class="newcaption"><span itemprop="name">Marcell &nbsp;Szakaly</span></span></a></center></div></div>
+							     <h2>Research</h2>
+							     <div class="row"><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3  clear-xs clear-sm clear-md clear-lg"><a class="piccy" href="/people/Simon.Birnbach/" style="background-image:url('/files/8401//simon-b.jpg')"></a><center><a href="/people/Simon.Birnbach/"><span class="newcaption"><span itemprop="name">Simon&nbsp;Birnbach</span></span></a></center><center><span class="subcaptionrole">Senior Research Associate</span></center></div><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3 "><a class="piccy" href="/people/Sebastian.Koehler/" style="background-image:url('/files/14327//Sebastian%20Koehler.jpeg')"></a><center><a href="/people/Sebastian.Koehler/"><span class="newcaption"><span itemprop="name">Sebastian&nbsp;Köhler</span></span></a></center><center><span class="subcaptionrole">Senior Research Associate</span></center></div><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3  clear-xs"><a class="piccy" href="/people/Yashovardhan.Sharma/" style="background-image:url('/files/11385//YashovardhanSharma.jpg')"></a><center><a href="/people/Yashovardhan.Sharma/"><span class="newcaption"><span itemprop="name">Yashovardhan&nbsp;Sharma</span></span></a></center><center><span class="subcaptionrole">Researcher</span></center></div></div>
+							<h2>Past Students</h2>
+							<div class="row"><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3  clear-xs clear-sm clear-md clear-lg"><a class="piccy"></a><center><span class="newcaption"><span itemprop="name">Bushra&nbsp;AlAhmadi</span></span></center></div><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3 "><a class="piccy" style="background-image:url('/files/11534//mg.jpg')"></a><center><span class="newcaption"><span itemprop="name">Martin&nbsp;Georgiev</span></span></center></div><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3  clear-xs"><a class="piccy"></a><center><span class="newcaption"><span itemprop="name">Klaudia&nbsp;Krawiecka</span></span></center></div><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3  clear-sm"><a class="piccy" href="https://giuliolovisotto.github.io" style="background-image:url('/files/9430//1556445_10202391184873416_1620726892_o.jpg')"></a><center><a href="https://giuliolovisotto.github.io"><span class="newcaption"><span itemprop="name">Giulio&nbsp;Lovisotto</span></span></a></center></div><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3  clear-xs clear-md clear-lg"><a class="piccy" style="background-image:url('/files/11482//headshot.jpg')"></a><center><span class="newcaption"><span itemprop="name">James&nbsp;Pavur</span></span></center></div><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3 "><a class="piccy" style="background-image:url('/files/8626//MichalPiskozub.jpg')"></a><center><span class="newcaption"><span itemprop="name">Michal&nbsp;Piskozub</span></span></center></div><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3  clear-xs clear-sm"><a class="piccy" style="background-image:url('/files/9907//portrait_new.jpg')"></a><center><span class="newcaption"><span itemprop="name">Marc&nbsp;Roeschlin</span></span></center></div><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3 "><a class="piccy" style="background-image:url('/files/11544//IVO_final_small.jpg')"></a><center><span class="newcaption"><span itemprop="name">Ivo&nbsp;Sluganovic</span></span></center></div><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3  clear-xs clear-md clear-lg"><a class="piccy" style="background-image:url('/files/9793//CDTyearbook2017byIanWallman-1288.jpg')"></a><center><span class="newcaption"><span itemprop="name">Matt Smith</span></span></center></div><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3  clear-sm"><a class="piccy" style="background-image:url('/files/5123//Martin%20Strohmeier.jpeg')"></a><center><span class="newcaption"><span itemprop="name">Martin&nbsp;Strohmeier</span></span></center><span class="subcaption"><small>
+				(Cyber-Defence Campus, armasuisse Science &amp; Technology)
+			</small></span></div><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3  clear-xs"><a class="piccy" style="background-image:url('/files/6803//cdt-vincent-taylor.jpg')"></a><center><span class="newcaption"><span itemprop="name">Vincent&nbsp;Taylor</span></span></center></div><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3 "><a class="piccy" style="background-image:url('/files/11485//profile_pic.jpeg')"></a><center><span class="newcaption"><span itemprop="name">Henry&nbsp;Turner</span></span></center></div><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3  clear-xs clear-sm clear-md clear-lg"><a class="piccy" style="background-image:url('/files/7838//Chris%20Vaas_.jpg')"></a><center><span class="newcaption"><span itemprop="name">Christian&nbsp;Vaas</span></span></center></div></div>
+							<h2>Past Researchers</h2>
+							<div class="row"><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3  clear-xs clear-sm clear-md clear-lg"><a class="piccy" style="background-image:url('/files/11926//RichardBakerPhoto-website.png')"></a><center><span class="newcaption"><span itemprop="name">Richard&nbsp;Baker</span></span></center></div><div itemscope="itemscope" itemtype="http://schema.org/Person" class="picturebox col-xs-6 col-sm-4 col-md-3 "><a class="piccy" style="background-image:url('/files/7001//profile.jpg')"></a><center><span class="newcaption"><span itemprop="name">Simon&nbsp;Eberz</span></span></center></div></div></div><div class="col-xs-12 col-md-3 col-md-pull-9 side-menu-col"><h2 class="side-menu-title text-uppercase"><a href="#">About Us</a></h2><ul class="side-menu"><li class="active mobile-menu-source"><a href="/people/">People</a><ul><li class="active"><a href="/people/faculty.html">Faculty</a></li><li><a href="/people/research.html">Research</a></li><li><a href="/people/students.html">Students</a></li><li><a href="/people/support.html">Professional Services</a></li><li><a href="/people/visitingprofessors.html">Visiting Professors</a></li><li><a href="/people/emeritusfaculty.html">Emeritus Faculty</a></li><li><a href="/people/associates.html">Associate Members</a></li></ul></li><li><a href="/aboutus/vacancies/">Vacancies</a></li><li><a href="/aboutus/women-cs-oxford/index.html">Women in the department</a></li><li><a href="/aboutus/equality-diversity-inclusion/index.html">Equality, diversity and inclusion</a></li><li><a href="https://www.alumniweb.ox.ac.uk/cs/make-a-donation">Support Us</a></li><li><a href="/aboutus/cshistory.html">Our History</a></li><li><a href="/aboutus/contact.html">Contact Us</a></li></ul></div></div></div>
+        <!-- BACK TO TOP -->
+        <div class="container-fluid content-width back-to-top">
+            <div class="row">
+                <div class="col-sm-12">
+                    <a href="#" class="scroll-to-anchor"><i class="fa fa-chevron-up"></i> Back to Top </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="container-fluid content-width">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <nav class="site-footer-links" style="clear:all">
+                            <ul>
+                                <li><a href="/calendars.html">Calendars</a></li>
+                                <li><a href="https://intranet.cs.ox.ac.uk/">Internal</a></li>
+                                <li><a href="/rssfeeds.html">RSS Feeds</a></li>
+                                <li><a href="/sitemap.html">Sitemap</a></li>
+                                <li><a href="/privacy-policy.html">Privacy &amp; Cookies</a></li>
+				<li><a href="/accessibility.html">Accessibility Statement</a></li>
+                                <!--<li><a href="#">Legal</a></li>-->
+                            </ul>
+                        </nav>
+                    </div>
+		    <div class="col-sm-4">
+		    	<center>
+				<a href="https://advance-he.ac.uk/equality-charters/athena-swan-charter" target="_blank"><img width="149" class="img-responsive" src="/images/newweb/AthenaSWANBronzeAward2.png" alt="Athena SWAN Bronze Award"></a>
+			</center>
+                    </div>
+		    <div class="col-sm-4">
+                        <aside class="site-footer-social clearfix">
+                            <ul>
+                                <li><a href="https://uk.linkedin.com/company/compscioxford" data-toggle="tooltip" data-placement="left" data-container=".site-footer" title="LinkedIn">
+                                    <img src="/img/icon-linkedin.png" alt="LinkedIn">
+                                </a></li>
+                                <li><a href="https://www.youtube.com/c/CompSciOxford/" data-toggle="tooltip" data-placement="left" data-container=".site-footer" title="YouTube">
+                                    <img src="/img/icon-youtube.png" alt="YouTube">
+                                </a></li>
+                                <li><a href="https://twitter.com/CompSciOxford" data-toggle="tooltip" data-placement="left" data-container=".site-footer" title="Twitter">
+                                    <img src="/img/icon-twitter2.png" alt="Twitter">
+                                </a></li>
+                                <li><a href="https://www.facebook.com/CompSciOxford" data-toggle="tooltip" data-placement="left" data-container=".site-footer" title="Facebook">
+                                    <img src="/img/icon-facebook.png" alt="Facebook">
+                                </a></li>
+				<li><a href="https://www.instagram.com/compscioxford/?hl=en" data-toggle="tooltip" data-placement="left" data-container=".site-footer" title="Instagram">
+                                    <img src="/img/instagram_small.png" alt="Instagram">
+                                </a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                </div>
+		
+		<div class="row">
+                    <div class="col-sm-12">
+                        <p class="site-footer-copyright">
+                            <small>&copy; <a href="http://www.ox.ac.uk/">University of Oxford</a> <script>document.write(new Date().getFullYear());</script></small>
+                        </p>
+                        <p class="site-footer-url">
+			    /people/ivan.martinovic/index.html
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- SCRIPTS -->
+        <!-- Load scripts last for efficiency - https://developer.yahoo.com/performance/rules.html#js_bottom -->
+        <script src="/js/common.js?version=2"></script>
+	
+        <script type="text/javascript" src="/javascript/rss-newweb.js?version=15"></script>
+	<script type="text/javascript" src="/javascript/ical-newweb.js?version=4"></script>
+
+	<script src="/javascript/newweb_feeds.js?version=5"></script>
+
+	<script src="/javascript/share.js?version=1"></script>
+	
+	
+	
+	
+
+	
+	
+	<script type="application/ld+json">
+	{
+		"@type":"WebPage",
+		"@context":"http://schema.org",
+		"publisher":
+		{
+			"@type":"Organization",
+			"name":"Department of Computer Science",
+			"legalName":"Department of Computer Science, University of Oxford",
+			"logo":{"@type":"ImageObject","url":"https://www.cs.ox.ac.uk/images/CompSci_logo_landscapeL_rgb_corrected.jpg","width":704,"height":241},
+			"url":"https://www.cs.ox.ac.uk/",
+			"sameAs":
+			[
+				"https://www.youtube.com/c/CompSciOxford/",
+				"https://www.linkedin.com/company/department-of-computer-science-university-of-oxford",
+				"https://twitter.com/CompSciOxford",
+				"https://www.facebook.com/CompSciOxford",
+				"https://www.flickr.com/photos/computerscienceoxford/"
+			],
+			"contactPoint":
+			[
+				{"@type": "ContactPoint","telephone": "+44 (0)1865 273838","email":"enquiries@cs.ox.ac.uk","contactType": "customer support"},
+				{"@type": "ContactPoint","telephone": "+44 (0)1865 273611","email":"finance@cs.ox.ac.uk","contactType": "bill payment"}
+			],
+			"address":{"@type": "PostalAddress","streetAddress": "Wolfson Building, Parks Road","addressLocality": "Oxford","addressRegion": "Oxfordshire","postalCode": "OX1 3QD","addressCountry": "GB"},
+			"parentOrganization":
+			{
+				"@type":"Organization",
+				"name":"Mathematical, Physical and Life Sciences Division",
+				"logo":
+				{"@type":"ImageObject","url":"https://www.mpls.ox.ac.uk/images/site-logos/mpls-logo","width":416,"height":200},
+				"url":"https://www.mpls.ox.ac.uk/",
+				"address":{"@type": "PostalAddress","streetAddress": "9 Parks Road","addressLocality": "Oxford","addressRegion": "Oxfordshire","postalCode": "OX1 3PD","addressCountry": "GB"},
+				"parentOrganization":
+				{
+					"@type":"CollegeOrUniversity",
+					"name":"University of Oxford",
+					"logo":
+					{"@type":"ImageObject","url":"https://www.ox.ac.uk/sites/default/themes/custom/oxweb/images/oxweb-logo.gif","width":110,"height":110},
+					"url":"https://www.ox.ac.uk/",
+					"address":{"@type": "PostalAddress","streetAddress": "University Offices Wellington Square","addressLocality": "Oxford","addressRegion": "Oxfordshire","postalCode": "OX1 2JD","addressCountry": "GB"}
+				}
+			}
+		},
+		"copyrightHolder":
+		{
+			"@type":"Organization",
+			"name":"Department of Computer Science","legalName":"Department of Computer Science, University of Oxford",
+			"logo":{"@type":"ImageObject","url":"https://www.cs.ox.ac.uk/images/CompSci_logo_landscapeL_rgb_corrected.jpg","width":704,"height":241},
+			"url":"https://www.cs.ox.ac.uk/",
+			"parentOrganization":
+			{
+				"@type":"CollegeOrUniversity",
+				"name":"University of Oxford",
+				"logo":{"@type":"ImageObject","url":"http://www.ox.ac.uk/sites/default/themes/custom/oxweb/images/oxweb-logo.gif","width":110,"height":110},
+				"url":"https://www.ox.ac.uk/"
+			}
+		},
+		"speakable":
+		{
+			"@type": "SpeakableSpecification",
+			"cssSelector":
+			[
+				".slideshow-text",
+				".media-body",
+				".featured-list-col",
+				"*[itemprop=articleBody]",
+				"*[itemprop=text]",
+				".title",
+				".heroine-caption-text",
+				".personalContent"
+			]
+		}
+		
+	}
+	</script>
+
+	
+    </body>
+</html>
+

@@ -1,0 +1,503 @@
+<!DOCTYPE html>  <script type="text/javascript" defer="defer" src="/public/downloads/frms-fingerprint.js?custID=124&version=4.3.6&cookieDomain=current&serviceUrl=/public/generate/jsonp"></script><!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+    <title>Wenyuan Xu-Zhejiang University Personal homepage</title>
+	<meta name="keywords" content="XUWENYUAN,XUWENYUAN,Wenyuan Xu,zju,浙江大学个人主页,浙江大学,个人主页" />
+	<meta name="description" content="XUWENYUAN,XUWENYUAN,Wenyuan Xu,zju,浙江大学个人主页,浙江大学,个人主页" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/person//default/skins/tpl_1_en//css/css.css">
+    <link rel="stylesheet" href="/person//default/skins/tpl_1_en//font/iconfont.css">
+    <link rel="stylesheet" href="/person//default/skins/tpl_1_en//css/en.css">
+    <link rel="stylesheet" href="/person//default/skins/tpl_1_en//iconfont/iview_icon.css">
+	    <link rel="stylesheet" href="/person/default/skins/tpl_1_en//theme/summer/style.css">
+		<script type="text/javascript">
+	var domain_url = "https://person.zju.edu.cn/person";
+	var home_url = "https://person.zju.edu.cn/index/en/";
+	var sso_login_url = "https://person.zju.edu.cn/sso/manageLogin";
+	var site_path = "/person";
+	
+	
+
+	var _paq = window._paq || [];
+	
+	function login(){
+		window.location.href = sso_login_url;
+	}
+	function  showDownMenu() {
+        document.querySelector('.DropdownMenu').style.display="block"
+    };
+   function  hideDownMenu() {
+	  document.querySelector('.DropdownMenu').style.display="none"
+   };
+	
+	</script>
+
+	<!-- cemyun -->
+	<script type="text/javascript">
+	var CEM = CEM || [];
+	(function () {
+	  var u = '//cemyun.com';
+	  var d = document,
+		g = d.createElement('script'),
+		s = d.getElementsByTagName('script')[0];
+	  g.type = 'text/javascript';
+	  g.async = true;
+	  g.defer = true;
+	  g.src = u + '/sdk/web.js';
+	  s.parentNode.insertBefore(g, s);
+	  g.onload = function () {
+		Cemyun.init(u + '/trac/l1w94wgprq');
+	  };
+	})();
+	</script>
+	<!-- End cemyun Code -->
+</head>
+<body>
+    <div id="app">
+        <div id="Content">
+            <header class="header phDetail">
+                <div class="contentMain clearfix position">
+                    <i class="iconfont icon-icon-bars" id="triggerBtn"></i>
+                    <div class="fixed" id="fixed"></div>
+                    <div class="logo">
+						<a href="https://person.zju.edu.cn/index/en/" target="_blank"></a>
+                    </div>
+                    <div class="nav" id="nav">
+                        <ul class="clearfix nav-wrap">
+                            <li>
+                                <a href="https://person.zju.edu.cn/index/en/">Home</a>
+                            </li>
+							<li>
+								<a href="http://www.zju.edu.cn/english/about/list.htm" target="_blank">ZJU Profile</a>
+							</li>
+                            <li><a href="http://service.zju.edu.cn" target="_blank">ZJU Services</a></li>
+                            <li>
+								<a href="https://person.zju.edu.cn/index//en/childPages/about" target="_blank">About</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="search-input">
+                        <div class="selectBox">
+                            <ul>
+                                <li class="active">
+									Basic Info Search
+                                    <Icon type="arrow-down-b" v-show="!selectDown"></Icon>
+                                    <i class="ivu-icon ivu-icon-arrow-down-b"></i>
+                                </li>
+                                <li style="display: none">Full Text Search</li>
+                            </ul>
+                            <ul style="display: none">
+                                <li class="active">
+                                    Full Text Search
+                                    <i class="ivu-icon ivu-icon-arrow-down-b"></i>
+                                </li>
+                                <li style="display: none">Basic Info Search</li>
+                            </ul>
+                        </div>
+                        <input type="text" class="searchInput" placeholder="Name/Department/Subject/Research interest">
+                        <button class="search-btn"></button>
+                    </div>
+				<div class="rightTop">
+					<!-- Site switch -->
+					<div class="siteSwitch">
+						<a href="https://person.zju.edu.cn/wyxu">中文</a>
+						|
+						<a href="https://person.zju.edu.cn/en/wyxu" class="active">English</a>
+					</div>
+					<!-- login -->
+					<div class="login_success"  onmouseenter="showDownMenu()" onmouseleave="hideDownMenu()" style="display:none">
+						<span class="name"> Welcome&nbsp;!&emsp;<span id="userName"></span><!-- -->
+						<i class="ivu-icon ivu-icon-arrow-down-b"></i>
+						</span>
+						<div class="DropdownMenu">
+							<ul class="clearfix">
+								<li>
+									<a href="/person/personalPage.php">Main</a>
+								</li>
+								<li>
+									<a href="javascript:void()" id="loginout">Logout</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="login">
+						<span onclick="login()">Login</span>
+					</div>
+				</div>
+                </div>
+            </header>
+            <div class="article">
+				<!--<div class="top_bg"></div>-->
+                <div class="contentMain clearfix">
+					<div class="leftSide">
+						<div class="title_">
+							<h3 class="fl">Related People</h3>
+							<span class="fr" onclick="ajax()">Another batch</span>
+						</div>
+						<div id="teachersPic" class="teachersPic"></div>
+						<!--链接-->
+												<div class="links">
+							<div class="title_">
+								<h3 class="fl">Related Links</h3>
+							</div>
+							<ul>
+															<li >
+									<a href="http://www.usslab.org/member/xuwenyuan.html" target="_blank" title="Wenyuan's other homepage">Wenyuan's other homepage</a>
+								</li>
+														</ul>
+						</div>
+												
+												<!--访问量  最近维护时间-->
+						<div class="amount" style="line-height:26px;">
+							<label>Last updated</label><br/>2020-10-19
+						</div>
+						
+						<!--访问量-->
+						<div class="amount">
+							<label>Total visits</label>:34861
+						</div>
+                    </div>
+                     <div class="rightContent">
+						<div class="pernalDetail">
+								<div class="baseInfo">
+									<div class="personal_img">
+										<img src="https://person.zju.edu.cn/person//attachments/2018-08/0812104058-843090302.jpg" width="174" height="232"  style="margin:0 auto;display:block;">
+										<div class="radius"></div>
+									</div>
+									<div class="personal_detail">
+										<div class="personal_top">
+											<div class="personal_name">
+											XUWENYUAN											<small>Ph.D.</small>																						<!--学位-->
+											<!--<small>											<a href="#" onclick="search_kwd('countrys','156','China')">China</a></small>-->
+											 <div class="zc">
+											 	<span>professor</span>
+												<span style="color:#e8e8e8">|</span>												<span>Doctoral supervisor</span>											 </div>
+											</div>
+											<div class="personal_ewm">
+												<div class="where fl">
+																																							<div class="collegeName">
+														<label>Department</label> 
+																																												<a href="#" onclick="search_kwd('companys','510000','College of Electrical Engineering')">College of Electrical Engineering</a>
+																												<span class="indicate"></span>													</div>
+																																						</div>
+												<div class="ewm fr">
+													<img src="https://person.zju.edu.cn/person/getQRcode.php?uid=0012172&type=2&sign=dd98247cc381f8e85fdabab457718467&dt=1726197121&url=https://person.zju.edu.cn/en/wyxu" alt="二维码">
+												</div>
+											</div>
+										</div>
+										<div class="personal_bottom">
+											<!--静态的-->
+																						<ul>
+																								 												<li class='email'>
+													<label>E-mail</label>   wyxu@zju.edu.cn
+												</li>
+																																															</ul>
+																					</div>
+									</div>
+									<script>
+										var pageUid = '0012172';
+										var apiRelation = '/api/relation?sign=fde6a3563e99e1f173c01423e6f12943&dt=1726197121';
+										
+										ajax();
+										var indx=1;
+										function ajax() {
+											indx++;
+											if(indx%2==0){
+												document.querySelector('.title_ span').style.backgroundPosition="0px -202px"
+											}else{
+												document.querySelector('.title_ span').style.backgroundPosition="0px -242px"
+											}
+											var xmlHttpReg = null;
+										   if (window.ActiveXObject) {//如果是IE
+												xmlHttpReg = new ActiveXObject("Microsoft.XMLHTTP");
+											} else if (window.XMLHttpRequest) {
+												xmlHttpReg = new XMLHttpRequest(); //实例化一个xmlHttpReg
+										   }
+								 
+										   if (xmlHttpReg != null) {
+												var url= site_path +apiRelation+"&pageUid="+pageUid+"&type=2"
+												xmlHttpReg.open("get", url, true)
+												xmlHttpReg.send(null);
+												xmlHttpReg.onreadystatechange = doResult; //设置回调函数
+											}
+											var teachersPic="<ul>";
+											function doResult() {
+												if (xmlHttpReg.readyState == 4) {//4代表执行完成
+													if (xmlHttpReg.status == 200) {//200代表执行成功
+														var sucess_data=JSON.parse(xmlHttpReg.responseText);
+														var teacherInfo=sucess_data.data;
+															for(var i=0;i<teacherInfo.length;i++){
+																teachersPic+="<li><div class='teachersImg'><a href="+teacherInfo[i].url+" target='_blank'><img src="+teacherInfo[i].photo+"></div>";
+																teachersPic+="<h5>"+teacherInfo[i].name+"</h5></a>";
+																teachersPic+="<p>"+ (teacherInfo[i].college_name  || '') +"</p></li>"
+															}
+														teachersPic+="</ul>";
+														document.getElementById("teachersPic").innerHTML = teachersPic;
+													}
+											   }
+
+										   }
+										}
+										//ProhibitionRight() ;
+										function ProhibitionRight() { //禁止右键
+											window.onkeydown = function (e) {
+												if (e.ctrlKey && e.keyCode == 83) {
+												  return false;
+												}
+											}
+											window.oncontextmenu = function () {
+												return false;
+											}
+										};
+										function search_kwd(kwd,kwv1,kwv2){
+											var kwv2 = window.encodeURI(kwv2);
+											if(kwv1){
+												if(kwd=='companys'){
+													var url_= home_url+"search?"+kwd+"="+kwv1+"~"+kwv2;
+												}else{
+													var url_= home_url+"search?"+kwd+"="+kwv1+"-"+kwv2;
+												}
+												window.open(url_);
+											}
+										};
+										
+										</script>
+								</div>
+							</div>
+						<!--导航-->
+						<div class='jbxx-content'>
+							<div class="tabNav" id="tabNav">
+								<span class="btn leftBtn"></span>
+								<span class="btn rightBtn"></span>
+								<ul class="clearfix" id="tab_nav">
+									<li col="0">
+										<a onclick="columnData(0)" href="#0" >Biography</a>
+									</li>
+																											<li col="775122" >
+										<a onclick="columnData(775122)" href="#775122" >Courses</a>
+									</li>
+																																				<li col="775128" >
+										<a onclick="columnData(775128)" href="#775128" >Publications</a>
+									</li>
+																			                            </ul>
+							</div>
+							<div class="jbxx"></div>
+						</div>
+					</div>
+                </div>
+			</div>
+            <footer class="footer">
+                <p> Copyright &copy; 2007-2030 Zhejiang University Tel：0571-87951669 &nbsp;E-mail：xwmaster@zju.edu.cn <a href="/index/en/computedData" class="">Platform Statistics</a> </p>
+            </footer>
+        </div>
+    </div>
+	<script src="/person/default/skins/common/crypto-js/crypto-js.js"></script>
+	<script src="/person/default/skins/common/index.js"></script>
+    <script>
+	var pageUid = '0012172';
+	var highLightKeywords = [];
+    var logoutUrl = "https://person.zju.edu.cn/person/casLogin.php?logout=1";
+    var curCol = "0";
+	var apiColumn = "/api/column?sign=612132e4cb14e52d168de3f5f85d1ddc&dt=1726197121";
+	
+		//导航异步加载
+		function columnData(id) {
+			var nav_=document.querySelector('#tab_nav'),lis=nav_.querySelectorAll('li'),xmlHttpReg = null;
+			for(var i=0;i<lis.length;i++){
+				id==lis[i].getAttribute('col') ? lis[i].className='active' :lis[i].className='';
+			};
+			if (window.ActiveXObject) {//如果是IE
+				xmlHttpReg = new ActiveXObject("Microsoft.XMLHTTP");
+			} else if (window.XMLHttpRequest) {
+				xmlHttpReg = new XMLHttpRequest(); //实例化一个xmlHttpReg
+		   }
+ 
+			if (xmlHttpReg != null) {
+				var url=site_path+apiColumn+"&column_id="+id+"&pageUid="+pageUid+"&type=2"
+				xmlHttpReg.open("get", url, true);
+				xmlHttpReg.send(null);
+				xmlHttpReg.onreadystatechange = doResult; //设置回调函数
+			}
+			function doResult() {
+				if (xmlHttpReg.readyState == 4) {//4代表执行完成
+					if (xmlHttpReg.status == 200) {//200代表执行成功
+						var sucess_data=JSON.parse(xmlHttpReg.responseText);
+						var ajax_data=sucess_data.data.content;
+						document.querySelector('.jbxx').innerHTML ='';
+						document.querySelector('.jbxx').innerHTML=ajax_data;
+
+						if(highLightKeywords.length>0){
+							for (var i=0;i<highLightKeywords.length;i++)
+							{
+								var key = keyLight('.jbxx', highLightKeywords[i], 'red');
+							}
+						}
+					}
+			   }
+			}
+		};
+		function keyLight(id, key, bgColor){
+			var oDiv = document.querySelector(id),
+			sText = oDiv.innerHTML,
+			bgColor = bgColor || "orange",    
+			sKey = "<span style='background-color: "+bgColor+";color:#fff;'>"+key+"</span>",
+			num = -1,
+			rStr = new RegExp(key, "g"),
+			rHtml = new RegExp("\<.*?\>","ig"), //匹配html元素
+			aHtml = sText.match(rHtml); //存放html元素的数组
+			sText = sText.replace(rHtml, '{~}');  //替换html标签
+			sText = sText.replace(rStr,sKey); //替换key
+			sText = sText.replace(/{~}/g,function(){  //恢复html标签
+				num++;
+				return aHtml[num];
+			});
+			oDiv.innerHTML = sText;
+		}
+		function tabSlide(fn) {
+			var maxWidth = 964,btnWidth=42,
+			contentEle=document.querySelector('.jbxx'),
+			ele = document.querySelector('#tabNav');
+			if(ele){
+				var eleUl = ele.querySelector('ul'),
+				eleLiWidth = eleUl.querySelector('li').offsetWidth,
+				options={
+					getPathColumn:function(){
+						var pathnName=window.location.hash;
+						var columnId=pathnName.indexOf('#')!=-1 ? pathnName.split('#')[1] : 0;
+						return columnId;
+					},
+					computeRightPosition:function(cacheI){
+						cacheI ? i=Number(cacheI) :i += 2;
+						eleUl.style.marginLeft = -eleLiWidth * i + 'px';
+						var cal_w = maxWidth + (eleLiWidth * i);
+						i==0 ?	lbtn.setAttribute("id", '') :lbtn.setAttribute("id", 'show');
+						cal_w >= totalW && rbtn.setAttribute("id", '');
+					},
+					computeLeftPosition:function(){
+						if (i >= 2) {
+							i -= 2;
+							eleUl.style.marginLeft = -eleLiWidth * i + 'px';
+							i == 0 ? lbtn.setAttribute("id", '') : i > 0 ? rbtn.setAttribute("id", 'show') : void(0);
+						};
+					},
+					initActiveColumn:function(){
+						if(activeColumnOffsetLeft>(maxWidth-btnWidth)){
+							var diffNum=Math.ceil((activeColumnOffsetLeft-(maxWidth-btnWidth))/eleLiWidth);
+							var num=diffNum %2 ==0 ? diffNum : diffNum+1;
+							this.computeRightPosition(num);
+						};
+						typeof fn=='function' && fn(colId);
+					},
+				},
+				i = 0,
+				activeColumnOffsetLeft=0,
+				colId=0,
+				totalW =(function(d){
+					var total=0,activeColumn=d.getPathColumn();
+					for (var j = 0,sls=eleUl.querySelectorAll('li');j < sls.length; j++) {
+						var eqcol= sls[j].getAttribute('col');	// 栏目ID
+						var eqcolalias=sls[j].getAttribute('colalias'); // 栏目别名
+						var tempvariables= eqcolalias ? eqcolalias: eqcol;
+						if(tempvariables==activeColumn){
+							colId=eqcol;
+							activeColumnOffsetLeft=sls[j].offsetLeft;
+						};
+						total += eleUl.querySelectorAll('li')[j].offsetWidth;
+					};
+					return total += 1;
+				})(options),
+				rbtn = document.querySelector('.rightBtn'),
+				lbtn = document.querySelector('.leftBtn');
+				totalW > maxWidth &&  rbtn.setAttribute("id", 'show');
+				rbtn.onclick = function() {
+					options.computeRightPosition();
+				};
+				lbtn.onclick = function() {
+					options.computeLeftPosition();
+				};
+				contentEle.innerHTML='正在加载中，请稍后...' ;
+				options.initActiveColumn();
+			}
+		};
+		// js启动
+		tabSlide(function(id){
+			columnData(id)
+		});
+		
+    </script>
+
+<style>
+
+div.jbxx li{
+	list-style: inherit;
+	margin-left: 10px;
+}
+.ivu-table {
+    width: inherit;
+    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    color: #495060;
+    font-size: 12px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.ivu-table th {
+    height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: #f8f8f9;
+}
+.ivu-table td, .ivu-table th {
+    min-width: 0;
+    height: 48px;
+    box-sizing: border-box;
+    text-align: left;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    border-bottom: 1px solid #e9eaec;
+}
+.ivu-table-cell {
+    padding-left: 18px;
+    padding-right: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-break: break-all;
+    box-sizing: border-box;
+}
+
+</style>	
+<div class="social-share"></div>
+<!--  css & js -->
+<link rel="stylesheet" href="/person/css/share.min.css">
+<script src="/person/js/social-share.min.js"></script>
+
+<script type="text/javascript">
+
+var $config = {
+    title               : '浙江大学个人主页',
+    description         : '浙江大学个人主页',
+    //sites               : ['qzone', 'qq', 'weibo','wechat', 'douban'], // 启用的站点
+	disabled            : ['google', 'facebook', 'twitter'], // 禁用的站点
+};
+socialShare('.social-share', $config);
+
+</script>
+<style>
+
+.social-share {
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    z-index: 999999;
+    width: 100%;
+    border: 0;
+}
+
+</style></body>
+</html>

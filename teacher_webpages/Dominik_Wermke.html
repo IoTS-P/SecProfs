@@ -1,0 +1,572 @@
+<!DOCTYPE html><html lang="en" dir="ltr"><head>
+	<meta name="generator" content="Hugo 0.116.1"/><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40"/>
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fefefe"/>
+
+<script> 
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
+
+
+<link rel="canonical" href="https://dwermke.com/"/>
+<link rel="stylesheet" href="https://dwermke.com/css/style.f3e90d3de11cdc395bf1b6878f51629d16ac8a8b17781d8d780415c80ad18ae9.css" integrity="sha256-8+kNPeEc3Dlb8baHj1FinRasiosXeB2NeAQVyArRiuk="/>
+
+
+	
+    
+        
+        <link rel="icon" type="image/png" sizes="16x16" href="https://dwermke.com/img/favicon_hu97be7f931a8629d86f50b678f36474aa_18960_16x16_resize_catmullrom_3.png"/>
+    
+        
+        <link rel="icon" type="image/png" sizes="32x32" href="https://dwermke.com/img/favicon_hu97be7f931a8629d86f50b678f36474aa_18960_32x32_resize_catmullrom_3.png"/>
+    
+        
+        <link rel="icon" type="image/png" sizes="48x48" href="https://dwermke.com/img/favicon_hu97be7f931a8629d86f50b678f36474aa_18960_48x48_resize_catmullrom_3.png"/>
+    
+        
+        <link rel="icon" type="image/png" sizes="64x64" href="https://dwermke.com/img/favicon_hu97be7f931a8629d86f50b678f36474aa_18960_64x64_resize_catmullrom_3.png"/>
+    
+        
+        <link rel="icon" type="image/png" sizes="128x128" href="https://dwermke.com/img/favicon_hu97be7f931a8629d86f50b678f36474aa_18960_128x128_resize_catmullrom_3.png"/>
+    
+        
+        <link rel="icon" type="image/png" sizes="256x256" href="https://dwermke.com/img/favicon_hu97be7f931a8629d86f50b678f36474aa_18960_256x256_resize_catmullrom_3.png"/>
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dwermke.com/img/favicon_hu97be7f931a8629d86f50b678f36474aa_18960_180x180_resize_catmullrom_3.png"/>
+
+<title>Dominik Wermke</title>
+			<meta name="description" content="Dominik Wermke is an Assistant Professor in the Department of Computer Science at the North Carolina State University. He is member of the Secure Computing Institute, the WSPR Research Lab, and the Secure Software Supply Chain Center (S3C2). Research areas of interest include usable security and privacy, improving security of and trust in the software supply chain, supporting collaboration and security in the open source ecosystem, and generally supporting software experts in designing, developing, and deploying secure, privacy-respecting, and user-friendly systems."/><meta name="keywords" content="Dominik Wermke, NC state, usable security, software supply chain"/>
+<script type="application/ld+json">
+	{
+		"@context": "http://schema.org",
+		"@type": "Person",
+		"name": "Dominik Wermke",
+		"familyName": "Wermke",
+		"jobTitle": "Assistant Professor of Computer Science",
+		"honorificPrefix": "Dr",
+		"affiliation": "North Carolina State University",
+		"alumniOf": "Leibniz University Hannover",
+		"url": "http://dwermke.com",
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "890 Oval Dr.",
+			"addressLocality": "Raleigh",
+			"addressRegion": "NC",
+			"postalCode": "27695-8206",
+			"addressCountry": "USA"
+		},
+		"email": "dwermke@ncsu.edu",
+		"nationality": "German",
+		"sameAs": [
+			"https://www.linkedin.com/in/dwermke",
+			"https://github.com/dwermke",
+			"https://scholar.google.de/citations?user=aTkX9lYAAAAJ&hl=en",
+			"https://dblp.org/pid/203/1800.html",
+			"https://orcid.org/0009-0008-2921-1254"
+		]
+	}
+</script>
+
+	</head>
+	<body>
+		<a id="skip-link" href="#text-content">Skip to text content</a>
+		<header>
+			<nav class="menu">
+        <a class="menu-item is-active" href="https://dwermke.com/">About</a>
+    
+        <a class="menu-item " href="https://dwermke.com/publications">Publications</a>
+    
+        <a class="menu-item " href="https://dwermke.com/teaching">Teaching</a>
+    
+</nav>
+<div class="settings">
+	<button id="themeSwitcher" aria-label="Theme Switcher">
+		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="lightbulb" viewBox="0 0 16 16">
+			<path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1"></path>
+		</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="lightbulb-fill" viewBox="0 0 16 16">
+			<path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5"></path>
+		</svg>
+	</button>
+</div>
+
+		</header>
+		<main>
+			<nav class="breadcrumbs"></nav>
+			<article id="text-content" class="markdown">
+
+<h1 id="dominik-wermke">Dominik Wermke <a href="https://dwermke.com/#dominik-wermke" class="anchor">#</a></h1>
+<p>Hi, I am an Assistant Professor in the Department of Computer Science at North Carolina State University (<a href="https://www.csc.ncsu.edu/people/dwermke" rel="noopener">NC State</a>).
+I am a member of the Secure Computing Institute (<a href="https://sci.ncsu.edu/people/#:~:text=real%20world%20applications.-,Dominik%20Wermke,-Dominik%20Wermke%20is" rel="noopener">SCI</a>),
+the Wolfpack Security and Privacy Research (<a href="https://wspr.csc.ncsu.edu/people.html#:~:text=real%20world%20applications.-,Dominik%20Wermke,-Dominik%20Wermke%20is" rel="noopener">WSPR</a>) Lab, and the Secure Software Supply Chain Center (<a href="https://s3c2.org/people/#:~:text=Dominik%20Wermke%20%28NC%20State%20University%29" rel="noopener">S3C2</a>).</p>
+<details>
+    <summary>
+        Pronunciation: VERM-keh [/veeːm.ke/]
+    </summary>
+    <audio controls="" preload="auto">
+        <source src="dominikwermke.mp3"/>
+    </audio>
+<p>I actually love all the different pronunciations for my last name, so feel free to go with whatever feels right in your language / accent.</p>
+<p>The German pronunciation sounds roughly like “VERM-keh” (<code>/veeːm.ke/</code> in IPA).
+“Verm-” rhymes with “term” and “-ke” as in “kettle”.</p>
+</details>
+<p>I am looking for <strong>motivated PhD students</strong> to work with in the areas of usable security and software supply chain security. PhD admissions at NC State are done centrally and are due in December: <a href="https://www.csc.ncsu.edu/academics/graduate/procedure.php" rel="noopener">Application Procedure</a>.</p>
+
+<h2 id="research-interests">Research Interests <a href="https://dwermke.com/#research-interests" class="anchor">#</a></h2>
+<p>My research areas of interest include <strong>usable security and privacy</strong>, improving security of and trust in the <strong>software supply chain</strong>, supporting collaboration and security in the <strong>open source ecosystem</strong>, and generally <strong>supporting software experts</strong> in designing, developing, and deploying secure, privacy-respecting, and user-friendly systems.</p>
+<p>My research involves both quantitative and qualitative approaches, such as large-scale analyses of software repositories and communities, alongside interviews and surveys, to uncover underlying motivations, causes, and to understand the significant challenges software experts face when interacting with computer security mechanisms.</p>
+<br/>
+
+<div class="columns">
+  
+  <div class="markdown-inner">
+    
+<h2 id="contact">Contact <a href="https://dwermke.com/#contact" class="anchor">#</a></h2>
+<ul>
+<li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path>
+</svg></span> <a href="mailto:dwermke@ncsu.edu">dwermke@ncsu.edu</a></li>
+<li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path>
+</svg></span> <span style="color: var(--text-color-80);">contact@[this domain]</span></li>
+</ul>
+<!-- &lt;small style=&#34;color: var(--text-color-80);&#34;&gt;* For (potential) students: please see [this page](/posts/student-faq) before inquiring about positions.&lt;/small&gt;  -->
+<!-- Open (to everyone) office hours: -->
+<!-- - Monday 10-12 EDT, [booking link]() -->
+
+  </div>
+  
+  <div class="markdown-inner">
+    
+<h2 id="profiles">Profiles <a href="https://dwermke.com/#profiles" class="anchor">#</a></h2>
+<ul>
+<li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 512 512"><path fill="#4285f4" d="M256 411.12L0 202.667 256 0z"></path><path fill="#356ac3" d="M256 411.12l256-208.453L256 0z"></path><circle fill="#a0c3ff" cx="256" cy="362.667" r="149.333"></circle><path fill="#76a7fa" d="M121.037 298.667c23.968-50.453 75.392-85.334 134.963-85.334s110.995 34.881 134.963 85.334H121.037z"></path></svg>
+</span> <a href="https://scholar.google.de/citations?user=aTkX9lYAAAAJ&amp;hl=en" rel="noopener">Google Scholar</a></li>
+<li><span class="icon"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" fill="currentColor">
+<g>
+<path d="M455.4,304.3l-45.9-171.7c0,0-2.9-11.1-13.6-6.2l-105,48.8l16.1,60l20.4,76.5l0.1,1.2c1,8.8-7.7,14.8-7.7,14.8L284.8,344
+l9.4,35.4l0.7,1.9c1.3,3.2,5.3,11.3,15.2,17.1l130.3,80.1c0,0,12.7,7.7,9.7-3.1L413,336.4l34.9-16.1
+C447.9,320.3,458.4,315.5,455.4,304.3L455.4,304.3z M314.1,306.1l-0.2-1.2l-21.2-79.1l-25-92.7v-0.7c0,0-3-11.1-15.7-18.7
+L121.7,33.6c0,0-12.7-7.7-9.7,3.1l37.3,139.2l-35,16.3c0,0-10.5,4.8-7.5,15.9l45.9,171.7c0,0,3,11.1,13.6,6.2l140-65.3
+C306.2,320.9,315.9,316.3,314.1,306.1z"></path>
+</g>
+</svg>
+</span> <a href="https://dblp.org/pid/203/1800.html" rel="noopener">DBLP</a></li>
+<li><span class="icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>ORCID</title><path fill="#a6ce39" d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"></path></svg>
+</span><a href="https://orcid.org/0009-0008-2921-1254" rel="noopener">ORCID</a></li>
+<li><span class="icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+</span> <a href="https://github.com/dwermke" rel="noopener">GitHub</a></li>
+<li><span class="icon"><svg fill="#0A66C2" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></span> <a href="https://linkedin.com/in/dwermke" rel="noopener">LinkedIn</a></li>
+</ul>
+
+  </div>
+  
+</div>
+
+<!-- ## Activity -->
+
+<h2 id="academic-bio">Academic Bio <a href="https://dwermke.com/#academic-bio" class="anchor">#</a></h2>
+<div id="academic-bio" x-data="bioGenerator()" x-init="init()">
+	
+	<fieldset class="bio-select">
+		<legend>Select:</legend>
+		<select x-model="person" aria-label="Person">
+			<option value="I">First Person</option>
+			<option value="He">Third Person</option>
+		</select>
+	</fieldset>
+	
+	<fieldset class="bio-include">
+		<legend>Include:</legend>
+		<label>
+			<input type="checkbox" x-model="showEducation"/>
+			Education
+		</label>
+		<label>
+			<input type="checkbox" x-model="showResearchFocus"/>
+			Research
+		</label>
+		<label>
+			<input type="checkbox" x-model="showInterests"/>
+			Interests
+		</label>
+		<label>
+			<input type="checkbox" x-model="showConferences"/>
+			Conferences
+		</label>
+		<label>
+			<input type="checkbox" x-model="showPubs"/>
+			Publications
+		</label>
+	</fieldset>
+	<div class="box">
+		<div x-show="person === &#39;I&#39;">
+			<p>
+			<span>I am an Assistant Professor in the Department of Computer Science at the North Carolina State University.</span>
+			<span>Prior to NC State, I worked as a researcher at the CISPA Helmholtz Center for Information Security and was part of the TeamUSEC research group for human-centered security.</span>
+			<span x-show="showEducation">I received my Dr. rer. nat. (PhD equivalent) in computer science from Leibniz University Hannover in 2023 and both a M.Sc. and B.Sc. from Saarland University in 2016 and 2015 respectively.</span>
+			</p><p x-show="showResearchFocus">My research enables developers and administrators to deploy secure, privacy-respecting, and trust-worthy software that benefits the security of hundreds of dependent code bases, thousands of real-world deployments, and millions of end users.
+			I leverage this multiplicative effect by supporting open source maintainers, developers, and system administrators in the shared endeavor towards a more secure and trustworthy software ecosystem.
+			</p>
+			<p x-show="showInterests">
+			My research areas of interest include usable security, supporting software experts, the software supply chain, and the open source ecosystem. Designing secure and user-friendly systems, developing tools to assist software professionals, enhancing transparency and trust in the software supply chain, and improving collaboration and security in open source communities.
+			</p>
+			<p x-show="showConferences">
+			My work has appeared in the top-tier security venues such as IEEE S&amp;P, USENIX Security, and ACM CCS, as well as field-specific venues such as SOUPS and ACSAC.
+			</p>
+		</div>
+		<div x-show="person === &#39;He&#39;">
+			<p>
+			<span>Dominik Wermke is an Assistant Professor in the Department of Computer Science at the North Carolina State University.</span>
+			<span>Prior to NC State, he worked as a researcher at the CISPA Helmholtz Center for Information Security and was part of the TeamUSEC research group for human-centered security.</span>
+			<span x-show="showEducation">He received his Dr. rer. nat. (PhD equivalent) in computer science from Leibniz University Hannover in 2023 and both a M.Sc. and B.Sc. from Saarland University in 2016 and 2015 respectively.</span>
+			</p>
+			<p x-show="showResearchFocus">His research enables developers and administrators to deploy secure, privacy-respecting, and trust-worthy software that benefits the security of hundreds of dependent code bases, thousands of real-world deployments, and millions of end users.
+			His research leverages this multiplicative effect by supporting open source maintainers, developers, and system administrators in the shared endeavor towards a more secure and trustworthy software ecosystem.
+			</p>
+			<p x-show="showInterests">
+			Research areas of interest include usable security, supporting software experts, the software supply chain, and the open source ecosystem. Designing secure and user-friendly systems, developing tools to assist software professionals, enhancing transparency and trust in the software supply chain, and improving collaboration and security in open source communities.
+			</p>
+			<p x-show="showConferences">
+			His work has appeared in the top-tier security venues such as IEEE S&amp;P, USENIX Security, and ACM CCS, as well as field-specific venues such as SOUPS and ACSAC.
+			</p>
+		</div>
+		<div x-show="showPubs">
+			<br/>
+			<p>
+			<u>Dominik Wermke</u>, Jan H. Klemmer, Noah Wöhler, Juliane Schmüser, Harshini Sri Ramulu, Yasemin Acar, and Sascha Fahl.
+			<b>&#34;Always Contribute Back&#34;: A Qualitative Study on Security Challenges of the Open Source Supply Chain</b>.
+			<i>In Proceedings of the 44th IEEE Symposium on Security and Privacy (IEEE S&amp;P 23)</i>, San Francisco, CA, USA, May 22-24, 2023.
+			</p>
+			<p>
+			Marcel Fourné, <u>Dominik Wermke</u>, Will Enck, Sascha Fahl, and Yasemin Acar.
+			<b>It&#39;s like flossing your teeth: On the Importance and Challenges of Reproducible Builds for Software Supply Chain Security</b>.
+			<i>In Proceedings of the 44th IEEE Symposium on Security and Privacy (IEEE S&amp;P 23)</i>, San Francisco, CA, USA, May 22-24, 2023.
+			</p><p>
+			<u>Dominik Wermke</u>, Noah Wöhler, Jan H. Klemmer, Marcel Fourné, Yasemin Acar, and Sascha Fahl.
+			<b>Committed to Trust: A Qualitative Study on Security &amp; Trust in Open Source Software Projects</b>.
+			<i>In Proceedings of the 43rd IEEE Symposium on Security and Privacy (IEEE S&amp;P 22)</i>, San Francisco, CA, USA, May 23-26, 2022.
+			</p>
+		</div>
+	</div>
+</div>
+
+<script>
+	function bioGenerator() {
+		return {
+			person: 'He',
+			showEducation: true,
+			showResearchFocus: true,
+			showInterests: false,
+			showConferences: true,
+			showPubs: false,
+			init() {
+				this.person = 'He';
+				this.showEducation = true;
+				this.showResearchFocus = true;
+				this.showInterests = false;
+				this.showConferences = true;
+				this.showPubs = false;
+			},
+		};
+	}
+</script>
+
+
+<h2 id="academic-service">Academic Service <a href="https://dwermke.com/#academic-service" class="anchor">#</a></h2>
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+
+
+
+<div class="services">
+	
+	
+	<div class="services-year">
+		2024
+	</div>
+	<span class="services-entries">
+		<div class="service">
+			<span class="venue"><a href="https://sp2024.ieee-security.org/" aria-label="venue">IEEE S&amp;P&#39;24</a>, 
+			</span><span class="position">Member of PC</span><span class="proof">
+				<a href="https://sp2024.ieee-security.org/cfpapers.html#:~:text=Dominik%20Wermke" aria-label="external reference">
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="var(--text-color-80)" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"></path>
+  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"></path>
+</svg>
+				</a>
+			</span></div></span>
+	
+	<div class="services-year">
+		2023
+	</div>
+	<span class="services-entries">
+		<div class="service">
+			<span class="venue"><a href="https://eurousec23.itu.dk/" aria-label="venue">EuroUSEC&#39;23</a>, 
+			</span><span class="position">Member of PC</span><span class="proof">
+				<a href="https://eurousec23.itu.dk/#:~:text=Schyff%2C%20Rhodes%20University-,Dominik%20Wermke,-%2C%20CISPA%20Helmholtz%20Center" aria-label="external reference">
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="var(--text-color-80)" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"></path>
+  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"></path>
+</svg>
+				</a>
+			</span></div>
+		<div class="service">
+			<span class="venue"><a href="https://secdev.ieee.org/2023/home" aria-label="venue">IEEE SecDev&#39;23</a>, 
+			</span><span class="position">Member of PC</span><span class="proof">
+				<a href="https://secdev.ieee.org/2023/program-committee/#:~:text=Dominik%20Wermke" aria-label="external reference">
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="var(--text-color-80)" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"></path>
+  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"></path>
+</svg>
+				</a>
+			</span></div>
+		<div class="service">
+			<span class="venue"><a href="https://wisec2023.surrey.ac.uk/" aria-label="venue">ACM WiSec&#39;23</a>, 
+			</span><span class="position">Member of PC</span><span class="proof">
+				<a href="https://wisec2023.surrey.ac.uk/program-committee/#:~:text=Dominik%20Wermke" aria-label="external reference">
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="var(--text-color-80)" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"></path>
+  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"></path>
+</svg>
+				</a>
+			</span></div></span>
+	
+	<div class="services-year">
+		2022
+	</div>
+	<span class="services-entries">
+		<div class="service">
+			<span class="venue"><a href="https://eurousec2022.secuso.org/#organization" aria-label="venue">EuroUSEC&#39;22</a>, 
+			</span><span class="position">Member of PC</span><span class="proof">
+				<a href="https://eurousec2022.secuso.org/#:~:text=Dominik%20Wermke" aria-label="external reference">
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="var(--text-color-80)" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"></path>
+  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"></path>
+</svg>
+				</a>
+			</span></div>
+		<div class="service">
+			<span class="venue"><a href="https://www.usenix.org/conference/soups2022/call-for-posters" aria-label="venue">SOUPS&#39;22</a>, 
+			</span><span class="position">Member of poster jury</span><span class="proof">
+				<a href="https://www.usenix.org/conference/soups2022/call-for-posters#:~:text=University%20of%20Washington-,Dominik%20Wermke,-%2C%20George%20Washington" aria-label="external reference">
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="var(--text-color-80)" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"></path>
+  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"></path>
+</svg>
+				</a>
+			</span></div>
+		<div class="service">
+			<span class="venue"><a href="https://security-information-workers.org/2022" aria-label="venue">WSIW&#39;22</a>, 
+			</span><span class="position">Member of PC</span><span class="proof">
+				<a href="https://security-information-workers.org/2022/#:~:text=Dominik%20Wermke" aria-label="external reference">
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="var(--text-color-80)" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"></path>
+  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"></path>
+</svg>
+				</a>
+			</span></div>
+		<div class="service">
+			<span class="venue"><a href="https://security-information-workers.org/2022" aria-label="venue">WSIW&#39;22</a>, 
+			</span><span class="position">Web Chair</span><span class="proof">
+				<a href="https://security-information-workers.org/2022/#:~:text=Leibniz%20University%20Hannover-,Dominik%20Wermke,-%2C%20CISPA%20Helmholtz" aria-label="external reference">
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="var(--text-color-80)" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"></path>
+  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"></path>
+</svg>
+				</a>
+			</span></div></span>
+	
+	<div class="services-year">
+		2021
+	</div>
+	<span class="services-entries">
+		<div class="service">
+			<span class="venue"><a href="https://www.usenix.org/conference/soups2021/call-for-posters" aria-label="venue">SOUPS&#39;21</a>, 
+			</span><span class="position">Member of poster jury</span><span class="proof">
+				<a href="https://www.usenix.org/conference/soups2021/call-for-posters#:~:text=Tseng%2C%20Cornell%20University-,Dominik%20Wermke,-%2C%20Leibniz%20University" aria-label="external reference">
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="var(--text-color-80)" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"></path>
+  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"></path>
+</svg>
+				</a>
+			</span></div></span>
+	
+	<div class="services-year">
+		2020
+	</div>
+	<span class="services-entries">
+		<div class="service">
+			<span class="venue"><a href="https://cosdeo.aalto.fi/" aria-label="venue">CoSDEO&#39;20</a>, 
+			</span><span class="position">Member of PC</span><span class="proof">
+				<a href="https://cosdeo.aalto.fi/#:~:text=Europe%20Ltd.%2C%20UK-,Dominik%20Wermke,-%2C%20Leibniz%20University%20Hannover" aria-label="external reference">
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="var(--text-color-80)" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"></path>
+  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"></path>
+</svg>
+				</a>
+			</span></div></span>
+	
+	<div class="services-year">
+		2019
+	</div>
+	<span class="services-entries">
+		<div class="service">
+			<span class="venue"><a href="https://www.usenix.org/conference/soups2019/call-for-posters" aria-label="venue">SOUPS&#39;19</a>, 
+			</span><span class="position">Member of poster jury</span><span class="proof">
+				<a href="https://www.usenix.org/conference/soups2019/call-for-posters#:~:text=Institute%20of%20Technology-,Dominik%20Wermke,-%2C%20Leibniz%20University" aria-label="external reference">
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="var(--text-color-80)" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"></path>
+  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"></path>
+</svg>
+				</a>
+			</span></div></span>
+	
+	<div class="services-year">
+		2018
+	</div>
+	<span class="services-entries">
+		<div class="service">
+			<span class="venue"><a href="https://cosdeo.github.io/" aria-label="venue">CoSDEO&#39;18</a>, 
+			</span><span class="position">Member of PC</span><span class="proof">
+				<a href="https://cosdeo.github.io/#:~:text=Dominik%20Wermke" aria-label="external reference">
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="var(--text-color-80)" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"></path>
+  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"></path>
+</svg>
+				</a>
+			</span></div>
+		<div class="service">
+			<span class="venue"><a href="https://www.usenix.org/conference/soups2018/call-for-posters" aria-label="venue">SOUPS&#39;18</a>, 
+			</span><span class="position">Member of poster jury</span><span class="proof">
+				<a href="https://www.usenix.org/conference/soups2018/call-for-posters#:~:text=Carnegie%20Mellon%20University-,Dominik%20Wermke,-%2C%20Leibniz%20University" aria-label="external reference">
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="var(--text-color-80)" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"></path>
+  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"></path>
+</svg>
+				</a>
+			</span></div></span></div>
+
+
+
+			</article>
+			<nav class="breadcrumbs"></nav>
+		</main>
+		<footer><center>
+	<div class="quicklinks">
+		<div class="column">
+			<h3>Categories</h3>
+			<div>
+				<a href="https://dwermke.com/">
+					About
+				</a>
+			</div>
+			<div>
+				<a href="https://dwermke.com/publications">
+					Publications
+				</a>
+			</div>
+			<div>
+				<a href="https://dwermke.com/teaching">
+					Teaching
+				</a>
+			</div>
+		</div>
+		<div class="column">
+			<h3>Profiles</h3>
+			<div>
+				<a href="https://scholar.google.de/citations?user=aTkX9lYAAAAJ&amp;hl=en" rel="noopener">GScholar</a>
+			</div>
+			<div>
+				<a href="https://dblp.org/pid/203/1800.html" rel="noopener">DBLP</a>
+			</div>
+			<div>
+				<a href="https://orcid.org/0009-0008-2921-1254" rel="noopener">ORCID</a>
+			</div>
+			<div>
+				<a href="https://github.com/dwermke" rel="noopener">GitHub</a>
+			</div>
+			<div>
+				<a href="https://linkedin.com/in/dwermke" rel="noopener">LinkedIn</a>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+	<br/>
+	<small style="color:var(--text-color-60);">Static site generated in <a style="color:var(--text-color-80);" href="https://gohugo.io/">Hugo</a> with custom theme, deployed on <a style="color:var(--text-color-80);" href="https://vercel.com/">vercel</a>.
+</small></center><small style="color:var(--text-color-60);">
+</small></footer><script data-goatcounter="https://stats.dwermke.com/count" async="" src="//gc.zgo.at/count.js"></script><small style="color:var(--text-color-60);">
+<script src="https://dwermke.com/js/alpine.min.js" defer=""></script>
+<script src="https://dwermke.com/js/theme-switcher.js" defer=""></script>
+
+	
+
+</small></body></html>

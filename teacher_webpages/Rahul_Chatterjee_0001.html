@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Rahul Chatterjee </title>
+        <meta charset="utf-8">
+        <!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        <meta name="description" content="Personal Webpage of Rahul Chatterjee">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link href="css/style.css?14" rel="stylesheet">
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+        <script src="js/macros.js"></script>
+
+        <!-- Google analytics -->
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-93247046-1', 'auto');
+         ga('send', 'pageview');
+
+         $("#projects-heading").click(function(){
+             $("#project-text").toggle(1000);
+         });
+         
+         function loadPage(divloc, page) {
+             $.get(page, function(data){
+                 console.log(divloc);
+                 $(divloc).empty();
+                 $(divloc).html(data);
+             });
+         }
+         $(document).ready(function(){
+             $('.load').trigger("click");
+         });
+
+                 
+         function toggle_div(div) {
+             $('#' + div).toggle('fast', function(){
+                 console.log('Toggle Transition Complete');
+             });
+         }
+
+        </script>
+        <!-- END -->
+    </head>
+
+    <body style="padding-top:0.5em">
+        <div class="container-fluid" style="margin-top:1em;">
+            <div class="row offset-md-1 col-md-10 well" style="margin-bottom:1em">
+	        <div class="col-sm-3" style="float: left">
+	            <img src="images/myimg_2023-bg.png" alt="Rahul Chatterjee" style="width: 90%" alt="Rahul Chatterjee" class=""/>
+                    <!-- <a href="https://github.com/rchatterjee" target="_blank">
+                         <code>github.com/rchatterjee</code>
+                         </a><br/> -->
+	        </div>
+	        <div class="col-sm-4">
+		    <br/>
+	            <h2 class="bangla">Rahul Chatterjee<br/> à¦°à¦¾à¦¹à§à¦² à¦à§à¦¯à¦¾à¦à¦¾à¦°à§à¦à§à¦à§ </h2>
+	            <!-- h2 class="bangla">Rahul Chatterjee</h2 -->
+                    Assistant Professor <br/>
+                    <a href="https://www.cs.wisc.edu" target="_blank" >Computer Sciences <br/>
+                        <!-- a href="https://www.cs.cornell.edu" target="_blank"></a><br/ -->
+	                <a href="https://www.wisc.edu" target="_blank">University of Wisconsin&mdash;Madison</a><br/>
+                        <!-- a href="https://goo.gl/maps/Za7x2CNhcWqnqMZY9" targe="_blank">1210 W Dayton St, Madison, WI 53706 &nbsp;</a> <br/><br/-->
+                        <b>Office: CS 7373</b><br/>
+                        <span> Email:
+			    rahul.chatterjee (at) wisc.edu
+			    <!--img src="images/wisc-email.png" width="180px"/-->
+			</span> <br/>
+                        <div class="">
+                            <a href="#publications"><button type="button" class="mt-3 btn btn-outline-primary">Research</button></a>
+                            <a href="#service"><button type="button" class="mt-3 btn btn-outline-primary">Service</button></a>
+                            <a href="#teaching"><button type="button" class="mt-3 mr-2 btn btn-outline-primary" href="">Teaching</button></a>
+                        </div>
+	                <!-- a href="data/RahulChatterjee_CV2019.pdf">Curriculum Vitae</a -->
+	        </div>
+                <!-- <div class="border rounded col-sm-4 text well alert-secondary overflow-auto" style="width: 90%; height: 240px; overflow-y: scroll">
+                    <h6>What's new</h6>
+			 <ul class="news">
+                         <lh><b>Year 2023</b></lh>
+                         <li> <link-me name='sophie-short'/> talked about <a href="#pets22-ipv">Android dual use apps found in various languages</a> at <a href="https://www.petsymposium.org/2022/" target="_blank">PETS 2022</a> on July 12, 2023 at 11:50 pm CT ( Session 5C) (Yeah that's not a typo!). </li>
+                         <lh><b>Year 2022</b></lh>
+                         <li> <link-me name='majed-short'/> will talk about <a href="#pets22-ipv">Android dual use apps found in various languages</a> at <a href="https://www.petsymposium.org/2022/" target="_blank">PETS 2022</a> on July 12, 2023 at 11:50 pm CT ( Session 5C) (Yeah that's not a typo!). </li>
+                         <li> <a target="_blank"  href="https://sophiestephenson.notion.site/"> Sophie </a> will give a talk on <a href="#sp22-arvr">SoK: Authentication in AR/VR</a> at <a href="https://www.ieee-security.org/TC/SP2022/" target="_blank">IEEE S&P (Oakland)</a> on May 23 at 11:20 (Session 2C). </li>
+                         <li> <a target="_blank" href="https://pages.cs.wisc.edu/~yc/">Yunang</a> will present the poster of 2021 accepted paper on <a href="#sp21">Data Privacy in Trigger-Action Systems</a> at <a href="https://www.ieee-security.org/TC/SP2022/" target="_blank">IEEE S&P (Oakland)</a>  on May 23 at 5:30 (Pacific Concourse).
+                         </li>
+
+
+                         <li> <b>Year 2021 summary</b><br/>
+                         Papers written: SIGCSE (1), USENIX Security (9), S&P (3), WWW (1), ISCA (1)</br>
+                         Papers reviewed: S&P (26), USENIX Security (20), WAY (2), EuroUSEC '21 (4), CCS (10)
+                         </li>
+
+                         <li> <b>Year 2020 summary</b><br/>
+                         Papers written: ICER (1), SIGCSE (1), SPACE (1), S&P (3), CVPR (1);</br>
+                         Papers reviewed: S&P (22), USENIX Security (16), WAY (2), EuroUSEC (5), SPACE (4), CHI (1), JoC (1).
+                         </li>
+                         <li> Neal will talk (virtually) about <a href="papers/tpake-space20.pdf">tPAKE</a> on  Dec 20, 2020.</li>
+                         <li> Majed talked about our paper on <a href="papers/comp-systems-icer20.pdf">insecure coding</a> practices
+                         by students in Computer Systems courses in top US
+                         universities at ICER 2020.</li>
+                         <li>I will give a talk at IIT Kharagpur on "The Spyware Used in Intimate Partner Violence and How to Stop Them" on Jan 3, 2020 at 4:30-5:30.</li>
+                         <li><a href="https://infosci.cornell.edu/content/freed/">Diana Freed</a> will present our paper on
+                         <a href="https://havron.dev/pubs/freed-cscw19.pdf">"Is my phone hacked?" Analyzing Clinical Computer Security Interventions with Survivors of Intimate Partner Violence</a> at CSCW 2019 in Austin, TX.</li>
+                         <li><a href="https://www.arijuels.com/">Ari Juels</a> will present our paper on
+                         <a href="https://eprint.iacr.org/2019/1103">Multisketches</a> at CCS 2019 in London.</li>
+                         <li><a href="http://www.cs.cornell.edu/~lucy/">Lucy Li</a> will present our paper on
+                         <a href="https://arxiv.org/abs/1905.13737">Protolcos for Chekcing Comproimsed Credentials (C3)</a> at CCS 2019 in London.</li>
+                         <li><a href="https://www.cs.cornell.edu/~havron/">Sam Havron</a>
+                         will present our work on <a href="https://www.cs.cornell.edu/~havron/pubs/clinicalsec.pdf">Clinical Computer Security</a> at
+                         USENIX Security 2019. </li>
+			 </ul> 
+	        </div>-->
+            </div>
+            <div id="home" class="col-md-9 offset-md-1">
+	        <div id="whoami"></div>
+	        <!-- <h2> Who am I? </h2> -->
+	        <div class="text">
+                    <p> I design secure systems to make digital technologies
+                        safe and secure for everyone. My research methodology
+                        combines empiricism with analytical techniques.  Some of
+                        my recent research includes: designing secure and usable
+                        authentication systems, securing private data in
+                        trigger-action platforms, mitigating abuse of smart home
+                        devices by an abusive intimate partner, and building security mindset in CS undergraduate students.  My CV can be found <a href="data/RahulChatterjee.pdf">here</a>.
+                        Also check out our <a href="https://madsp.cs.wisc.edu/" target="_blank">Madison Security & Privacy
+                        group</a>.
+                        I am always looking for self-motivated students who are interested in working on real-world digital security and privacy problems.  
+                        If you have a relevant research idea and want to collaborate please drop me a note.
+
+			<p>With the help of a number of motivated students, we run <a href="https://techclinic.cs.wisc.edu/" location="_blank">Madison Tech Clinic (MTC)</a> to support survivors of domestic and intimate partner violence who are experiencing technology-faciliated abuse. This is an initiative similar to <a href="https://www.ceta.tech.cornell.edu/" target="_blank">CETA</a> in NYC.  <!-- We work with <a target="_blank" href="https://abuseintervention.org/">Domestic Abuse Intervention Services (DAIS)</a> for providing support to survivors. --> <em>We are looking for passionate <a href="https://techclinic.cs.wisc.edu/volunteer/">volunteers</a> for MTC.</em> Please reach out to me if you are interested. </p>
+                </div>
+
+	        <div id="projects" class="load" onclick="loadPage('#loadprojects', 'projects.html')"> </div>
+                <div id="loadprojects"> </div>
+                <hr/>
+
+                <div id="publications" class="load" onclick="loadPage('#loadpubs', 'pubs.html')"> </div>
+                <div id="loadpubs"> </div>
+                <hr/>
+
+
+	        <div id="students"></div>
+	        <h3> Students <a href="#">&uarr;</a></h3>
+	        <div class="text pb-3">
+                    <h5>PhD</h5>
+                    <ul>
+                        <li> <link-me name='majed'/></li>
+                        <li> <link-me name='mazharul'/></li>
+                        <li> <link-me name='sophie'/></li>
+                        <li> <link-me name='rose'/></li>
+                        <li> <link-me name='naman'/></li>
+                        <!--li> Nathak D Kohls</li -->
+                    </ul>
+
+                    <h5>PhD Committee</h5>
+                    <ul>
+                        <li> <a target="_blank" href="https://https://anjali05.github.io/">Anjali </a> </li>
+                        <li> <a target="_blank" href="https://www.kyuinlee.com/">Kyuin Lee </a> </li>
+                        <li> <a target="_blank" href="https://phddirectory.ece.wisc.edu/staff/pal-asmita/">Asmita Pal</a> </li>
+                        <li> <a target="_blank" href="https://sheatsley.me/">Ryan Sheatsley</a> </li>
+                        <li> <a target="_blank" href="https://pauley.me/">Eric Pauley</a> </li>
+                    </ul>
+                    <h5>Masters</h5>
+                    <ul>
+                        <li> Akhil Polamarasetty</li>
+                    </ul>
+                    <h5>Undergraduate</h5>
+                    <ul>
+                        <li>  (BS, <a href="https://wiscers.cs.wisc.edu/" target="_blank">WISCERS 2021</a>, Fa '21 - Sp '22)</li>
+                        <li> <link-me name='michaelnoguera'> </li>
+                        <li> <link-me name='yiwei'> </li>
+                    </ul>
+                    <h5> Alumni </h5>
+                    <ul>
+                        <li> <link-me name='paulchung'> (PhD, Sp '22 -  Sp '24) --> PhD at UCSD </li>
+                        <li> <link-me name='yunang'/> (PhD, Fa' 2023) --> Google</li>
+                        <li> Sneha Tripathi (BS, Fa'22 - Sp '23)</li>
+                        <li> <link-me name='adil'/> (MS, Fa '21 - Fa '22) --> Figma</li>
+                        <li> <a href="https://www.linkedin.com/in/vchadha023" target="_blank" >Varun Chadha</a> (MS, Fa '21 - Sp '22) --> </li>
+                        <li> Quinn Cassidy (BS, <a href="https://wiscers.cs.wisc.edu/" target="_blank">WISCERS 2021</a>, Fa '21 - Sp '22)</li>
+                        <li> Sammuel Moon (BS, Fa '21 - Sp '22) </li>
+                        <li> Stephen Fan (BS, Fa '21) </li>
+                        <li> Katy Dong (BS, Fa '20 - Sp '21 --> MS at CMU)</li>
+                        <li> Yukun Li  (BS, Fa '20 - Sp '21 --> MS at CMU)</li>
+                        <li> Ruizhe Wang (BS, Fa' 20 - Sp '21, --> MMath at Univ. of Waterloo)  </li>
+                        <li> Athena Sayles (MS, Sp '20 - Sp '21, Co-advised with Earlence Fernandes)</li>
+                        <li> Suleman Ahmad (MS, Sp '20 - Sp '21, --> Cloudflare)</li>
+                        <li> Neal Pongmorrakot (BS, Sp '20 - Sp '21)</li>
+                        <li> Kieran Mulligan (BS, Fa  '20)</li>
+                        <li> Deepak Srinath (MS, Fa '19 - Fa '20)</li>
+                    </ul>
+	        </div>
+	        <div id="service"></div>
+	        <h3> Service <a href="#">&uarr;</a></h3>
+	        <div class="text pb-3">
+                    Program committee:
+	            <ul>
+                        <li><b>2024 </b>:
+                            <link-me name='oakland' year=2024 short=1 />&nbsp; &middot; &nbsp; 
+                            <link-me name='usenix' year=24 short=1 /> &nbsp; &middot; &nbsp; 
+                        </li>
+                        <li><b>2023 </b>:
+                            <link-me name='usenix' year=23 short=1 />&nbsp; &middot; &nbsp; 
+                            <link-me name='ccs' year=23 short=1 />&nbsp; &middot; &nbsp; 
+                            <link-me name='pets' year=23 short=1 /> &nbsp; &middot; &nbsp; 
+                        </li>
+                        <li><b>2022 </b>:
+                            <a target="_blank" href="https://www.ieee-security.org/TC/SP2022/cfpapers.html">IEEE S&P</a> &nbsp; &middot; &nbsp;
+                            <a target="_blank" href="https://www.usenix.org/conference/usenixsecurity22/call-for-papers">USENIX Security</a>&nbsp; &middot; &nbsp; 
+                            <a target="_blank" href="https://petsymposium.org/cfp22.php">PoPETS</a> &nbsp; &middot; &nbsp; 
+                            <a target="_blank" href="https://safe-things-2022.github.io/">SafeThings</a> &nbsp; &middot; &nbsp;
+                            <a target="_blank" href="https://space2022.lnmiit.ac.in/"> SPACE </a>
+
+                        </li>
+                        <li><b>2021 </b>:
+                            <a target="_blank" href="https://www.ieee-security.org/TC/SP2021/cfpapers.html">IEEE S&P</a> &nbsp; &middot; &nbsp; 
+                            <a target="_blank" href="https://www.usenix.org/conference/usenixsecurity21">USENIX Security</a>&nbsp; &middot; &nbsp; 
+                            <a target="_blank" href="https://www.sigsac.org/ccs/CCS2021/program-committee.html">ACM CCS</a>&nbsp; &middot; &nbsp; 
+                            <a target="_blank" href="https://www.ieee-security.org/TC/SP2021/SPW2021/safethings2021/">SafeThings</a>
+                        </li>
+
+                        <li><b>2020 </b>:
+                            <a target="_blank" href="https://www.ieee-security.org/TC/SP2020/">IEEE S&P</a> &nbsp; &middot; &nbsp; 
+                            <a target="_blank" href="https://wayworkshop.org/2020/program.html"> WAY </a> &nbsp; &middot; &nbsp; 
+                            <a target="_blank" href="https://eusec20.cs.uchicago.edu/#cfp"> EuroUSEC </a> &nbsp; &middot; &nbsp; 
+                            <a target="_blank" href="https://cse.iitkgp.ac.in/conf/SPACE2020/progcomm.php"> SPACE </a>
+                        </li>
+                        <li><b>2019 </b>: <a target="_blank" href="https://wayworkshop.org/2019/program.html"> WAY </a></li>
+	            </ul>
+                    Other reviewing works:
+                    
+                    JoC &nbsp; &middot; &nbsp;  CHI
+	        </div>
+
+	        <div id="teaching"></div>
+	        <h3> Teaching <a href="#">&uarr;</a></h3>
+	        <div class="text">
+	            <ul>
+	                <li>CS 642 (Introduction to Information Security) &mdash;
+                            <a href="https://canvas.wisc.edu/courses/168496" target="_blank">Fall 2019</a>  &nbsp; &middot; &nbsp; 
+                            <a href="https://canvas.wisc.edu/courses/219039" target="_blank">Fall 2020</a>  &nbsp; &middot; &nbsp; 
+                            <a href="https://canvas.wisc.edu/courses/271196" target="_blank">Fall 2021</a>  &nbsp; &middot; &nbsp; 
+                            <a href="https://canvas.wisc.edu/courses/321736" target="_blank">Fall 2022</a>  &nbsp; &middot; &nbsp; 
+                            <a href="https://canvas.wisc.edu/courses/344545" target="_blank">Spring 2023</a>
+                        </li>  
+	                <li>CS 838 (Topics in Security and Privacy) &mdash;
+                            <a href="https://canvas.wisc.edu/courses/190749/" target="_blank">Spring 2020</a> &nbsp; &middot; &nbsp; 
+                            <a href="https://canvas.wisc.edu/courses/245140/" target="_blank">Spring 2021</a>
+                        </li>
+                        <li>CS 839 (Human-Centric Security and Privcy) &mdash;
+                            <a href="https://canvas.wisc.edu/courses/425509/" target="_blank">Fall 2024</a> &nbsp; &middot; &nbsp;
+                        </li>
+	                <li>CS 782 (Advanced Computer Security and Privacy) &mdash;
+                            <a href="https://canvas.wisc.edu/courses/324379" target="_blank">Fall 2022</a>  &nbsp; &middot; &nbsp;  
+                            <a href="https://canvas.wisc.edu/courses/396286" target="_blank">Spring 2024</a> 
+                        </li>
+	            </ul>
+	        </div>
+	        <!-- <h2> Contact Me <a href="#">&uarr;</a></h2>
+	             <div id="contact" class="text">
+	             <address>
+	             <strong>Cornell Tech <br/>
+	             111 8th Ave #302, New York, NY 10011, USA<br/> -->
+                <!--storng> Cornell University</strong><br/>
+	             Bill and Melinda Gates Hall,<br/>
+	             343 Campus Rd, <br/>
+	             Ithaca, NY 14853, USA<br/-->
+	        <!-- e-mail: &lt;firstname&gt;@cs.cornell.edu</a><br/>
+	             </address>
+	             </div> -->
+	        <div style="height:300px"></div>
+    </body>
+</html>
+
+<!--  LocalWords:  cryptographically mindset
+-->
